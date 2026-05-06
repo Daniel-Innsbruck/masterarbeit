@@ -4,28 +4,35 @@ Prompt templates for rag_to_be_tested evaluation
 
 
 
-VALIDATION_PROMPTS = {     'validate_init_prompt': '''
-            Validate the following initial prompt.  
-            It contains a `RAG_input` used to test a Retrieval-Augmented Generation (rag_to_be_tested) system.  
-            This should represent the start of a conversation with the rag_to_be_tested system.  
+VALIDATION_PROMPTS = {
+    'validate_init_prompt': '''
+            Validate the following initial multi-hop prompt used to test a Retrieval-Augmented Generation system.  
+            This represents the start of a conversation.  
+
+            Input to validate (JSON):  
+            {question}  
+            
+            Provided Context: 
+            {document}
 
             Requirements:  
-            1. The context of the RAG_input should be related to the provided document.  
-            2. The question must be exactly the same as the `RAG_input`.  
-            3. The answer must be correct.  
+            1. Cross-Document Reasoning: The question MUST require synthesizing facts from BOTH Snippet A and Snippet B. If the question can be fully answered using only one of the snippets, it is invalid.
+            2. Factual Accuracy: The provided answer must be factually correct based on the combined context.
+            3. Thematic Link: The identified 'thematic_link' must be logically sound, contextually well-founded, and genuinely connect the two snippets.
+            4. Query Type Validation: The JSON contains a 'logic_type'. The formulated question MUST genuinely match the definition of this specific type:
+               * inference: The question requires deducting a conclusion, underlying motive, or implicit fact by combining information from both snippets.
+               * comparison: The question requires comparing, contrasting, or finding similarities between entities, events, or numbers mentioned across the two snippets.
+               * temporal: The question requires establishing a chronological sequence, a timeline of events, or a cause-and-effect chain over time using both snippets.
+            5. Natural Phrasing: The question must not explicitly mention "Snippet A", "Snippet B", or "the document".
 
-            Input to validate:  
-            {question}  
-            Provided Document: {document}
+            If ANY of the above requirements are not met, return the reason and set `"correct"` to `false`.  
+            If ALL requirements are met, set `"correct"` to `true`.  
 
-            If any of the above requirements are not met, return the reason and set `"correct"` to `false`.  
-            If all requirements are met, set `"correct"` to `true`.  
-
-            Return the result as JSON in the following format:
-         
-                "correct": true/false,
-                "reason": "Explanation if incorrect, otherwise empty"
-           
+            **Output Format (exact JSON):**
+            {{
+                "correct": true,
+                "reason": "Explanation of which requirement failed and why (leave empty if correct)"
+            }}
         ''',
     
     'validate_follow_up_prompt': '''

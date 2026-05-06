@@ -1,43 +1,34 @@
-import getpass
 import os
+import time
+from dotenv import load_dotenv
+
 from langchain.chat_models import init_chat_model
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
-from langchain_core.vectorstores import InMemoryVectorStore
-from dotenv import load_dotenv
-from langchain.document_loaders import PyMuPDFLoader
-from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_postgres import PGVector
-import bs4
-from langchain import hub
-from langchain_community.document_loaders import WebBaseLoader
+from langchain_chroma import Chroma  # Changed from PGVector
 from langchain_core.documents import Document
-from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langgraph.graph import START, StateGraph
-from typing_extensions import List, TypedDict
 from langchain_core.messages import BaseMessage, HumanMessage, AIMessage
 from langchain_core.prompts import ChatPromptTemplate
+from langgraph.graph import START, StateGraph
 from langgraph.checkpoint.memory import MemorySaver
-import time
+from typing_extensions import List, TypedDict
+
 # Load .env file and override existing environment variables
 load_dotenv(override=True)
 os.environ['GOOGLE_API_KEY'] = os.getenv('GOOGLE_API_KEY')
-os.environ['OPENAI_API_KEY'] = os.getenv('OPENAI_API_KEY')
+# os.environ['OPENAI_API_KEY'] = os.getenv('OPENAI_API_KEY')
 
-llm = init_chat_model("gpt-4.1-mini", model_provider="openai")
-# llm = init_chat_model("gemini-2.5-flash-lite-preview-06-17", model_provider="google_genai")
-
-
-
-embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
+# llm = init_chat_model("gpt-4.1-mini", model_provider="openai")
+llm = init_chat_model("gemini-2.5-flash", model_provider="google_genai")
 
 
-vector_store = PGVector(
-    embeddings=embeddings,
-    collection_name="my_docs",
-    # connection="postgresql+psycopg://postgres:password@localhost:5432/vectordb",
-    connection="postgresql+psycopg://postgres:password@localhost:5432/clapnq",
+
+embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
+
+vector_store = Chroma(
+    collection_name="guardian_chunks",
+    persist_directory="../data/chroma_data",
+    embedding_function=embeddings
 )
-
 
 
 
@@ -90,24 +81,19 @@ def llm_invoke_with_retry(llm, messages, max_retries=3, wait_time=60):
     return None
 
 
-# Define application steps
 def retrieve(state: State):
     current_human_message = None
     for msg in reversed(state["messages"]):
         if isinstance(msg, HumanMessage):
             current_human_message = msg
             break
-    
-    current_question_content = current_human_message.content
-    
 
+    current_question_content = current_human_message.content
     chat_history_for_rephrase = [msg for msg in state["messages"] if msg != current_human_message]
 
     if chat_history_for_rephrase:
         rephrase_messages = rephrase_prompt.invoke({
-            # "chat_history": chat_history_for_rephrase[-3:],
             "chat_history": chat_history_for_rephrase,
-            # "chat_history": [],
             "question": current_question_content
         })
         standalone_question_response = llm_invoke_with_retry(llm, rephrase_messages)
@@ -115,23 +101,20 @@ def retrieve(state: State):
     else:
         standalone_question = current_question_content
 
+    # Retrieve k=10 from ChromaDB
     retrieved_docs = vector_store.similarity_search(standalone_question, k=10)
-    # retrieved_docs = vector_store.similarity_search(standalone_question, k=3)
-    # retrieved_docs = vector_store.similarity_search(standalone_question, k=1)
-    
 
     return {"context": retrieved_docs, "question": current_question_content}
-
 
 def generate(state: State):
     docs_content = "\n\n".join(doc.page_content for doc in state["context"])
     messages_for_qa = prompt.invoke({
-        "chat_history": state["messages"][:-1], 
+        "chat_history": state["messages"][:-1],
         # "chat_history": state["messages"][0],
         # "chat_history": [],
         # "chat_history": state["messages"][-4:-1],
         "context": docs_content,
-        "question": state["question"] 
+        "question": state["question"]
     })
     response = llm_invoke_with_retry(llm, messages_for_qa)
     return {"answer": response.content, "messages": state["messages"] + [AIMessage(content=response.content)]}

@@ -1,12 +1,11 @@
 from ragas.metrics import AspectCritic, SimpleCriteriaScore
-from ragas.dataset_schema import MultiTurnSample, EvaluationDataset, SingleTurnSample
-from ragas.messages import HumanMessage, AIMessage
+from ragas.dataset_schema import EvaluationDataset, SingleTurnSample
 from ragas import evaluate
 import json
 from dotenv import load_dotenv
-from ragas.llms import LangchainLLMWrapper
 from langchain_openai import ChatOpenAI
 import os
+import gc
 from ragas.metrics import (
     faithfulness,
     answer_relevancy,
@@ -24,44 +23,34 @@ from ragas.embeddings import LangchainEmbeddingsWrapper
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 # Initialize with Google AI Studio
-evaluator_llm = LangchainLLMWrapper(ChatGoogleGenerativeAI(
-    model="gemini-2.0-flash"
+evaluator_llm = LangchainLLMWrapper(ChatOpenAI(
+    model="gpt-5-mini"
 ))
 
 paths = [
-# add your paths here
+    "../data/conversation_data_gemini-2.0-flash_turns_5_conversations_100.jsonl"
 ]
 
-for path in paths[:3]:
-    print(path)
-    with open(path) as f:
-        data = json.load(f)
-    
-    list_cconversatiuons = []
+for path in paths:
+    print(f"\nEvaluating: {path}")
+    data = []
+    with open(path, 'r', encoding = 'utf-8') as f:
+        for line in f:
+            if line.strip():
+                data.append(json.loads(line))
+
     list_singleturn_conversations = []
     for conversation in data:
-        conversationlist = conversation['conversation']
-        userInput = []
-        for turn in conversationlist:
-            userInput.append(HumanMessage(content=turn['rag_input']))
-            userInput.append(AIMessage(content=turn['rag_answer']))
-            retrieved_contexts = []
-            for doc in turn['context']:
-                retrieved_contexts.append(doc['page_content'])
+        for turn in conversation['conversation']:
+            retrieved_contexts = turn.get('context', [])
             list_singleturn_conversations.append(
                 SingleTurnSample(
                     user_input=turn['question'],
-                    reference=turn['answer'],
+                    reference=turn['answer'],  # Ground-Truth for Context Recall
                     response=turn['rag_answer'],
                     retrieved_contexts=retrieved_contexts,
-                    reference_contexts=[conversation['document']]
                 )
             )
-        sample_conversation = MultiTurnSample(
-            user_input=userInput
-            
-        )
-        list_cconversatiuons.append(sample_conversation)
         
     definition_correctness = "Return 1 if the AI answers the question correct; otherwise, return 0."
     correctness_aspect_critic = AspectCritic(
@@ -97,7 +86,7 @@ for path in paths[:3]:
     avg_faithfulness = sum([entry["faithfulness_aspect_critic"] for entry in result_json]) / len(result_json)
     avg_context_precision = sum([entry["context_precision_critic"] for entry in result_json]) / len(result_json)
     avg_context_recall = sum([entry["context_recall_critic"] for entry in result_json]) / len(result_json)
-    result_json = {
+    final_output = {
         "file_path": path,
         "average_scores": {
             "correctness_aspect_critic": avg_correctness,
@@ -107,10 +96,16 @@ for path in paths[:3]:
         },
         "detailed_results": result_json
     }
-    print(avg_correctness, avg_faithfulness, avg_context_precision, avg_context_recall)
-    #modify path to save the results
-    final_path = path.replace("conversation_data", "single_turn_evaluation_results").replace(".json", "_evaluation.json")
-    with open(final_path, "w") as f:
-        json.dump(result_json, f, indent=4)
-    import gc
+    print(f"--- RESULTS ---")
+    print(
+        f"Correctness: {avg_correctness:.2f} | Faithfulness: {avg_faithfulness:.2f} | Precision: {avg_context_precision:.2f} | Recall: {avg_context_recall:.2f}")
+
+    final_path = path.replace(".jsonl", "_evaluation.json").replace("conversation_data",
+                                                                    "single_turn_evaluation_results")
+
+    os.makedirs(os.path.dirname(final_path), exist_ok=True)
+
+    with open(final_path, "w", encoding='utf-8') as f:
+        json.dump(final_output, f, indent=4)
+
     gc.collect()

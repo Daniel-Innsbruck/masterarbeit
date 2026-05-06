@@ -34,14 +34,24 @@ class LLMResponseParser:
                     else:
                         normalized[key] = str(v)
 
-            expected_fields = ['rag_input', 'question', 'answer', 'type']
-            missing = [field for field in expected_fields if field not in normalized]
+                if 'question' in normalized and 'rag_input' not in normalized:
+                    normalized['rag_input'] = normalized['question']
 
-            if missing:
-                print(f"Warning: Missing fields: {missing}")
+                is_initial_turn = 'thematic_link' in normalized or 'logic_type' in normalized
 
-            # Return whatever fields we have
-            return {field: normalized[field] for field in normalized if field in expected_fields}
+                if is_initial_turn:
+                    required_fields = ['rag_input', 'question', 'answer', 'thematic_link', 'logic_type']
+                else:
+                    required_fields = ['rag_input', 'question', 'answer', 'type']
+
+                # Validation
+                if all(field in normalized for field in required_fields):
+                    return {field: normalized[field] for field in required_fields}
+                else:
+                    missing = [field for field in required_fields if field not in normalized]
+
+                if missing:
+                    print(f"Warning: Missing fields: {missing}")
 
         except json.JSONDecodeError:
             print("Error: Response is not valid JSON.")

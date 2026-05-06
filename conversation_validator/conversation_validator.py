@@ -9,10 +9,10 @@ import Models.chat_gpt as chat_gpt
 from .utils import parser_validation as parser
 import time
 
-# model_name = 'gemini-2.0-flash'  # Change to 'gemini-2.0-flash' if needed
-model_name= 'gpt-5-nano'
-# model = gemini.GEMINI(model_name)
-model = chat_gpt.ChatGPT(model_name)
+model_name = 'gemini-2.5-flash'  # Change to 'gemini-2.0-flash' if needed
+# model_name= 'gpt-5-nano'
+model = gemini.GEMINI(model_name)
+# model = chat_gpt.ChatGPT(model_name)
 parser = parser.LLMResponseParser()
 
 def send_request_to_LLM_validation(prompt):
@@ -41,13 +41,21 @@ def send_request_to_LLM_validation(prompt):
 
 
 # Validate and rephrase prompts in one step
-def valaidate_init_prompt_all_in_one(question,document):
+def validate_init_prompt_all_in_one(question,document):
+    question_dict = {
+        'rag_input': question.get('rag_input', question.get('question')),
+        'question': question.get('question', ''),
+        'answer': question.get('answer', ''),
+        'thematic_link': question.get('thematic_link', ''),
+        'logic_type': question.get('logic_type', '')
+    }
+
     validate_prompt = templates.VALIDATION_PROMPTS['validate_init_prompt'].format(
-        question=str({'rag_input':question['rag_input'], 'question':question['question'], 'answer':question['answer']}),
-        document = str(document)
+        question=str(question_dict),
+        document=str(document)
     )
     answer = send_request_to_LLM_validation(validate_prompt)
-    
+
     return answer
 
 # Validate follow-up questions in one step

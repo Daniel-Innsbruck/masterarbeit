@@ -62,4 +62,38 @@ CONVERSATION_PROMPTS = {
         "Answer": The expected, correct answer based on the document(s).
         "Type": The type of question you are asking, choose from the following: Follow-up, Clarification, Correction, Comparative.
     ''',
+    'init_multihop_prompt': '''
+        You are a SOTA evaluation assistant for RAG systems. Your goal is to create complex
+        Multi-Hop questions.
+        
+        TASK:
+        Given two context snippets from DIFFERENT news articles, identify their latent connection and formulate a question that CANNOT be answered by one snippet alone.
+        
+        QUESTION TYPE: {query_type}
+        
+        CONTEXT A: {chunk_a}
+        CONTEXT B: {chunk_b}
+        
+        CONSTRAINTS:
+        1. The answer MUST require facts from both Snippet A AND Snippet B.
+        2. Focus on a "Thematic Bridge" (e.g. Causal link, shared event, or temporal sequence).
+        3. The question must be natural (no mention of 'Snippet A').
+        4. Provide the answer clearly based on the provided snippets.
+        
+        OUTPUT FORMAT (JSON):
+        {{
+            "question": "The multi-hop question",
+            "answer": "The combined answer",
+            "thematic_link": "Short explanation of the link between A and B",
+            "logic_type": "{query_type}"
+        }}
+        
+        REQUIRED JSON STRUCTURE:
+        {{
+            "question": "...",
+            "answer": "...",
+            "thematic_link": "...",
+            "logic_type": "{query_type}"
+        }}
+    ''',
 }
