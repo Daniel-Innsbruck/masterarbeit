@@ -94,3 +94,7 @@ models/
 cache/
 
 .ragas-venv
+
+# Chorma
+
+chroma_data/
