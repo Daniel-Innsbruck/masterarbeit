@@ -1,0 +1,91 @@
+import os
+import time
+from dotenv import load_dotenv
+
+from langchain.chat_models import init_chat_model
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
+from langchain_chroma import Chroma
+from langchain_core.messages import BaseMessage, HumanMessage, AIMessage
+from langchain_core.prompts import ChatPromptTemplate
+from typing_extensions import List
+
+# Load .env file and override existing environment variables
+load_dotenv(override=True)
+os.environ['GOOGLE_API_KEY'] = os.getenv('GOOGLE_API_KEY')
+
+llm = init_chat_model("gemini-2.5-flash", model_provider="google_genai")
+
+embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
+
+vector_store = Chroma(
+    collection_name="target_baseline",
+    persist_directory="../phase_1_validation/chroma_db",
+    embedding_function=embeddings
+)
+
+prompt = ChatPromptTemplate.from_messages([
+    ("system", "You are a helpful assistant. Answer the question based on the provided context and the previous chat history. If the context does not contain the answer, state that you cannot find the answer.\n\nChat History:\n{chat_history}"),
+    ("human", "Context:\n{context}\n\nQuestion: {question}"),
+])
+
+
+def llm_invoke_with_retry(llm, messages, max_retries=3, wait_time=60):
+    """Invoke LLM with retry logic for rate limiting"""
+    for attempt in range(max_retries):
+        try:
+            return llm.invoke(messages)
+        except Exception as e:
+            if '429' in str(e):
+                if attempt < max_retries - 1:
+                    print(f"Rate limit exceeded. Waiting for 60 seconds before evaluating next batch")
+                    time.sleep(wait_time)
+                    continue
+                else:
+                    print(f"Max retries exceeded. Rate limit still active.")
+                    raise e
+            elif '503' in str(e):
+                if attempt < max_retries - 1:
+                    print(f"Service Unavailable. Waiting for 60 seconds before evaluating next batch")
+                    time.sleep(wait_time)
+                    continue
+                else:
+                    print(f"Max retries exceeded. Rate limit still active.")
+                    raise e
+            else:
+                raise e
+    return None
+
+
+# Simple in-memory conversation store: thread_id -> list of BaseMessage
+conversation_store: dict[str, List[BaseMessage]] = {}
+
+
+def baseline_rag(question: str, thread_id: str, k: int = 5):
+    """Standard RAG: retrieve documents based on raw question, generate answer with chat history."""
+
+    # Get or initialize conversation history
+    if thread_id not in conversation_store:
+        conversation_store[thread_id] = []
+
+    chat_history = conversation_store[thread_id]
+
+    # Retrieve documents based on the raw question (no rephrasing)
+    retrieved_docs = vector_store.similarity_search(question, k=k)
+
+    # Generate answer
+    docs_content = "\n\n".join(doc.page_content for doc in retrieved_docs)
+    messages_for_qa = prompt.invoke({
+        "chat_history": chat_history,
+        "context": docs_content,
+        "question": question
+    })
+    response = llm_invoke_with_retry(llm, messages_for_qa)
+
+    # Update conversation history
+    conversation_store[thread_id].append(HumanMessage(content=question))
+    conversation_store[thread_id].append(AIMessage(content=response.content))
+
+    return {
+        "answer": response.content,
+        "context": [doc.page_content for doc in retrieved_docs]
+    }
