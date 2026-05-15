@@ -1,0 +1,34 @@
+git
+.gitignore
+
+# Sensitive Data and local envs
+.env
+.venv/
+venv/
+env/
+
+# Python Caches & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Jupyter Notebooks
+notebooks/
+.ipynb_checkpoints/
+*.ipynb
+
+# local data
+data/
+
+# IDE Config
+.idea/
+.vscode/
+
+# Poetry-Files
+../pyproject.toml
+../poetry.lock
+
+# Dockerfiles
+docker-compose.yml
+Dockerfile
