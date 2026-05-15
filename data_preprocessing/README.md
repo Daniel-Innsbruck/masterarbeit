@@ -27,3 +27,12 @@ Once the MongoDB is populated, execute the Jupyter Notebook `add_embeddings_to_g
 * It embeds the chunks using the `gemini-embedding-001` model.
 * It explicitly links each chunk to its parent document via the `article_id` metadata field, which is a strict requirement for the framework's stochastic multi-hop context discovery (Section 4.3).
 * The output is a local ChromaDB instance stored in `./chroma_db`.
+
+## Dataset Access
+
+The complete Evaluation Vector Database ($V_{eval}$) is hosted on Zenodo due to file size constraints and licensing terms.
+
+* **DOI:** [10.5281/zenodo.20201221](https://doi.org/10.5281/zenodo.20201221)
+* **Access Level:** Restricted (Request access via Zenodo for academic evaluation).
+
+To use the pre-computed data, download `chroma_data.zip` from the link above and extract it into the root directory of this project before running the evaluation scripts
