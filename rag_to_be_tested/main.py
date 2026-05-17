@@ -10,12 +10,16 @@ rag_graph = get_rag_graph()
 class QuestionRequest(BaseModel):
     question: str
     thread_id: str
-    mode: str = "default"  # "default" or "baseline"
+    mode: str = "default"  # "default" or "baseline" or "advanced"
 
 @app.post("/rag")
 def ask_question(request: QuestionRequest):
     if request.mode == "baseline":
         return baseline_rag(request.question, request.thread_id)
+
+    if request.mode == "advanced":
+        result = agentic_rag(request.question, request.thread_id)
+        return {"answer": result["answer"], "context": result["context"]}
 
     thread_id = request.thread_id
     current_checkpoint = rag_graph.get_state(config={"configurable": {"thread_id": thread_id}})
