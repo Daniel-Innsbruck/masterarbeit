@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from qa_chains.qa_chain import get_rag_graph
 from qa_chains.qa_chain_baseline import baseline_rag
+from qa_chains.qa_chain_advanced import agentic_rag
 from langchain_core.messages import HumanMessage
 
 app = FastAPI()

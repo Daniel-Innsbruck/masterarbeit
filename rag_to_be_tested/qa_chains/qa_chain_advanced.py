@@ -6,25 +6,32 @@ import time
 from dotenv import load_dotenv
 from pymongo import MongoClient
 
-from langchain.chat_models import init_chat_model
-from langchain_google_genai import GoogleGenerativeAIEmbeddings
-from langchain_chroma import Chroma
+import chromadb
+from google import genai
 from langchain_core.messages import BaseMessage, HumanMessage, AIMessage
 from typing_extensions import List
-
+from langchain_google_genai import HarmCategory, HarmBlockThreshold, ChatGoogleGenerativeAI
 # Load .env file and override existing environment variables
 load_dotenv(override=True)
 os.environ['GOOGLE_API_KEY'] = os.getenv('GOOGLE_API_KEY')
 
-llm = init_chat_model("gemini-2.5-flash", model_provider="google_genai")
-
-embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
-
-vector_store = Chroma(
-    collection_name="target_advanced",
-    persist_directory="../chroma/chroma_db_advanced",
-    embedding_function=embeddings
+llm = ChatGoogleGenerativeAI(
+    model="gemini-2.5-flash",
+    safety_settings={
+        HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
+        HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
+        HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
+        HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
+    }
 )
+
+
+# Raw ChromaDB client
+chroma_client = chromadb.PersistentClient(path="../phase_1_validation/chroma_db_advanced")
+vector_collection = chroma_client.get_or_create_collection(name="target_advanced")
+
+# Google GenAI client for query embeddings
+genai_client = genai.Client(api_key=os.getenv('GOOGLE_API_KEY'))
 
 # MongoDB connection for parent document lookup
 mongo_client = MongoClient(os.getenv('MONGO_URI', 'mongodb://localhost:27017/'))
@@ -33,6 +40,14 @@ db = mongo_client.guardian_db
 # In-memory conversation store: thread_id -> list of BaseMessage
 conversation_store: dict[str, List[BaseMessage]] = {}
 
+def get_query_embedding(text: str) -> list:
+    """Embed query text using the same model as ingestion"""
+    result = genai_client.models.embed_content(
+        model="gemini-embedding-001",
+        contents=text,
+        config={"task_type": "RETRIEVAL_QUERY"}
+    )
+    return result.embeddings[0].values
 
 def llm_invoke_with_retry(llm, messages, max_retries=3, wait_time=60):
     """Invoke LLM with retry logic for rate limiting"""
@@ -60,7 +75,6 @@ def llm_invoke_with_retry(llm, messages, max_retries=3, wait_time=60):
                 raise e
     return None
 
-
 def retrieve_full_document(query_text: str, n_results: int = 1) -> dict:
     """
     Parent Document Retrieval:
@@ -69,14 +83,26 @@ def retrieve_full_document(query_text: str, n_results: int = 1) -> dict:
     3. Fetch full article from MongoDB
     """
     try:
-        results = vector_store.similarity_search_with_score(query_text, k=n_results)
+        print(f"[DEBUG] Collection count: {vector_collection.count()}")
 
-        if not results:
+        query_embedding = get_query_embedding(query_text)
+        print(f"[DEBUG] Embedding length: {len(query_embedding)}")
+
+        results = vector_collection.query(
+            query_embeddings=[query_embedding],
+            n_results=n_results
+        )
+
+        print(f"[DEBUG] Results IDs: {results['ids']}")
+        print(f"[DEBUG] Results distances: {results.get('distances')}")
+
+        if not results["ids"] or not results["ids"][0]:
             return {"status": "no_results", "content": "No matching chunks found in vector store."}
 
-        doc, score = results[0]
-        article_id = doc.metadata.get("article_id", None)
-        chunk_text = doc.page_content
+        chunk_text = results["documents"][0][0]
+        metadata = results["metadatas"][0][0]
+        distance = results["distances"][0][0] if results.get("distances") else None
+        article_id = metadata.get("article_id", None)
 
         if not article_id:
             return {"status": "partial", "content": chunk_text, "note": "No article_id in metadata, returning chunk only."}
@@ -97,33 +123,35 @@ def retrieve_full_document(query_text: str, n_results: int = 1) -> dict:
             "status": "success",
             "content": full_text,
             "article_id": article_id,
-            "relevance_score": float(score)
+            "relevance_score": float(distance) if distance else None
         }
 
     except Exception as e:
         return {"status": "error", "content": f"Retrieval error: {str(e)}"}
 
 
-AGENT_SYSTEM_PROMPT = """You are an intelligent research assistant with access to a document retrieval tool.
-Your job is to answer the user's question by retrieving and analyzing relevant documents.
+AGENT_SYSTEM_PROMPT = """
+    You are an intelligent research assistant with access to a document retrieval tool.
+    Your job is to answer the user's question by retrieving and analysing relevant documents.
+    
+    You MUST respond in valid JSON format with this exact structure:
+    {{
+        "thought": "Your reasoning about whether you have enough context to answer",
+        "action": "ANSWER" or "SEARCH",
+        "search_query": "The search query to use (only if action is SEARCH)",
+        "final_answer": "Your complete answer (only if action is ANSWER)"
+    }}
+    
+    RULES:
+    - If the context is insufficient, use action "SEARCH" with a targeted search_query.
+    - If you have enough context, use action "ANSWER" with a comprehensive final_answer.
+    - Each SEARCH retrieves a full newspaper article. Formulate precise queries.
+    - Consider the chat history for context about previous questions.
+    - ONLY output valid JSON, nothing else.
+"""
 
-You MUST respond in valid JSON format with this exact structure:
-{{
-    "thought": "Your reasoning about whether you have enough context to answer",
-    "action": "ANSWER" or "SEARCH",
-    "search_query": "The search query to use (only if action is SEARCH)",
-    "final_answer": "Your complete answer (only if action is ANSWER)"
-}}
 
-RULES:
-- If the context is insufficient, use action "SEARCH" with a targeted search_query.
-- If you have enough context, use action "ANSWER" with a comprehensive final_answer.
-- Each SEARCH retrieves a full newspaper article. Formulate precise queries.
-- Consider the chat history for context about previous questions.
-- ONLY output valid JSON, nothing else."""
-
-
-def agentic_rag(question: str, thread_id: str, max_hops: int = 3) -> dict:
+def agentic_rag(question: str, thread_id: str, max_hops: int = 5) -> dict:
     """
     Agentic RAG with Parent Document Retrieval and multi-hop reasoning.
     """
@@ -136,10 +164,9 @@ def agentic_rag(question: str, thread_id: str, max_hops: int = 3) -> dict:
     all_retrieved_contents = []
 
     for hop in range(max_hops):
-        # Build context string from all retrieved documents so far
         context_str = "\n\n---\n\n".join(context_memory) if context_memory else "No documents retrieved yet."
 
-        # Build chat history string
+        # build chat history string
         history_str = ""
         if chat_history:
             for msg in chat_history:
@@ -154,7 +181,7 @@ def agentic_rag(question: str, thread_id: str, max_hops: int = 3) -> dict:
             
             Current Question: {question}
             
-            Analyze the context and decide: do you have enough information to answer, or do you need to search for more? Respond in JSON.
+            Analyse the context and decide: do you have enough information to answer, or do you need to search for more? Respond in JSON.
         """
 
         messages = [
@@ -218,15 +245,17 @@ def agentic_rag(question: str, thread_id: str, max_hops: int = 3) -> dict:
 
     context_str = "\n\n---\n\n".join(context_memory) if context_memory else "No documents retrieved."
 
-    fallback_message = f"""Based on ALL the context below, give the best possible answer to the question.
-If some information is missing, state that clearly.
+    fallback_message = f"""
+    Based on ALL the context below, give the best possible answer to the question.
+    If some information is missing, state that clearly.
 
-Context:
-{context_str}
-
-Question: {question}
-
-Provide a comprehensive answer."""
+    Context:
+    {context_str}
+    
+    Question: {question}
+    
+    Provide a comprehensive answer.
+    """
 
     messages = [
         ("system", "You are a helpful assistant. Answer the question based on the provided context."),

@@ -21,7 +21,7 @@ embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
 
 vector_store = Chroma(
     collection_name="target_baseline",
-    persist_directory="../phase_1_validation/chroma_db",
+    persist_directory="../phase_1_validation/chroma_db_baseline",
     embedding_function=embeddings
 )
 
