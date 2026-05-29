@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Conversation Viewer</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .controls {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+    }
+    input[type="file"], input[type="number"], button {
+      padding: 10px 15px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    button:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+    .conversation {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .status-counter {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #555;
+    }
+    details {
+      background: #f1f8ff;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .entry {
+      margin-bottom: 20px;
+      border: 1px solid #eee;
+      border-left: 4px solid #007bff;
+      border-radius: 4px;
+      padding: 15px;
+      background: #fafafa;
+    }
+    .entry p {
+      margin: 8px 0;
+      line-height: 1.5;
+    }
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      background: #e9ecef;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #495057;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Conversation Viewer</h1>
+
+  <div class="controls">
+    <input type="file" id="jsonFileInput" accept=".json, .jsonl">
+    <button onclick="loadJSON()">Load File</button>
+  </div>
+
+  <div class="controls" id="navControls" style="display: none;">
+    <button id="prevBtn" onclick="prevConversation()">&#8592; Previous</button>
+    <span id="counterDisplay" style="font-weight: bold; min-width: 100px; text-align: center;"></span>
+    <button id="nextBtn" onclick="nextConversation()">Next &#8594;</button>
+
+    <div style="margin-left: 20px; border-left: 1px solid #ccc; padding-left: 20px;">
+      <input type="number" id="gotoIndex" placeholder="Go to #" style="width: 80px;" min="1">
+      <button onclick="goToConversation()">Go</button>
+    </div>
+  </div>
+
+  <div class="conversation" id="conversationContainer">
+    <p style="text-align: center; color: #888;">Please load a JSON or JSONL file to view conversations.</p>
+  </div>
+
+  <script>
+    let conversations = [];
+    let currentIndex = 0;
+
+    function loadJSON() {
+      const fileInput = document.getElementById('jsonFileInput');
+      if (!fileInput.files.length) {
+        alert("Please select a file.");
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const rawText = e.target.result.trim();
+
+        // Strategy: Try parsing as standard JSON Array first. If that fails, parse as JSON Lines (.jsonl)
+        try {
+          conversations = JSON.parse(rawText);
+          if (!Array.isArray(conversations)) {
+            conversations = [conversations]; // Wrap single object in array
+          }
+        } catch (err) {
+          try {
+            const lines = rawText.split('\n');
+            conversations = lines.map(line => JSON.parse(line.trim()));
+          } catch (jsonlErr) {
+            alert("Failed to parse file. Ensure it is valid JSON or JSONL.");
+            console.error(jsonlErr);
+            return;
+          }
+        }
+
+        if (conversations.length > 0) {
+          currentIndex = 0;
+          document.getElementById('navControls').style.display = 'flex';
+          displayConversation();
+        } else {
+          alert("The file is empty.");
+        }
+      };
+      reader.readAsText(fileInput.files[0]);
+    }
+
+    function displayConversation() {
+      const container = document.getElementById('conversationContainer');
+      const counter = document.getElementById('counterDisplay');
+
+      if (!conversations.length) return;
+
+      // Update Navigation State
+      counter.innerText = `${currentIndex + 1} / ${conversations.length}`;
+      document.getElementById('prevBtn').disabled = currentIndex === 0;
+      document.getElementById('nextBtn').disabled = currentIndex === conversations.length - 1;
+
+      const convo = conversations[currentIndex];
+
+      // Determine Title (Fallback to Document IDs if title is missing)
+      let titleText = convo.title || `Conversation: ${convo.parent_doc_A} & ${convo.parent_doc_B}`;
+      const title = `<h2>${titleText}</h2>`;
+
+      // Meta Information (Role, etc.)
+      const metaInfo = convo.role ? `<p><strong>Persona Role:</strong> <em>${convo.role}</em></p>` : '';
+
+      // Conversation Entries
+      let entries = '<p>No conversation turns found.</p>';
+      if (convo.conversation && convo.conversation.length > 0) {
+        entries = convo.conversation.map((entry, idx) => `
+          <div class="entry">
+            <h4>Turn ${entry.turn_index !== undefined ? entry.turn_index + 1 : idx + 1}</h4>
+            <p><strong>RAG Input (Simulated User):</strong> ${entry.rag_input}</p>
+            <p><strong>Stand-Alone Question:</strong> ${entry.question}</p>
+            <p><strong>Ground Truth Answer:</strong> ${entry.answer}</p>
+            <p><strong>RAG Answer:</strong> ${entry.rag_answer || "<em>(No answer recorded)</em>"}</p>
+            <div style="margin-top: 10px;">
+              <span class="badge">Type: ${entry.type || 'N/A'}</span>
+              <span class="badge">Logic: ${entry.logic_type || 'N/A'}</span>
+              <span class="badge">Multi-Hop: ${entry.multi_hop_flag === 1 ? 'Yes' : 'No'}</span>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      container.innerHTML = title + metaInfo + entries;
+    }
+
+    function nextConversation() {
+      if (currentIndex < conversations.length - 1) {
+        currentIndex++;
+        displayConversation();
+      }
+    }
+
+    function prevConversation() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        displayConversation();
+      }
+    }
+
+    function goToConversation() {
+      const inputVal = parseInt(document.getElementById('gotoIndex').value);
+      // Adjust for 1-based indexing entered by user
+      if (!isNaN(inputVal) && inputVal >= 1 && inputVal <= conversations.length) {
+        currentIndex = inputVal - 1;
+        displayConversation();
+      } else {
+        alert(`Please enter a valid number between 1 and ${conversations.length}.`);
+      }
+    }
+  </script>
+
+</body>
+</html>

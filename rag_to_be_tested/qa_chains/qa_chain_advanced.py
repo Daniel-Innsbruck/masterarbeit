@@ -6,6 +6,7 @@ import time
 from dotenv import load_dotenv
 from pymongo import MongoClient
 
+import re
 import chromadb
 from google import genai
 from langchain_core.messages import BaseMessage, HumanMessage, AIMessage
@@ -187,22 +188,29 @@ def agentic_rag(question: str, thread_id: str, max_hops: int = 5) -> dict:
 
         if not response:
             break
-
-        # Parse JSON response
+        #parse JSON
         try:
             response_text = response.content.strip()
-            # Handle markdown code blocks
-            if response_text.startswith("```"):
-                response_text = response_text.split("\n", 1)[1]
-                response_text = response_text.rsplit("```", 1)[0]
-            parsed = json.loads(response_text)
+
+            json_match = re.search(r'(\{.*\})', response_text, re.DOTALL)
+
+            if json_match:
+                json_str = json_match.group(1)
+            else:
+                json_str = response_text
+
+            parsed = json.loads(json_str)
+
         except json.JSONDecodeError:
-            print(f"[Hop {hop+1}] Failed to parse JSON, treating as final answer.")
-            # Update conversation history
+            print(f"[Hop {hop + 1}] Failed to parse JSON. Raw output:\n{response_text}")
+
+            fallback_match = re.search(r'"final_answer"\s*:\s*"([^"]+)"', response_text)
+            fallback_answer = fallback_match.group(1) if fallback_match else "Error: Agent produced invalid format."
+
             conversation_store[thread_id].append(HumanMessage(content=question))
-            conversation_store[thread_id].append(AIMessage(content=response.content))
+            conversation_store[thread_id].append(AIMessage(content=fallback_answer))
             return {
-                "answer": response.content,
+                "answer": fallback_answer,
                 "context": all_retrieved_contents
             }
 

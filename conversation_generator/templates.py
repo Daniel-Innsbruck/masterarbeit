@@ -4,43 +4,42 @@ Prompt templates for rag_to_be_tested evaluation
 
 CONVERSATION_PROMPTS = {
     'init_multihop_prompt': '''
-        You are an expert evaluator of conversational AI systems, specializing in assessing Retrieval-Augmented Generation (RAG) models dynamically. You will conduct a multi-turn dialogue with the RAG system by initiating and maintaining a conversation. 
-        Your goal is to create a complex Multi-Hop question for the first turn of a conversation.
+            Your task: Write the FIRST question to start a conversation with a RAG system. 
+            You must create a complex Multi-Hop question based on the provided bridging topics and contexts.
 
-        **Your Role:** {Role}
+            **Your Persona:** {Role}
+            **Bridging Topics:** {t_bridge}
 
-        TASK:
-        Given two context snippets from DIFFERENT source documents and a set of valid Bridging Topics, formulate a highly precise, incisive question that STRICTLY requires synthesizing information from BOTH snippets.
+            **Context A:** 
+            {chunk_a}
 
-        VALID BRIDGING TOPICS (T_bridge): {t_bridge}
+            **Context B:** 
+            {chunk_b}
 
-        CONTEXT A: 
-        {chunk_a}
+            ### RULES FOR THE QUESTION
+            1. **Strict Multi-Hop:** The question MUST require synthesizing facts from BOTH Context A and B. It must be impossible to answer using only one context.
+            2. **No Compound Questions:** Do NOT ask two separate questions joined by "and" (e.g., "What is X, and what is Y?"). Ask a single, cohesive question.
+            3. **Natural Persona:** Sound like a human naturally starting a chat based on your Persona. Avoid stiff, academic exam-style phrasing. NEVER mention "Context A" or "Context B".
+            4. **Scope:** The answer to your question must be entirely contained within the provided snippets.
+            5. **No Premise Leakage:** Do not explicitly summarize the facts from both Context A and Context B in your question. A true multi-hop question asks for the connection WITHOUT giving it away. 
+               - BAD: "Given that flour prices have tripled [Context B], how did the Iran attack [Context A] cause this?"
+               - GOOD: "What direct impact did the recent escalation with Iran have on the pricing of basic baking ingredients like flour?"
+                        
+            ### CONFIGURATION
+            - **Logic Type:** Choose the reasoning required: 'inference' (connecting premises), 'comparison' (comparing entities), or 'temporal' (timelines/sequences).
+            - **First Turn Rule:** Because this is the very first message, `rag_input` and `question` MUST be strictly identical.
 
-        CONTEXT B: 
-        {chunk_b}
-
-        CRITICAL CONSTRAINTS:
-        1. ADOPT PERSONA: Use language and style fitting your assigned character. Be direct and natural; excessive politeness or introductions are unnecessary unless dictated by your role.
-        2. STRICT MULTI-HOP: It must be IMPOSSIBLE to answer the question using only Context A or only Context B. The answer must require a logical synthesis of facts from both.
-        3. NO COMPOUND QUESTIONS: Do NOT simply ask two separate questions joined by 'and'. The question must be a single, cohesive inquiry built around ONE OR MORE topics from the 'T_bridge' list.
-        4. STRICT SCOPE: The question must be answerable EXACTLY and ENTIRELY within the boundaries of the provided snippets.
-        5. COMPREHENSIVE ANSWER: The ground-truth "answer" captures and summarizes the core synthesized facts from both contexts.
-        6. NATURAL FLOW: The question must sound natural (do not mention 'Context A' or 'Context B').
-        7. LOGIC TYPE: Autonomously determine the logical reasoning required to answer your question ('inference', 'comparison' or 'temporal').
-        8. Because this is the first turn, "rag_input" and "question" MUST be identical. "multi_hop_flag" MUST be 1, and "type" MUST be "Initial".
-
-        OUTPUT FORMAT (exact JSON):
-        {{
-            "rag_input": "The initial natural question sent to the RAG system, phrased exactly in your assigned Role",
-            "question": "Exactly the same as rag_input",
-            "answer": "The combined, comprehensive ground-truth answer",
-            "type": "Initial",
-            "logic_type": "The logical reasoning type you chose (inference, comparison, or temporal)",
-            "multi_hop_flag": 1,
-            "bridging_topic": "A single string summarizing the bridging topic(s) you actually used"
-        }}
-    ''',
+            ### OUTPUT FORMAT (Strict JSON)
+            {{
+                "rag_input": "Your initial, natural question matching your Persona.",
+                "question": "Exactly the same as rag_input.",
+                "answer": "The comprehensive ground-truth answer combining facts from both contexts.",
+                "type": "Initial",
+                "logic_type": "inference / comparison / temporal",
+                "multi_hop_flag": 1,
+                "bridging_topic": "A short summary of the specific bridging topic you used."
+            }}
+        ''',
 
     'rephrase_init_prompt': '''
         This was incorrect. Reason: {reason}

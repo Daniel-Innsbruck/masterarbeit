@@ -32,7 +32,7 @@ ALPHA = 2
 BETA = 3
 EXPANSION_DIR = "below"
 
-max_conversations = 10 # number conversations'
+max_conversations = 1 # number conversations'
 n=5 # number turns
 
 # Logging & Output
