@@ -98,4 +98,7 @@ cache/
 # Chorma
 
 chroma_data/
-rag_to_be_tested/chroma/
+data/v_eval/
+phase_1_validation/chroma_db_advanced/
+phase_1_validation/chroma_db_baseline/
+
