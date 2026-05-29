@@ -120,3 +120,55 @@ class ChromaConnector:
             'article_id': results['metadatas'][idx]['article_id'],
             'chunk_index': results['metadatas'][idx]['chunk_index']
         }
+
+    def get_adjacent_chunk(self, article_id, current_indices, total_chunks, direction="below"):
+        """
+        Retrieves the adjacent document chunk based on the preferred semantic direction.
+        Automatically reverses direction if a document boundary is reached.
+
+        Args:
+            article_id: The parent document identifier.
+            current_indices: A list of chunk indices currently in the active context.
+            total_chunks: The total number of chunks in the parent document.
+            direction: The preferred expansion direction ('above' or 'below').
+
+        Returns:
+            The adjacent chunk dictionary, or None if the document is fully loaded.
+        """
+        if len(current_indices) >= total_chunks:
+            return None
+
+        min_idx = min(current_indices)
+        max_idx = max(current_indices)
+
+        target_idx = None
+
+        if direction == "below":
+            if max_idx + 1 < total_chunks:
+                target_idx = max_idx + 1
+            elif min_idx - 1 >= 0:
+                target_idx = min_idx - 1
+        elif direction == "above":
+            if min_idx - 1 >= 0:
+                target_idx = min_idx - 1
+            elif max_idx + 1 < total_chunks:
+                target_idx = max_idx + 1
+
+        if target_idx is None:
+            return None
+
+        results = self.collection.get(
+            where={"$and": [{"article_id": article_id}, {"chunk_index": target_idx}]},
+            include=['metadatas', 'documents']
+        )
+
+        if not results['ids']:
+            return None
+
+        return {
+            'id': results['ids'][0],
+            'text_snippet': results['documents'][0],
+            'article_id': results['metadatas'][0]['article_id'],
+            'chunk_index': results['metadatas'][0]['chunk_index'],
+            'total_chunks': results['metadatas'][0].get('total_chunks', total_chunks)
+        }

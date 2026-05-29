@@ -29,14 +29,20 @@ class LLMResponseParser:
                 if 'question' in normalized and 'rag_input' not in normalized:
                     normalized['rag_input'] = normalized['question']
 
-                is_initial_turn = 'thematic_link' in normalized or 'logic_type' in normalized
+                is_initial_turn = 'bridging_topic' in normalized or str(normalized.get('type', '')).lower() == 'initial'
 
                 if is_initial_turn:
-                    required_fields = ['rag_input', 'question', 'answer', 'thematic_link', 'logic_type']
+                    required_fields = ['rag_input', 'question', 'answer', 'type', 'logic_type', 'multi_hop_flag',
+                                       'bridging_topic']
                 else:
-                    required_fields = ['rag_input', 'question', 'answer', 'type']
+                    required_fields = ['rag_input', 'question', 'answer', 'type', 'logic_type', 'multi_hop_flag']
 
                 if all(field in normalized for field in required_fields):
+                    # Safety cast for multi_hop_flag to ensure it is an integer (1 or 0)
+                    try:
+                        normalized['multi_hop_flag'] = int(normalized['multi_hop_flag'])
+                    except (ValueError, TypeError):
+                        normalized['multi_hop_flag'] = 0
                     return {field: normalized[field] for field in required_fields}
                 else:
                     missing = [field for field in required_fields if field not in normalized]
@@ -46,7 +52,6 @@ class LLMResponseParser:
             print("Parser Error: Generator LLM did not return valid JSON.")
 
         return None
-
 
     def parse_and_validate_validation(self, response: str) -> Optional[Dict]:
         """

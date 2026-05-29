@@ -83,18 +83,12 @@ def retrieve_full_document(query_text: str, n_results: int = 1) -> dict:
     3. Fetch full article from MongoDB
     """
     try:
-        print(f"[DEBUG] Collection count: {vector_collection.count()}")
-
         query_embedding = get_query_embedding(query_text)
-        print(f"[DEBUG] Embedding length: {len(query_embedding)}")
 
         results = vector_collection.query(
             query_embeddings=[query_embedding],
             n_results=n_results
         )
-
-        print(f"[DEBUG] Results IDs: {results['ids']}")
-        print(f"[DEBUG] Results distances: {results.get('distances')}")
 
         if not results["ids"] or not results["ids"][0]:
             return {"status": "no_results", "content": "No matching chunks found in vector store."}

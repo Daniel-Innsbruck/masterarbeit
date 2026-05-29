@@ -1,20 +1,20 @@
 """
 Parser for LLM responses in rag_to_be_tested evaluation
 """
-from typing import Dict, Optional
+from typing import Dict, Optional, Any
 
 class LLMResponseParser:
-   
-    
-    def parse_and_validate(self, response: str) -> Optional[Dict[str, str]]:
+
+
+    def parse_and_validate(self, response: str) -> Optional[Dict[str, Any]]:
         """
         Parse and validate response in one step
-        
+
         Args:
             response (str): Raw LLM response
-            
+
         Returns:
-            Optional[Dict[str, str]]: Parsed data if valid, None otherwise
+            Optional[Dict[str, Any]]: Parsed data if valid, None otherwise
         """
         try:
             import json, re
@@ -29,7 +29,7 @@ class LLMResponseParser:
                     key = k.lower().replace(" ", "_")
                     if isinstance(v, str):
                         normalized[key] = v.strip()
-                    elif isinstance(v, bool):
+                    elif isinstance(v, (bool, int)): # Erlaubt bool UND int (für multi_hop_flag)
                         normalized[key] = v
                     else:
                         normalized[key] = str(v)
@@ -37,15 +37,19 @@ class LLMResponseParser:
                 if 'question' in normalized and 'rag_input' not in normalized:
                     normalized['rag_input'] = normalized['question']
 
-                is_initial_turn = 'thematic_link' in normalized or 'logic_type' in normalized
+                is_initial_turn = 'bridging_topic' in normalized or 'thematic_link' in normalized or str(normalized.get('type', '')).lower() == 'initial'
 
                 if is_initial_turn:
-                    required_fields = ['rag_input', 'question', 'answer', 'thematic_link', 'logic_type']
+                    required_fields = ['rag_input', 'question', 'answer', 'type', 'logic_type', 'multi_hop_flag', 'bridging_topic']
                 else:
-                    required_fields = ['rag_input', 'question', 'answer', 'type']
+                    required_fields = ['rag_input', 'question', 'answer', 'type', 'logic_type', 'multi_hop_flag']
 
-                # Validation
                 if all(field in normalized for field in required_fields):
+                    try:
+                        normalized['multi_hop_flag'] = int(normalized['multi_hop_flag'])
+                    except (ValueError, TypeError):
+                        normalized['multi_hop_flag'] = 0
+
                     return {field: normalized[field] for field in required_fields}
                 else:
                     missing = [field for field in required_fields if field not in normalized]

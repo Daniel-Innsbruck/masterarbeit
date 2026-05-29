@@ -32,6 +32,7 @@ dependencies = [
     "langchain-chroma (>=1.1.0,<2.0.0)",
     "langchain-core (>=1.4.0,<2.0.0)",
     "fastapi (>=0.136.1,<0.137.0)",
+    "ragas (>=0.4.3,<0.5.0)",
 ]
 
 [tool.poetry]

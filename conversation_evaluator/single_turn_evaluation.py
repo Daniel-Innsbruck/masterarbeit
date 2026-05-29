@@ -31,27 +31,40 @@ paths = [
     "../data/conversation_data_gemini-2.0-flash_turns_5_conversations_100.jsonl"
 ]
 
+def calculate_safe_average(result_list, key):
+    valid_entries = [entry[key] for entry in result_list if entry[key] == entry[key] and entry[key] is not None]
+    if len(valid_entries) == 0:
+        return 0.0
+    return sum(valid_entries) / len(valid_entries)
+
+
 for path in paths:
     print(f"\nEvaluating: {path}")
     data = []
-    with open(path, 'r', encoding = 'utf-8') as f:
+    with open(path, 'r', encoding='utf-8') as f:
         for line in f:
             if line.strip():
                 data.append(json.loads(line))
 
-    list_singleturn_conversations = []
+    list_multihop_conversations = []
+    list_singlehop_conversations = []
+
+    # DEINE IDEE: Direkt beim Auslesen trennen
     for conversation in data:
         for turn in conversation['conversation']:
             retrieved_contexts = turn.get('context', [])
-            list_singleturn_conversations.append(
-                SingleTurnSample(
-                    user_input=turn['question'],
-                    reference=turn['answer'],  # Ground-Truth for Context Recall
-                    response=turn['rag_answer'],
-                    retrieved_contexts=retrieved_contexts,
-                )
+            sample = SingleTurnSample(
+                user_input=turn['question'],
+                reference=turn['answer'],  # Ground-Truth for Context Recall
+                response=turn['rag_answer'],
+                retrieved_contexts=retrieved_contexts,
             )
-        
+
+            if turn.get('multi_hop_flag', 0) == 1:
+                list_multihop_conversations.append(sample)
+            else:
+                list_singlehop_conversations.append(sample)
+
     definition_correctness = "Return 1 if the AI answers the question correct; otherwise, return 0."
     correctness_aspect_critic = AspectCritic(
         name="correctness_aspect_critic",
@@ -59,46 +72,78 @@ for path in paths:
         llm=evaluator_llm,
     )
 
-    result = evaluate(
-        dataset=EvaluationDataset(samples=list_singleturn_conversations),
-        metrics=[correctness_aspect_critic,faithfulness, context_precision, context_recall],
-        llm=evaluator_llm,
-    )
-    result_json = []
-    results = result.to_pandas()
-    for _, row in results.iterrows():
-        user_input = row["user_input"]      
-        correctness_aspect_critic = row["correctness_aspect_critic"]
-        faithfulness_critic = row["faithfulness"]
-        context_precision_critic = row["context_precision"]
-        context_recall_critic = row["context_recall"]
+    metrics_to_use = [correctness_aspect_critic, faithfulness, context_precision, context_recall]
 
-    
-        
-        result_json.append({
-            "content": user_input,
-            "correctness_aspect_critic": correctness_aspect_critic,
-            "faithfulness_aspect_critic": faithfulness_critic,
-            "context_precision_critic": context_precision_critic,
-            "context_recall_critic": context_recall_critic
-        })
-    avg_correctness = sum([entry["correctness_aspect_critic"] for entry in result_json]) / len(result_json)
-    avg_faithfulness = sum([entry["faithfulness_aspect_critic"] for entry in result_json]) / len(result_json)
-    avg_context_precision = sum([entry["context_precision_critic"] for entry in result_json]) / len(result_json)
-    avg_context_recall = sum([entry["context_recall_critic"] for entry in result_json]) / len(result_json)
-    final_output = {
-        "file_path": path,
-        "average_scores": {
+
+    # Brehmes Original-Logik, in eine Funktion gekapselt, um sie für beide Listen nutzen zu können
+    def run_evaluation_core(samples_list):
+        if not samples_list:
+            return [], {}
+
+        result = evaluate(
+            dataset=EvaluationDataset(samples=samples_list),
+            metrics=metrics_to_use,
+            llm=evaluator_llm,
+        )
+
+        result_json = []
+        results = result.to_pandas()
+
+        for _, row in results.iterrows():
+            user_input = row["user_input"]
+            correctness_val = row["correctness_aspect_critic"]
+            faithfulness_val = row["faithfulness"]
+            context_precision_val = row["context_precision"]
+            context_recall_val = row["context_recall"]
+
+            result_json.append({
+                "content": user_input,
+                "correctness_aspect_critic": correctness_val,
+                "faithfulness_aspect_critic": faithfulness_val,
+                "context_precision_critic": context_precision_val,
+                "context_recall_critic": context_recall_val
+            })
+
+        avg_correctness = calculate_safe_average(result_json, "correctness_aspect_critic")
+        avg_faithfulness = calculate_safe_average(result_json, "faithfulness_aspect_critic")
+        avg_context_precision = calculate_safe_average(result_json, "context_precision_critic")
+        avg_context_recall = calculate_safe_average(result_json, "context_recall_critic")
+
+        average_scores = {
             "correctness_aspect_critic": avg_correctness,
             "faithfulness_aspect_critic": avg_faithfulness,
             "context_precision_critic": avg_context_precision,
             "context_recall_critic": avg_context_recall
+        }
+
+        return result_json, average_scores
+
+
+    print(f"--- Running MULTI-HOP Evaluation ({len(list_multihop_conversations)} samples) ---")
+    multi_results, multi_averages = run_evaluation_core(list_multihop_conversations)
+
+    print(f"--- Running SINGLE-HOP Evaluation ({len(list_singlehop_conversations)} samples) ---")
+    single_results, single_averages = run_evaluation_core(list_singlehop_conversations)
+
+    final_output = {
+        "file_path": path,
+        "multi_hop_evaluation": {
+            "average_scores": multi_averages,
+            "detailed_results": multi_results
         },
-        "detailed_results": result_json
+        "single_hop_evaluation": {
+            "average_scores": single_averages,
+            "detailed_results": single_results
+        }
     }
-    print(f"--- RESULTS ---")
-    print(
-        f"Correctness: {avg_correctness:.2f} | Faithfulness: {avg_faithfulness:.2f} | Precision: {avg_context_precision:.2f} | Recall: {avg_context_recall:.2f}")
+
+    print(f"\n--- RESULTS ---")
+    if multi_averages:
+        print(
+            f"[MULTI-HOP]  Correctness: {multi_averages['correctness_aspect_critic']:.2f} | Faithfulness: {multi_averages['faithfulness_aspect_critic']:.2f} | Precision: {multi_averages['context_precision_critic']:.2f} | Recall: {multi_averages['context_recall_critic']:.2f}")
+    if single_averages:
+        print(
+            f"[SINGLE-HOP] Correctness: {single_averages['correctness_aspect_critic']:.2f} | Faithfulness: {single_averages['faithfulness_aspect_critic']:.2f} | Precision: {single_averages['context_precision_critic']:.2f} | Recall: {single_averages['context_recall_critic']:.2f}")
 
     final_path = path.replace(".jsonl", "_evaluation.json").replace("conversation_data",
                                                                     "single_turn_evaluation_results")
