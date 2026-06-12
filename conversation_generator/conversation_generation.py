@@ -1,13 +1,17 @@
 import requests
 import sys
 import os
+
+# Füge das übergeordnete Verzeichnis zum Python-Pfad hinzu
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import random
 import gc
 import time
 import json
 
-# Füge das übergeordnete Verzeichnis zum Python-Pfad hinzu
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from dialogue_cache.dialogue_cache import DialogueCache
+
 
 import Models.gemini as gemini
 import Models.chat_gpt as chat_gpt
@@ -31,12 +35,17 @@ parser = parser.LLMResponseParser()
 ALPHA = 2
 BETA = 3
 EXPANSION_DIR = "below"
+CACHE_TAU = 0.95
+CACHE_SAFEGUARD = True
+CACHE_PATH = "./data/dialogue_cache.json"
 
-max_conversations = 1 # number conversations'
-n=5 # number turns
+MAX_RETRIES = 10  # Max retries per turn (independent of n)
+n = 5             # Target number of turns per conversation
+
+max_conversations = 20 # number conversations'
 
 # Logging & Output
-output_file = "./data/conversation_data_" + model_name + "_turns_" + str(n) + "_conversation_" +str(max)+ ".jsonl"
+output_file = "./data/conversifation_data_" + model_name + "_turns_" + str(n) + "_conversation_" +str(max)+ ".jsonl"
 log_file = "./data/conversation_data_" + model_name + "_turns_" + str(n) + "_conversation_" +str(max)+ ".log"
 
 Role = "You are a highly attentive conversationalist who asks context-aware questions. Your questions should build naturally on previous exchanges, using referring expressions like 'this', 'that', or 'it' to maintain coherence and continuity."
@@ -78,37 +87,43 @@ def _build_context_string(chunk_list):
 # Turn 0: Multi-Hop Generation (Cross-Document)
 # =========================================================
 
-def get_initial_multihop_prompt_data(chunk_a, chunk_b, t_bridge):
-    prompt = templates.CONVERSATION_PROMPTS['init_multihop_prompt'].format(
-        Role=Role,
-        t_bridge=t_bridge,
-        chunk_a=chunk_a['text_snippet'],
-        chunk_b=chunk_b['text_snippet']
-    )
+def get_initial_multihop_prompt_data(chunk_a, chunk_b, t_bridge, max_retries=MAX_RETRIES):
+    combined_docs = _build_context_string([chunk_a]) + "\n\n" + _build_context_string([chunk_b])
 
-    answer = send_request_to_LLM_conversation(prompt)
+    answer = send_request_to_LLM_conversation(templates.CONVERSATION_PROMPTS['init_multihop_prompt'].format(
+        Role=Role, t_bridge=t_bridge,
+        chunk_a=_build_context_string([chunk_a]),
+        chunk_b=_build_context_string([chunk_b])
+    ))
 
-    combined_docs = f"Snippet A: {chunk_a['text_snippet']}\n\nSnippet B: {chunk_b['text_snippet']}"
+    for attempt in range(max_retries):
+        validation = conversation_validator.validate_init_prompt_all_in_one(answer, combined_docs)
+        if validation and validation['correct']:
+            return answer  # ✅ passed
 
-    validation = conversation_validator.validate_init_prompt_all_in_one(answer, combined_docs)
-    if validation and not validation['correct']:
-        print(f"Initial prompt validation failed: {validation['reason']}")
+        reason = validation['reason'] if validation else "Unknown validation error"
+        print(f"  Initial prompt validation failed (attempt {attempt + 1}/{max_retries}): {reason}")
         with open(log_file, 'a', encoding='utf-8') as f:
-            f.write(f"Validation failed for initial multi-hop.\nAnswer: {answer}\nReason: {validation['reason']}\n\n")
+            f.write(f"Validation failed for initial multi-hop (attempt {attempt + 1}).\nAnswer: {answer}\nReason: {reason}\n\n")
 
         answer = send_request_to_LLM_conversation(templates.CONVERSATION_PROMPTS['rephrase_init_prompt'].format(
-            Role=Role,
-            reason=validation['reason']
+            Role=Role, reason=reason
         ))
 
-    return answer
+    # Final check after last rephrase
+    validation = conversation_validator.validate_init_prompt_all_in_one(answer, combined_docs)
+    if validation and validation['correct']:
+        return answer
+
+    print(f"  Initial prompt failed after {max_retries} retries. Giving up.")
+    return None
 
 
 # =========================================================
 # Turn 1-n: Follow-up Generation
 # =========================================================
 
-def get_follow_up_question(answer, active_chunks):
+def get_follow_up_question(answer, active_chunks, max_retries=MAX_RETRIES):
     follow_up_prompt = templates.CONVERSATION_PROMPTS['follow_up_prompt'].format(
         Role=Role,
         context_a=_build_context_string(active_chunks['A']),
@@ -119,19 +134,27 @@ def get_follow_up_question(answer, active_chunks):
     history = model.get_chat_history()
     response = send_request_to_LLM_conversation(follow_up_prompt)
 
-    validation = conversation_validator.validate_follow_up_question_all_in_one(response, history)
+    for attempt in range(max_retries):
+        validation = conversation_validator.validate_follow_up_question_all_in_one(response, history)
+        if validation and validation['correct']:
+            return response  # ✅ passed
 
-    if validation and not validation['correct']:
-        print(f"Follow-up validation failed: {validation['reason']}")
+        reason = validation['reason'] if validation else "Unknown validation error"
+        print(f"  Follow-up validation failed (attempt {attempt + 1}/{max_retries}): {reason}")
         with open(log_file, 'a', encoding='utf-8') as f:
-            f.write(f"Follow-up Validation failed.\nAnswer: {response}\nReason: {validation['reason']}\n\n")
+            f.write(f"Follow-up validation failed (attempt {attempt + 1}).\nAnswer: {response}\nReason: {reason}\n\n")
 
         response = send_request_to_LLM_conversation(templates.CONVERSATION_PROMPTS['rephrase_follow_up_prompt'].format(
-            Role=Role,
-            reason=validation['reason']
+            Role=Role, reason=reason
         ))
 
-    return response
+    # Final check
+    validation = conversation_validator.validate_follow_up_question_all_in_one(response, history)
+    if validation and validation['correct']:
+        return response
+
+    print(f"  Follow-up failed after {max_retries} retries. Giving up on this turn.")
+    return None
 
 
 # =========================================================
@@ -139,8 +162,17 @@ def get_follow_up_question(answer, active_chunks):
 # =========================================================
 
 def generate_conversation():
-    db_connector = ChromaConnector('../data/v_eval/')
-    cd = ContextDiscoverer(db_connector=db_connector, llm_model=model, k=4)
+    db_connector = ChromaConnector('./data/v_eval/')
+    cd = ContextDiscoverer(db_connector=db_connector, llm_model=model, k=4, allowed_articles_path='./data/allowed_article_ids.json')
+
+    # Initialize cache
+    cache = DialogueCache(
+        embedding_fn=db_connector.get_gemini_embedding,
+        tau=CACHE_TAU,
+        safeguard=CACHE_SAFEGUARD,
+        persist_path=CACHE_PATH
+    )
+
     counter = 0
     failed_counter = 0
 
@@ -154,37 +186,71 @@ def generate_conversation():
             return
 
         print(f"\n--- Conversation {counter + 1}/{max_conversations} ---")
-        print("Searching for context bridge (Cross-Document) via Context Discoverer...")
 
+        # =============================================
+        # CACHE: Check for existing root
+        # =============================================
+        cached_root = None
+        chunk_a = None
+        chunk_b = None
+        t_bridge = None
+        question = None
+
+        # Try to reuse an existing root (optional: iterate over cached roots)
+        # For now: discover fresh context, then check cache
+        print("Searching for context bridge via Context Discoverer...")
         discovered_context = cd.discover_valid_context()
 
         if not discovered_context:
-            print("DB empty or no semantic bridges could be found. Aborting.")
+            print("No semantic bridges found. Aborting.")
             break
 
         chunk_a = discovered_context['chunk_a']
         chunk_b = discovered_context['chunk_b']
         t_bridge = discovered_context['t_bridge']
 
-        active_chunks = {"A": [chunk_a], "B": [chunk_b]}
-        print(
-            f"Validated Context Bridge found! Topics: {t_bridge}\n"
-            f" A -> Article: {chunk_a['article_id']} [Index {chunk_a['chunk_index']}/{chunk_a.get('total_chunks', '?')}]\n"
-            f" B -> Article: {chunk_b['article_id']} [Index {chunk_b['chunk_index']}/{chunk_b.get('total_chunks', '?')}]"
-        )
+        # Check if this doc pair has a cached root
+        cached_root = cache.find_root(chunk_a['article_id'], chunk_b['article_id'])
 
-        question = get_initial_multihop_prompt_data(chunk_a, chunk_b, t_bridge)
+        if cached_root:
+            print(f"CACHE HIT: Root found for ({chunk_a['article_id']}, {chunk_b['article_id']})")
+            # Reuse cached initial bundle and source set
+            chunk_a = cached_root.source_set['chunk_a']
+            chunk_b = cached_root.source_set['chunk_b']
+            t_bridge = cached_root.source_set['t_bridge']
+            question = cached_root.initial_bundle
+        else:
+            print("No cached root. Generating initial multi-hop question...")
+            question = get_initial_multihop_prompt_data(chunk_a, chunk_b, t_bridge)
+
+            if question:
+                # Register new root
+                source_set = {
+                    'chunk_a': chunk_a,
+                    'chunk_b': chunk_b,
+                    't_bridge': t_bridge
+                }
+                cached_root = cache.register_root(
+                    chunk_a['article_id'], chunk_b['article_id'],
+                    source_set, question
+                )
+
+        active_chunks = {"A": [chunk_a], "B": [chunk_b]}
         failed = question is None
 
-        if not failed:
-            for turn_idx in range(n):
-                if failed:
-                    print(f"Aborting conversation at turn {turn_idx + 1}.")
-                    break
+        # Track current position in cache tree
+        current_children = cached_root.children if cached_root else []
+        # Track if entire path so far was exact matches (for the exact-match exemption)
+        all_exact_so_far = True
 
+        if not failed:
+            turn_idx = 0
+            turn_retries = 0
+
+            while turn_idx < n and turn_retries < MAX_RETRIES:
                 current_indices_a = [c['chunk_index'] for c in active_chunks["A"]]
                 current_indices_b = [c['chunk_index'] for c in active_chunks["B"]]
-                print(f"Turn {turn_idx + 1} | Active Chunks: A{current_indices_a}, B{current_indices_b}")
+                print(f"Turn {turn_idx + 1}/{n} | Active Chunks: A{current_indices_a}, B{current_indices_b}")
 
                 try:
                     res = requests.post(API_URL, json={"question": question['rag_input'], "thread_id": thread_id})
@@ -202,41 +268,92 @@ def generate_conversation():
                         "rag_answer": answer,
                         "context": context,
                         "turn_index": turn_idx,
-                        "ground_truth_chunks": [c['id'] for c in active_chunks["A"]] + [c['id'] for c in
-                                                                                        active_chunks["B"]]
+                        "ground_truth_chunks": [c['id'] for c in active_chunks["A"]] + [c['id'] for c in active_chunks["B"]]
                     })
                 except Exception as e:
                     print(f"Error during RAG request: {e}")
                     failed = True
                     break
 
-                if turn_idx < n - 1:
-                    next_turn = turn_idx + 2
+                turn_idx += 1
 
-                    if next_turn == ALPHA:
-                        adj_chunk = db_connector.get_adjacent_chunk(
-                            article_id=active_chunks["A"][0]['article_id'],
-                            current_indices=current_indices_a,
-                            total_chunks=active_chunks["A"][0].get('total_chunks', 1),
-                            direction=EXPANSION_DIR
-                        )
-                        if adj_chunk:
-                            active_chunks["A"].append(adj_chunk)
-                            print(f" -> [Context Expansion] Expanded A with index {adj_chunk['chunk_index']}")
+                # Last turn reached: done
+                if turn_idx >= n:
+                    break
 
-                    if next_turn == BETA:
-                        adj_chunk = db_connector.get_adjacent_chunk(
-                            article_id=active_chunks["B"][0]['article_id'],
-                            current_indices=current_indices_b,
-                            total_chunks=active_chunks["B"][0].get('total_chunks', 1),
-                            direction=EXPANSION_DIR
-                        )
-                        if adj_chunk:
-                            active_chunks["B"].append(adj_chunk)
-                            print(f" -> [Context Expansion] Expanded B with index {adj_chunk['chunk_index']}")
+                # =============================================
+                # Context Expansion
+                # =============================================
+                next_turn = turn_idx + 1
 
+                if next_turn == ALPHA:
+                    adj_chunk = db_connector.get_adjacent_chunk(
+                        article_id=active_chunks["A"][0]['article_id'],
+                        current_indices=current_indices_a,
+                        total_chunks=active_chunks["A"][0].get('total_chunks', 1),
+                        direction=EXPANSION_DIR
+                    )
+                    if adj_chunk:
+                        active_chunks["A"].append(adj_chunk)
+                        print(f" -> [Context Expansion] Expanded A with index {adj_chunk['chunk_index']}")
+
+                if next_turn == BETA:
+                    adj_chunk = db_connector.get_adjacent_chunk(
+                        article_id=active_chunks["B"][0]['article_id'],
+                        current_indices=current_indices_b,
+                        total_chunks=active_chunks["B"][0].get('total_chunks', 1),
+                        direction=EXPANSION_DIR
+                    )
+                    if adj_chunk:
+                        active_chunks["B"].append(adj_chunk)
+                        print(f" -> [Context Expansion] Expanded B with index {adj_chunk['chunk_index']}")
+
+                # =============================================
+                # CACHE: Try to reuse follow-up bundle
+                # =============================================
+                def _validator_fn(bundle, history):
+                    return conversation_validator.validate_follow_up_question_all_in_one(bundle, history)
+
+                cache_result = cache.process_turn(
+                    children=current_children,
+                    response_text=answer,
+                    conversation_history=model.get_chat_history(),
+                    validator_fn=_validator_fn
+                )
+
+                if cache_result['hit']:
+                    question = cache_result['bundle']
+                    current_children = cache_result['node'].children
+                    if not cache_result['similarity'] == 1.0:
+                        all_exact_so_far = False
+                    print(f" -> [CACHE HIT] sim={cache_result['similarity']:.4f} | reusing cached bundle")
+                else:
+                    # Full CG + CV cycle (with internal retries)
                     question = get_follow_up_question(answer, active_chunks)
-                    failed = question is None
+                    all_exact_so_far = False
+
+                    if question is not None:
+                        new_node = cache.insert_child(
+                            children=current_children,
+                            response_text=answer,
+                            response_embedding=cache_result['embedding'],
+                            next_bundle=question
+                        )
+                        current_children = new_node.children
+                        print(f" -> [CACHE MISS] New branch inserted")
+                    else:
+                        # Turn generation failed after MAX_RETRIES inside get_follow_up_question
+                        # Remove the last appended turn and retry from this position
+                        print(f"  ⚠ Turn {turn_idx + 1} failed. Retrying...")
+                        conv.pop()  # Remove the turn whose follow-up we couldn't generate
+                        turn_idx -= 1
+                        turn_retries += 1
+                        continue
+
+            # Check if we got enough turns
+            if len(conv) < n:
+                print(f"  ⚠ Only generated {len(conv)}/{n} turns after {turn_retries} retries. Marking as failed.")
+                failed = True
 
             model.reset_chat()
 
@@ -250,28 +367,21 @@ def generate_conversation():
             with open(output_file, 'a', encoding='utf-8') as f:
                 f.write(json.dumps(data_item, ensure_ascii=False) + "\n")
 
-            print("\n" + "=" * 60)
-            print(f"SUCCESS! CONVERSATION GENERATED:")
-            print(f"Doc A: {chunk_a['article_id']}")
-            print(f"Doc B: {chunk_b['article_id']}")
-            print("-" * 60)
+            # Save cache after each successful conversation
+            cache.save()
 
-            for turn in conv:
-                print(
-                    f"TURN {turn['turn_index'] + 1} | Type: {turn['type']} | Logic: {turn['logic_type']} | Multi-Hop: {turn['multi_hop_flag']}")
-                print(f"Simulated User : {turn['rag_input']}")
-                print(f"Target RAG     : {turn['rag_answer']}")
-                print("-" * 60)
-            print("=" * 60 + "\n")
+            print(f"\nSUCCESS! Cache stats: {cache.stats()}")
             counter += 1
             failed_counter = 0
         else:
             failed_counter += 1
-            print(f"Failed conversations in a row: {failed_counter}")
 
         if failed_counter >= 3:
-            print(f"Stopping evaluation after {failed_counter} consecutive failures.")
+            print(f"Stopping after {failed_counter} consecutive failures.")
             break
+
+    # Final cache save
+    cache.save()
 
 if __name__ == "__main__":
     generate_conversation()

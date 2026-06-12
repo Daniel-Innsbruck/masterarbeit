@@ -25,6 +25,11 @@ CONVERSATION_PROMPTS = {
                - BAD: "Given that flour prices have tripled [Context B], how did the Iran attack [Context A] cause this?"
                - GOOD: "What direct impact did the recent escalation with Iran have on the pricing of basic baking ingredients like flour?"
                         
+            ### PRECISION RULES
+            
+            - **No Vague Temporal Language:** NEVER use "recently", "lately", "not long ago", etc. Use **specific dates, months, or years** from the contexts (e.g., "in March 2024", "after the 14 April strike").
+            - **Specific Answers:** The ground-truth answer must contain concrete facts (dates, numbers, names) that narrow down the possible reference ground truths to precisely the references sources that are given to you to formulate the question.
+            
             ### CONFIGURATION
             - **Logic Type:** Choose the reasoning required: 'inference' (connecting premises), 'comparison' (comparing entities), or 'temporal' (timelines/sequences).
             - **First Turn Rule:** Because this is the very first message, `rag_input` and `question` MUST be strictly identical.
