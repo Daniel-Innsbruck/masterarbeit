@@ -42,7 +42,7 @@ CACHE_PATH = "./data/dialogue_cache.json"
 MAX_RETRIES = 10  # Max retries per turn (independent of n)
 n = 5             # Target number of turns per conversation
 
-max_conversations = 20 # number conversations'
+max_conversations = 1 # number conversations'
 
 # Logging & Output
 output_file = "./data/conversifation_data_" + model_name + "_turns_" + str(n) + "_conversation_" +str(max)+ ".jsonl"
@@ -99,7 +99,7 @@ def get_initial_multihop_prompt_data(chunk_a, chunk_b, t_bridge, max_retries=MAX
     for attempt in range(max_retries):
         validation = conversation_validator.validate_init_prompt_all_in_one(answer, combined_docs)
         if validation and validation['correct']:
-            return answer  # ✅ passed
+            return answer
 
         reason = validation['reason'] if validation else "Unknown validation error"
         print(f"  Initial prompt validation failed (attempt {attempt + 1}/{max_retries}): {reason}")
@@ -137,7 +137,7 @@ def get_follow_up_question(answer, active_chunks, max_retries=MAX_RETRIES):
     for attempt in range(max_retries):
         validation = conversation_validator.validate_follow_up_question_all_in_one(response, history)
         if validation and validation['correct']:
-            return response  # ✅ passed
+            return response
 
         reason = validation['reason'] if validation else "Unknown validation error"
         print(f"  Follow-up validation failed (attempt {attempt + 1}/{max_retries}): {reason}")
@@ -148,7 +148,6 @@ def get_follow_up_question(answer, active_chunks, max_retries=MAX_RETRIES):
             Role=Role, reason=reason
         ))
 
-    # Final check
     validation = conversation_validator.validate_follow_up_question_all_in_one(response, history)
     if validation and validation['correct']:
         return response
@@ -162,8 +161,8 @@ def get_follow_up_question(answer, active_chunks, max_retries=MAX_RETRIES):
 # =========================================================
 
 def generate_conversation():
-    db_connector = ChromaConnector('./data/v_eval/')
-    cd = ContextDiscoverer(db_connector=db_connector, llm_model=model, k=4, allowed_articles_path='./data/allowed_article_ids.json')
+    db_connector = ChromaConnector('./data/v_eval_filtered/')
+    cd = ContextDiscoverer(db_connector=db_connector, llm_model=model, k=4)
 
     # Initialize cache
     cache = DialogueCache(

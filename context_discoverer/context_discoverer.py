@@ -21,15 +21,6 @@ class ContextDiscoverer:
         self.db = db_connector
         self.llm = llm_model
         self.k = k
-        self.allowed_articles = None
-        if allowed_articles_path:
-            with open(allowed_articles_path, 'r') as f:
-                self.allowed_articles = set(json.load(f))
-
-    def _is_allowed(self, article_id):
-        if self.allowed_articles is None:
-            return True
-        return article_id in self.allowed_articles
 
     def discover_valid_context(self, max_start_retries=20):
         """
@@ -46,9 +37,6 @@ class ContextDiscoverer:
             if not raw_chunk_a:
                 return None
 
-            if not self._is_allowed(raw_chunk_a['article_id']):
-                continue
-
             db_result = self.db.collection.get(ids=[raw_chunk_a['id']])
 
             if not db_result['metadatas'] or not db_result['metadatas'][0]:
@@ -59,7 +47,7 @@ class ContextDiscoverer:
 
             if 'chunk_index' not in meta or 'total_chunks' not in meta:
                 print(
-                    f"[CD] Warning: 'chunk_index' or 'total_chunks' missing from article {meta.get('article_id', 'Unknown')}. Discrading chunk.")
+                    f"[CD] Warning: 'chunk_index' or 'total_chunks' missing from article {meta.get('article_id', 'Unknown')}. Discarding chunk.")
                 continue
 
             chunk_a = {
@@ -78,8 +66,6 @@ class ContextDiscoverer:
                 continue
 
             for chunk_b in neighbors:
-                if not self._is_allowed(chunk_b['article_id']):
-                    continue
                 validation_result = self._validate_with_llm(chunk_a, chunk_b)
 
                 if validation_result and validation_result.get('score') == 1:
