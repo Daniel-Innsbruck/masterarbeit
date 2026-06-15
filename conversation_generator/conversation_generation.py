@@ -45,7 +45,7 @@ n = 5             # Target number of turns per conversation
 max_conversations = 1 # number conversations'
 
 # Logging & Output
-output_file = "./data/conversifation_data_" + model_name + "_turns_" + str(n) + "_conversation_" +str(max)+ ".jsonl"
+output_file = "./data/conversation_data_" + model_name + "_turns_" + str(n) + "_conversation_" +str(max)+ ".jsonl"
 log_file = "./data/conversation_data_" + model_name + "_turns_" + str(n) + "_conversation_" +str(max)+ ".log"
 
 Role = "You are a highly attentive conversationalist who asks context-aware questions. Your questions should build naturally on previous exchanges, using referring expressions like 'this', 'that', or 'it' to maintain coherence and continuity."

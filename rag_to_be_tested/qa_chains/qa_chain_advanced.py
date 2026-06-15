@@ -28,7 +28,7 @@ llm = ChatGoogleGenerativeAI(
 
 
 # Raw ChromaDB client
-chroma_client = chromadb.PersistentClient(path="../phase_1_validation/chroma_db_advanced")
+chroma_client = chromadb.PersistentClient(path="../phase_1_validation/chroma_db_advanced_filtered")
 vector_collection = chroma_client.get_or_create_collection(name="target_advanced")
 
 # Google GenAI client for query embeddings

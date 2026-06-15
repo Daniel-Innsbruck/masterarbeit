@@ -172,3 +172,21 @@ class ChromaConnector:
             'chunk_index': results['metadatas'][0]['chunk_index'],
             'total_chunks': results['metadatas'][0].get('total_chunks', total_chunks)
         }
+
+    def get_chunk_by_id(self, article_id, chunk_index):
+        """Retrieve a specific chunk by article_id and chunk_index."""
+        results = self.collection.get(
+            where={"$and": [{"article_id": article_id}, {"chunk_index": chunk_index}]},
+            include=['metadatas', 'documents']
+        )
+
+        if not results['ids']:
+            return None
+
+        return {
+            'id': results['ids'][0],
+            'text_snippet': results['documents'][0],
+            'article_id': results['metadatas'][0]['article_id'],
+            'chunk_index': results['metadatas'][0]['chunk_index'],
+            'total_chunks': results['metadatas'][0].get('total_chunks', 1)
+        }
