@@ -12,14 +12,13 @@ from langchain_openai import ChatOpenAI
 
 load_dotenv(find_dotenv(), override=True)
 
-# 1. We use GPT-5-mini as the Judge to avoid Self-Enhancement Bias!
 evaluator_llm = LangchainLLMWrapper(ChatOpenAI(
-    model="gpt-5-mini"
+    model="gpt-4o-mini"
 ))
 
 # INSERT THE PATH TO YOUR GENERATED .jsonl FILE HERE
 paths = [
-    "../data/conversation_data_gemini-2.0-flash_turns_5_conversations_100.jsonl"
+    "../data/2906_conversation_data_gemini-3.1-flash-lite_turns_5_conversations_1.jsonl"
 ]
 
 for path in paths:
@@ -79,7 +78,7 @@ for path in paths:
         forgetfulness_critic = row.get("forgetfulness_aspect_critic", 0)
         context_critic = row.get("context_retention_aspect_critic", 0)
 
-        conversation_text = "\n".join([f"{msg.type}: {msg.content}" for msg in user_input_messages])
+        conversation_text = "\n".join([f"{msg['type']}: {msg['content']}" for msg in user_input_messages])
 
         result_json.append({
             "conversation_log": conversation_text,

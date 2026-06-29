@@ -4,15 +4,21 @@ import streamlit as st
 import json
 import glob
 import os
+from utils.chroma_connector import ChromaConnector
 
 st.set_page_config(page_title="Dialogue Viewer", layout="wide")
 st.title("🔍 RAG-DIVE Dialogue Viewer")
+
+db_connector = ChromaConnector('./data/v_eval_filtered/')
+
+def get_chunk_text_from_id(chunk_id):
+    return db_connector.get_chunk_by_id(chunk_id)
+
 
 # =========================================================
 # Load JSONL files
 # =========================================================
 data_dir = st.sidebar.text_input("Data directory (absolute or relative)", value="./data")
-
 if not os.path.isdir(data_dir):
     st.sidebar.error(f"Directory not found: `{data_dir}`")
     st.stop()
@@ -70,11 +76,17 @@ conv = conversations[conv_idx]
 # =========================================================
 # Header
 # =========================================================
+
+st.subheader("📚 Source Documents")
+
 col1, col2 = st.columns(2)
 with col1:
-    st.metric("Doc A", conv.get("parent_doc_A", "?"))
+    st.markdown("**Article A**")
+    st.info(conv.get("parent_doc_A", "?"))
+
 with col2:
-    st.metric("Doc B", conv.get("parent_doc_B", "?"))
+    st.markdown("**Article B**")
+    st.info(conv.get("parent_doc_B", "?"))
 
 role_text = conv.get("role", "")
 if role_text:
@@ -117,11 +129,26 @@ for turn in conv.get("conversation", []):
 
     ctx = turn.get("context", "")
     chunks = turn.get("ground_truth_chunks", [])
+
     with st.expander(f"📄 Retrieved Context & Ground Truth Chunks ({len(chunks)} chunks)"):
+        # 1. Ground Truth Section (Live Fetch)
         if chunks:
-            st.markdown(f"**GT Chunk IDs:** `{chunks}`")
+            st.markdown("### 🎯 Ground Truth Source Chunks")
+            for chunk_id in chunks:
+                with st.expander(f"View content for: `{chunk_id}`"):
+                    chunk_text = db_connector.get_chunk_by_id_for_streamlit(chunk_id)
+                    st.text(chunk_text)
+            st.divider()
+
+        # 2. Retrieved Context Section
+        st.markdown("### 🤖 Retrieved Context (by Target System)")
         if ctx:
-            ctx_str = ctx if isinstance(ctx, str) else json.dumps(ctx, indent=2, ensure_ascii=False)
-            st.code(ctx_str[:3000] + ("..." if len(ctx_str) > 3000 else ""), language=None)
+            if isinstance(ctx, list):
+                # Wenn es eine Liste ist, zeige die einzelnen Dokumente sauber an
+                for idx, doc in enumerate(ctx):
+                    with st.expander(f"Retrieved Document {idx + 1}"):
+                        st.markdown(doc)
+            else:
+                st.code(str(ctx), language=None)
         else:
             st.caption("No context recorded.")

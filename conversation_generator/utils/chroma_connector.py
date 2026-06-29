@@ -77,10 +77,8 @@ class ChromaConnector:
     def get_bridging_chunk(self, query_text, exclude_article_id, top_k=5):
         """Steps 2 & 3: Filtered Semantic Search & Randomised Selection (d_B)"""
 
-        # 3. Wir übersetzen den Text manuell in den 3072-Vektor!
         query_vector = self.get_gemini_embedding(query_text)
 
-        # 4. Wir suchen mit query_embeddings anstatt query_texts!
         results = self.collection.query(
             query_embeddings=[query_vector],
             n_results=top_k,
@@ -190,3 +188,9 @@ class ChromaConnector:
             'chunk_index': results['metadatas'][0]['chunk_index'],
             'total_chunks': results['metadatas'][0].get('total_chunks', 1)
         }
+
+
+    #ToDo remove later
+    def get_chunk_by_id_for_streamlit(self, chunk_id):
+        results = self.collection.get(ids=[chunk_id], include=['documents'])
+        return results['documents'][0] if results['documents'] else None

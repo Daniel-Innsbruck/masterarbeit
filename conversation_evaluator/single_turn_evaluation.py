@@ -24,11 +24,11 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 
 # Initialize with Google AI Studio
 evaluator_llm = LangchainLLMWrapper(ChatOpenAI(
-    model="gpt-5-mini"
+    model="gpt-4o-mini",
 ))
 
 paths = [
-    "../data/conversation_data_gemini-2.0-flash_turns_5_conversations_100.jsonl"
+    "../data/2906_conversation_data_gemini-3.1-flash-lite_turns_5_conversations_1.jsonl"
 ]
 
 def calculate_safe_average(result_list, key):
@@ -49,7 +49,6 @@ for path in paths:
     list_multihop_conversations = []
     list_singlehop_conversations = []
 
-    # DEINE IDEE: Direkt beim Auslesen trennen
     for conversation in data:
         for turn in conversation['conversation']:
             retrieved_contexts = turn.get('context', [])
@@ -75,7 +74,6 @@ for path in paths:
     metrics_to_use = [correctness_aspect_critic, faithfulness, context_precision, context_recall]
 
 
-    # Brehmes Original-Logik, in eine Funktion gekapselt, um sie für beide Listen nutzen zu können
     def run_evaluation_core(samples_list):
         if not samples_list:
             return [], {}

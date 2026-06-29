@@ -158,6 +158,8 @@ def agentic_rag(question: str, thread_id: str, max_hops: int = 5) -> dict:
     context_memory = []
     all_retrieved_contents = []
 
+    seen_article_ids = set()
+
     for hop in range(max_hops):
         context_str = "\n\n---\n\n".join(context_memory) if context_memory else "No documents retrieved yet."
 
@@ -220,13 +222,26 @@ def agentic_rag(question: str, thread_id: str, max_hops: int = 5) -> dict:
 
         if action == "SEARCH":
             search_query = parsed.get("search_query", question)
-            print(f"[Hop {hop+1}] Searching: '{search_query}'")
+            print(f"[Hop {hop + 1}] Searching: '{search_query}'")
 
             result = retrieve_full_document(search_query)
 
             if result["status"] in ("success", "partial"):
-                context_memory.append(result["content"])
-                all_retrieved_contents.append(result["content"])
+                article_id = result.get("article_id")
+
+                if article_id and article_id in seen_article_ids:
+                    print(
+                        f"[Hop {hop + 1}] Duplicate found (Article {article_id}). Prompting agent to try a different query.")
+                    context_memory.append(
+                        f"System Note: Your search for '{search_query}' returned an article you ALREADY have. "
+                        f"Read the existing context again, or use a COMPLETELY DIFFERENT search query to find the missing information."
+                    )
+                else:
+                    if article_id:
+                        seen_article_ids.add(article_id)
+
+                    context_memory.append(result["content"])
+                    all_retrieved_contents.append(result["content"])
             else:
                 context_memory.append(f"Search for '{search_query}' returned no results.")
 

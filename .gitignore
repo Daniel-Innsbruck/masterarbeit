@@ -96,7 +96,6 @@ cache/
 .ragas-venv
 
 # Chorma
-
-data/v_eval/
-data/v_eval_filtered/
 phase_1_validation/
+
+data/

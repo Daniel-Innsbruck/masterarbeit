@@ -12,12 +12,13 @@ VALIDATION_PROMPTS = {''
         1. The context of the RAG_input should be related to the provided document.  
         2. The question must be exactly the same as the `RAG_input`.  
         3. The answer must be correct.  
-        4. Multi-Hop Integrity: The answer MUST require synthesizing information from BOTH provided snippets (Context A and Context B). It must not be answerable by only one snippet and must not be a compound question.
+        4. Multi-Hop Integrity: The answer MUST require synthesising information from BOTH provided snippets (Context A and Context B). It must not be answerable by only one snippet and must not be a compound question.
         5. Query Type Alignment: The logical reasoning used must strictly match the declared `logic_type`.
 
         Input to validate:  
         {question}  
-        Provided Document: {document}
+        Provided Documents (Contains Context A and Context B):
+        {document}
 
         If any of the above requirements are not met, return the reason and set `"correct"` to `false`.  
         If all requirements are met, set `"correct"` to `true`.  
@@ -47,11 +48,15 @@ VALIDATION_PROMPTS = {''
          5. STRICT Multi-Hop Integrity & Logic Type
             - DUAL CONTEXT REQUIREMENT: The question MUST require synthesizing facts from BOTH available contexts to form a complete answer. If the question can be fully answered using only one context, it fails.
             - NO COMPOUND QUESTIONS: It must NOT be two separate single-hop questions joined together (e.g., "What did A do, and what did B do?"). The synthesis must be required to answer a single underlying question
+         
          Input to validate: 
          {question}
 
-         Conversation History (Contains Contexts & Previous Turns): 
+         Conversation History: 
          {conversation_history}
+
+         Currently Active Context (Use this for factual verification and checking Multi-Hop Context Requirement):
+         {active_context}
 
          Return the result as JSON in the following format:
          {{
@@ -98,13 +103,16 @@ VALIDATION_PROMPTS = {''
         Input to validate: 
         {question}
         
-        Conversation History (Contains Contexts & Previous Turns): 
+        Conversation History: 
         {conversation_history}
+        
+        Currently Active Context (Use this for factual verification and checking Single-Hop Context Requirement):
+        {active_context}
         
         Return the result as JSON in the following format:
         {{
-        "correct": true/false,
-        "reason": "Explanation of which requirement failed and why (leave empty if correct)"
+            "correct": true/false,
+            "reason": "Explanation of which requirement failed and why (leave empty if correct)"
         }}
     '''
 }

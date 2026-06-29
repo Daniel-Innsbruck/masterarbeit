@@ -61,7 +61,7 @@ def validate_init_prompt_all_in_one(question, document):
 
 
 # Validate follow-up questions in one step
-def validate_follow_up_question_all_in_one(question, history):
+def validate_follow_up_question_all_in_one(question, history, current_active_context):
     # Capture all keys including logic_type and multi_hop_flag
     question_dict = {
         'rag_input': question.get('rag_input', ''),
@@ -82,7 +82,8 @@ def validate_follow_up_question_all_in_one(question, history):
 
     validate_prompt = templates.VALIDATION_PROMPTS[template_name].format(
         question=str(question_dict),
-        conversation_history=str(history)
+        conversation_history=str(history),
+        active_context=current_active_context
     )
 
     answer = send_request_to_LLM_validation(validate_prompt)
