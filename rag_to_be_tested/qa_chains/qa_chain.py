@@ -1,6 +1,6 @@
 import os
 import time
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 
 from langchain.chat_models import init_chat_model
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
@@ -13,7 +13,7 @@ from langgraph.checkpoint.memory import MemorySaver
 from typing_extensions import List, TypedDict
 
 # Load .env file and override existing environment variables
-load_dotenv(override=True)
+load_dotenv(find_dotenv(), override=True)
 os.environ['GOOGLE_API_KEY'] = os.getenv('GOOGLE_API_KEY')
 # os.environ['OPENAI_API_KEY'] = os.getenv('OPENAI_API_KEY')
 

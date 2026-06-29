@@ -1,7 +1,7 @@
 import os
 from google import genai
-from dotenv import load_dotenv
-load_dotenv()
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv(), override = True)
 os.environ['GOOGLE_API_KEY'] = os.getenv('GOOGLE_API_KEY')
 
 class GEMINI:

@@ -1,7 +1,7 @@
 import json
 import os
 import gc
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 
 from ragas.metrics import AspectCritic
 from ragas.dataset_schema import MultiTurnSample, EvaluationDataset
@@ -10,7 +10,7 @@ from ragas import evaluate
 from ragas.llms import LangchainLLMWrapper
 from langchain_openai import ChatOpenAI
 
-load_dotenv(override=True)
+load_dotenv(find_dotenv(), override=True)
 
 # 1. We use GPT-5-mini as the Judge to avoid Self-Enhancement Bias!
 evaluator_llm = LangchainLLMWrapper(ChatOpenAI(

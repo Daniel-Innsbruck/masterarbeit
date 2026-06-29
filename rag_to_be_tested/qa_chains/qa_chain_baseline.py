@@ -2,7 +2,7 @@
 
 import os
 import time
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 
 from langchain.chat_models import init_chat_model
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
@@ -12,7 +12,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from typing_extensions import List
 
 # Load .env file and override existing environment variables
-load_dotenv(override=True)
+load_dotenv(find_dotenv(), override=True)
 os.environ['GOOGLE_API_KEY'] = os.getenv('GOOGLE_API_KEY')
 
 llm = init_chat_model("gemini-2.5-flash", model_provider="google_genai")

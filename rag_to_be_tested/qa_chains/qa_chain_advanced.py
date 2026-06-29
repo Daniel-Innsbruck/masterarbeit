@@ -3,7 +3,7 @@
 import os
 import json
 import time
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 from pymongo import MongoClient
 
 import re
@@ -13,7 +13,7 @@ from langchain_core.messages import BaseMessage, HumanMessage, AIMessage
 from typing_extensions import List
 from langchain_google_genai import HarmCategory, HarmBlockThreshold, ChatGoogleGenerativeAI
 # Load .env file and override existing environment variables
-load_dotenv(override=True)
+load_dotenv(find_dotenv(), override=True)
 os.environ['GOOGLE_API_KEY'] = os.getenv('GOOGLE_API_KEY')
 
 llm = ChatGoogleGenerativeAI(

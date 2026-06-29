@@ -2,7 +2,7 @@ from ragas.metrics import AspectCritic, SimpleCriteriaScore
 from ragas.dataset_schema import EvaluationDataset, SingleTurnSample
 from ragas import evaluate
 import json
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 from langchain_openai import ChatOpenAI
 import os
 import gc
@@ -12,7 +12,7 @@ from ragas.metrics import (
     context_precision,
     context_recall,
 )
-load_dotenv(override=True)
+load_dotenv(find_dotenv(), override=True)
 # print(os.environ['GOOGLE_API_KEY'])
 
 # evaluator_llm = LangchainLLMWrapper(ChatOpenAI(model="gpt-4o-mini"))
