@@ -1,0 +1,36 @@
+{
+  "root_id": "392c9cc7-f4c1-4529-94fc-2a1f59ced3cd",
+  "chunk_a": {
+    "id": "us-news/2026/jan/12/journalists-homeland-security-ice-trump#chunk_1",
+    "text_snippet": "Title: Trump officials urged to halt violence against journalists amid ICE protests\nDate: 2026-01-12\n\nContent: That push – accentuated by the outrage over a Minnesota woman being killed by an ICE officer this week – will probably mean more protests and potentially more violence against journalists. It’s unclear if the messages to the DHS will help keep journalists safe. “We don’t know if ICE is going to step up its immigration efforts in New York – that depends on a lot of political factors – but we certainly have seen it happen [elsewhere], and the way ICE has conducted itself in those cities gives some cause for concern that not having those channels of communication is bad for everybody,” said Carroll Bogert, CEO of the City, a New York news outlet, who wrote a letter in December to DHS officials. The Freedom of the Press Foundation tracks arrests and assaults against journalists and found that last year there were 172 alleged assaults against journalists, most from law enforcement at protests concerning the administration’s immigration policies.",
+    "article_id": "us-news/2026/jan/12/journalists-homeland-security-ice-trump",
+    "chunk_index": 1,
+    "total_chunks": 8
+  },
+  "chunk_b": {
+    "id": "us-news/2026/jan/16/minnesota-congress-democrats-ice-hearing#chunk_4",
+    "text_snippet": "Title: Democrats condemn ‘trauma and terror’ of Trump’s ICE surge in Minnesota\nDate: 2026-01-16\n\nContent: Protests have escalated over her killing, and the exclusion of state investigators from an FBI inquiry. Polling released by the American Civil Liberties Union on Friday showed that 71% of voters supported an independent investigation into the shooting, and 84% said people had the constitutional right to observe and document ICE activity in public. ICE agents, meanwhile, have continued to engage in violent confrontations with residents, protesters and those being sought as allegedly undocumented or otherwise in violation of immigration law. Many of the more violent encounters have been caught on video and posted to social media. The Minnesota congresswoman Betty McCollum condemned “Trump’s abuse of power”. “High school students have been thrown to the ground and pepper-sprayed on their own school grounds, and it’s happening right here, right now,” she said. “The actions of these agents, which are totally unprofessional and illegal, create great harm and fear.",
+    "article_id": "us-news/2026/jan/16/minnesota-congress-democrats-ice-hearing",
+    "chunk_index": 4,
+    "total_chunks": 6
+  },
+  "t_bridge": [
+    "ICE enforcement policies in Minnesota",
+    "Public and journalistic responses to ICE conduct",
+    "Escalation of violence during anti-ICE protests"
+  ],
+  "initial_question": {
+    "rag_input": "How did the January 2026 killing of a Minnesota woman by an ICE officer influence the safety concerns expressed regarding journalists covering immigration protests?",
+    "question": "How did the January 2026 killing of a Minnesota woman by an ICE officer influence the safety concerns expressed regarding journalists covering immigration protests?",
+    "answer": "The killing of the woman in Minnesota by an ICE officer in January 2026 acted as a catalyst that intensified public outrage and led to an escalation in protests. This surge in protest activity heightened concerns that there would be increased violence directed toward journalists, who were already facing a high volume of alleged assaults (172 in the previous year) from law enforcement while documenting immigration policy enforcement.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Connection between the Minnesota ICE shooting and rising risks to journalists at protests."
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}
