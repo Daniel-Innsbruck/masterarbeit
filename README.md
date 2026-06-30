@@ -150,20 +150,28 @@ The pre-embedded ChromaDBs and the raw JSON documents are hosted externally.
 
 ## Components Overview
 
+### Context Discoverer ([`context_discoverer/`](context_discoverer/))
 
+Identifies latent thematic bridges between isolated document chunks.
+
+* Executes a two-stage pipeline using filtered KNN search in the semantic vector space.
+* Evaluates semantic candidates via LLM to establish valid, multi-source foundations for complex multi-hop queries.
+
+---
 
 ### Conversation Generator ([`conversation_generator/`](conversation_generator/))
 
 Generates **synthetic conversations** for RAG evaluation.
 
-* Supports multiple models (GPT, Gemini)
-* Role-based generation (e.g., “precise/expert”, “confused” personas)
+* Supports multiple models (GPT, Gemini).
+* Role-based generation (e.g., “precise/expert”, “confused” personas).
+* Implements deterministic context expansion to simulate naturally broadening dialogues.
 
 ---
 
 ### Conversation Validator ([`conversation_validator/`](conversation_validator/))
 
-Automatically checks generated conversations
+Automatically checks generated conversations. Ensures logical coherence, factual grounding, and query type alignment before inputs are passed to the target RAG system.
 
 ---
 
@@ -171,8 +179,8 @@ Automatically checks generated conversations
 
 Implements **RAGAS-based evaluation** and custom metrics:
 
-* *Single-turn*: correctness, faithfulness, context precision, context recall
-* *Multi-turn*: forgetfulness, context retention
+* *Single-turn*: correctness, faithfulness, context precision, context recall. **Note:** These metrics are strictly segmented and evaluated separately for **single-hop** and **multi-hop** queries to isolate cross-document reasoning performance.
+* *Multi-turn*: forgetfulness, context retention.
 
 ---
 
@@ -185,27 +193,20 @@ Integrations for large language models:
 
 ---
 
-### RAG System ([`rag_to_be_tested/`](rag_to_be_tested/))
+### Target RAG Systems ([`rag_to_be_tested/`](rag_to_be_tested/))
 
-Implements the syntetic RAG pipeline.
+Implements the target RAG architectures evaluated in the thesis.
 
-* **`main.py`** – FastAPI application serving QA endpoints
-* **`qa_chain.py`** – RAG implementation using LangGraph, integrating:
-
-  * Google Generative AI embeddings
-  * PGVector for document storage
-  * Multi-step retrieval and generation pipeline
-  * Contains ClapNQ data
+* **`main.py`** – FastAPI application serving QA endpoints.
+* **`qa_chains/`** – Directory containing the RAG implementations operating on ChromaDB:
+  * `qa_chain_baseline.py`: **System A (Naive Baseline)** using restrictive chunking and standard dense-vector retrieval.
+  * `qa_chain_advanced.py`: **System B (Agentic Retrieval)** using an iterative LLM reasoning loop and parent-document retrieval strategies.
 
 ---
 
-###  Industrial Use Case ([`industrial_use_case/`](industrial_use_case/))
+### Industrial Use Case ([`industrial_use_case/`](industrial_use_case/))
 
-Demonstrates the RAG-DIVE framework in a real-world industrial setting.
-
-* Includes code for CG, CV, and evaluation
-* Uses data from `single-hop-RAG-dataset/`
-* Contains SQuAD and RAG-Evaluation pipelines
+*[TODO: Add description and instructions for the industrial use case experiments, SQuAD evaluation, and data integration]*
 
 ---
 
@@ -215,6 +216,3 @@ Demonstrates the RAG-DIVE framework in a real-world industrial setting.
 | --------------- | ------------------------------------------------------------ |
 | **Single-Turn** | Correctness, Faithfulness, Context Precision, Context Recall |
 | **Multi-Turn**  | Forgetfulness, Context Retention                             |
-
----
-
