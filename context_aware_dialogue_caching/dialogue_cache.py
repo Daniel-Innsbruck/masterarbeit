@@ -7,7 +7,7 @@ from google.genai import types
 
 
 class DialogueCache:
-    def __init__(self, base_dir="./data/dialogue_cache", tau=0.95, safeguard=True):
+    def __init__(self, base_dir="./data/dialogue_cache", tau=0.2, safeguard=True):
         self.base_dir = base_dir
         self.roots_dir = os.path.join(base_dir, "roots")
         self.trees_dir = os.path.join(base_dir, "trees")
@@ -109,21 +109,24 @@ class DialogueCache:
     # ==========================================
     def find_cache_hit(self, root_id, turn_index, current_rag_answer):
         """Sucht nach einer semantisch ähnlichen RAG-Antwort im gecachten Tree."""
+
+        #ToDO num_nodes entfernen
         tree_path = os.path.join(self.trees_dir, f"{root_id}.json")
         if not os.path.exists(tree_path):
-            return None, 0.0
+            return None, 0.0, 0
 
         with open(tree_path, 'r', encoding='utf-8') as f:
             tree_data = json.load(f)
 
         turn_key = str(turn_index)
         if turn_key not in tree_data:
-            return None, 0.0
+            return None, 0.0, 0
 
         valid_nodes = [n for n in tree_data[turn_key] if n.get('parent_id') == self.active_parent_id]
 
+        num_candidates = len(valid_nodes)
         if not valid_nodes:
-            return None, 0.0
+            return None, 0.0, 0
 
         current_embedding = self._get_embedding(current_rag_answer)
 
@@ -139,10 +142,10 @@ class DialogueCache:
 
         if highest_sim >= self.tau:
             print(f"    --> [CACHE HIT] Similarity: {highest_sim:.4f} >= {self.tau}")
-            return best_match['next_question_bundle'], highest_sim
+            return best_match, highest_sim, num_candidates
         else:
             print(f"    --> [CACHE MISS] Best similarity: {highest_sim:.4f} < {self.tau}")
-            return None, highest_sim
+            return None, highest_sim, num_candidates
 
     def stage_tree_node(self, turn_index, rag_answer, next_question_bundle):
         """Merkt sich einen neuen Knoten für den Tree. Wird nur bei Gesamterfolg gespeichert."""

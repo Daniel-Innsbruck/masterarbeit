@@ -1,5 +1,6 @@
 import os
 from google import genai
+from google.genai import types
 from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv(), override = True)
 os.environ['GOOGLE_API_KEY'] = os.getenv('GOOGLE_API_KEY')
@@ -98,3 +99,22 @@ class GEMINI:
             list: A list of messages exchanged in the chat session.
         """
         return self.chat.get_history()
+
+    def inject_history(self, user_prompt, model_response):
+        """
+        Injects a simulated conversational turn into the conversation history.
+        This ensures that the model knows the cached context when generating follow-up responses.
+        """
+        # Wir bauen die korrekten SDK-Objekte für User- und Modell-Nachrichten
+        user_content = types.Content(
+            role="user",
+            parts=[types.Part.from_text(text=user_prompt)]
+        )
+        model_content = types.Content(
+            role="model",
+            parts=[types.Part.from_text(text=model_response)]
+        )
+
+        # Anhängen an die bestehende Historie des Chat-Objekts
+        history = self.get_chat_history()
+        history.extend([user_content, model_content])

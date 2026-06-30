@@ -38,7 +38,16 @@ EXPANSION_DIR = "below"
 
 ## Cache-Steuerung
 
-BUILD_CACHE = True          # Soll Cache befüllt werden?
+BUILD_CACHE = False          # Soll Cache befüllt werden?
+USE_CACHE = True            # Soll der Cache gelesen werden?
+CACHE_MODE = "all"
+CACHE_TAU = 0.95
+CACHE_SAFEGUARD = True
+
+# Fixe Liste von UIDs für das kontrollierte Experiment / Phase 1 Validation
+FIXED_ROOT_IDS = [
+    "392c9cc7-f4c1-4529-94fc-2a1f59ced3cd"
+]
 
 ## Fail-Fast parameters
 MAX_RETRIES = 3  # Max retries per turn (independent of n)
@@ -46,11 +55,12 @@ MAX_CONSECUTIVE_FAILS = 5 # max number of complete conversation restarts before 
 
 # dialog configs
 n = 5             # Target number of turns per conversation
-max_conversations = 1 # number conversations'
+max_conversations = 10 # number conversations'
 
 # Logging & Output
-output_file = "./data/2906_conversation_data_" + model_name + "_turns_" + str(n) + "_conversations_" + str(max_conversations)+ ".jsonl"
-log_file = "./data/2906_conversation_data_" + model_name + "_turns_" + str(n) + "_conversations_" + str(max_conversations)+ ".log"
+output_file = "./data/cachetree_test_conversation_data_" + model_name + "_turns_" + str(n) + "_conversations_" + str(max_conversations)+ ".jsonl"
+log_file = "./data/cachetree_test_conversation_data_" + model_name + "_turns_" + str(n) + "_conversations_" + str(max_conversations)+ ".log"
+metrics_file = "./data/cache_metrics_" + model_name + "_turns_" + str(n) + ".jsonl"
 
 # Role = "You are a highly attentive conversationalist who asks context-aware questions. Your questions should build naturally on previous exchanges, using referring expressions like 'this', 'that', or 'it' to maintain coherence and continuity."
 Role = "Your questions are very short and precise"
@@ -175,12 +185,14 @@ def generate_conversation():
     db_connector = ChromaConnector('./data/v_eval_filtered/')
     cd = ContextDiscoverer(db_connector=db_connector, llm_model=model, k=4)
 
-    dialogue_cache = DialogueCache() if BUILD_CACHE else None
+    dialogue_cache = DialogueCache() if USE_CACHE or BUILD_CACHE else None
 
     counter = 0
     consecutive_fails = 0
 
-    while counter < max_conversations:
+    iterations = max_conversations # len(FIXED_ROOT_IDS) if (USE_CACHE and FIXED_ROOT_IDS) else max_conversations
+
+    while counter < iterations:
         if consecutive_fails >= MAX_CONSECUTIVE_FAILS:
             print(
                 f"\n!!!{MAX_CONSECUTIVE_FAILS} consecutive conversation fails at converation {counter + 1}. Loop is aborted and intermediary results are saved.")
@@ -196,43 +208,64 @@ def generate_conversation():
 
         print(f"\n--- Conversation {counter + 1}/{max_conversations} (Consecutive Fails: {consecutive_fails}) ---")
 
-        if BUILD_CACHE:
+        if BUILD_CACHE or USE_CACHE:
             dialogue_cache.clear_temp_stage()
 
+        root_data = None
+        is_new_root = False
+        root_id = None
         # =========================================================
         # Turn 0: Context Discovery & Initial Question
         # =========================================================
+        if USE_CACHE and FIXED_ROOT_IDS:
+            root_id = FIXED_ROOT_IDS[0] #FIXED_ROOT_IDS[counter]
+            # Versuche das spezifische Root-File von der Festplatte zu laden
+            root_path = os.path.join(dialogue_cache.roots_dir, f"{root_id}.json")
+            if os.path.exists(root_path):
+                with open(root_path, 'r', encoding='utf-8') as f:
+                    root_data = json.load(f)
+                print(f"\n--- Run {counter + 1} | Using Fixed Root: {root_id} ---")
+            else:
+                print(f"\n[WARN] Fixed Root {root_id} not found on disk. Falling back to dynamic generation.")
+        if root_data:
+            chunk_a = root_data['chunk_a']
+            chunk_b = root_data['chunk_b']
+            t_bridge = root_data['t_bridge']
+            question = root_data['initial_question']
+        else:
+            print("Searching for context bridge via Context Discoverer...")
+            discovered_context = None
+            for _ in range(MAX_RETRIES):
+                discovered_context = cd.discover_valid_context()
+                if discovered_context:
+                    break
 
-        print("Searching for context bridge via Context Discoverer...")
-        discovered_context = None
-        for _ in range(MAX_RETRIES):
-            discovered_context = cd.discover_valid_context()
-            if discovered_context:
-                break
+            if not discovered_context:
+                print(f"No semantic bridges found after {MAX_RETRIES} attempts. Restarting whole conversation.")
+                consecutive_fails += 1
+                continue
 
-        if not discovered_context:
-            print(f"No semantic bridges found after {MAX_RETRIES} attempts. Restarting whole conversation.")
-            consecutive_fails += 1
-            continue
+            chunk_a = discovered_context['chunk_a']
+            chunk_b = discovered_context['chunk_b']
+            t_bridge = discovered_context['t_bridge']
+            question = get_initial_multihop_prompt_data(chunk_a, chunk_b, t_bridge, max_retries=MAX_RETRIES)
 
-        chunk_a = discovered_context['chunk_a']
-        chunk_b = discovered_context['chunk_b']
-        t_bridge = discovered_context['t_bridge']
+            # =========================================================
+            # Turn 0: Initial Question (Max 3 Tries via MAX_RETRIES)
+            # =========================================================
 
-        # =========================================================
-        # Turn 0: Initial Question (Max 3 Tries via MAX_RETRIES)
-        # =========================================================
-        question = get_initial_multihop_prompt_data(chunk_a, chunk_b, t_bridge, max_retries=MAX_RETRIES)
+            if not question:
+                print(f"Initial multi-hop generation failed after {MAX_RETRIES} retries. Restarting whole conversation.")
+                consecutive_fails += 1
+                model.reset_chat()
+                continue
+            if BUILD_CACHE:
+                root_id, root_data = dialogue_cache.prepare_new_root(
+                    chunk_a, chunk_b, t_bridge, question, ALPHA, BETA, EXPANSION_DIR
+                )
+                is_new_root = True
 
-        if not question:
-            print(f"Initial multi-hop generation failed after {MAX_RETRIES} retries. Restarting whole conversation.")
-            consecutive_fails += 1
-            model.reset_chat()
-            continue
-        if BUILD_CACHE:
-            root_id, root_data = dialogue_cache.prepare_new_root(
-                chunk_a, chunk_b, t_bridge, question, ALPHA, BETA, EXPANSION_DIR
-            )
+        if dialogue_cache:
             dialogue_cache.start_new_path(root_id)
 
         active_chunks = {"A": [chunk_a], "B": [chunk_b]}
@@ -282,6 +315,7 @@ def generate_conversation():
             next_turn = turn_idx + 1
             expanding_context_parts = []
             expanding_context = ""
+
             if next_turn == ALPHA:
                 adj_chunk = db_connector.get_adjacent_chunk(
                     article_id=active_chunks["A"][0]['article_id'],
@@ -317,19 +351,90 @@ def generate_conversation():
                     )
 
             # =========================================================
-            # Follow-Up Generation (Max 3 Tries via MAX_RETRIES)
+            # CACHE Schritt 1: Lesen
             # =========================================================
-            next_question = get_follow_up_question(answer, active_chunks, expanding_context=expanding_context,
-                                              max_retries=MAX_RETRIES)
-            if not next_question:
-                print(
-                    f"  ⚠ Follow-Up Generation failed after {MAX_RETRIES} retries at turn {turn_idx + 1}. Restarting whole conversation.")
-                conversation_failed = True
-                break
+            next_question = None
 
-            # --- Node in den Cache aufnehmen ---
-            if BUILD_CACHE:
-                dialogue_cache.stage_tree_node(turn_idx - 1, answer, next_question)
+            #ToDo entfernen(nur für experiment)
+            sim_score = 0.0
+            num_candidates = 0
+            cache_accepted = False
+            validator_passed = False # trackt urteil des validators
+
+            if USE_CACHE and CACHE_MODE == "all" and not is_new_root:
+                cached_bundle, sim_score, num_candidates = dialogue_cache.find_cache_hit(root_id, turn_idx - 1, answer)
+
+                if cached_bundle:
+                    proposed_question = cached_bundle['next_question_bundle']
+                    if CACHE_SAFEGUARD:
+                        print("Executing Safeguard Validation...")
+                        current_active_context = _build_active_context_string_for_validator(active_chunks)
+                        history = model.get_chat_history()
+                        validation = conversation_validator.validate_follow_up_question_all_in_one(
+                            proposed_question, history, current_active_context
+                        )
+                        if validation and validation['correct']:
+                            print("Safeguard passed. Reusing cached follow-up.")
+                            validator_passed = True
+
+                            next_question = proposed_question
+                            cache_accepted = True
+                        else:
+                            print(f"Safeguard failed. Regenerating.")
+                            validator_passed = False
+                    else:
+                        print("Safeguard disabled. Reusing cached follow-up.")
+                        next_question = proposed_question
+                        cache_accepted = True
+                        validator_passed = False
+
+                    # HISTORY INJECTION BEI CACHE HIT
+                    if cache_accepted:
+                        dialogue_cache.active_parent_id = cached_bundle['node_id']
+                        print("Injecting cached turn into model memory to prevent amnesia...")
+                        simulated_prompt = templates.CONVERSATION_PROMPTS['follow_up_prompt'].format(
+                            expanding_context=expanding_context, RAG_answer=answer
+                        )
+                        simulated_response = json.dumps(next_question, ensure_ascii=False)
+                        model.inject_history(simulated_prompt, simulated_response)
+
+            # =========================================================
+            # STRUKTURIERTES EXPERIMENT-LOGGING (Für deine Plots)
+            # =========================================================
+            # Wir loggen jeden Turn, um zu sehen, ob überhaupt Cache da war (candidates > 0)
+            metrics_entry = {
+                "conversation_id": counter + 1,  # Die wievielte Konversation
+                "turn_index": turn_idx,  # Die Konversationsebene (Turn)
+                "cache_available": num_candidates > 0,  # Cache verfügbar ja/nein
+                "candidates_count": num_candidates,  # Wie viele standen zur Auswahl
+                "highest_sim": round(sim_score, 4) if num_candidates > 0 else 0.0,
+                "validator_passed": validator_passed if num_candidates > 0 else None,  # Urteil des CV
+                "cache_accepted_and_used": cache_accepted  # Wurde es im Lauf wirklich genutzt?
+            }
+
+            with open(metrics_file, 'a', encoding='utf-8') as f:
+                f.write(json.dumps(metrics_entry) + "\n")
+
+            # Alt-Logging für die Konsole (Kompakt gehalten)
+            print(
+                f"    [CACHE LOG] Turn {turn_idx} | Candidates: {num_candidates} | Sim: {sim_score:.4f} | Accepted: {cache_accepted}")
+            # =========================================================
+            # CACHE SCHRITT 2: Generieren (Falls Cache leer/abgelehnt) + Follow-Up generierung (max. 3 fails)
+            # =========================================================
+            if not cache_accepted:
+                next_question = get_follow_up_question(answer, active_chunks, expanding_context=expanding_context,
+                                                       max_retries=MAX_RETRIES)
+
+                if not next_question:
+                    print(f"Follow-Up Generation failed after {MAX_RETRIES} retries at turn {turn_idx + 1}. Restarting whole conversation.")
+                    conversation_failed = True
+                    break
+
+                # =========================================================
+                # CACHE SCHRITT 3: Schreiben (Nur wenn FRISCH generiert UND BUILD_CACHE)
+                # =========================================================
+                if BUILD_CACHE and CACHE_MODE == "all":
+                    dialogue_cache.stage_tree_node(turn_idx - 1, answer, next_question)
 
             question = next_question
 
@@ -339,7 +444,7 @@ def generate_conversation():
         if conversation_failed:
             consecutive_fails += 1
             model.reset_chat()
-            if BUILD_CACHE:
+            if dialogue_cache:
                 dialogue_cache.clear_temp_stage()
             continue
 
@@ -349,8 +454,10 @@ def generate_conversation():
         consecutive_fails = 0
 
         if BUILD_CACHE:
-            dialogue_cache.save_root(root_data)
-            dialogue_cache.commit_tree(root_id)
+            if is_new_root:
+                dialogue_cache.save_root(root_data)
+            if CACHE_MODE == "all":
+                dialogue_cache.commit_tree(root_id)
             print(f"Caching successful for Root: {root_id}")
 
         data_item = {

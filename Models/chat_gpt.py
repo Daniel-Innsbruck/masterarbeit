@@ -64,3 +64,11 @@ class ChatGPT:
         Returns the current chat history.
         """
         return self.messages
+
+    def inject_history(self, user_prompt, model_response):
+        """
+        Injects a simulated conversational turn into the conversation history.
+        This ensures that the model knows the cached context when generating follow-up responses.
+        """
+        self.messages.append({"role": "user", "content": user_prompt})
+        self.messages.append({"role": "assistant", "content": model_response})
