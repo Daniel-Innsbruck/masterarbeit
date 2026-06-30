@@ -10,7 +10,7 @@ import gc
 import time
 import json
 
-from dialogue_cache.dialogue_cache import DialogueCache
+from context_aware_dialogue_caching.dialogue_cache import DialogueCache
 
 
 import Models.gemini as gemini
@@ -35,10 +35,12 @@ parser = parser.LLMResponseParser()
 ALPHA = 2
 BETA = 3
 EXPANSION_DIR = "below"
-CACHE_TAU = 0.95
-CACHE_SAFEGUARD = True
-CACHE_PATH = "./data/dialogue_cache.json"
 
+## Cache-Steuerung
+
+BUILD_CACHE = True          # Soll Cache befüllt werden?
+
+## Fail-Fast parameters
 MAX_RETRIES = 3  # Max retries per turn (independent of n)
 MAX_CONSECUTIVE_FAILS = 5 # max number of complete conversation restarts before qa-gernation ends early (avoid infinite loop)
 
@@ -173,6 +175,8 @@ def generate_conversation():
     db_connector = ChromaConnector('./data/v_eval_filtered/')
     cd = ContextDiscoverer(db_connector=db_connector, llm_model=model, k=4)
 
+    dialogue_cache = DialogueCache() if BUILD_CACHE else None
+
     counter = 0
     consecutive_fails = 0
 
@@ -192,9 +196,13 @@ def generate_conversation():
 
         print(f"\n--- Conversation {counter + 1}/{max_conversations} (Consecutive Fails: {consecutive_fails}) ---")
 
+        if BUILD_CACHE:
+            dialogue_cache.clear_temp_stage()
+
         # =========================================================
-        # Context Discovery (Max 3 Tries via MAX_RETRIES)
+        # Turn 0: Context Discovery & Initial Question
         # =========================================================
+
         print("Searching for context bridge via Context Discoverer...")
         discovered_context = None
         for _ in range(MAX_RETRIES):
@@ -221,6 +229,11 @@ def generate_conversation():
             consecutive_fails += 1
             model.reset_chat()
             continue
+        if BUILD_CACHE:
+            root_id, root_data = dialogue_cache.prepare_new_root(
+                chunk_a, chunk_b, t_bridge, question, ALPHA, BETA, EXPANSION_DIR
+            )
+            dialogue_cache.start_new_path(root_id)
 
         active_chunks = {"A": [chunk_a], "B": [chunk_b]}
         turn_idx = 0
@@ -306,27 +319,39 @@ def generate_conversation():
             # =========================================================
             # Follow-Up Generation (Max 3 Tries via MAX_RETRIES)
             # =========================================================
-            question = get_follow_up_question(answer, active_chunks, expanding_context=expanding_context,
+            next_question = get_follow_up_question(answer, active_chunks, expanding_context=expanding_context,
                                               max_retries=MAX_RETRIES)
-            if not question:
+            if not next_question:
                 print(
                     f"  ⚠ Follow-Up Generation failed after {MAX_RETRIES} retries at turn {turn_idx + 1}. Restarting whole conversation.")
                 conversation_failed = True
                 break
 
-        # Wurde die Turn-Loop wegen eines Fehlers (API oder LLM) abgebrochen?
+            # --- Node in den Cache aufnehmen ---
+            if BUILD_CACHE:
+                dialogue_cache.stage_tree_node(turn_idx - 1, answer, next_question)
+
+            question = next_question
+
+        # =========================================================
+        # Abschluss & Speichern
+        # =========================================================
         if conversation_failed:
             consecutive_fails += 1
             model.reset_chat()
+            if BUILD_CACHE:
+                dialogue_cache.clear_temp_stage()
             continue
 
-        # =========================================================
-        # Save Success (Reset Fail Counter!)
-        # =========================================================
         print(f"Conversation {counter + 1} successfully generated!")
         model.reset_chat()
 
         consecutive_fails = 0
+
+        if BUILD_CACHE:
+            dialogue_cache.save_root(root_data)
+            dialogue_cache.commit_tree(root_id)
+            print(f"Caching successful for Root: {root_id}")
 
         data_item = {
             "parent_doc_A": chunk_a['article_id'],
