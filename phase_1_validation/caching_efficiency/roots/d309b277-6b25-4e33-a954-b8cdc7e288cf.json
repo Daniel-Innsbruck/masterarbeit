@@ -1,0 +1,37 @@
+{
+  "root_id": "d309b277-6b25-4e33-a954-b8cdc7e288cf",
+  "chunk_a": {
+    "id": "world/2026/feb/05/china-green-energy-sector-investment-growth#chunk_1",
+    "text_snippet": "Title: Green energy sector drove more than 90% of China’s investment growth last year, analysis finds\nDate: 2026-02-05\n\nContent: This accounted for 11.4% of China’s gross domestic product, up from 7.3% in 2022. China is increasingly dependent on these sectors. Without clean energy, Beijing’s leaders would have missed their 5% annual growth target by a wide margin. Most of the extra capacity is being used to meet domestic demand for a rollout of wind and solar that has recently been double that in the rest of the world combined. Chinese government advisers say this is no longer just a transition of power generation, but a system-wide change in how the country is wired and made mobile. The most spectacular investment growth last year was in the battery sector, where ever more efficient technology is being used for electric vehicles (EVs) and grid storage upgrades. Exports are also surging.",
+    "article_id": "world/2026/feb/05/china-green-energy-sector-investment-growth",
+    "chunk_index": 1,
+    "total_chunks": 5
+  },
+  "chunk_b": {
+    "id": "politics/2026/jan/16/over-reliance-on-china-could-hit-uk-energy-supply-chains-putting-9000-jobs-at-risk#chunk_4",
+    "text_snippet": "Title: Over-reliance on China could hit UK energy supply chains ‘putting 90,000 jobs at risk’\nDate: 2026-01-16\n\nContent: “Cognisant of the risks and continuing to seek win-win cooperation, China has focused on promoting domestic demand as the future growth engine. With a growing middle class, the consumer potential for local and global products and services should not be underestimated,” said Lynn Song, the chief economist for Greater China at ING. “This process will take time, perhaps more time than some of China’s trade partners may like, but we believe this is set to be a key theme of the coming decade and beyond.” The IPPR said the government should clarify its position on Chinese investment and involvement in the UK’s clean energy supply chains, and invest more in domestic production of batteries and green steel. It should also work with allies to invest in international stockpiles of solar, battery and critical minerals to avoid the risk of delay if supply chain shocks emerge.",
+    "article_id": "politics/2026/jan/16/over-reliance-on-china-could-hit-uk-energy-supply-chains-putting-9000-jobs-at-risk",
+    "chunk_index": 4,
+    "total_chunks": 6
+  },
+  "t_bridge": [
+    "China's green energy sector investment",
+    "Global supply chain dependency",
+    "Battery manufacturing",
+    "Economic policy and domestic demand"
+  ],
+  "initial_question": {
+    "rag_input": "How does China's heavy investment in battery manufacturing as of February 2026 relate to the supply chain concerns raised by the IPPR regarding the UK’s energy sector?",
+    "question": "How does China's heavy investment in battery manufacturing as of February 2026 relate to the supply chain concerns raised by the IPPR regarding the UK’s energy sector?",
+    "answer": "As of February 2026, China is seeing spectacular investment growth in battery manufacturing to meet both domestic demand and surging exports. This concentration of production capacity creates a dependency that the IPPR warns could threaten the UK's energy supply chains, prompting recommendations for the UK to invest more in domestic battery production and international stockpiles to mitigate the risks of potential supply chain shocks.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "China's battery investment versus UK supply chain dependency"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}
