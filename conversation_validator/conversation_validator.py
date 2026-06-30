@@ -18,10 +18,20 @@ parser = parser.LLMResponseParser()
 def send_request_to_LLM_validation(prompt):
     success = False
     response = None
+
+    total_in_tokens = 0
+    total_out_tokens = 0
+
     while not success:
         try:
             # We use .prompt() for single-turn stateless validation
             llm_response = model.prompt(prompt)
+
+            #die verbrauchten Tokens für diesen API-Call abgreifen
+            in_tok, out_tok = model.get_and_reset_turn_tokens()
+            total_in_tokens += in_tok
+            total_out_tokens += out_tok
+
             response = parser.parse_and_validate_validation(llm_response)
             if response != "":
                 success = True
@@ -32,9 +42,9 @@ def send_request_to_LLM_validation(prompt):
             else:
                 success = True
                 print(f"Error generating validation data: {e}")
-                return None
-    return response
+                return None, total_in_tokens, total_out_tokens
 
+    return response, total_in_tokens, total_out_tokens
 
 def validate_init_prompt_all_in_one(question, document):
     # Capture all new keys for Multi-Hop validation
@@ -56,9 +66,14 @@ def validate_init_prompt_all_in_one(question, document):
         document=str(document)
     )
 
-    answer = send_request_to_LLM_validation(validate_prompt)
-    return answer
+    answer, in_tok, out_tok = send_request_to_LLM_validation(validate_prompt)
+    if answer is None:
+        return {"correct": False, "reason": "Validation LLM failed.", "tokens_in": in_tok, "tokens_out": out_tok}
 
+        # NEU: Tokens ins finale Dictionary packen
+    answer['tokens_in'] = in_tok
+    answer['tokens_out'] = out_tok
+    return answer
 
 # Validate follow-up questions in one step
 def validate_follow_up_question_all_in_one(question, history, current_active_context):
@@ -86,5 +101,12 @@ def validate_follow_up_question_all_in_one(question, history, current_active_con
         active_context=current_active_context
     )
 
-    answer = send_request_to_LLM_validation(validate_prompt)
+    answer, in_tok, out_tok = send_request_to_LLM_validation(validate_prompt)
+
+    if answer is None:
+        return {"correct": False, "reason": "Validation LLM failed.", "tokens_in": in_tok, "tokens_out": out_tok}
+
+    # NEU: Tokens ins finale Dictionary packen
+    answer['tokens_in'] = in_tok
+    answer['tokens_out'] = out_tok
     return answer

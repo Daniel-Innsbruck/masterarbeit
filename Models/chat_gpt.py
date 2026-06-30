@@ -23,6 +23,9 @@ class ChatGPT:
         self.MODEL_NAME = modelname
         self.client = OpenAI()
         self.messages = []
+
+        self.current_input_tokens = 0
+        self.current_output_tokens = 0
         
     def prompt(self, prompt):
         """
@@ -32,6 +35,11 @@ class ChatGPT:
             model=self.MODEL_NAME,
             messages=[{"role": "user", "content": prompt}]
         )
+
+        if response.usage:
+            self.current_input_tokens += response.usage.prompt_tokens
+            self.current_output_tokens += response.usage.completion_tokens
+
         return response.choices[0].message.content.strip()
 
 
@@ -48,16 +56,29 @@ class ChatGPT:
             # verbosity="low",
             # reasoning_effort="low",
         )
+        if response.usage:
+            self.current_input_tokens += response.usage.prompt_tokens
+            self.current_output_tokens += response.usage.completion_tokens
 
         reply = response.choices[0].message.content.strip()
         self.messages.append({"role": "assistant", "content": reply})
         return reply
+
+    def get_and_reset_turn_tokens(self):
+        """Gibt Input und Output zurück und resettet."""
+        in_tok = self.current_input_tokens
+        out_tok = self.current_output_tokens
+        self.current_input_tokens = 0
+        self.current_output_tokens = 0
+        return in_tok, out_tok
 
     def reset_chat(self):
         """
         Clears the chat history.
         """
         self.messages = []
+        self.current_input_tokens = 0
+        self.current_output_tokens = 0
         
     def get_chat_history(self):
         """

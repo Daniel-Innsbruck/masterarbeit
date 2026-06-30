@@ -30,6 +30,8 @@ class GEMINI:
         self.client = genai.Client(api_key=os.environ['GOOGLE_API_KEY'])
         self.chat = self.client.chats.create(model=modelname)
 
+        self.current_input_tokens = 0
+        self.current_output_tokens = 0
     def prompt(self, prompt):
         """
         Sends a prompt to the GPT model and retrieves the model's response.
@@ -71,9 +73,11 @@ class GEMINI:
             str: The model's response to the chat.
         """
         response = self.chat.send_message(message)
-        # usage_data = response.usage_metadata
-        
+        if response.usage_metadata:
+            self.current_input_tokens += response.usage_metadata.prompt_token_count
+            self.current_output_tokens += response.usage_metadata.candidates_token_count
 
+        # usage_data = response.usage_metadata
         # # Ensure log directory exists
         # log_dir = './logs'
         # if not os.path.exists(log_dir):
@@ -91,6 +95,17 @@ class GEMINI:
         This clears all previous conversation history and starts fresh.
         """
         self.chat = self.client.chats.create(model=self.MODEL_NAME)
+        self.current_output_tokens = 0
+        self.current_input_tokens = 0
+
+    def get_and_reset_turn_tokens(self):
+        """Gibt Input und Output zurück und resettet."""
+        in_tok = self.current_input_tokens
+        out_tok = self.current_output_tokens
+        self.current_input_tokens = 0
+        self.current_output_tokens = 0
+        return in_tok, out_tok
+
     def get_chat_history(self):
         """
         Retrieves the chat history of the current session.
