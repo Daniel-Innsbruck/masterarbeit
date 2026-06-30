@@ -1,0 +1,36 @@
+{
+  "root_id": "bfeeeccc-65bf-4dfd-bff6-483a1d9e6fe1",
+  "chunk_a": {
+    "id": "us-news/2026/apr/07/chad-bianco-sheriff-california-ballot-seizure-prop-50#chunk_4",
+    "text_snippet": "Title: ‘A blatant political ploy’: California sheriff’s seizure of referendum ballots sets off alarm bells\nDate: 2026-04-07\n\nContent: In a statement, Bianco denied politics played a role in his investigation. “I appreciate everyone’s opinion when they obtained their expertise from television. Any investigation is a fact-finding mission to determine if allegations are true or not, and who, if anyone, is responsible. Disingenuous politicians and clickbait media have spun this into something political. Investigations do not stop because someone might get their feelings hurt,” he said. “This investigation was kept very quiet by me; it was twisted into a political event and brought to the public by an absolute embarrassment to law enforcement, Rob Bonta. The only undermining of confidence in our elections is the abuse of the legal system to stop a lawful investigation to cover up the results,” he added.",
+    "article_id": "us-news/2026/apr/07/chad-bianco-sheriff-california-ballot-seizure-prop-50",
+    "chunk_index": 4,
+    "total_chunks": 9
+  },
+  "chunk_b": {
+    "id": "australia-news/2026/apr/16/sa-election-uncounted-ballots-votes-one-nation-seat-narungga-ntwnfb#chunk_2",
+    "text_snippet": "Title: Discovery of unopened ballots prompts new count in SA seat One Nation won by just 58 votes\nDate: 2026-04-16\n\nContent: He said 81 “sealed and unopened” votes had been found at a Port Pirie early voting centre, in the neighbouring seat of Stuart. “Elections are incredibly complex things to undertake. There are thousands of employees, hundreds of polling booths, over a million votes to count,” he said. “We are fortunate in Australia and in SA in particular we have fair and free elections, and in SA we jealously guard how we undertake democracy. “It is disappointing, though, when we see things go not exactly as they should.” He said there was no suggestion of interference or tampering. The commission is expected to seek legal advice and petition the court of disputed returns if the new count changes the election result. “We have not investigated what the cause of the error was,” McLay said. McLay said the SA electoral commission would support any independent external review into the 2026 state election.",
+    "article_id": "australia-news/2026/apr/16/sa-election-uncounted-ballots-votes-one-nation-seat-narungga-ntwnfb",
+    "chunk_index": 2,
+    "total_chunks": 4
+  },
+  "t_bridge": [
+    "Election integrity",
+    "Ballot handling controversies",
+    "Public trust in electoral processes"
+  ],
+  "initial_question": {
+    "rag_input": "How do the stated approaches to election integrity in April 2026 contrast between the California sheriff's seizure of ballots and the South Australian electoral commission's response to the Port Pirie findings?",
+    "question": "How do the stated approaches to election integrity in April 2026 contrast between the California sheriff's seizure of ballots and the South Australian electoral commission's response to the Port Pirie findings?",
+    "answer": "In the California investigation on April 7, 2026, Sheriff Bianco views the seizure of ballots as a necessary fact-finding mission to prevent the abuse of the legal system, framing his actions as a defense against political undermining of electoral confidence. In contrast, regarding the 81 ballots found on April 16, 2026, the South Australian electoral commission maintains there is no suggestion of interference or tampering and has stated they have not yet investigated the cause of the discrepancy, though they are open to an independent external review to support the state's electoral process.",
+    "type": "Initial",
+    "logic_type": "comparison",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Election integrity and ballot handling"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}
