@@ -1,31 +1,38 @@
-# RAG-DIVE
+# DSIA_2024_Hillebrand_Daniel_MA
 
- **A Dynamic Approach for Multi-Turn Dialogue Evaluation in Retrieval-Augmented Generation**
+ **Automated Evaluation of RAG Systems for Multi-Turn, Multi-Hop Scenarios**
 
-This repository accompanies the results and raw data from our paper **“RAG-DIVE:  A Dynamic Approach for Multi-Turn Dialogue Evaluation in Retrieval-Augmented Generation”**, which explores conversation generation, validation, and evaluation within a Retrieval-Augmented Generation (RAG) framework.
-
+This repository accompanies the results and raw data from the Master's thesis **Automated Evaluation of RAG Systems for
+Multi-Turn, Multi-Hop Scenarios"**. The work extends the original framework **“RAG-DIVE:  A Dynamic Approach for 
+Multi-Turn Dialogue Evaluation in Retrieval-Augmented Generation”** of Brehme et al. (2026) by introducing advanced 
+capabilities for multi-hop reasoning and cross-document context construction. The framework enables the automated 
+evaluation of Retrieval-Augmented Generation (RAG) systems by simulating complex, document-bridging dialogues through a
+two-stage context discovery mechanism, deterministic context expansion, and an integrated response-aware dialogue 
+caching layer. It provides a robust testing environment for assessing factual integrity and reasoning performance in
+dynamic, multi-turn interactions.
 
 ---
 
 ## Repository Overview
 
-This repository contains the **data, code, and configurations** used for all experiments presented in the paper.
+This repository contains the **data, code, and configurations** used for all experiments presented in the Master's thesis..
 
 ### Folder Structure
 
-| Folder | Description |
-|--------|-------------|
+| Folder | Description                                                                                                                                                                                                                                                                                                                                                         |
+|--------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **`data/`** | Contains all generated conversations and corresponding logs. Each experiment folder includes:<br>• One JSON file per run (conversation data)<br>• Log file (Conversation Validator output)<br>• Metric files:<br> – *Multiturn metrics*: forgetfulness, context retention<br> – *Single-turn metrics*: correctness, faithfulness, context precision, context recall |
-| **`data/industrial_usecase/`** | Includes the industrial use case experiments:<br>• `SQuAD_evaluation/` – SQuAD-based RAG evaluation<br>• `RAG-DIVE_evaluation/` – Evaluation results of our RAG-DIVE setup |
-| **`human_validation/`** | Contains Excel sheets with human validation results of generated conversations.<br>The main dataset used: `data/data_experiment_1_10x5turn/conversation_data_gemini-2.0-flash_turns_5_conversation_100_0.json`.<br>To view the conversation, open `viewer.html` in your browser. |
-| **`conversation_generator/`** | Code used for **synthetic conversation generation** with multiple model configurations and personas. |
-| **`conversation_validator/`** | Code for **automatic validation** of generated conversations. |
-| **`conversation_evaluator/`** | Evaluation scripts for **RAG performance metrics**, including RAGAS-based assessments. |
-| **`Models/`** | Contains model configuration and integration scripts:<br>• `chat_gpt.py` – OpenAI GPT integration<br>• `gemini.py` – Google Gemini integration |
-| **`rag_to_be_tested/`** | The RAG system under test. To initialize:<br>• Build the PGVector database (`vectordb.ipynb`)<br>• Start the RAG FastAPI service (`main.py`) |
-| **`industrial_use_case/`** | Code for the industrial use case experiments, including Conversation Generator (CG), Conversation Validator (CV), and evaluation scripts inside for SQuAD evalaution `RAG_Evaluation_Standard/`. Data is stored in `single-hop-RAG-dataset/`. |
-
-
+| **`data/industrial_usecase/`** | Includes the industrial use case experiments                                                                                                                                                                                                                                                                                                                        |
+| **`human_validation/`** | Contains Excel sheets with human validation results of generated conversations.<br>The main dataset used: `data/ADD_CORRECT_PATH_HERE`.<br>To view the conversation, open `viewer.html` in your browser.                                                                                                                                                            |
+| **`context_discoverer/` | Implements the Context Discoverer (CD) for multi-hop semantic bridging via filtered KNN search and LLM validation.                                                                                                                                                                                                                                                  |
+| **`conversation_generator/`** | Code used for **synthetic conversation generation** with multiple model configurations and personas.                                                                                                                                                                                                                                                                |
+| **`conversation_validator/`** | Code for **automatic validation** of generated conversations.                                                                                                                                                                                                                                                                                                       |
+| **`conversation_evaluator/`** | Evaluation scripts for **RAG performance metrics**, including RAGAS-based assessments.                                                                                                                                                                                                                                                                              |
+| **`Models/`** | Contains model configuration and integration scripts:<br>• `chat_gpt.py` – OpenAI GPT integration<br>• `gemini.py` – Google Gemini integration                                                                                                                                                                                                                      |
+| **`rag_to_be_tested/`** | Implementation of the target RAG architectures: System A (Naive Baseline) and System B (Agentic Retrieval). Start the RAG FastAPI service (`main.py`)                                                                                                                                                                                                               |
+| **`industrial_use_case/`** | Code for the industrial use case experiments, including Conversation Generator (CG), Conversation Validator (CV), and evaluation scripts inside for SQuAD evalaution `RAG_Evaluation_Standard/`. Data is stored in `single-hop-RAG-dataset/`.                                                                                                                       |
+| **`data_preprocessing/`** | Pipeline for news article acquisition and processing. Contains a cronjob for fetching news articles ( `guardian_fetcher`) and a Jupyter notebook to initialise `v_eval`. |
+| **`streamlit_viewer/`** | Interactive tool (`app.py`) for viewing generated conversations. |
 ---
 
 ## Getting Started
@@ -33,58 +40,112 @@ This repository contains the **data, code, and configurations** used for all exp
 ### Prerequisites
 
 - **Docker**
-- **Python 3.9+**
-- **Uvicorn**
+- **Python 3.12+**
+- **Poetry** (for main environment dependency management)
 
 ---
 
-### Environment Setup
+### 1. Database Setup:
 
-1. **Copy the environment template**
-  
-   ```bash
-      cp .env.example .env
-   ````
+1. **Start the MongoDB instance**:
 
-2. **Configure API keys**
+Target System B requires a MongoDB instance running locally. Deploy it via Docker: 
 
-   Edit `.env` to include your API credentials:
+```
+docker pull mongo:latest
+```
 
-   ```bash
-   GOOGLE_API_KEY=your_google_api_key
-   OPENAI_API_KEY=your_openai_api_key
-   ```
+2. **Download Datasets and Vector Databases**:
+
+The pre-embedded ChromaDBs and the raw JSON documents are hosted externally.
+
+- ChromaDBs (`v_eval`, `v_base`, `v_advanced`): Download them from [INSERT LINK HERE].
+- Raw Guardian Articles: Download the raw dataset from [INSERT LINK HERE] and import it into your running MongoDB instance.
+
+3. **Import the raw guardian news articles into MongoDB**:
+
+`TODO`
+
+### 2. Environment Setup
+
+1. **Configure API keys**
+    
+    Copy the environment file template and add your API credentials:
+    ```bash
+    cp .env.example .env
+    ````
+    edit `.env`
+    ```bash
+    GOOGLE_API_KEY=your_google_api_key
+    OPENAI_API_KEY=your_openai_api_key
+    MONGO_URI=mongodb://localhost:27017/
+    ```
+2. **Initialize the Main Environment (Poetry)**:
+    The main framework (Generator, Validator, Evaluator, Context Discoverer) is managed via Poetry.
+    ```bash
+    poetry env use python3.12
+    poetry install
+    ```
+3. **Initialise Sub-Environments**:
+    
+    The target RAG system and the Streamlit viewer run in isolated environments to prevent dependency conflicts.
+    
+    Setup for `rag_to_be_tested`:
+        
+    ```bash
+    cd rag_to_be_tested
+    python3.12 -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    pip install -r requirements.txt
+    deactivate
+    cd ..
+    ```
+
+    Setup for `streamlit_viewer`:
+    
+    ```bash
+    cd streamlit_viewer
+    python3.12 -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    pip install -r requirements.txt
+    deactivate
+    cd ..
+    ```
 
 ---
 
-### Start the RAG System
+### 3. Start the RAG Evaluation
 
-1. **Start the Docker container**
-
-   ```bash
-   sudo docker start <container_id>   # container_id obtained after running vectordb.ipynb
-   ```
-
-2. **Launch the RAG FastAPI application**
+1. **Launch the RAG FastAPI application**
 
    ```bash
    cd rag_to_be_tested/
+   source venv/bin/activate
    uvicorn main:app --reload
    ```
 
-3. **Start the Conversation Generator in a new terminal**
+2. **Start the Conversation Generator in a new terminal**
 
    ```bash
-   cd conversation_generator/
-   python3 conversation_generation.py
+   poetry shell
+   python3 conversation_generator/conversation_generation.py
    ```
+3. **Monitor Live Generations (Optional)**:
 
-4. **After finishing, stop the Docker container**
+    You can view the generated conversations in real-time using the Streamlit app:
+    ```bash
+    cd streamlit_viewer
+    source venv/bin/activate
+    streamlit run app.py
+    ```
+4. **After finishing, run the evaluation scripts**
 
    ```bash
-   sudo docker stop <container_id>
+   poetry shell
+   cd conversation_evaluator
+   python3 single_turn_evaluation.py
+   python3 multi_turn_evaluation.py
    ```
-
 ---
 
 ## Components Overview
