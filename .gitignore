@@ -96,6 +96,9 @@ cache/
 .ragas-venv
 
 # Chorma
-phase_1_validation/
+phase_1_validation/chroma_db_advanced
+phase_1_validation/chroma_db_advanced_filtered
+phase_1_validation/chroma_db_baseline
+phase_1_validation/chroma_db_baseline_filtered
 
 data/
