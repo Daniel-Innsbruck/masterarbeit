@@ -1,0 +1,36 @@
+{
+  "root_id": "45ea68d7-6e88-4ba9-a8d3-cb2366b1651a",
+  "chunk_a": {
+    "id": "uk-news/2026/mar/24/restaurants-raided-britain-version-ice-immigration#chunk_8",
+    "text_snippet": "Title: ‘They singled out non-white, foreign-born workers’: the restaurants raided by Britain’s version of ICE \nDate: 2026-03-24\n\nContent: The lead officer told Nolan they were there off the back of an anonymous tipoff that specified “illegal Bengali workers”. After failing to find any illegal workers in the kitchen, having carried out their interrogations in plain sight of diners, the officers asked Nolan if there were any more members of staff on the premises. He said there weren’t. He was then asked the question again, replying with the same answer. Upon being asked a third time, Nolan got frustrated and said not “unless they’re on the fucking roof”. At this point, the officer “gave up trying to catch me out”, he says. The officer told Nolan that they were looking for “five to six illegal workers”. After about half an hour, with the dinner service halted, Ice left. Nolan asked an officer why they came during their busiest period, allowing customers to “look at this charade unfold”. The officer said they had to come at a “busy time when all staff were working”.",
+    "article_id": "uk-news/2026/mar/24/restaurants-raided-britain-version-ice-immigration",
+    "chunk_index": 8,
+    "total_chunks": 19
+  },
+  "chunk_b": {
+    "id": "us-news/2026/mar/06/ice-arrest-oregon-shop-owner#chunk_5",
+    "text_snippet": "Title: ICE arrested an Oregon shop owner who had her green card in her pocket: ‘They didn’t care’\nDate: 2026-03-06\n\nContent: When she responded asking why she was stopped, an officer did not show a warrant or give a reason, her declaration said. The officers reached through her window, opened the door, pulled her out and kneeled on her back, the declaration said. They also accused her of being “illegal”, she wrote. One witness video captured Juanita facedown yelling through sobs: “Why are you arresting me? You are not police … Emely! Emely!” Emely, her US citizen daughter, soon arrived. Footage Emely recorded of the incident shows she immediately explained that her mom had a green card and was carrying it on her. When she yelled to her mom that she was recording, an officer shined a bright light in her face, obscuring her camera’s view. “You don’t need to tackle her. There’s no reason to fucking do this,” Emely pleaded. The officers handcuffed Juanita and put her in their car. One officer then told Emely she could also be arrested for “obstruction”, witness video shows.",
+    "article_id": "us-news/2026/mar/06/ice-arrest-oregon-shop-owner",
+    "chunk_index": 5,
+    "total_chunks": 16
+  },
+  "t_bridge": [
+    "Immigration enforcement tactics",
+    "Allegations of misconduct by immigration officers",
+    "Civil rights during workplace or public detentions"
+  ],
+  "initial_question": {
+    "rag_input": "How do the interrogation tactics used by immigration officers in March 2026 compare across the restaurant raid and the shop owner's arrest?",
+    "question": "How do the interrogation tactics used by immigration officers in March 2026 compare across the restaurant raid and the shop owner's arrest?",
+    "answer": "In the March 24, 2026, restaurant raid, officers used repeated questioning to try to catch the owner out and justify their presence based on an anonymous tipoff about 'illegal Bengali workers' during a busy service. In the March 6, 2026, shop owner incident, officers used physical force, including kneeling on the subject's back and handcuffing her without showing a warrant, while actively obscuring documentation efforts by the owner's daughter and threatening her with arrest for 'obstruction'.",
+    "type": "Initial",
+    "logic_type": "comparison",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Comparative misconduct in immigration enforcement"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

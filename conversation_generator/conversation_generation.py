@@ -46,7 +46,7 @@ CACHE_SAFEGUARD = True
 
 # Fixe Liste von UIDs für das kontrollierte Experiment / Phase 1 Validation
 FIXED_ROOT_IDS = [
-    "392c9cc7-f4c1-4529-94fc-2a1f59ced3cd"
+    "45ea68d7-6e88-4ba9-a8d3-cb2366b1651a"
 ]
 
 ## Fail-Fast parameters
@@ -55,12 +55,12 @@ MAX_CONSECUTIVE_FAILS = 5 # max number of complete conversation restarts before 
 
 # dialog configs
 n = 5             # Target number of turns per conversation
-max_conversations = 9 # number conversations'
+max_conversations = 6 # number conversations'
 
 # Logging & Output
-output_file = "./data/cachetree_test_conversation_data_" + model_name + "_turns_" + str(n) + "_conversations_" + str(max_conversations)+ ".jsonl"
-log_file = "./data/cachetree_test_conversation_data_" + model_name + "_turns_" + str(n) + "_conversations_" + str(max_conversations)+ ".log"
-metrics_file = "./data/cache_metrics_" + model_name + "_turns_" + str(n) + ".jsonl"
+output_file = "./data/45ea68d7-6e88-4ba9-a8d3-cb2366b1651a.jsonl"
+log_file = "./data/45ea68d7-6e88-4ba9-a8d3-cb2366b1651a.log"
+metrics_file = "./data/cache_metrics_45ea68d7-6e88-4ba9-a8d3-cb2366b1651a.jsonl"
 
 # Role = "You are a highly attentive conversationalist who asks context-aware questions. Your questions should build naturally on previous exchanges, using referring expressions like 'this', 'that', or 'it' to maintain coherence and continuity."
 Role = "Your questions are very short and precise"
@@ -488,7 +488,7 @@ def generate_conversation():
             total_turn_time = time.time() - turn_start_time
 
             metrics_entry = {
-                "conversation_id": counter + 22,
+                "conversation_id": counter + 25,
                 "turn_index": turn_idx,  # Ab hier Turn 1, 2, 3...
                 "cache_available": num_candidates > 0,
                 "candidates_count": num_candidates,
