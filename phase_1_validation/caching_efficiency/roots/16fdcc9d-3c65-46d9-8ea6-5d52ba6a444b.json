@@ -1,0 +1,37 @@
+{
+  "root_id": "16fdcc9d-3c65-46d9-8ea6-5d52ba6a444b",
+  "chunk_a": {
+    "id": "us-news/2026/feb/26/kristi-noem-ice-meeting-delia-ramirez#chunk_2",
+    "text_snippet": "Title: Kristi Noem meets with Democratic lawmaker in ‘combative’ meeting about ICE conduct\nDate: 2026-02-26\n\nContent: The DHS has fallen under heightened scrutiny for its aggressive anti-immigrant crackdown throughout the country. Under Noem’s leadership, agencies within the department have escalated immigration enforcement operations nationwide, leading to a backlash from many voters and mass demonstrations. The department has also received significant pushback from lawmakers and the public in response to recent killings by DHS officers during immigration arrest operations. In the past year, the Trump administration has also granted the DHS widespread powers to carry out immigration-related arrests and is in the process of expanding its immigrant detention network. “It went as I expected it would go,” Ramirez said, adding that “my position on her leadership has not changed”, with the representative continuing to push for Noem’s resignation, impeachment or firing. The DHS responded on Wednesday night.",
+    "article_id": "us-news/2026/feb/26/kristi-noem-ice-meeting-delia-ramirez",
+    "chunk_index": 2,
+    "total_chunks": 7
+  },
+  "chunk_b": {
+    "id": "us-news/2026/jan/14/kristi-noem-articles-of-impeachment#chunk_2",
+    "text_snippet": "Title: Democratic lawmakers file articles of impeachment against Kristi Noem\nDate: 2026-01-14\n\nContent: “We hope she would get serious about doing her job to protect American people, which is what this Department is doing under Secretary Noem.” In response, Kelly said of Noem: “You have violated your oath of office and there will be consequences.” Late last year, the representative Delia Ramirez, a fellow Illinois Democrat, moved to impeach Noem, amid an immigration crackdown in Chicago. They accuse the secretary of willfully obstructing congressional oversight by withholding appropriated funds and repeatedly blocking lawmakers from entering DHS facilities. It further alleges a violation of public trust through the use of “warrantless arrests” and the use of “violence against US citizens and lawful individuals”. It also charges Noem with self-dealing for “inappropriately” using taxpayer dollars to fund an ad campaign for ICE recruitment, and awarding the $200m recruitment contract to a firm run by the husband of the senior DHS official and chief spokesperson, Tricia McLaughlin.",
+    "article_id": "us-news/2026/jan/14/kristi-noem-articles-of-impeachment",
+    "chunk_index": 2,
+    "total_chunks": 5
+  },
+  "t_bridge": [
+    "Kristi Noem",
+    "Impeachment proceedings against DHS Secretary",
+    "DHS immigration enforcement and oversight",
+    "Delia Ramirez"
+  ],
+  "initial_question": {
+    "rag_input": "How did the specific concerns raised in the January 14, 2026 articles of impeachment against Kristi Noem inform Delia Ramirez’s assessment of the DHS after their meeting on February 26, 2026?",
+    "question": "How did the specific concerns raised in the January 14, 2026 articles of impeachment against Kristi Noem inform Delia Ramirez’s assessment of the DHS after their meeting on February 26, 2026?",
+    "answer": "Following the February 26, 2026 meeting, Delia Ramirez concluded that her position on Noem’s leadership had not changed, maintaining that she should be impeached, fired, or resign because the concerns filed in the January 14, 2026 articles—specifically the obstruction of congressional oversight, the use of violence against US citizens, and the aggressive anti-immigrant crackdown—remained unaddressed and persistent under Noem's continued leadership.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Connection between formal impeachment allegations and post-meeting stance"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}
