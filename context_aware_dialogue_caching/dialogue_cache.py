@@ -94,7 +94,7 @@ class DialogueCache:
         return root_id, root_data
 
     def save_root(self, root_data):
-        """Speichert den Root final auf der Festplatte."""
+        """Saves root on disc"""
         filepath = os.path.join(self.roots_dir, f"{root_data['root_id']}.json")
         with open(filepath, 'w', encoding='utf-8') as f:
             json.dump(root_data, f, ensure_ascii=False, indent=2)
@@ -108,9 +108,8 @@ class DialogueCache:
     # TREE CACHING (CI/CD Follow-Ups)
     # ==========================================
     def find_cache_hit(self, root_id, turn_index, current_rag_answer):
-        """Sucht nach einer semantisch ähnlichen RAG-Antwort im gecachten Tree."""
+        """searches for semantically similar cache rag response in current branch."""
 
-        #ToDO num_nodes entfernen
         tree_path = os.path.join(self.trees_dir, f"{root_id}.json")
         if not os.path.exists(tree_path):
             return None, 0.0, 0
@@ -133,7 +132,7 @@ class DialogueCache:
         best_match = None
         highest_sim = 0.0
 
-        # Suche nach der ähnlichsten Antwort in diesem Turn
+        # search for semantically most similar rag response
         for cached_node in valid_nodes:
             sim = self._cosine_similarity(current_embedding, cached_node['rag_answer_embedding'])
             if sim > highest_sim:
@@ -148,7 +147,7 @@ class DialogueCache:
             return None, highest_sim, num_candidates
 
     def stage_tree_node(self, turn_index, rag_answer, next_question_bundle):
-        """Merkt sich einen neuen Knoten für den Tree. Wird nur bei Gesamterfolg gespeichert."""
+        """in-memory cache of node in tree that is currently build. Only saved upon success."""
         new_node_id = str(uuid.uuid4())
 
         self.current_temp_tree_nodes.append({
@@ -162,7 +161,7 @@ class DialogueCache:
         self.active_parent_id = new_node_id
 
     def commit_tree(self, root_id):
-        """Speichert alle gemerkten Knoten final in den Tree für diesen Root."""
+        """saves all cached nodes on disc"""
         if not self.current_temp_tree_nodes:
             return
 
@@ -177,7 +176,7 @@ class DialogueCache:
             if turn_key not in tree_data:
                 tree_data[turn_key] = []
 
-            # Duplikate vermeiden (falls exakt dieselbe Antwort schon existiert)
+            # omit duplicate entries in case the exact same rag response already exists in current child nodes.
             exists = any(n['rag_answer'] == node['rag_answer'] for n in tree_data[turn_key])
             if not exists:
                 tree_data[turn_key].append(node)
@@ -185,9 +184,9 @@ class DialogueCache:
         with open(tree_path, 'w', encoding='utf-8') as f:
             json.dump(tree_data, f, ensure_ascii=False, indent=2)
 
-        # Temporären Speicher leeren
+        # empty cache
         self.clear_temp_stage()
 
     def clear_temp_stage(self):
-        """Leert den temporären Speicher (z.B. wenn die Konversation fehlschlägt)."""
+        """empties node cache (i.e. after errors)"""
         self.current_temp_tree_nodes = []

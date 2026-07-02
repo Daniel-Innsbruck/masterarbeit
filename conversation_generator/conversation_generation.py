@@ -38,13 +38,13 @@ EXPANSION_DIR = "below"
 
 ## Cache-Steuerung
 
-BUILD_CACHE = True          # Soll Cache befüllt werden?
-USE_CACHE = True            # Soll der Cache gelesen werden?
+BUILD_CACHE = False          # should cache be built?
+USE_CACHE = False            # shoudl cache be read?
 CACHE_MODE = "all"
-CACHE_TAU = 0.95
+CACHE_TAU = 0.2
 CACHE_SAFEGUARD = True
 
-# Fixe Liste von UIDs für das kontrollierte Experiment / Phase 1 Validation
+# list uids of cached dialogues here for regression tests
 FIXED_ROOT_IDS = [
     "45ea68d7-6e88-4ba9-a8d3-cb2366b1651a"
 ]
@@ -55,12 +55,12 @@ MAX_CONSECUTIVE_FAILS = 5 # max number of complete conversation restarts before 
 
 # dialog configs
 n = 5             # Target number of turns per conversation
-max_conversations = 6 # number conversations'
+max_conversations = 1 # number conversations'
 
 # Logging & Output
-output_file = "./data/45ea68d7-6e88-4ba9-a8d3-cb2366b1651a.jsonl"
-log_file = "./data/45ea68d7-6e88-4ba9-a8d3-cb2366b1651a.log"
-metrics_file = "./data/cache_metrics_45ea68d7-6e88-4ba9-a8d3-cb2366b1651a.jsonl"
+output_file = "./data/test.jsonl"#"./data/45ea68d7-6e88-4ba9-a8d3-cb2366b1651a.jsonl"
+log_file = "./data/test.log"#"./data/45ea68d7-6e88-4ba9-a8d3-cb2366b1651a.log"
+metrics_file = "./data/test.jsonl"#"./data/cache_metrics_45ea68d7-6e88-4ba9-a8d3-cb2366b1651a.jsonl"
 
 # Role = "You are a highly attentive conversationalist who asks context-aware questions. Your questions should build naturally on previous exchanges, using referring expressions like 'this', 'that', or 'it' to maintain coherence and continuity."
 Role = "Your questions are very short and precise"
@@ -91,7 +91,7 @@ def send_request_to_LLM_conversation(prompt):
 
 
 # =========================================================
-# Hilfsfunktionen
+# Aid Functions
 # =========================================================
 
 def _build_context_string(chunk_list):
@@ -99,7 +99,7 @@ def _build_context_string(chunk_list):
 
 
 def _build_active_context_string_for_validator(active_chunks):
-    """Baut einen klar strukturierten String aus allen aktuell aktiven Chunks."""
+    """Builds a structured string from all currently active chunks"""
     context_a_str = _build_context_string(active_chunks["A"])
     context_b_str = _build_context_string(active_chunks["B"])
 
@@ -114,56 +114,56 @@ def _build_active_context_string_for_validator(active_chunks):
 # =========================================================
 
 def get_initial_multihop_prompt_data(chunk_a, chunk_b, t_bridge, max_retries=MAX_RETRIES):
-    total_val_in = 0
-    total_val_out = 0
-    total_gen_time = 0.0
-    total_val_time = 0.0
+    #total_val_in = 0
+    #total_val_out = 0
+    #total_gen_time = 0.0
+    #total_val_time = 0.0
 
     combined_docs_for_validator = (
         f"--- CONTEXT A ---\n{_build_context_string([chunk_a])}\n\n"
         f"--- CONTEXT B ---\n{_build_context_string([chunk_b])}"
     )
-    gen_start = time.time()
+    # gen_start = time.time()
     answer = send_request_to_LLM_conversation(templates.CONVERSATION_PROMPTS['init_multihop_prompt'].format(
         Role=Role, t_bridge=t_bridge,
         chunk_a=_build_context_string([chunk_a]),
         chunk_b=_build_context_string([chunk_b])
     ))
-    total_gen_time += (time.time() - gen_start)
+    # total_gen_time += (time.time() - gen_start)
     for attempt in range(max_retries + 1):
-        val_start = time.time()
+        # val_start = time.time()
         validation = conversation_validator.validate_init_prompt_all_in_one(answer, combined_docs_for_validator)
-        total_val_time += (time.time() - val_start)
+        # total_val_time += (time.time() - val_start)
 
-        if validation:
-            total_val_in += validation.get('tokens_in', 0)
-            total_val_out += validation.get('tokens_out', 0)
+        #if validation:
+        #    total_val_in += validation.get('tokens_in', 0)
+        #    total_val_out += validation.get('tokens_out', 0)
 
         if validation and validation['correct']:
-            return answer, attempt, total_val_in, total_val_out, total_gen_time, total_val_time
+            return answer, attempt#, total_val_in, total_val_out, total_gen_time, total_val_time
 
         reason = validation['reason'] if validation else "Unknown validation error"
         print(f"  Initial prompt validation failed (attempt {attempt + 1}/{max_retries}): {reason}")
         with open(log_file, 'a', encoding='utf-8') as f:
             f.write(f"Validation failed for initial multi-hop (attempt {attempt + 1}).\nAnswer: {answer}\nReason: {reason}\n\n")
-        gen_start = time.time()
+        # gen_start = time.time()
         answer = send_request_to_LLM_conversation(templates.CONVERSATION_PROMPTS['rephrase_init_prompt'].format(
             Role=Role, reason=reason
         ))
-        total_gen_time += (time.time() - gen_start)
+        # total_gen_time += (time.time() - gen_start)
 
     print(f"  Initial prompt failed after {max_retries} retries. Giving up.")
-    return None, max_retries, total_val_in, total_val_out, total_gen_time, total_val_time
+    return None, max_retries#, total_val_in, total_val_out, total_gen_time, total_val_time
 
 # =========================================================
 # Turn 1-n: Follow-up Generation
 # =========================================================
 
 def get_follow_up_question(answer, active_chunks, expanding_context = "", max_retries=MAX_RETRIES):
-    total_val_in = 0
-    total_val_out = 0
-    total_gen_time = 0.0
-    total_val_time = 0.0
+    #total_val_in = 0
+    #total_val_out = 0
+    #total_gen_time = 0.0
+    #total_val_time = 0.0
 
     current_active_context = _build_active_context_string_for_validator(active_chunks)
 
@@ -175,41 +175,42 @@ def get_follow_up_question(answer, active_chunks, expanding_context = "", max_re
     history = model.get_chat_history()
     gen_start = time.time()
     response = send_request_to_LLM_conversation(follow_up_prompt)
-    total_gen_time += (time.time() - gen_start)
+    # total_gen_time += (time.time() - gen_start)
 
     for attempt in range(max_retries + 1):
-        val_start = time.time()
+        # val_start = time.time()
         validation = conversation_validator.validate_follow_up_question_all_in_one(
             response, history, current_active_context
         )
-        total_val_time += (time.time() - val_start)
+        # total_val_time += (time.time() - val_start)
 
-        if validation:
-            total_val_in += validation.get('tokens_in', 0)
-            total_val_out += validation.get('tokens_out', 0)
+        #if validation:
+        #    total_val_in += validation.get('tokens_in', 0)
+        #    total_val_out += validation.get('tokens_out', 0)
 
         if validation and validation['correct']:
-            return (
-                response,
-                attempt,
-                total_val_in,
-                total_val_out,
-                total_gen_time,
-                total_val_time,
-            )
+            return response
+                #(
+                #response,
+                #attempt,
+                #total_val_in,
+                #total_val_out,
+                #total_gen_time,
+                #total_val_time,
+            #)
 
         reason = validation['reason'] if validation else "Unknown validation error"
         print(f"  Follow-up validation failed (attempt {attempt + 1}/{max_retries}): {reason}")
         with open(log_file, 'a', encoding='utf-8') as f:
             f.write(f"Follow-up validation failed (attempt {attempt + 1}).\nAnswer: {response}\nReason: {reason}\n\n")
-        gen_start = time.time()
+        #gen_start = time.time()
         response = send_request_to_LLM_conversation(templates.CONVERSATION_PROMPTS['rephrase_follow_up_prompt'].format(
             reason=reason
         ))
-        total_gen_time += (time.time() - gen_start)
+        #total_gen_time += (time.time() - gen_start)
 
     print(f"Follow-up failed after {max_retries} retries. Giving up on this turn.")
-    return None, max_retries, total_val_in, total_val_out, total_gen_time, total_val_time
+    return None#, max_retries, total_val_in, total_val_out, total_gen_time, total_val_time
 
 # =========================================================
 # Main Evaluation Loop
@@ -219,7 +220,7 @@ def generate_conversation():
     db_connector = ChromaConnector('./data/v_eval_filtered/')
     cd = ContextDiscoverer(db_connector=db_connector, llm_model=model, k=4)
 
-    dialogue_cache = DialogueCache() if USE_CACHE or BUILD_CACHE else None
+    dialogue_cache = DialogueCache(tau=CACHE_TAU) if USE_CACHE or BUILD_CACHE else None
 
     counter = 0
     consecutive_fails = 0
@@ -249,13 +250,12 @@ def generate_conversation():
         is_new_root = False
         root_id = None
 
-        turn_0_retries, t0_val_in, t0_val_out, t0_gen_time, t0_val_time = 0, 0, 0, 0.0, 0.0
         # =========================================================
         # Turn 0: Context Discovery & Initial Question
         # =========================================================
         if USE_CACHE and FIXED_ROOT_IDS:
-            root_id = FIXED_ROOT_IDS[0] #FIXED_ROOT_IDS[counter]
-            # Versuche das spezifische Root-File von der Festplatte zu laden
+            root_id = FIXED_ROOT_IDS[counter]
+            # load root file from file path
             root_path = os.path.join(dialogue_cache.roots_dir, f"{root_id}.json")
             if os.path.exists(root_path):
                 with open(root_path, 'r', encoding='utf-8') as f:
@@ -284,9 +284,14 @@ def generate_conversation():
             chunk_a = discovered_context['chunk_a']
             chunk_b = discovered_context['chunk_b']
             t_bridge = discovered_context['t_bridge']
-            question, turn_0_retries, t0_val_in, t0_val_out, t0_gen_time, t0_val_time = get_initial_multihop_prompt_data(
+            #question, turn_0_retries, t0_val_in, t0_val_out, t0_gen_time, t0_val_time = get_initial_multihop_prompt_data(
+            #    chunk_a, chunk_b, t_bridge, max_retries=MAX_RETRIES
+            #)
+
+            question, turn_0_retries = get_initial_multihop_prompt_data(
                 chunk_a, chunk_b, t_bridge, max_retries=MAX_RETRIES
             )
+
             # =========================================================
             # Turn 0: Initial Question (Max 3 Tries via MAX_RETRIES)
             # =========================================================
@@ -313,13 +318,13 @@ def generate_conversation():
         # Turn Generation Loop
         # =========================================================
         while turn_idx < n:
-            turn_start_time = time.time()
+            # turn_start_time = time.time()
             current_indices_a = [c['chunk_index'] for c in active_chunks["A"]]
             current_indices_b = [c['chunk_index'] for c in active_chunks["B"]]
             print(f"Turn {turn_idx + 1}/{n} | Active Chunks: A{current_indices_a}, B{current_indices_b}")
 
             # RAG API Call
-            rag_start = time.time()
+            # rag_start = time.time()
             try:
                 res = requests.post(API_URL, json={"question": question.get('rag_input'), "thread_id": thread_id})
                 answer = res.json().get("answer", "")
@@ -342,7 +347,7 @@ def generate_conversation():
                 print(f"Error during RAG request: {e}")
                 conversation_failed = True
                 break
-            time_spent_rag = time.time() - rag_start
+            # time_spent_rag = time.time() - rag_start
             turn_idx += 1
 
             if turn_idx >= n:
@@ -390,21 +395,20 @@ def generate_conversation():
                     )
 
             # =========================================================
-            # CACHE Schritt 1: Lesen
+            # Read Cache
             # =========================================================
             next_question = None
 
-            #ToDo entfernen(nur für experiment)
-            sim_score = 0.0
-            num_candidates = 0
+            # sim_score = 0.0
+            # num_candidates = 0
             cache_accepted = False
-            validator_passed = False # trackt urteil des validators
+            # validator_passed = False # trackt urteil des validators
 
-            turn_retries = 0
-            val_tokens_in = 0
-            val_tokens_out = 0
-            time_spent_validating = 0.0
-            time_spent_generating = 0.0
+            # turn_retries = 0
+            # val_tokens_in = 0
+            # val_tokens_out = 0
+            # time_spent_validating = 0.0
+            # time_spent_generating = 0.0
             if USE_CACHE and CACHE_MODE == "all" and not is_new_root:
                 cached_bundle, sim_score, num_candidates = dialogue_cache.find_cache_hit(root_id, turn_idx - 1, answer)
 
@@ -412,33 +416,33 @@ def generate_conversation():
                     proposed_question = cached_bundle['next_question_bundle']
                     if CACHE_SAFEGUARD:
                         print("Executing Safeguard Validation...")
-                        val_start = time.time()
+                        # val_start = time.time()
                         current_active_context = _build_active_context_string_for_validator(active_chunks)
                         history = model.get_chat_history()
                         validation = conversation_validator.validate_follow_up_question_all_in_one(
                             proposed_question, history, current_active_context
                         )
-                        time_spent_validating += (time.time() - val_start)
-                        if validation:
-                            val_tokens_in += validation.get('tokens_in', 0)
-                            val_tokens_out += validation.get('tokens_out', 0)
+                        # time_spent_validating += (time.time() - val_start)
+                        #if validation:
+                        #    val_tokens_in += validation.get('tokens_in', 0)
+                        #    val_tokens_out += validation.get('tokens_out', 0)
 
                         if validation and validation['correct']:
                             print("Safeguard passed. Reusing cached follow-up.")
-                            validator_passed = True
+                            # validator_passed = True
 
                             next_question = proposed_question
                             cache_accepted = True
                         else:
                             print(f"Safeguard failed. Regenerating.")
-                            validator_passed = False
+                            # validator_passed = False
                     else:
                         print("Safeguard disabled. Reusing cached follow-up.")
                         next_question = proposed_question
                         cache_accepted = True
-                        validator_passed = False
+                        # validator_passed = False
 
-                    # HISTORY INJECTION BEI CACHE HIT
+                    # history injection in case of cache hit
                     if cache_accepted:
                         dialogue_cache.active_parent_id = cached_bundle['node_id']
                         print("Injecting cached turn into model memory to prevent amnesia...")
@@ -449,22 +453,19 @@ def generate_conversation():
                         model.inject_history(simulated_prompt, simulated_response)
 
             # =========================================================
-            # CACHE SCHRITT 2: Generieren (Falls Cache leer/abgelehnt) + Follow-Up generierung (max. 3 fails)
+            #  Follow-Up generation in case cache was dismissed or cache is disabled (max. 3 fails)
             # =========================================================
             if not cache_accepted:
-                (
-                    next_question,
-                    turn_retries,
-                    val_tokens_in,
-                    val_tokens_out,
-                    time_spent_generating,
-                    time_spent_validating,
-                ) = get_follow_up_question(
-                    answer,
-                    active_chunks,
-                    expanding_context=expanding_context,
-                    max_retries=MAX_RETRIES,
-                )
+                next_question = get_follow_up_question(answer, active_chunks, expanding_context=expanding_context, max_retries=MAX_RETRIES)
+                #(
+                #    next_question,
+                #    # turn_retries
+                #) = get_follow_up_question(
+                #    answer,
+                #    active_chunks,
+                #    expanding_context=expanding_context,
+                #    max_retries=MAX_RETRIES,
+                #)
 
                 if next_question is None:
                     print(
@@ -484,37 +485,37 @@ def generate_conversation():
             # =========================================================
             # STRUKTURIERTES LOGGING
             # =========================================================
-            gen_tokens_in, gen_tokens_out = model.get_and_reset_turn_tokens()
-            total_turn_time = time.time() - turn_start_time
+            # gen_tokens_in, gen_tokens_out = model.get_and_reset_turn_tokens()
+            # total_turn_time = time.time() - turn_start_time
 
-            metrics_entry = {
-                "conversation_id": counter + 25,
-                "turn_index": turn_idx,  # Ab hier Turn 1, 2, 3...
-                "cache_available": num_candidates > 0,
-                "candidates_count": num_candidates,
-                "highest_sim": round(sim_score, 4) if num_candidates > 0 else 0.0,
-                "validator_passed": validator_passed if num_candidates > 0 else None,
-                "cache_accepted_and_used": cache_accepted,
+            #metrics_entry = {
+            #    "conversation_id": counter + 25,
+            #    "turn_index": turn_idx,  # Ab hier Turn 1, 2, 3...
+            #    "cache_available": num_candidates > 0,
+            #    "candidates_count": num_candidates,
+            #    "highest_sim": round(sim_score, 4) if num_candidates > 0 else 0.0,
+            #    "validator_passed": validator_passed if num_candidates > 0 else None,
+            #    "cache_accepted_and_used": cache_accepted,
 
-                "generation_retries": turn_retries,
-                "gen_tokens_in": gen_tokens_in,
-                "gen_tokens_out": gen_tokens_out,
-                "val_tokens_in": val_tokens_in,
-                "val_tokens_out": val_tokens_out,
+            #    "generation_retries": turn_retries,
+            #    "gen_tokens_in": gen_tokens_in,
+            #    "gen_tokens_out": gen_tokens_out,
+            #    "val_tokens_in": val_tokens_in,
+            #    "val_tokens_out": val_tokens_out,
 
-                "total_turn_time_sec": round(total_turn_time, 2),
-                "generator_time_sec": round(time_spent_generating, 2),
-                "validator_time_sec": round(time_spent_validating, 2),
-                "rag_time_sec": round(time_spent_rag, 2)  # NEU: RAG Latenz!
-            }
+            #    "total_turn_time_sec": round(total_turn_time, 2),
+            #    "generator_time_sec": round(time_spent_generating, 2),
+            #    "validator_time_sec": round(time_spent_validating, 2),
+            #    "rag_time_sec": round(time_spent_rag, 2)  # NEU: RAG Latenz!
+            #}
 
-            with open(metrics_file, 'a', encoding='utf-8') as f:
-                f.write(json.dumps(metrics_entry) + "\n")
+            #with open(metrics_file, 'a', encoding='utf-8') as f:
+            #    f.write(json.dumps(metrics_entry) + "\n")
 
-            print(
-                f"    [CACHE LOG] Turn {turn_idx} | Sim: {sim_score:.4f} | RAG: {time_spent_rag:.1f}s | Gen: {time_spent_generating:.1f}s | Val: {time_spent_validating:.1f}s")
-            print(
-                f"    [METRICS] Time: {total_turn_time:.1f}s (Gen: {time_spent_generating:.1f}s, Val: {time_spent_validating:.1f}s)")
+            #print(
+            #    f"    [CACHE LOG] Turn {turn_idx} | Sim: {sim_score:.4f} | RAG: {time_spent_rag:.1f}s | Gen: {time_spent_generating:.1f}s | Val: {time_spent_validating:.1f}s")
+            #print(
+            #    f"    [METRICS] Time: {total_turn_time:.1f}s (Gen: {time_spent_generating:.1f}s, Val: {time_spent_validating:.1f}s)")
         # =========================================================
         # Abschluss & Speichern
         # =========================================================
