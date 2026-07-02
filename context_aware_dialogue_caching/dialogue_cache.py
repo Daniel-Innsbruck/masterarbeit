@@ -14,21 +14,20 @@ class DialogueCache:
         self.tau = tau
         self.safeguard = safeguard
 
-        # cache-dirs erstellen, falls noch nicht vorhanden
+        # create cache dirs (if they don't already exist)
         os.makedirs(self.roots_dir, exist_ok=True)
         os.makedirs(self.trees_dir, exist_ok=True)
 
-        # Gemini Client für die Embeddings der RAG-Antworten (für Sim)
+        # Gemini Client for embedding rag-responses (für Sim)
         self.gemini_client = genai.Client(api_key=os.environ.get("GOOGLE_API_KEY"))
 
-        # Temporärer Speicher für die aktuelle Konversation (wird nur bei Erfolg geschrieben)
+        # temporary cache for current conversaation (is only saved upon success
         self.current_temp_tree_nodes = []
 
-        # Trackt den aktuellen Pfad im Baum
+        # tracks path in current tree
         self.active_parent_id = None
 
     def _get_embedding(self, text):
-        """Erzeugt ein Embedding für die Ähnlichkeitsberechnung der RAG-Antworten."""
         response = self.gemini_client.models.embed_content(
             model='gemini-embedding-001',
             contents=text,
@@ -40,17 +39,15 @@ class DialogueCache:
         return np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2))
 
     # ==========================================
-    # ROOT BOOTSTRAPPING (Initiale Fragen)
+    # ROOT BOOTSTRAPPING (Initial query)
     # ==========================================
     def get_random_root(self, current_alpha=None, current_beta=None, current_dir=None):
         """
-        Lädt eine zufällige initiale Konfiguration (Root).
+        Lädt a random initial root from the cache.
 
-        Bietet zwei Modi:
-        1. Tuning-Modus (Parameter sind None): Ignoriert die Expansions-Konfiguration,
-           und sucht aus allen generierten Initialfragen zufällig eine aus.
-        2. CI/CD-Modus (Parameter gesetzt): Filtert strikt nach den Hyperparametern,
-           damit die gecachten dialoge zur spezifierten Context Expansion passen
+       two modes
+        1. Tuning-Mode (Parameters = None): Ignores expansion configs, browses all cached roots
+        2. CI/CD-Mode (Parameters set): Browses only roots that match the current expansion config
         """
         root_files = [f for f in os.listdir(self.roots_dir) if f.endswith('.json')]
         if not root_files:
@@ -63,11 +60,11 @@ class DialogueCache:
             with open(os.path.join(self.roots_dir, file), 'r', encoding='utf-8') as f:
                 root_data = json.load(f)
 
-            # MODUS 1: jede root ok (für model-tuning)
+            # MODE 1
             if current_alpha is None and current_beta is None and current_dir is None:
                 return root_data
 
-            # MODUS 2: Striktes Filtern für die exakte Context-Expansion Strategie (für regresion tests)
+            # MODE 2
             config = root_data.get("expansion_config", {})
             if (config.get("alpha") == current_alpha and
                     config.get("beta") == current_beta and
@@ -77,7 +74,7 @@ class DialogueCache:
         return None
 
     def prepare_new_root(self, chunk_a, chunk_b, t_bridge, initial_question, alpha, beta, direction):
-        """Bereitet einen neuen Root vor. Wird erst nach erfolgreicher Konversation gespeichert."""
+        """Prepares new root for caching."""
         root_id = str(uuid.uuid4())
         root_data = {
             "root_id": root_id,
@@ -100,7 +97,6 @@ class DialogueCache:
             json.dump(root_data, f, ensure_ascii=False, indent=2)
 
     def start_new_path(self, root_id):
-        """Wird am Start jeder neuen Konversation aufgerufen."""
         self.active_parent_id = root_id
         self.clear_temp_stage()
 
