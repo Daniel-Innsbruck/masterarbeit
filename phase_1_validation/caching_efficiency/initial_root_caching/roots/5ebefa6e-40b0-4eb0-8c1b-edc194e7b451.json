@@ -1,0 +1,36 @@
+{
+  "root_id": "5ebefa6e-40b0-4eb0-8c1b-edc194e7b451",
+  "chunk_a": {
+    "id": "politics/live/2026/apr/01/keir-starmer-rachel-reeves-iran-energy-bills-supermarket-cost-of-living-uk-politics-latest-news-updates#chunk_1",
+    "text_snippet": "Title: Reeves criticises Trump for starting Iran war with no ‘clear plan’ to get out of it – as it happened\nDate: 2026-04-01\n\nContent: PA says: Thomas Kerr, a senior figure in the party and one of their Holyrood candidates, said he could not rule out re-airing the ad which was branded “racist” by Scottish Labour leader Mr Sarwar and first minister John Swinney. The former Tory councillor spoke to reporters at a press conference alongside Reform UK Scotland leader Lord Malcolm Offord in Glasgow’s east end. The pair posed in front of two vans that showed pictures of migrants, all non-white, on a boat with large red writing above that read: “Scotland is at breaking point.” Smaller words below the picture said: “Glasgow has become the illegal migrant capital of the UK. Only Reform Scotland will stop this.” During the press conference, at Tollcross international swimming centre, Lord Offord said a Reform Scottish government would use Holyrood’s powers to clamp down on migration, which is reserved, through areas including housing policy, which are devolved.",
+    "article_id": "politics/live/2026/apr/01/keir-starmer-rachel-reeves-iran-energy-bills-supermarket-cost-of-living-uk-politics-latest-news-updates",
+    "chunk_index": 1,
+    "total_chunks": 51
+  },
+  "chunk_b": {
+    "id": "politics/live/2026/apr/15/labour-reform-uk-women-nigel-farage-local-elections-keir-starmer-kemi-badenoch-pmqs-iran-war-uk-politics-latest#chunk_18",
+    "text_snippet": "Title: Reeves tells Americans she does not know why they launched Iran war – as it happened\nDate: 2026-04-15\n\nContent: Anas Sarwar has dismissed as “a desperate lie from a desperate man” a claim by Reform UK’s Scotland leader, Malcolm Offord, that he offered to do a deal with the hard-right party to keep the Scottish National party out of power. As Libby Brooks and Severin Carrell report, Offord made the claim on Channel 4’s Scottish leaders’ debate on Tuesday evening, alleging the Scottish Labour leader came “bouncing up” to him at an event in December last year, suggesting they “work together to remove the SNP”. Here is the full story. Eluned Morgan, the Welsh first minister, has urged the government to drop plans to site a joint radar base with the US in Wales. In an interview with the Times, she said that the government should “pause” its involvement with the project in the light of Donald Trump’s conduct during the Iran war.",
+    "article_id": "politics/live/2026/apr/15/labour-reform-uk-women-nigel-farage-local-elections-keir-starmer-kemi-badenoch-pmqs-iran-war-uk-politics-latest",
+    "chunk_index": 18,
+    "total_chunks": 57
+  },
+  "t_bridge": [
+    "Malcolm Offord",
+    "Reform UK Scotland",
+    "Anas Sarwar"
+  ],
+  "initial_question": {
+    "rag_input": "How did Anas Sarwar respond to the political claims made by Malcolm Offord following their joint appearance in Glasgow during April 2026?",
+    "question": "How did Anas Sarwar respond to the political claims made by Malcolm Offord following their joint appearance in Glasgow during April 2026?",
+    "answer": "While Malcolm Offord and Thomas Kerr campaigned together in Glasgow’s east end in April 2026 to criticize migration policy, Offord subsequently alleged during a Scottish leaders’ debate that Anas Sarwar had previously approached him to suggest they work together to remove the SNP from power. Sarwar dismissed this claim as a \"desperate lie from a desperate man.\"",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Political conflict between Sarwar and Offord"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "root_id": "19c44475-41c6-4a03-93b8-904bd766ff36",
+  "chunk_a": {
+    "id": "politics/live/2026/jan/05/uk-venezuela-response-starmer-trump-labour-conservatives-latest-news-updates#chunk_27",
+    "text_snippet": "Title: No 10 suggests UK would not vote for UN security council resolution condemning US arrest of Maduro – as it happened\nDate: 2026-01-05\n\nContent: But it is a complicated situation. It remains a complicated situation. The most important thing is stability and that peaceful transition to democracy … I think the vast majority of Labour MPs would say that they want to see democracy in Venezuela. That is hugely important. At the weekend Mette Frederiksen, the Danish prime minister, said Donald Trump has no right to annex Greenland. Asked about her comments today, Keir Starmer said: Well, I stand with her, and she’s right about the future of Greenland. In a separate question, Starmer was asked if he agreed with calls from the Danes for the US president to stop proposing American annexation of the island. He replied: Yes. Greenland and the Kingdom of Denmark are to decide the future of Greenland, and only Greenland and the Kingdom of Denmark.",
+    "article_id": "politics/live/2026/jan/05/uk-venezuela-response-starmer-trump-labour-conservatives-latest-news-updates",
+    "chunk_index": 27,
+    "total_chunks": 42
+  },
+  "chunk_b": {
+    "id": "world/2026/jan/05/keir-starmer-masterclass-hedging-bets-venezuela-raid#chunk_3",
+    "text_snippet": "Title: Starmer delivers masterclass in hedging his bets after Venezuela raid\nDate: 2026-01-05\n\nContent: “Nobody thinks Maduro was a good guy, or that he should have been in power,” one said. “But effectively kidnapping a head of state to achieve regime change sets you on a dangerous path.” Some on the political side have also privately voiced concerns. “If we let this happen without condemning it then where does it stop? Colombia? Cuba? Even Greenland? Where does Trump strike next?” one minister questioned. Downing Street insiders – perhaps conscious of alarm over Trump’s actions among Labour MPs – insist the UK would take a more robust approach if a European ally were ever threatened. Starmer has publicly backed the Danish prime minister after she demanded the US stop its threats to forcibly take over Greenland, which is largely autonomous but remains part of the Danish kingdom, for security and mineral resources.",
+    "article_id": "world/2026/jan/05/keir-starmer-masterclass-hedging-bets-venezuela-raid",
+    "chunk_index": 3,
+    "total_chunks": 5
+  },
+  "t_bridge": [
+    "Keir Starmer's foreign policy",
+    "Donald Trump's geopolitical actions",
+    "Greenland's sovereignty",
+    "US-UK diplomatic relations"
+  ],
+  "initial_question": {
+    "rag_input": "Why did Keir Starmer publicly support Mette Frederiksen's stance on Greenland on January 5, 2026?",
+    "question": "Why did Keir Starmer publicly support Mette Frederiksen's stance on Greenland on January 5, 2026?",
+    "answer": "On January 5, 2026, Keir Starmer supported Mette Frederiksen because he believes the future of Greenland should be decided solely by Greenland and the Kingdom of Denmark, rather than by the US president's proposed annexation. This stance aligns with the broader diplomatic strategy of Downing Street, where officials have voiced concerns that the US's recent actions in Venezuela—such as the kidnapping of a head of state—set a dangerous precedent that could lead the US to strike at other territories, including Greenland.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Keir Starmer's diplomatic response to US geopolitical actions in Greenland and Venezuela"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

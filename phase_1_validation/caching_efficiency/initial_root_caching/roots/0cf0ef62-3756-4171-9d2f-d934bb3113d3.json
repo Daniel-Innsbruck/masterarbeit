@@ -1,0 +1,36 @@
+{
+  "root_id": "0cf0ef62-3756-4171-9d2f-d934bb3113d3",
+  "chunk_a": {
+    "id": "us-news/2026/apr/07/gun-violence-funding-cuts-california-trump#chunk_0",
+    "text_snippet": "Title: Trump cut funding for gun violence prevention. California’s Latino communities are facing the fallout\nDate: 2026-04-07\n\nContent: Sergio Diaz knows how to make people feel comfortable. It is a skill he learned from his years as a salesman selling shoes, cellphones and lawn care hardware in the San Francisco Bay Area. He is no longer a salesman, but relating to others is still crucial in Diaz’s work as a gun violence prevention specialist for the Oakland non-profit Youth Alive. Every day, the 34-year-old goes to trauma centers, like Highland hospital in East Oakland, and meets with people who are recovering after being shot. He talks with them at their bedsides to figure out what they need to redirect them away from retaliation – whether it’s help applying for medical benefits or getting a driver’s license. Beyond his way with words, he says he is able to build relationships with his clients, many of whom are immigrants from Central America, because he understands their circumstances. Like them, Diaz is all too familiar with violence.",
+    "article_id": "us-news/2026/apr/07/gun-violence-funding-cuts-california-trump",
+    "chunk_index": 0,
+    "total_chunks": 11
+  },
+  "chunk_b": {
+    "id": "us-news/2026/mar/11/the-california-town-that-lost-its-mayor-to-gun-suicide#chunk_2",
+    "text_snippet": "Title: The California town that lost its mayor to gun suicide\nDate: 2026-03-11\n\nContent: The guy who helped build trails, parks and playgrounds. The guy who always showed up. After moving throughout the country for decades, West had formed a deep bond with San Juan Bautista, and there, he found meaning. “It became home in his heart,” said his daughter, Tina West. What he loved most were the people, she recalled. And nothing made him prouder than being their mayor, a position he held until he died. More Americans die by gun suicide than by gun homicide. For decades, rural communities like San Juan Bautista have endured higher suicide rates than cities, and most of these deaths involve firearms. In a town this small, a single suicide upsets the rhythm of life to such an extent that traditional ways of measuring suicides stop making sense. West’s death alone – in a population of just 2,200 people – was enough to alter the town’s suicide rate to more than three times the national average (14.2 per 100,000) and four times the state’s (11.3 per 100,000).",
+    "article_id": "us-news/2026/mar/11/the-california-town-that-lost-its-mayor-to-gun-suicide",
+    "chunk_index": 2,
+    "total_chunks": 17
+  },
+  "t_bridge": [
+    "Gun violence prevention and impact",
+    "Public health crisis",
+    "California community-based response to firearm-related trauma"
+  ],
+  "initial_question": {
+    "rag_input": "How do the firearm-related public health crises addressed by community-based programs in Oakland during April 2026 compare to the impact of gun suicides in towns like San Juan Bautista as of March 2026?",
+    "question": "How do the firearm-related public health crises addressed by community-based programs in Oakland during April 2026 compare to the impact of gun suicides in towns like San Juan Bautista as of March 2026?",
+    "answer": "In April 2026, programs like Youth Alive in Oakland focus on individual intervention and trauma recovery for victims of firearm violence, such as those at Highland Hospital, to prevent retaliation. In contrast, the March 2026 data on San Juan Bautista highlights the catastrophic statistical impact of a single gun suicide in a small rural town, where one death caused the local suicide rate to climb to over three times the national average and four times the state average.",
+    "type": "Initial",
+    "logic_type": "comparison",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Comparison of community-based trauma response and rural gun suicide impact"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

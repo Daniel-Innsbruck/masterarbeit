@@ -1,0 +1,36 @@
+{
+  "root_id": "1d21886e-7d19-48ab-b05b-118feb4b23f8",
+  "chunk_a": {
+    "id": "us-news/live/2026/feb/23/donald-trump-mar-a-lago-tariffs-epstein-immigration-latest-news-updates#chunk_30",
+    "text_snippet": "Title: Hakeem Jeffries invites family of Jesse Jackson and Epstein survivor to Trump’s State of the Union address – as it happened\nDate: 2026-02-24\n\nContent: Peter Mandelson has been arrested by detectives investigating claims he committed misconduct in public office during his friendship with the convicted sex offender Jeffrey Epstein. Video footage showed him being driven away from his home in an unmarked car shortly after being escorted from his home by officers. Mandelson, 72, was fired from the most prestigious posting in Britain’s diplomatic service in September, when the depth of his friendship with Epstein started to become clear. London’s Metropolitan police have been investigating the alleged leaking by Mandelson of Downing Street emails and market-sensitive information to Epstein. The former UK ambassador to the US is understood to believe he has not committed any offence. A police investigation into Mandelson was opened after the release of files by the US justice department related to the late disgraced financier.",
+    "article_id": "us-news/live/2026/feb/23/donald-trump-mar-a-lago-tariffs-epstein-immigration-latest-news-updates",
+    "chunk_index": 30,
+    "total_chunks": 64
+  },
+  "chunk_b": {
+    "id": "politics/live/2026/feb/23/send-white-paper-keir-starmer-labour-reform-tories-uk-politics-latest-news-updates#chunk_1",
+    "text_snippet": "Title: Met police arrest former British ambassador to US Peter Mandelson – as it happened \nDate: 2026-02-23\n\nContent: For a full list of all the stories covered on the blog today, do scroll through the list of key event headlines near the top of the blog. Former Green party co-leader, Carla Denyer, has said it is “absolutely right” that Peter Mandleson was arrested for questioning. In a post on X, she said: “About time. Absolutely right that Mandelson is arrested for questioning. We owe so much to the bravery of the women who fought to get the Epstein files released. We must have full accountability from Mandelson and Mountbatten-Windsor.” Peter Mandelson has been arrested by detectives investigating claims he committed misconduct in public office during his friendship with the convicted sex offender Jeffrey Epstein. Bridget Phillipson has presented sweeping plans to overhaul special educational needs provision in England, with a package of measures designed to make the system less reliant on cash-strapped councils and give schools greater responsibility.",
+    "article_id": "politics/live/2026/feb/23/send-white-paper-keir-starmer-labour-reform-tories-uk-politics-latest-news-updates",
+    "chunk_index": 1,
+    "total_chunks": 74
+  },
+  "t_bridge": [
+    "Peter Mandelson",
+    "Jeffrey Epstein",
+    "Metropolitan police investigation"
+  ],
+  "initial_question": {
+    "rag_input": "How did the 2026 Metropolitan police investigation into Peter Mandelson connect his professional fallout in September 2025 to the public reaction expressed by Carla Denyer?",
+    "question": "How did the 2026 Metropolitan police investigation into Peter Mandelson connect his professional fallout in September 2025 to the public reaction expressed by Carla Denyer?",
+    "answer": "The Metropolitan police investigation, which led to Mandelson's arrest in February 2026, concerns his alleged misconduct in public office during his friendship with Jeffrey Epstein—a friendship that first led to his firing from the British diplomatic service in September 2025. Following his arrest, Carla Denyer publicly supported the move, stating it was 'about time' and emphasizing that accountability is owed for the bravery of the women involved in the release of the Epstein files.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Peter Mandelson's diplomatic career, police investigation, and public response"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

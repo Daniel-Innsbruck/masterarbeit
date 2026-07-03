@@ -1,0 +1,36 @@
+{
+  "root_id": "d86c189d-8e19-4b1c-9b42-54c6a5033bcb",
+  "chunk_a": {
+    "id": "uk-news/live/2026/apr/18/keir-starmer-peter-mandelson-olly-robbins-antonia-romeo-labour-uk-politics-latest-news-updates#chunk_2",
+    "text_snippet": "Title: Olly Robbins ‘thrown under bus’ by No 10, says ex-Foreign Office chief – as it happened\nDate: 2026-04-18\n\nContent: Speaking in Dundee, Swinney stated that he was “satisfied the Scottish government has taken the necessary steps to implement the supreme court ruling” despite heavy criticism from Joanna Cherry, a former MP and colleague of Swinney who left the party last year. Cherry, who told the Times that she was “absolutely disgusted by the SNP, and ashamed of being a member” has heavily criticised Swinney and his predecessors on the SNP stance on sex and gender, labelling Swinney a “coward” and saying they have been “too afraid” to stand up to the party on the issue. The supreme court’s ruling, made in April 2025, stated that for the purposes of the Equality Act 2010, sex is based on birth sex and not acquired gender, a distinction that Cherry had been a longtime campaigner for.",
+    "article_id": "uk-news/live/2026/apr/18/keir-starmer-peter-mandelson-olly-robbins-antonia-romeo-labour-uk-politics-latest-news-updates",
+    "chunk_index": 2,
+    "total_chunks": 19
+  },
+  "chunk_b": {
+    "id": "politics/live/2026/apr/15/labour-reform-uk-women-nigel-farage-local-elections-keir-starmer-kemi-badenoch-pmqs-iran-war-uk-politics-latest#chunk_1",
+    "text_snippet": "Title: Reeves tells Americans she does not know why they launched Iran war – as it happened\nDate: 2026-04-15\n\nContent: Anas Sarwar has dismissed as “a desperate lie from a desperate man” a claim by Reform UK’s Scotland leader, Malcolm Offord, that he offered to do a deal with the rightwing party to keep the Scottish National party out of power. For a full list of all the stories covered on the blog today, do scroll through the list of key event headlines near the top of the blog. Campaigners who won a legal case in the UK’s highest court on the definition of a woman said they are “quietly confident” long-awaited guidance on single-sex spaces has not been watered down, the Press Association reports. PA says: For Women Scotland (FWS), who celebrated a landmark legal victory a year ago, described their meeting with women and equalities minister Bridget Phillipson today as “positive”. The campaigners pressed for detail on changes made to draft guidance and what date they expected it to be published ahead of parliamentary scrutiny.",
+    "article_id": "politics/live/2026/apr/15/labour-reform-uk-women-nigel-farage-local-elections-keir-starmer-kemi-badenoch-pmqs-iran-war-uk-politics-latest",
+    "chunk_index": 1,
+    "total_chunks": 57
+  },
+  "t_bridge": [
+    "Supreme Court ruling on Equality Act 2010 definition of sex",
+    "For Women Scotland (FWS) legal victory",
+    "Scottish political discourse on sex and gender guidance"
+  ],
+  "initial_question": {
+    "rag_input": "How does the For Women Scotland legal victory from April 2025 align with the Scottish government's implementation of the Supreme Court's ruling on the Equality Act 2010?",
+    "question": "How does the For Women Scotland legal victory from April 2025 align with the Scottish government's implementation of the Supreme Court's ruling on the Equality Act 2010?",
+    "answer": "The For Women Scotland (FWS) legal victory in April 2025 confirmed that for the purposes of the Equality Act 2010, sex is defined by birth sex rather than acquired gender. John Swinney stated that the Scottish government has taken the necessary steps to implement this Supreme Court ruling, which aligns with the definition FWS campaigned for, as they continue to press the government for finalized guidance on single-sex spaces based on this legal precedent.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Legal definition of sex and government policy"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

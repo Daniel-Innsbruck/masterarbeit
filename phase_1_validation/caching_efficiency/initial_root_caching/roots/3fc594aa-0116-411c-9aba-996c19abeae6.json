@@ -1,0 +1,37 @@
+{
+  "root_id": "3fc594aa-0116-411c-9aba-996c19abeae6",
+  "chunk_a": {
+    "id": "us-news/2026/feb/24/north-carolina-missing-woman-found#chunk_0",
+    "text_snippet": "Title: Missing North Carolina woman found ‘alive and well’ after 24 years\nDate: 2026-02-24\n\nContent: A North Carolina woman says she was simultaneously “ecstatic … pissed … [and] heartbroken” to learn authorities recently found her mother living safely and well – while also wanting her location kept secret – more than 24 years after she suddenly vanished from her family. “I am all over the map!” Amanda Smith, the daughter of Michele Hundley Smith, wrote in a lengthy statement on a social media page dedicated to searching for her mother. “Will I have a relationship once more with my mom? Honestly, I can’t answer that [because] I don’t even know. “My initial reaction would be yes absolutely but then I think of all the hurt … Even then, my mom is only human, just as well all are.” Amanda Smith’s search for Michele had previously received national media attention as recently as 2020, when the daughter – among other things – told NBC News that “nothing was ever the same” after her mother seemingly disappeared from their home in Eden, North Carolina, on 9 December 2001.",
+    "article_id": "us-news/2026/feb/24/north-carolina-missing-woman-found",
+    "chunk_index": 0,
+    "total_chunks": 5
+  },
+  "chunk_b": {
+    "id": "us-news/2026/mar/28/north-carolina-woman-forgives-mom-for-disappearing-without-a-word-24-years-ago#chunk_0",
+    "text_snippet": "Title: North Carolina woman forgives mom for disappearing without a word 24 years ago\nDate: 2026-03-28\n\nContent: A North Carolina woman whose mother was missing without a word for 24 years before authorities managed to locate her – alive and well – has reunited with her and says she forgives her. “I know everything is not black and white – there’s a whole gray area,” Amanda Smith said of her mother, 62-year-old Michele Hundley Smith, after they embraced in front of a courthouse on Thursday. “And so I mean, look – life’s too short for me to hold a grudge against her because she’s my mom.” The Smiths’ reunion served as a postscript of sorts to a story that commanded days of national media attention beginning on 20 February, when the sheriff’s office of Rockingham county, North Carolina, announced that it had tracked down Michele after she had been reported missing in December 2001. Michele’s husband at the time reported that she mentioned going shopping the last time he saw her – only neither she nor her minivan ever came back.",
+    "article_id": "us-news/2026/mar/28/north-carolina-woman-forgives-mom-for-disappearing-without-a-word-24-years-ago",
+    "chunk_index": 0,
+    "total_chunks": 4
+  },
+  "t_bridge": [
+    "Amanda Smith",
+    "Michele Hundley Smith",
+    "24-year disappearance case",
+    "Mother-daughter reunion"
+  ],
+  "initial_question": {
+    "rag_input": "How did Amanda Smith’s feelings about her mother Michele Hundley Smith’s disappearance evolve between her February 2026 statement and their reunion on March 26, 2026?",
+    "question": "How did Amanda Smith’s feelings about her mother Michele Hundley Smith’s disappearance evolve between her February 2026 statement and their reunion on March 26, 2026?",
+    "answer": "In her February 2026 statement, Amanda Smith expressed complex, conflicting emotions including being \"ecstatic,\" \"pissed,\" and \"heartbroken,\" and she was unsure if she could have a relationship with her mother due to the pain caused by the 24-year disappearance. By their reunion at the courthouse on March 26, 2026, Amanda had moved past those feelings of hurt to offer forgiveness, stating that life is too short to hold a grudge against her mother.",
+    "type": "Initial",
+    "logic_type": "temporal",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Evolution of Amanda Smith's emotional state regarding her mother's disappearance and reunion."
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

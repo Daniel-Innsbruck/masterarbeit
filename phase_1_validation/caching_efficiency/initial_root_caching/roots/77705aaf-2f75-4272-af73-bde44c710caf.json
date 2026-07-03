@@ -1,0 +1,36 @@
+{
+  "root_id": "77705aaf-2f75-4272-af73-bde44c710caf",
+  "chunk_a": {
+    "id": "politics/2026/apr/09/israel-attacks-on-lebanon-should-not-be-happening-says-keir-starmer#chunk_2",
+    "text_snippet": "Title: Israel’s attacks on Lebanon should not be happening, says Keir Starmer\nDate: 2026-04-09\n\nContent: UK ministers have refused to directly condemn Trump, even after the president shocked the world by saying Iran’s “whole civilisation will die” if Tehran did not meet US demands before the ceasefire. In the ITV interview, Starmer was obliquely critical of the language, saying: “They are not words I would use, ever use, because I come at this with our British values and principles.” In his Guardian article, Starmer set out the separate path the UK has taken over the war, writing: “From the outset, I was clear Britain would not be drawn into offensive military action. And we were not.” The PM presented his choices as being best for the UK’s interests and for creating longer-term resilience. “It is why, alongside staying out of the conflict, we’ve rebuilt our European alliances and boosted our defence capacity with the biggest sustained investment since the cold war,” he wrote. “Those measures aren’t simply about responding to one crisis in isolation.",
+    "article_id": "politics/2026/apr/09/israel-attacks-on-lebanon-should-not-be-happening-says-keir-starmer",
+    "chunk_index": 2,
+    "total_chunks": 5
+  },
+  "chunk_b": {
+    "id": "politics/live/2026/apr/08/keir-starmer-iran-war-trump-ceasefire-gulf-strait-of-hormuz-labour-conservatives-liberal-democrats-reform-scotland-holyrood-uk-politics-latest-news-updates#chunk_6",
+    "text_snippet": "Title: UK politics: Starmer warns ‘lot of work to do’ to make ceasefire permanent at start of talks in Gulf - as it happened\nDate: 2026-04-08\n\nContent: Responding to a question about Trump, he declined to criticise the US president directly. But he implied that he thought Trump’s decision to wage war on Iran was deeply flawed. Asked if his relationship with Trump was “in tatters”, Starmer told broadcasters: I’ve acted as you would expect of a British prime minister, which is by being absolutely focused on what is our national interest, and that’s why I’ve applied my principles and my values throughout. And my principles and values made sure that our decisions were that we wouldn’t get involved in the action without a lawful basis, without a viable, thought-through plan. That was the right position for the United Kingdom, and of course, that has included us taking action, collective self-defence … I act in the British national interest, but nothing, but nothing, is going to deflect me from that.",
+    "article_id": "politics/live/2026/apr/08/keir-starmer-iran-war-trump-ceasefire-gulf-strait-of-hormuz-labour-conservatives-liberal-democrats-reform-scotland-holyrood-uk-politics-latest-news-updates",
+    "chunk_index": 6,
+    "total_chunks": 53
+  },
+  "t_bridge": [
+    "Keir Starmer's diplomatic stance on the US-Iran conflict",
+    "The distinction between UK national interests and US foreign policy",
+    "Justification for UK military non-interventionism"
+  ],
+  "initial_question": {
+    "rag_input": "How did Keir Starmer justify the UK's refusal to join the US-led offensive against Iran in April 2026 while maintaining British values?",
+    "question": "How did Keir Starmer justify the UK's refusal to join the US-led offensive against Iran in April 2026 while maintaining British values?",
+    "answer": "In April 2026, Keir Starmer justified the UK's military non-interventionism by stating that the decisions were based on British national interests, values, and principles, specifically requiring a lawful basis and a viable, thought-through plan before taking action. He contrasted this stance with the rhetoric used by President Trump regarding Iran—which Starmer deemed incompatible with his own principles—while emphasizing that Britain remained focused on rebuilding European alliances and boosting defense capacity rather than being drawn into offensive military action.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Justification for UK non-interventionism based on national interests and diplomatic values."
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

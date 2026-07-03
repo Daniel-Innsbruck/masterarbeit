@@ -1,0 +1,36 @@
+{
+  "root_id": "36d09f46-fa28-4e6d-b8e7-9bb16ff885a7",
+  "chunk_a": {
+    "id": "us-news/2026/mar/06/ice-arrest-oregon-shop-owner#chunk_8",
+    "text_snippet": "Title: ICE arrested an Oregon shop owner who had her green card in her pocket: ‘They didn’t care’\nDate: 2026-03-06\n\nContent: “People were shocked and horrified, because she is well-known and has been here for so long. People were really concerned about the safety of their neighbors.” Locals organized a vigil to support Juanita and others affected by ICE and began doing early morning patrols and joining rapid response networks, Carrillo said. DHS later confirmed ICE had detained nine people in Cottage Grove that day. Three of those arrested were Carrillo’s family members, he said. One has since been deported to Guatemala; another was released and a third remains detained. The November operation, Carrillo said, sent many immigrants into hiding, regardless of their status. Children stayed home from school. Parents skipped work. Families struggled to keep up with necessities, like groceries. Carrillo, who was on the scene for Juanita’s arrest, said he was shaken by the episode and had to take time off work.",
+    "article_id": "us-news/2026/mar/06/ice-arrest-oregon-shop-owner",
+    "chunk_index": 8,
+    "total_chunks": 16
+  },
+  "chunk_b": {
+    "id": "us-news/ng-interactive/2026/apr/05/trump-deportation-rural-towns-wisconsin#chunk_11",
+    "text_snippet": "Title: Trump’s mass deportation plan has broken the quiet of small US towns: ‘We have to take care of each other’\nDate: 2026-04-05\n\nContent: “There was a reason why some of us never leave this town,” one woman said. “We’re proud to be from here. We feel safe here. It’s an amazing community where we feel supported and welcomed. Unfortunately, some of those same reasons that I’ve stayed here for so long I’ve recently been called into question.” Naturalized citizens said they carry their passports out of fear. One woman said she and her family have plans in place in case she is detained or pulled over, and her daughter has been harassed by kids saying they would send ICE to her house. Another said her husband, who is of Mexican descent, hadn’t left the house in a month since a suspicious vehicle stopped and stared at him. He “feels like a prisoner in his home”, she said. Local residents have raised questions over police’s involvement with immigration. One person said that two people were pulled over by Baldwin police, and ICE soon arrived after. “How would ICE know to come to that area?” they asked.",
+    "article_id": "us-news/ng-interactive/2026/apr/05/trump-deportation-rural-towns-wisconsin",
+    "chunk_index": 11,
+    "total_chunks": 17
+  },
+  "t_bridge": [
+    "Impact of ICE enforcement operations on small town community cohesion",
+    "Psychological and social effects of mass deportation plans on immigrant families",
+    "Community response and localized fears regarding immigration enforcement"
+  ],
+  "initial_question": {
+    "rag_input": "How did the localized fear triggered by the March 2026 arrests in Cottage Grove influence the ways families in other small towns like Baldwin were preparing for potential deportations in April 2026?",
+    "question": "How did the localized fear triggered by the March 2026 arrests in Cottage Grove influence the ways families in other small towns like Baldwin were preparing for potential deportations in April 2026?",
+    "answer": "Following the March 2026 arrests in Cottage Grove, which caused immigrants to go into hiding and struggle with daily necessities like groceries, a climate of fear spread to other small towns. By April 2026, this environment led families in places like Baldwin to take defensive measures: naturalized citizens began carrying passports for safety, families created contingency plans for potential detentions, and residents became hyper-vigilant, exemplified by individuals feeling like 'prisoners' in their homes and questioning the coordination between local police and ICE.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Expansion of community fear and defensive measures following ICE operations."
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

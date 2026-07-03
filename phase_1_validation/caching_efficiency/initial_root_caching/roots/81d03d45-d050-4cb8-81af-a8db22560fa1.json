@@ -1,0 +1,36 @@
+{
+  "root_id": "81d03d45-d050-4cb8-81af-a8db22560fa1",
+  "chunk_a": {
+    "id": "world/live/2026/apr/05/middle-east-crisis-live-iran-israel-us-war-trump-strait-hormuz-missing-pilot-downed#chunk_17",
+    "text_snippet": "Title: At least 15 killed in strikes on Lebanon – as it happened\nDate: 2026-04-06\n\nContent: A man employed by the US defense contractor V2X has been killed in a drone attack on Erbil airbase, amid concerns from colleagues that they are being placed in harm’s way and pressured to remain in Iraq despite security risks, five sources said. The worker, from Kenya, died in a night attack in his sleeping quarters on the base on 24 March. Another five workers were injured. They are from Kenya and India, and are among a group of about 45 workers employed by V2X who have remained on the base. One of the workers is in a critical condition with severe burns, sources said. “The company has messed up here bad,” said a source speaking on the condition of anonymity. “He didn’t have to die. The company thought it was more important to keep the mission going rather than get people to safety.” It is about to be 11pm in Tehran, and 10.30pm in Tel Aviv and Beirut.",
+    "article_id": "world/live/2026/apr/05/middle-east-crisis-live-iran-israel-us-war-trump-strait-hormuz-missing-pilot-downed",
+    "chunk_index": 17,
+    "total_chunks": 64
+  },
+  "chunk_b": {
+    "id": "world/live/2026/apr/06/iran-war-live-updates-trump-hormuz-oil-netanyahu-israel#chunk_72",
+    "text_snippet": "Title: Blasts heard near Erbil airport – as it happened\nDate: 2026-04-07\n\nContent: Kuwait also reported that two power and water desalination plants sustained “significant material damage” after being attacked by Iranian drones. Israeli attacks in Lebanon on Sunday killed at least 15 people, the country’s health ministry said, while Israel’s military chief visited troops in southern Lebanon and pledged to intensify strikes against Hezbollah. One of Israel’s strikes in Beirut on Sunday killed at least five people and wounded 52 in the Jnah neighbourhood, the Lebanese ministry said.",
+    "article_id": "world/live/2026/apr/06/iran-war-live-updates-trump-hormuz-oil-netanyahu-israel",
+    "chunk_index": 72,
+    "total_chunks": 73
+  },
+  "t_bridge": [
+    "Drone attacks in the Middle East region",
+    "Security incidents in Erbil",
+    "Geopolitical escalation involving Iran and its proxies"
+  ],
+  "initial_question": {
+    "rag_input": "How did the late March and early April 2026 drone attacks impact personnel and infrastructure in the Middle East?",
+    "question": "How did the late March and early April 2026 drone attacks impact personnel and infrastructure in the Middle East?",
+    "answer": "The drone attacks resulted in both human casualties and material damage: on 24 March 2026, a drone attack on Erbil airbase killed a V2X contractor from Kenya and injured five others, while in early April 2026, Iranian drone attacks caused significant material damage to two power and water desalination plants in Kuwait.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Drone attacks and regional security incidents"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

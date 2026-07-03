@@ -1,0 +1,36 @@
+{
+  "root_id": "66e50cb2-6618-4ffb-b71b-bdd493e147ba",
+  "chunk_a": {
+    "id": "us-news/live/2026/jan/08/minneapolis-shooting-ice-minnesota-protests-vigils-donald-trump-latest-news-updates#chunk_70",
+    "text_snippet": "Title: US immigration agents shoot two people – as it happened\nDate: 2026-01-09\n\nContent: In other developments: US European Command said on Wednesday that it had boarded the Marinera, a Russian-flagged oil tanker, over alleged sanctions violations, bringing to an end a dramatic two-week pursuit that began in the Caribbean and concluded in the Atlantic. Separately on Wednesday, the US coast guard announced it had intercepted another dark-fleet tanker that is under sanctions, the M Sophia, in a pre-dawn operation in the Caribbean. The operation is likely to strain relations with Vladimir Putin, coming at a sensitive moment as negotiations over a potential peace deal in Ukraine continue and after the US capture of Venezuela’s president, Nicolás Maduro, a longstanding Kremlin ally. Initial reports suggest the ageing tanker is empty, having been en route to pick up Venezuelan oil before changing course.",
+    "article_id": "us-news/live/2026/jan/08/minneapolis-shooting-ice-minnesota-protests-vigils-donald-trump-latest-news-updates",
+    "chunk_index": 70,
+    "total_chunks": 73
+  },
+  "chunk_b": {
+    "id": "us-news/live/2026/jan/09/trump-venezuela-oil-attacks-minnesota-portland-ice-supreme-court-tariffs-latest-news-updates#chunk_51",
+    "text_snippet": "Title: Trump threatens Greenland and Iran at meeting with oil bosses on Venezuela – as it happened\nDate: 2026-01-10\n\nContent: Russian envoy Kirill Dmitriev said on Telegram that Trump decided to release “all Russians” on board the Marinera tanker. The United States said previously the Marinera’s crew could be prosecuted – which Russia said was “categorically unacceptable.” Moscow on Thursday accused Washington of stoking tensions and threatening international shipping with the seizure of the tanker, which it has cast as illegal. Russia’s foreign ministry said the move will “only result in further military and political tensions”, adding that it was worried by “Washington’s willingness to generate acute international crisis situations.” US border patrol agents shot two people outside a hospital in Portland, Oregon, a day after an ICE officer shot and killed a woman in Minneapolis. The Portland police bureau (PPB) said in a statement on Thursday afternoon that two people were in hospital after a shooting involving federal agents, adding that the conditions of those shot were not known.",
+    "article_id": "us-news/live/2026/jan/09/trump-venezuela-oil-attacks-minnesota-portland-ice-supreme-court-tariffs-latest-news-updates",
+    "chunk_index": 51,
+    "total_chunks": 56
+  },
+  "t_bridge": [
+    "Marinera tanker seizure",
+    "US-Russia diplomatic tensions",
+    "Geopolitical implications of tanker sanctions"
+  ],
+  "initial_question": {
+    "rag_input": "How did the US government's position on the crew of the Marinera change between the seizure on January 7, 2026, and the statements made by the Russian envoy on January 10, 2026?",
+    "question": "How did the US government's position on the crew of the Marinera change between the seizure on January 7, 2026, and the statements made by the Russian envoy on January 10, 2026?",
+    "answer": "Initially, the United States indicated that the crew of the Russian-flagged tanker Marinera could be prosecuted following its seizure over alleged sanctions violations. However, by January 10, 2026, Russian envoy Kirill Dmitriev announced via Telegram that Donald Trump had decided to release all Russian crew members on board, contradicting the earlier US stance that Russia had labeled 'categorically unacceptable.'",
+    "type": "Initial",
+    "logic_type": "temporal",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Marinera tanker crew status"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

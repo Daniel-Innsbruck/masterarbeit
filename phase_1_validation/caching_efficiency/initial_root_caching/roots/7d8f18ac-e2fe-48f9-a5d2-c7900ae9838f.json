@@ -1,0 +1,35 @@
+{
+  "root_id": "7d8f18ac-e2fe-48f9-a5d2-c7900ae9838f",
+  "chunk_a": {
+    "id": "us-news/live/2026/apr/08/liberal-judge-chris-taylor-wisconsin-supreme-court-donald-trump-pete-hegseth-us-politics-latest#chunk_22",
+    "text_snippet": "Title: Trump and former loyalist Marjorie Taylor Greene trade jabs as Maga split over Iran widens – as it happened\nDate: 2026-04-09\n\nContent: Representative Glenn Ivey, of Maryland, will lead the effort, and invite all members who are in Washington tomorrow to join. The motion is unlikely to succeed, since a single objection would block unanimous consent and require Democrats to pursue a formal vote on the resolution. In a short while, Donald Trump will hold a meeting with Mark Rutte, the Nato secretary general. Rutte has arrived at the White House, but as of now sit-down is still closed to the press. Earlier, Karoline Leavitt told reporter that withdrawing from Nato is something the president “has discussed” and will likely discuss further with the secretary general. This comes after Trump has routinely criticized the alliance for the reluctance of member countries to offer support for the US military campaign in Iran.",
+    "article_id": "us-news/live/2026/apr/08/liberal-judge-chris-taylor-wisconsin-supreme-court-donald-trump-pete-hegseth-us-politics-latest",
+    "chunk_index": 22,
+    "total_chunks": 57
+  },
+  "chunk_b": {
+    "id": "us-news/live/2026/apr/09/democrats-war-powers-resolution-iran-republicans-melania-donald-trump-latest-news-updates#chunk_38",
+    "text_snippet": "Title: Confusion grows as Donald Trump reportedly claims he did not know Melania Trump was giving statement on Epstein – as it happened\nDate: 2026-04-10\n\nContent: While it’s largely a symbolic move, top Democrats in both chambers have vowed to hold votes again when Congress returns from recess next week. At a Q&amp;A following his address the Ronald Reagan Institute Washington, Nato secretary general Mark Rutte said that he “sensed” Donald Trump’s disappointment during his meeting with the president on Wednesday. “I explained to him yesterday the overwhelming majority of Europeans have done what US asked of them, and what was previously agreed in these circumstances,” Rutte said. “And yes, sometimes it takes a bit of time.” He reiterated that Nato exists to protect European partners but also the US, and understood Trump’s disappointment “to a certain extent” during their conversation, which he described as “open and candid”. Former congresswoman, and longtime Trump ally, Marjorie Taylor Greene said that she would be willing to “go to the whiteboard, and begin to try to sketch something new” with Democratic representative Ro Khanna.",
+    "article_id": "us-news/live/2026/apr/09/democrats-war-powers-resolution-iran-republicans-melania-donald-trump-latest-news-updates",
+    "chunk_index": 38,
+    "total_chunks": 55
+  },
+  "t_bridge": [
+    "Donald Trump's meeting with Nato secretary general Mark Rutte",
+    "Diplomatic tensions regarding Nato and Iran"
+  ],
+  "initial_question": {
+    "rag_input": "How did Mark Rutte respond to the frustration Donald Trump expressed during their April 2026 meeting regarding the military campaign in Iran?",
+    "question": "How did Mark Rutte respond to the frustration Donald Trump expressed during their April 2026 meeting regarding the military campaign in Iran?",
+    "answer": "During their meeting on April 8, 2026, Donald Trump expressed disappointment and criticized NATO members for not supporting the US military campaign in Iran. In response, during a Q&A on April 9, 2026, Mark Rutte stated he had explained to Trump that the majority of Europeans had fulfilled their agreements, noted that such processes take time, and reaffirmed that NATO exists to protect both European partners and the US.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Trump-Rutte meeting regarding Iran tensions"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "root_id": "824a9904-3b44-450f-a901-1f24ef1e081b",
+  "chunk_a": {
+    "id": "world/2026/feb/18/france-arrests-over-killing-far-right-activist-quentin-deranque-lyon#chunk_2",
+    "text_snippet": "Title: Parliamentary aide among 11 arrested over killing of French far-right activist \nDate: 2026-02-18\n\nContent: On Wednesday, as news of the arrests spread, the LFI said it had been forced to evacuate its national headquarters. “The national headquarters of LFI have just been evacuated following a bomb threat,” the party’s coordinator, Manuel Bompard, said on social media. “Police services are on site. All employees and activists are safe.” As videos of last week’s deadly confrontation continued to circulate on social media, Mélenchon called for calm. “Let’s not fuel the incitement to take the law into one’s own hands,” the LFI leader said on social media. Images broadcast by TF1 of the alleged attack showed several people hitting three others who were lying on the ground, two of whom managed to escape. One witness told AFP: “People were hitting each other with iron bars.” Némésis, the anti-immigration collective linked to Deranque, has blamed the killing on La Jeune Garde (Young Guard), an anti-fascist youth group co-founded by Arnault before he was elected to parliament.",
+    "article_id": "world/2026/feb/18/france-arrests-over-killing-far-right-activist-quentin-deranque-lyon",
+    "chunk_index": 2,
+    "total_chunks": 4
+  },
+  "chunk_b": {
+    "id": "world/2026/feb/16/french-police-murder-inquiry-quentin-deranque-lyon#chunk_2",
+    "text_snippet": "Title: French police launch murder inquiry after far-right activist’s death in Lyon\nDate: 2026-02-16\n\nContent: The LFI, as well as the Socialist party leader, Olivier Faure, protested against this label. On Monday, the government spokesperson Maud Bregeon accused the LFI of having “encouraged a climate of violence for years”. She told the broadcaster BFMTV that there was “therefore – in light of the political climate and the climate of violence – a moral responsibility on the part of LFI” for the attack on Thursday. A video broadcast by TF1 of the alleged attack on Thursday showed a group of people hitting three others lying on the ground, two of whom managed to escape while one lay motionless. A witness told Agence France-Presse: “People were hitting each other with iron bars.” Demonstrations called by the far right in memory of Deranque have taken place in the southern city of Montpellier and in Paris, where protesters unfurled a banner reading “antifa murderers, justice for Quentin”.",
+    "article_id": "world/2026/feb/16/french-police-murder-inquiry-quentin-deranque-lyon",
+    "chunk_index": 2,
+    "total_chunks": 4
+  },
+  "t_bridge": [
+    "Political implications of Quentin Deranque's death",
+    "LFI's response to accusations of inciting violence",
+    "Media reports on the confrontation in Lyon"
+  ],
+  "initial_question": {
+    "rag_input": "How did LFI's public response to the February 18, 2026, bomb threat correlate with the political accusations of inciting violence following the Lyon confrontation?",
+    "question": "How did LFI's public response to the February 18, 2026, bomb threat correlate with the political accusations of inciting violence following the Lyon confrontation?",
+    "answer": "Following the February 18, 2026, bomb threat at its headquarters, LFI leader Jean-Luc Mélenchon explicitly called for calm to avoid fueling the 'incitement to take the law into one’s own hands,' a direct response to the broader political climate where government officials like Maud Bregeon had accused LFI of encouraging years of violence leading up to the deadly Lyon confrontation.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "LFI's reaction to threats vs. political accusations of incitement"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

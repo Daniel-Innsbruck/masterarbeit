@@ -1,0 +1,37 @@
+{
+  "root_id": "b81a93ed-beca-4843-abcc-b4e24bd5fad9",
+  "chunk_a": {
+    "id": "world/ng-interactive/2026/mar/31/can-europes-public-service-media-survive-attacks-by-the-far-right#chunk_1",
+    "text_snippet": "Title: Can Europe’s public service media survive attacks by the far right?\nDate: 2026-03-31\n\nContent: In France, meanwhile, shortly before 2024 snap elections, the far-right National Rally said it would privatise public broadcasting if it won. Public TV and radio needed “a bit of liberty” and some programmes were too left-leaning, the RN’s vice-president said. The following year, a party allied to the RN – which could well produce France’s next president – set up an inquiry into the “neutrality, workings and financing” of public TV and radio. Marine Le Pen said both had “a clear problem with neutrality”. Public service media are meant to provide quality, unbiased, fact-driven content accessible to the broadest audience as part of a free, plural media that safeguards the rule of law by providing reliable, transparent information and scrutinising power.",
+    "article_id": "world/ng-interactive/2026/mar/31/can-europes-public-service-media-survive-attacks-by-the-far-right",
+    "chunk_index": 1,
+    "total_chunks": 10
+  },
+  "chunk_b": {
+    "id": "world/ng-interactive/2026/mar/30/leaders-seeking-undermine-rule-of-law-europe#chunk_0",
+    "text_snippet": "Title: ‘Assault on justice’: how far-right attacks are threatening rule of law in Europe\nDate: 2026-03-30\n\nContent: In March last year, a Paris court found Marine Le Pen guilty of embezzlement and barred her from running in next year’s presidential race in France. The far-right figurehead took to the airwaves to slam a “political decision” and “denial of democracy”. Le Pen, who has appealed, said she had been subjected to a “tyranny of judges” and a “political assassination”. The “system” had dropped “a nuclear bomb” on her. The presiding judge was then threatened by others on social media and her home address shared. Six months later, the former rightwing president Nicolas Sarkozy was handed a five-year prison sentence for criminal conspiracy. He denounced a decision “of extreme gravity in regard to the rule of law and for people’s trust in the justice system”. The court was motivated by a “hatred that truly knows no bounds”, Sarkozy added. The “injustice” it represented was “a scandal” and those who “hate me so much” were “humiliating France”, he said.",
+    "article_id": "world/ng-interactive/2026/mar/30/leaders-seeking-undermine-rule-of-law-europe",
+    "chunk_index": 0,
+    "total_chunks": 11
+  },
+  "t_bridge": [
+    "Marine Le Pen",
+    "Far-right political ideology",
+    "Challenges to democratic institutions (media and judiciary) in France",
+    "Rule of law"
+  ],
+  "initial_question": {
+    "rag_input": "How did Marine Le Pen's rhetoric regarding the neutrality of public media in 2025 relate to her reaction to the judicial ruling against her in March 2025?",
+    "question": "How did Marine Le Pen's rhetoric regarding the neutrality of public media in 2025 relate to her reaction to the judicial ruling against her in March 2025?",
+    "answer": "In 2025, Marine Le Pen accused public service media of having a \"clear problem with neutrality\" and scrutinized their workings. This aligns with her broader challenge to democratic institutions, as evidenced in March 2025 when she labeled her embezzlement conviction a \"political decision\" and a \"tyranny of judges,\" framing both the judiciary and the media as components of a biased \"system\" working against her.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Le Pen's challenges to French democratic institutions"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

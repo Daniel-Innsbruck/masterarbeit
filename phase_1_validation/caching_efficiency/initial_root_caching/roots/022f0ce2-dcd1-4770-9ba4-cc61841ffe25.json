@@ -1,0 +1,36 @@
+{
+  "root_id": "022f0ce2-dcd1-4770-9ba4-cc61841ffe25",
+  "chunk_a": {
+    "id": "us-news/2026/jan/29/ice-out-strike-protests-explained#chunk_3",
+    "text_snippet": "Title: ‘ICE Out’ strike and protests: what to know about demonstrations across the US\nDate: 2026-01-29\n\nContent: This week, news of the national strike spread far and wide on social media. Celebrities shared support, including singer Ariana Grande, who shared an infographic about the strike to her Instagram story and actor Pedro Pascal, who posted drawings of Pretti and Good on Instagram with the caption:“Pretti Good reason for a national strike.” What the strike and protests will look like The two days of protest will draw on a variety of strategies, organizers told the Guardian. On Friday, student groups, including the Somali Student Association, Black Student Union and Graduate Labor Union at the University of Minnesota, will lead walkouts in the state and are asking their peers across the country to do the same. “Students are always at the heart of movements for justice across the world,” the organizations wrote in a statement online. “We demand ICE out for good!” The walkouts will be followed by protests on Saturday.",
+    "article_id": "us-news/2026/jan/29/ice-out-strike-protests-explained",
+    "chunk_index": 3,
+    "total_chunks": 10
+  },
+  "chunk_b": {
+    "id": "us-news/2026/jan/31/anti-ice-protests-weekend#chunk_4",
+    "text_snippet": "Title: More than 300 anti-ICE protests planned across US this weekend\nDate: 2026-01-31\n\nContent: Saturday’s protests build on weeks of demonstrations following the ICE shooting of Good in her vehicle on 7 January. Crowds grew on 23 January, when tens of thousands of people in Minnesota marched downtown to demand that ICE leave the city. Local protest leaders called for “No work, no school, no shopping” as hundreds of businesses shut their doors. A week later, on 30 January, demonstrators called for a national shutdown, and thousands of people participated in hundreds of protest actions across the country – from Knoxville, Tennessee, where high school students walked out of class, to Seattle, where local businesses shut down. “Today’s actions are a handoff from everything that has already been building up,” Dunn said. “In Los Angeles, we are picking up from where yesterday’s actions left off.",
+    "article_id": "us-news/2026/jan/31/anti-ice-protests-weekend",
+    "chunk_index": 4,
+    "total_chunks": 6
+  },
+  "t_bridge": [
+    "2026 national anti-ICE protests",
+    "Coordinated strike and walkout strategies",
+    "Timeline of demonstrations following the shooting of Good"
+  ],
+  "initial_question": {
+    "rag_input": "How did the coordinated student walkouts planned for 30 January 2026 relate to the demonstrations occurring after the 7 January 2026 shooting of Good?",
+    "question": "How did the coordinated student walkouts planned for 30 January 2026 relate to the demonstrations occurring after the 7 January 2026 shooting of Good?",
+    "answer": "The student walkouts on 30 January 2026 were part of a broader national strike strategy that built upon weeks of demonstrations following the 7 January 2026 shooting of Good; these actions served as a \"handoff\" from the initial protests, shifting from localized marches in Minnesota to a coordinated national effort involving student-led walkouts and business shutdowns across the country.",
+    "type": "Initial",
+    "logic_type": "temporal",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Connection between student walkouts and the timeline of post-shooting protests."
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "root_id": "b845a0de-1c6f-48b7-ad0d-6d707cef318a",
+  "chunk_a": {
+    "id": "us-news/live/2026/apr/10/donald-trump-melania-jeffrey-epstein-iran-inflation-latest-news-updates#chunk_8",
+    "text_snippet": "Title: Calls mount for California governor candidate Eric Swalwell to quit after multiple women accuse him of sexual assault – as it happened\nDate: 2026-04-11\n\nContent: He has said he cultivated a relationship with Epstein as a way to raise money for the school. While questions about Botstein’s relationship with Epstein have been swirling for years, the controversy reached a fever pitch earlier this year after the release of millions of “Epstein files” by the US Department of Justice, which revealed that the two regularly corresponded. Botstein has denied the two were friends, despite years of correspondence and in-person meetings, including a 2012 trip by Botstein to Epstein’s island. In his comments to staff, sources told the Guardian, Botstein suggested words to the effect of “we live in an oligarchy” and that therefore people “cannot be expected to investigate or know the moral character of the people who can afford to donate money”.",
+    "article_id": "us-news/live/2026/apr/10/donald-trump-melania-jeffrey-epstein-iran-inflation-latest-news-updates",
+    "chunk_index": 8,
+    "total_chunks": 54
+  },
+  "chunk_b": {
+    "id": "us-news/2026/apr/10/eric-swalwell-california-sexual-assault-allegations#chunk_5",
+    "text_snippet": "Title: Swalwell denies allegations of sexual assault as calls grow for him to withdraw from California governor race\nDate: 2026-04-11\n\nContent: Swalwell’s Democratic rivals in the race called on him to halt his campaign. “Eric Swalwell’s attempt to silence victims to save his campaign for governor – a campaign he was unfit to enter given these allegations – is a shameful disgrace to our democracy,” Antonio Villaraigosa, former speaker of the California state assembly, said in a statement. Former congresswoman Katie Porter expressed solidarity with the women who came forward. “We believe you and we stand with you,” she wrote on X. Steve Hilton, a Republican in the gubernatorial race, suggested on X that Swalwell’s alleged misconduct was an indictment of the state’s Democratic party. “For all their endless lectures about gender equality and their ‘values’ it’s obvious that today’s California Democratic Party doesn’t care about anything except its own power,” wrote Hilton, who was endorsed recently by Trump.",
+    "article_id": "us-news/2026/apr/10/eric-swalwell-california-sexual-assault-allegations",
+    "chunk_index": 5,
+    "total_chunks": 6
+  },
+  "t_bridge": [
+    "Eric Swalwell gubernatorial campaign",
+    "Sexual assault allegations against Eric Swalwell",
+    "California gubernatorial race political fallout"
+  ],
+  "initial_question": {
+    "rag_input": "How does the political strategy of using campaign donations to manage institutional reputations, as described in the April 2026 Epstein file controversy, mirror the criticism faced by Eric Swalwell regarding his own gubernatorial campaign conduct?",
+    "question": "How does the political strategy of using campaign donations to manage institutional reputations, as described in the April 2026 Epstein file controversy, mirror the criticism faced by Eric Swalwell regarding his own gubernatorial campaign conduct?",
+    "answer": "In both cases, individuals face backlash for their methods of maintaining campaign or institutional influence: in the Epstein files revealed in April 2026, Leon Botstein is criticized for accepting funds from Jeffrey Epstein while justifying it as a means to support his school, arguing that donors' moral character is secondary to funding; similarly, Eric Swalwell is facing intense pressure to withdraw from his 2026 gubernatorial race after being accused of silencing sexual assault victims to protect his campaign, with critics like Antonio Villaraigosa arguing that Swalwell's attempt to prioritize his campaign's survival over accountability is a disgrace to democracy.",
+    "type": "Initial",
+    "logic_type": "comparison",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Ethical integrity and campaign sustainability in 2026 political controversies"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

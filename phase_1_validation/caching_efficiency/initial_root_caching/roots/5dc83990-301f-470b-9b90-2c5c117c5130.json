@@ -1,0 +1,36 @@
+{
+  "root_id": "5dc83990-301f-470b-9b90-2c5c117c5130",
+  "chunk_a": {
+    "id": "australia-news/live/2026/feb/16/australia-news-live-supermarkets-coles-woolworths-discount-prices-court-coalition-angus-taylor-immigration-cost-of-living-anthony-albanese-labor-ntwnfb#chunk_6",
+    "text_snippet": "Title: BoM warns of ‘classic fire spike day’ for Victoria – as it happened\nDate: 2026-02-16\n\nContent: Thorpe later said she had not meant the words literally and condemned what she called the “mock outrage” that followed them, adding: My rally remarks were clearly a figure of speech – a metaphor for the pain in our communities and the urgent need to end genocide in Palestine and everywhere. Victorian bushfires being contained ahead of extreme danger tomorrow Victoria’s emergency management commissioner, Tim Wiebusch, said two of the major fires Victorian authorities had been battling for more than a month – at Walwa/Mt Lawson and Longwood – were deemed under control on Friday. Of the Otways bushfire, he said: Firefighters are continuing to put in containment lines and control lines around that fire as we head into tomorrow, but we are hopeful that that fire may be deemed contained some time this week … Our focus really is shifting, after the weather tomorrow, to really be about recovery here in Victoria. We now have 17 recovery hubs that are active across the state.",
+    "article_id": "australia-news/live/2026/feb/16/australia-news-live-supermarkets-coles-woolworths-discount-prices-court-coalition-angus-taylor-immigration-cost-of-living-anthony-albanese-labor-ntwnfb",
+    "chunk_index": 6,
+    "total_chunks": 49
+  },
+  "chunk_b": {
+    "id": "australia-news/live/2026/jan/28/australia-news-live-anthony-albanese-timor-leste-heatwave-nsw-bushfires-victoria-weather-liberals-leadership-sussan-ley-andrew-hastie-angus-taylor-ntwnfb#chunk_14",
+    "text_snippet": "Title: Palestine Action Group plans ‘national day of protest’ as Herzog visit confirmed – as it happened\nDate: 2026-01-28\n\nContent: If we don’t get another hot, dry, windy day, then we will be able to call that fire contained and eventually get it to under control and then safe. But I would say that there is still a chance that this fire could run again within the next two or three weeks because of the nature of the season. And it’s so dry. You know, if we get some really good rainfall that will be incredibly helpful and that will build our confidence. But the risk will be present … I would argue at least for a couple of weeks. Over to Victoria, where authorities are providing an update on the ongoing heatwave and bushfire situation. Victoria’s emergency management commissioner, Tim Wiebusch, said the state’s north was set to see eight consecutive days with temperatures above 40C and night-time temperatures in the mid to high 20s. Today is day five of the heatwave. He said 11,000 homes were without power because of heat stress on power infrastructure.",
+    "article_id": "australia-news/live/2026/jan/28/australia-news-live-anthony-albanese-timor-leste-heatwave-nsw-bushfires-victoria-weather-liberals-leadership-sussan-ley-andrew-hastie-angus-taylor-ntwnfb",
+    "chunk_index": 14,
+    "total_chunks": 76
+  },
+  "t_bridge": [
+    "Victorian bushfire management",
+    "Tim Wiebusch",
+    "Extreme weather conditions in Victoria"
+  ],
+  "initial_question": {
+    "rag_input": "How did Tim Wiebusch’s focus regarding the status of the Walwa/Mt Lawson and Longwood fires evolve between his January 2026 heatwave update and his February 16, 2026 report?",
+    "question": "How did Tim Wiebusch’s focus regarding the status of the Walwa/Mt Lawson and Longwood fires evolve between his January 2026 heatwave update and his February 16, 2026 report?",
+    "answer": "In his January 2026 update, Tim Wiebusch warned that because the season was so dry, the risk of bushfires running again would persist for at least a couple of weeks. By February 16, 2026, he was able to report that the major fires at Walwa/Mt Lawson and Longwood had been deemed under control, allowing the emergency management focus to shift toward statewide recovery efforts.",
+    "type": "Initial",
+    "logic_type": "temporal",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Evolution of Tim Wiebusch's fire management status reports"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

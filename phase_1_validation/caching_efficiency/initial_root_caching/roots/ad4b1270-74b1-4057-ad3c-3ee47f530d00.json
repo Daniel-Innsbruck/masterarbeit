@@ -1,0 +1,36 @@
+{
+  "root_id": "ad4b1270-74b1-4057-ad3c-3ee47f530d00",
+  "chunk_a": {
+    "id": "politics/2026/apr/13/nige-and-zia-plan-boriswave-traitors-gulag#chunk_6",
+    "text_snippet": "Title: Nige and Zia set out plan to send ‘Boriswave’ traitors to the gulag\nDate: 2026-04-13\n\nContent: “I don’t know how this war ends,” he said. “There doesn’t appear to be an exit strategy.” Keir Starmer got to this point six weeks ago. Even more bizarrely, Farage now insists he has no relationship with Donald Trump. Donald who? Never had any dealings with him. We don’t speak. I’ve deleted all my tweets in support. Must remember to do the same with Orbán. Nige couldn’t even bring himself to categorically state the US president was not suffering from cognitive decline. The Donald was nearly 80 and he had been like this for 10 years now. Blame the Americans for electing him. Trump was dead to him. With that, the presser was wrapped up. Nige had bitcoin to buy from Kwasi Kwarteng, the greatest chancellor in British history. What could possibly go wrong? After all, what was the point of being in politics, if not to cash in?",
+    "article_id": "politics/2026/apr/13/nige-and-zia-plan-boriswave-traitors-gulag",
+    "chunk_index": 6,
+    "total_chunks": 7
+  },
+  "chunk_b": {
+    "id": "uk-news/2026/apr/17/digested-week-hungary-election-rare-good-news#chunk_3",
+    "text_snippet": "Title: Digested week: Hungary’s election result is rare good news in a depressing and surreal world\nDate: 2026-04-17\n\nContent: Nige tapped on the door and was as shocked as we all were to find that the winner was someone he had met years ago in the Brexit party days. Honest Bob’s role was to stand, smiling sweetly, holding an oversized cardboard cheque. Just occasionally, Richard Tice, the deputy leader, is also allowed out. His role is to be Farage’s punchbag. When Nige needs a rottweiler, he summons up Zia Yusuf. Zia is always permanently angry about something and hates immigrants even more than Farage. He can be trusted to make Nige look the nice guy. Safe to say Matt Godwin has been dropped from the A team ever since he lost the Gorton and Denton byelection. Suella Braverman has yet to make an appearance with Nige. Almost as if he has a problem with women. Though maybe she will be blessed soon. On Monday, Farage announced plans for a show trial for all Tories involved in the Boriswave. But good news for Suella.",
+    "article_id": "uk-news/2026/apr/17/digested-week-hungary-election-rare-good-news",
+    "chunk_index": 3,
+    "total_chunks": 11
+  },
+  "t_bridge": [
+    "Nigel Farage's political actions and rhetoric",
+    "The 'Boriswave' movement and proposed show trials",
+    "Zia Yusuf's political role within Farage's circle"
+  ],
+  "initial_question": {
+    "rag_input": "What is the intended fate of the 'Boriswave' Tories according to the plans announced by Nigel Farage on April 17, 2026, and how does this reflect the role of his ally Zia Yusuf?",
+    "question": "What is the intended fate of the 'Boriswave' Tories according to the plans announced by Nigel Farage on April 17, 2026, and how does this reflect the role of his ally Zia Yusuf?",
+    "answer": "On April 17, 2026, Farage announced plans to hold a show trial for all Tories involved in the 'Boriswave' movement, with the intention of sending those traitors to the gulag. This aligns with the political role of Zia Yusuf, who serves as Farage's 'rottweiler'—a perpetually angry figure who handles extreme rhetoric, such as his intense hatred for immigrants, to make Farage appear as the 'nice guy' by comparison.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Farage's 'Boriswave' show trials and Zia Yusuf's role"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

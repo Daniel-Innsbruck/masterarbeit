@@ -1,0 +1,36 @@
+{
+  "root_id": "6e227df4-da7f-4972-a6f8-8a5750b6d0d0",
+  "chunk_a": {
+    "id": "uk-news/2026/apr/07/commonwealth-leaders-vow-to-keep-seeking-reparations-after-reform-uk-plan-to-halt-visas#chunk_3",
+    "text_snippet": "Title: Commonwealth leaders vow to keep seeking reparations after Reform UK plan to halt visas\nDate: 2026-04-07\n\nContent: Gill said Reform’s position showed a “terrible lack of knowledge” of the issues, highlighting that enslavers were compensated by British taxpayers. Last month, the UK and Nigeria agreed a £746m deal in which the UK would provide loan financing to refurbish two major ports in Lagos. The deal includes a £70m contract for loss-making British Steel in Lincolnshire, which has a Reform UK mayor. Neville Watson, was Reform UK’s only Black branch chair until he left last year, having called for reparations. Watson, the Christian People’s Alliance candidate for 2028’s London mayoral elections, said Reform’s stance would “punish nations for raising legitimate historical claims” and compound UK skills shortages. He described the UK-Nigeria trade deal as a reminder our “prosperity is seated in partnership”, adding that the Reform visa policy would “tear down the very fabric of trade and diplomacy”.",
+    "article_id": "uk-news/2026/apr/07/commonwealth-leaders-vow-to-keep-seeking-reparations-after-reform-uk-plan-to-halt-visas",
+    "chunk_index": 3,
+    "total_chunks": 7
+  },
+  "chunk_b": {
+    "id": "politics/2026/apr/07/reform-uk-stop-visas-countries-seeking-reparations-slavery#chunk_2",
+    "text_snippet": "Title: Reform UK would stop visas for people from countries seeking slavery reparations\nDate: 2026-04-07\n\nContent: “While countries like Jamaica, Nigeria and Ghana ramp up their demands for reparations, the Westminster establishment has rewarded them. Enough is enough.” Reform UK has previously pledged to scrap international aid for countries demanding reparations. In 2023, a report on reparations for the transatlantic slave trade, written and compiled by Patrick Robinson, a former judge of the International Court of Justice, concluded the UK alone should pay $24tn (£18.8tn) as reparations for transatlantic slavery in 14 countries. Last year the Caricom Reparations Commission (CRC), which was set up to progress the Caribbean’s pursuit of justice for centuries of enslavement and colonisation by European countries, addressed misleading press reports that suggested the commission’s aim was to “break the British Treasury” by demanding trillions of pounds.",
+    "article_id": "politics/2026/apr/07/reform-uk-stop-visas-countries-seeking-reparations-slavery",
+    "chunk_index": 2,
+    "total_chunks": 4
+  },
+  "t_bridge": [
+    "Reform UK visa policy",
+    "slavery reparations",
+    "UK-Nigeria trade relations"
+  ],
+  "initial_question": {
+    "rag_input": "How does Reform UK’s April 2026 visa policy conflict with the £746m trade deal established with Nigeria?",
+    "question": "How does Reform UK’s April 2026 visa policy conflict with the £746m trade deal established with Nigeria?",
+    "answer": "Reform UK’s policy proposes stopping visas for citizens from countries, such as Nigeria, that seek slavery reparations. This conflicts with the £746m UK-Nigeria trade deal—which includes a £70m contract for British Steel—because critics argue that restricting visas will damage the partnership required for such trade and diplomacy, effectively tearing down the fabric of the economic relationship.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Reform UK visa policy and UK-Nigeria trade"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

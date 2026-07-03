@@ -1,0 +1,37 @@
+{
+  "root_id": "9b01b310-3411-49a5-844c-b9060b924d0e",
+  "chunk_a": {
+    "id": "world/2026/feb/02/israel-agrees-to-limited-reopening-of-rafah-border-crossing-in-gaza#chunk_6",
+    "text_snippet": "Title: Handful of sick and wounded Palestinians allowed through Rafah crossing on first day\nDate: 2026-02-02\n\nContent: “The EU’s civilian mission is on the ground to monitor crossing operations and support Palestinian border guards,” she wrote online. The National Committee for the Administration of Gaza – a body of Palestinian technocrats tasked with helping govern the territory – welcomed the reopening of the crossing as a symbolic first step rather than a solution. In a statement posted on social media on Monday, the committee described the move as “the beginning of a long process to reconnect what has been torn apart, and to open a genuine window of hope for our people in the Gaza Strip”. The reopening of Rafah marks a tentative turning point after the fragile ceasefire agreed last October, a truce that has proved more nominal than real. Four months on, it has failed to halt the bombardment of Gaza, offering pauses rather than peace. Life in Gaza remains precarious. While airstrikes and gunfire have slowed, they have not ceased.",
+    "article_id": "world/2026/feb/02/israel-agrees-to-limited-reopening-of-rafah-border-crossing-in-gaza",
+    "chunk_index": 6,
+    "total_chunks": 8
+  },
+  "chunk_b": {
+    "id": "world/live/2026/feb/02/rafah-border-egypt-gaza-israel-opens-crossing-latest-news-updates#chunk_36",
+    "text_snippet": "Title: First medical evacuee leaves Gaza as Rafah crossing reopens for handful of Palestinians – as it happened\nDate: 2026-02-02\n\nContent: The crossing has largely been closed since May 2024. The reopening is being coordinated with Egypt and the European Union, Cogat, the Israeli agency charged with administration of Gaza, said. It added that the movement of Palestinians between Egypt and Gaza, permitted on foot only, would be allowed “only after prior security clearance by Israel,” with both Israel and Egypt imposing caps on the number of travellers crossing through the border. Earlier, Cogat said it expects “movement of residents in both directions, entry and exit to and from Gaza.” Many of those hoping to leave are sick and wounded people in need of medical care abroad – but the process may be a slow one. Following initial identification and screening at the crossing crossing by the EU mission, there will be another screening process at a “designated corridor, operated by the defence establishment in an area under IDF control,” Cogat said.",
+    "article_id": "world/live/2026/feb/02/rafah-border-egypt-gaza-israel-opens-crossing-latest-news-updates",
+    "chunk_index": 36,
+    "total_chunks": 38
+  },
+  "t_bridge": [
+    "Reopening of the Rafah crossing",
+    "Role of the European Union (EU) mission",
+    "Operational procedures and security clearance for Gazan travelers",
+    "Administration of Gaza post-October ceasefire"
+  ],
+  "initial_question": {
+    "rag_input": "How did the National Committee for the Administration of Gaza perceive the February 2, 2026, reopening of the Rafah crossing in the context of the operational constraints imposed by Cogat?",
+    "question": "How did the National Committee for the Administration of Gaza perceive the February 2, 2026, reopening of the Rafah crossing in the context of the operational constraints imposed by Cogat?",
+    "answer": "While the National Committee for the Administration of Gaza welcomed the February 2, 2026, reopening as a symbolic 'beginning of a long process' and a 'window of hope,' their perspective is constrained by the operational reality mandated by Cogat, which dictates that the crossing is limited to foot travel for a handful of people subject to strict prior Israeli security clearance and caps on traveler numbers.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Perception of the Rafah reopening vs. operational constraints"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

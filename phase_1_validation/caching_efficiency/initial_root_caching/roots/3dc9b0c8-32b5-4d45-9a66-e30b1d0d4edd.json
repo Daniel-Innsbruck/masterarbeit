@@ -1,0 +1,36 @@
+{
+  "root_id": "3dc9b0c8-32b5-4d45-9a66-e30b1d0d4edd",
+  "chunk_a": {
+    "id": "world/2026/apr/05/british-father-son-dubai-fortune-wanted-men-prison-beaten-tortured#chunk_13",
+    "text_snippet": "Title: ‘I was beaten and tortured’: how a British father and son made a fortune in Dubai then became wanted men\nDate: 2026-04-05\n\nContent: It reminded Albert of the “wild west”, he says. “Jumeirah Janes” was the nickname given to the wives of western expats living there at the time. Albert says he was never really there for the lifestyle. He was a “workaholic”, and spent any spare time with his family. But extroverts such as Wolfgang were happy to lean into the city’s flashy culture. Wolfgang enjoyed being part of Dubai’s social scene and soon became a point of contact for other British entrepreneurs and expats who wanted to move there. He describes being part of a community of “hand-picked B-list business development celebrities” who would be rolled out at parties, or encouraged to drop in when a new celebrity bought a house in the city. “I was the example of ‘This is what success looks like’,” says Wolfgang. “The proof in the pudding.” And it was good, until it wasn’t.",
+    "article_id": "world/2026/apr/05/british-father-son-dubai-fortune-wanted-men-prison-beaten-tortured",
+    "chunk_index": 13,
+    "total_chunks": 38
+  },
+  "chunk_b": {
+    "id": "world/2026/mar/03/british-expats-dubai-iran-war#chunk_1",
+    "text_snippet": "Title: Why some British expats in Dubai insist it’s business as usual – despite Iran war\nDate: 2026-03-03\n\nContent: A dramatic explosion at the world-famous Fairmont hotel in Dubai offered a spectacle to match the headlines. Experiencing both the shock of the moment and the ensuing public relations effort from the top to sustain confidence, have been an estimated 250,000 British nationals – a diverse community of fintech entrepreneurs, the super-rich, beauty salon workers, retirees and early-career professionals, many of whom have been attracted by the UAE’s 0% rate of income tax and all-year sun. For one British expat, only a few months into his life in Dubai working in the financial services industry, Saturday morning had brought a double shock to the system. After hearing the boom of the impacts, he shared a video from the BBC with colleagues, only to be told to delete it. The UAE had issued a warning that sharing unverified content was an imprisonable offence. The internet also appeared to briefly go down. “I can imagine some might find that oppressive,” he said.",
+    "article_id": "world/2026/mar/03/british-expats-dubai-iran-war",
+    "chunk_index": 1,
+    "total_chunks": 9
+  },
+  "t_bridge": [
+    "British expatriate experience in Dubai",
+    "Socio-political climate for expats in the UAE",
+    "The contrast between the perceived 'success' of expats and the restrictive regulatory environment"
+  ],
+  "initial_question": {
+    "rag_input": "How does the restrictive regulatory environment faced by British expats in March 2026 contrast with the image of 'success' projected by the community in April 2026?",
+    "question": "How does the restrictive regulatory environment faced by British expats in March 2026 contrast with the image of 'success' projected by the community in April 2026?",
+    "answer": "In March 2026, British expats faced a restrictive regulatory environment where sharing unverified content regarding geopolitical events became an imprisonable offense and internet access was controlled. This contrasts sharply with the culture observed in April 2026, where individuals like Wolfgang were utilized as human symbols of 'success' and 'business development celebrities,' encouraged to showcase an affluent and flashy lifestyle to bolster the city's image.",
+    "type": "Initial",
+    "logic_type": "comparison",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Contrast between perceived expat success and restrictive regulations."
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "root_id": "32b3e681-75e5-407b-b17f-58e0a5a386e2",
+  "chunk_a": {
+    "id": "us-news/2026/jan/30/trump-fulton-county-raid-election#chunk_0",
+    "text_snippet": "Title: FBI raid in Georgia has little legal basis – but serves Trump’s goal to weaken trust in election results\nDate: 2026-01-30\n\nContent: The FBI raid on the Fulton county election office Wednesday was an aggressive new front in Donald Trump’s effort to use his 2020 election loss to continue to sow doubt about American elections ahead of the 2026 midterms. As Trump sought to overturn the 2020 election, false claims of malfeasance during ballot-counting in Atlanta became a key part of the big lie about a stolen election. Misleading surveillance video showing ballots being retrieved from suitcases became the basis for a myth that fraudulent ballots were included in the tally. Rudy Giuliani, the president’s lawyer and a close ally at the time, was ordered to pay $148.1m to the election workers as part of a libel suit for spreading lies about them. He later settled. Two recounts confirmed Joe Biden won Georgia and state investigators debunked Trump’s false claims. Nonetheless, Trump and allies in the state have worked to keep that myth alive.",
+    "article_id": "us-news/2026/jan/30/trump-fulton-county-raid-election",
+    "chunk_index": 0,
+    "total_chunks": 9
+  },
+  "chunk_b": {
+    "id": "us-news/2026/feb/10/fbi-raid-fulton-county-voting-office-search-affidavit#chunk_0",
+    "text_snippet": "Title: Debunked claims from election deniers influenced FBI raid in Georgia, affidavit reveals\nDate: 2026-02-10\n\nContent: The FBI’s rationale behind raiding the Fulton county election office in Georgia last month was based on debunked claims from election deniers and came after a referral from a White House lawyer who tried to overturn the 2020 election, a search warrant affidavit unsealed on Tuesday reveals. The warrant offers the first insight for the basis for the FBI’s 28 January raid on the Fulton county election office. FBI officials seized nearly 700 boxes of election materials in the raid. The FBI’s investigation “originated” from a referral sent by Kurt Olsen, an attorney who sought to overturn the 2020 election and contacted justice department officials to urge them to file a motion at the US supreme court to nullify the election. Olsen began working at the White House last year to investigate election integrity problems. The FBI’s witnesses in the investigation include a cadre of conservative activists who have been hounding state officials with claims of wrongdoing in Fulton county for years.",
+    "article_id": "us-news/2026/feb/10/fbi-raid-fulton-county-voting-office-search-affidavit",
+    "chunk_index": 0,
+    "total_chunks": 7
+  },
+  "t_bridge": [
+    "FBI raid on Fulton County election office",
+    "2020 election misinformation",
+    "Influence of election deniers on federal investigations"
+  ],
+  "initial_question": {
+    "rag_input": "How did the 28 January 2026 FBI raid on the Fulton County election office connect debunked 2020 election misinformation to the legal efforts of Kurt Olsen?",
+    "question": "How did the 28 January 2026 FBI raid on the Fulton County election office connect debunked 2020 election misinformation to the legal efforts of Kurt Olsen?",
+    "answer": "The 28 January 2026 FBI raid was initiated by a referral from Kurt Olsen, an attorney who previously sought to overturn the 2020 election. The investigation relied on testimony from conservative activists who have spent years spreading debunked claims—such as the myth involving fraudulent ballots in suitcases—which were originally used by Donald Trump and his allies to sow doubt about the 2020 election results in Georgia.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Connection between 2020 election myths and the 2026 FBI investigation referral."
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}
