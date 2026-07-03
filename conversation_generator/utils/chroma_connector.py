@@ -189,8 +189,6 @@ class ChromaConnector:
             'total_chunks': results['metadatas'][0].get('total_chunks', 1)
         }
 
-
-    #ToDo remove later
     def get_chunk_by_id_for_streamlit(self, chunk_id):
         results = self.collection.get(ids=[chunk_id], include=['documents'])
         return results['documents'][0] if results['documents'] else None

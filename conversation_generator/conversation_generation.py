@@ -38,7 +38,7 @@ EXPANSION_DIR = "below"
 
 ## Cache-Steuerung
 
-BUILD_CACHE = False          # should cache be built?
+BUILD_CACHE = True          # should cache be built?
 USE_CACHE = False            # shoudl cache be read?
 CACHE_MODE = "all"
 CACHE_TAU = 0.2
@@ -55,7 +55,7 @@ MAX_CONSECUTIVE_FAILS = 5 # max number of complete conversation restarts before 
 
 # dialog configs
 n = 5             # Target number of turns per conversation
-max_conversations = 1 # number conversations'
+max_conversations = 50 # number conversations'
 
 # Logging & Output
 output_file = "./data/test.jsonl"#"./data/45ea68d7-6e88-4ba9-a8d3-cb2366b1651a.jsonl"
@@ -114,57 +114,63 @@ def _build_active_context_string_for_validator(active_chunks):
 # =========================================================
 
 def get_initial_multihop_prompt_data(chunk_a, chunk_b, t_bridge, max_retries=MAX_RETRIES):
-    #total_val_in = 0
-    #total_val_out = 0
-    #total_gen_time = 0.0
-    #total_val_time = 0.0
+    cg_in, cg_out, cg_time = 0, 0, 0.0
+    cv_in, cv_out, cv_time = 0, 0, 0.0
+
+    model.get_and_reset_turn_tokens()
+    conversation_validator.model.get_and_reset_turn_tokens()
 
     combined_docs_for_validator = (
         f"--- CONTEXT A ---\n{_build_context_string([chunk_a])}\n\n"
         f"--- CONTEXT B ---\n{_build_context_string([chunk_b])}"
     )
-    # gen_start = time.time()
+
+    #cg intitial generation measurements
+    cg_start = time.time()
     answer = send_request_to_LLM_conversation(templates.CONVERSATION_PROMPTS['init_multihop_prompt'].format(
         Role=Role, t_bridge=t_bridge,
         chunk_a=_build_context_string([chunk_a]),
         chunk_b=_build_context_string([chunk_b])
     ))
-    # total_gen_time += (time.time() - gen_start)
-    for attempt in range(max_retries + 1):
-        # val_start = time.time()
-        validation = conversation_validator.validate_init_prompt_all_in_one(answer, combined_docs_for_validator)
-        # total_val_time += (time.time() - val_start)
+    cg_time += time.time() - cg_start
+    in_tok, out_tok = model.get_and_reset_turn_tokens()
+    cg_in += in_tok
+    cg_out += out_tok
 
-        #if validation:
-        #    total_val_in += validation.get('tokens_in', 0)
-        #    total_val_out += validation.get('tokens_out', 0)
+    for attempt in range(max_retries + 1):
+        # cv validation
+        cv_start = time.time()
+        validation = conversation_validator.validate_init_prompt_all_in_one(answer, combined_docs_for_validator)
+        cv_time += time.time() - cv_start
+        in_tok, out_tok = conversation_validator.model.get_and_reset_turn_tokens()
+        cv_in += in_tok
+        cv_out += out_tok
 
         if validation and validation['correct']:
-            return answer, attempt#, total_val_in, total_val_out, total_gen_time, total_val_time
+            return answer, attempt, {"in": cg_in, "out": cg_out, "time": cg_time}, {"in": cv_in, "out": cv_out,
+                                                                                    "time": cv_time}
 
         reason = validation['reason'] if validation else "Unknown validation error"
         print(f"  Initial prompt validation failed (attempt {attempt + 1}/{max_retries}): {reason}")
         with open(log_file, 'a', encoding='utf-8') as f:
             f.write(f"Validation failed for initial multi-hop (attempt {attempt + 1}).\nAnswer: {answer}\nReason: {reason}\n\n")
-        # gen_start = time.time()
+        #cg rephrase phase
+        cg_start = time.time()
         answer = send_request_to_LLM_conversation(templates.CONVERSATION_PROMPTS['rephrase_init_prompt'].format(
             Role=Role, reason=reason
         ))
-        # total_gen_time += (time.time() - gen_start)
-
+        cg_time += time.time() - cg_start
+        in_tok, out_tok = model.get_and_reset_turn_tokens()
+        cg_in += in_tok
+        cg_out += out_tok
     print(f"  Initial prompt failed after {max_retries} retries. Giving up.")
-    return None, max_retries#, total_val_in, total_val_out, total_gen_time, total_val_time
-
+    return None, max_retries, {"in": cg_in, "out": cg_out, "time": cg_time}, {"in": cv_in, "out": cv_out,
+                                                                              "time": cv_time}
 # =========================================================
 # Turn 1-n: Follow-up Generation
 # =========================================================
 
 def get_follow_up_question(answer, active_chunks, expanding_context = "", max_retries=MAX_RETRIES):
-    #total_val_in = 0
-    #total_val_out = 0
-    #total_gen_time = 0.0
-    #total_val_time = 0.0
-
     current_active_context = _build_active_context_string_for_validator(active_chunks)
 
     follow_up_prompt = templates.CONVERSATION_PROMPTS['follow_up_prompt'].format(
@@ -173,44 +179,26 @@ def get_follow_up_question(answer, active_chunks, expanding_context = "", max_re
     )
 
     history = model.get_chat_history()
-    gen_start = time.time()
     response = send_request_to_LLM_conversation(follow_up_prompt)
-    # total_gen_time += (time.time() - gen_start)
 
     for attempt in range(max_retries + 1):
-        # val_start = time.time()
         validation = conversation_validator.validate_follow_up_question_all_in_one(
             response, history, current_active_context
         )
-        # total_val_time += (time.time() - val_start)
-
-        #if validation:
-        #    total_val_in += validation.get('tokens_in', 0)
-        #    total_val_out += validation.get('tokens_out', 0)
 
         if validation and validation['correct']:
             return response
-                #(
-                #response,
-                #attempt,
-                #total_val_in,
-                #total_val_out,
-                #total_gen_time,
-                #total_val_time,
-            #)
 
         reason = validation['reason'] if validation else "Unknown validation error"
         print(f"  Follow-up validation failed (attempt {attempt + 1}/{max_retries}): {reason}")
         with open(log_file, 'a', encoding='utf-8') as f:
             f.write(f"Follow-up validation failed (attempt {attempt + 1}).\nAnswer: {response}\nReason: {reason}\n\n")
-        #gen_start = time.time()
         response = send_request_to_LLM_conversation(templates.CONVERSATION_PROMPTS['rephrase_follow_up_prompt'].format(
             reason=reason
         ))
-        #total_gen_time += (time.time() - gen_start)
 
     print(f"Follow-up failed after {max_retries} retries. Giving up on this turn.")
-    return None#, max_retries, total_val_in, total_val_out, total_gen_time, total_val_time
+    return None
 
 # =========================================================
 # Main Evaluation Loop
@@ -225,7 +213,7 @@ def generate_conversation():
     counter = 0
     consecutive_fails = 0
 
-    iterations = max_conversations # len(FIXED_ROOT_IDS) if (USE_CACHE and FIXED_ROOT_IDS) else max_conversations
+    iterations = max_conversations
 
     while counter < iterations:
         if consecutive_fails >= MAX_CONSECUTIVE_FAILS:
@@ -253,6 +241,16 @@ def generate_conversation():
         # =========================================================
         # Turn 0: Context Discovery & Initial Question
         # =========================================================
+
+        # =========================================================
+        # reset token counters for experiment
+        # =========================================================
+        model.get_and_reset_turn_tokens()
+        conversation_validator.model.get_and_reset_turn_tokens()
+
+        # --- CD (Context Discoverer) METRIKEN ---
+        cd_start_time = time.time()
+
         if USE_CACHE and FIXED_ROOT_IDS:
             root_id = FIXED_ROOT_IDS[counter]
             # load root file from file path
@@ -275,7 +273,9 @@ def generate_conversation():
                 discovered_context = cd.discover_valid_context()
                 if discovered_context:
                     break
-
+            # cd token consumption measurements
+            cd_time = time.time() - cd_start_time
+            cd_in, cd_out = model.get_and_reset_turn_tokens()
             if not discovered_context:
                 print(f"No semantic bridges found after {MAX_RETRIES} attempts. Restarting whole conversation.")
                 consecutive_fails += 1
@@ -284,11 +284,8 @@ def generate_conversation():
             chunk_a = discovered_context['chunk_a']
             chunk_b = discovered_context['chunk_b']
             t_bridge = discovered_context['t_bridge']
-            #question, turn_0_retries, t0_val_in, t0_val_out, t0_gen_time, t0_val_time = get_initial_multihop_prompt_data(
-            #    chunk_a, chunk_b, t_bridge, max_retries=MAX_RETRIES
-            #)
 
-            question, turn_0_retries = get_initial_multihop_prompt_data(
+            question, turn_0_retries, cg_metrics, cv_metrics = get_initial_multihop_prompt_data(
                 chunk_a, chunk_b, t_bridge, max_retries=MAX_RETRIES
             )
 
@@ -301,6 +298,55 @@ def generate_conversation():
                 consecutive_fails += 1
                 model.reset_chat()
                 continue
+
+            # =========================================================
+            # log measurements
+            # =========================================================
+            metrics_entry = {
+                "conversation_id": counter + 1,
+                # Context Discoverer Costs
+                "cd_latency_sec": round(cd_time, 2),
+                "cd_tokens_in": cd_in,
+                "cd_tokens_out": cd_out,
+                # Conversation Generator Costs (inkl. Retries)
+                "cg_latency_sec": round(cg_metrics["time"], 2),
+                "cg_tokens_in": cg_metrics["in"],
+                "cg_tokens_out": cg_metrics["out"],
+                # Conversation Validator Costs (inkl. Retries)
+                "cv_latency_sec": round(cv_metrics["time"], 2),
+                "cv_tokens_in": cv_metrics["in"],
+                "cv_tokens_out": cv_metrics["out"],
+                # Retries / Rejections
+                "cv_rejections": turn_0_retries
+            }
+
+            # write to jsonl
+            with open("./data/root_bootstrapping_metrics.jsonl", "a", encoding="utf-8") as f:
+                f.write(json.dumps(metrics_entry) + "\n")
+
+            # console prints for monitoring
+            print(f"Root {counter + 1} Done | Retries: {turn_0_retries}")
+            print(f"  -> CD: {cd_time:.1f}s, Tokens In/Out: {cd_in}/{cd_out}")
+            print(f"  -> CG: {cg_metrics['time']:.1f}s, Tokens In/Out: {cg_metrics['in']}/{cg_metrics['out']}")
+            print(f"  -> CV: {cv_metrics['time']:.1f}s, Tokens In/Out: {cv_metrics['in']}/{cv_metrics['out']}")
+
+            # save cached roots
+            if BUILD_CACHE:
+                root_id, root_data = dialogue_cache.prepare_new_root(
+                    chunk_a, chunk_b, t_bridge, question, ALPHA, BETA, EXPANSION_DIR
+                )
+                dialogue_cache.save_root(root_data)
+                print(f"Caching successful for Root: {root_id}")
+
+            counter += 1
+            consecutive_fails = 0
+            model.reset_chat()
+            continue
+
+        ###########################################################################
+        # loop is skipped from here
+        ###########################################################################
+
             if BUILD_CACHE:
                 root_id, root_data = dialogue_cache.prepare_new_root(
                     chunk_a, chunk_b, t_bridge, question, ALPHA, BETA, EXPANSION_DIR
