@@ -1,0 +1,35 @@
+{
+  "root_id": "a588ac1e-b42e-40b7-8010-d4961ef582be",
+  "chunk_a": {
+    "id": "us-news/live/2026/mar/20/trump-mandelson-starmer-supreme-court-iran-us-politics-latest-news-updates#chunk_8",
+    "text_snippet": "Title: Trump claims strict voter ID act should be ‘easy pass’ but says ‘we need Democrat votes’ – as it happened\nDate: 2026-03-21\n\nContent: After noting that other countries, like China and Japan, were much more reliant on oil imports through what he called “the straits”, Trump said: “It always bothered me that we’re protecting them, and we don’t need ‘em.” “We didn’t need ‘em before we started, uh, ‘dig we must’. Uh, ‘dig me wust’ [sic], that’s the Trump policy of lots of oil,” the president said after apparently reaching for and failing to find his campaign slogan, “Drill, baby, drill” in the recesses of his memory. The fact that the president apparently forgot the three-word slogan for the unchecked exploitation of oil resources that he had mentioned in his inaugural address last year, and in a speech last month, led some observers to suggest that the slip was evidence that the nearly 80-year-old president now leading the US in war is in cognitive decline.",
+    "article_id": "us-news/live/2026/mar/20/trump-mandelson-starmer-supreme-court-iran-us-politics-latest-news-updates",
+    "chunk_index": 8,
+    "total_chunks": 59
+  },
+  "chunk_b": {
+    "id": "us-news/live/2026/mar/09/white-house-dhs-donald-trump-us-politics-latest-updates#chunk_0",
+    "text_snippet": "Title: Trump claims Democrats ‘probably won’t win an election for 50 years’ if strict voter ID bill passes – as it happened\nDate: 2026-03-10\n\nContent: We’re wrapping up our live coverage for the day, but we’ll be back on Tuesday. Here is a summary of today’s developments: As oil prices surged amid the widening war with Iran, Donald Trump said that the conflict could be over “very soon” while threatening even more aggressive action if Tehran moved to cut off global energy supplies. During back-to-back appearances in Florida, Trump said the US had taken a “little excursion” to the Middle East “to get rid of some evil” but suggested the war, now in its second week, was ahead of schedule and near completion. More here. Trump renewed his push for the Save America Act, a curtailment of voting access, after threatening on Sunday not to sign any bills until Congress approves the legislation. “All voters must show proof of citizenship in order to vote,” Trump said during remarks on Monday at a Republican event in Miami. “No mail-in ballots, except for illness, disability, military or travel.” More here.",
+    "article_id": "us-news/live/2026/mar/09/white-house-dhs-donald-trump-us-politics-latest-updates",
+    "chunk_index": 0,
+    "total_chunks": 42
+  },
+  "t_bridge": [
+    "Trump's legislative push for the Save America Act/Voter ID",
+    "Trump's rhetoric regarding foreign policy and oil dependence"
+  ],
+  "initial_question": {
+    "rag_input": "How did the Trump administration's March 2026 stated rationale for increased domestic oil production connect to his view on protecting foreign nations during the ongoing conflict?",
+    "question": "How did the Trump administration's March 2026 stated rationale for increased domestic oil production connect to his view on protecting foreign nations during the ongoing conflict?",
+    "answer": "During the war that surged oil prices in March 2026, Trump argued for a 'dig, baby, dig' policy of unchecked oil exploitation because he believed the U.S. should no longer protect foreign nations like China and Japan that rely on oil imports through strategic straits, noting that the U.S. does not need those countries.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Relationship between domestic energy policy and foreign protectionism during the 2026 oil crisis"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "root_id": "98c2f65f-8e79-40e3-b3ff-008fd12426d4",
+  "chunk_a": {
+    "id": "world/live/2026/jan/26/us-winter-storms-snow-ice-freezing-latest-news-updates#chunk_10",
+    "text_snippet": "Title: US gripped by severe winter storm with snow, ice and plunging temperatures – as it happened\nDate: 2026-01-26\n\nContent: In Corinth, Mississippi, heavy machinery manufacturer Caterpillar told employees at its site to stay home today and tomorrow. It already was Mississippi’s worst ice storm since 1994 with its biggest-ever deployment of ice-melting chemicals — 200,000 gallons (750,000 liters) — plus salt and sand to treat icy roads, Governor Tate Reeves said at a press conference on Sunday. He urged people not to drive anywhere unless absolutely necessary. “Do please reach out to friends and family,” Reeves added. Temperatures dipped as low as -40 Fahrenheit (-40C) in parts of Minnesota on Sunday. Many communities across the Midwest, South, and Northeast awakened Monday to subzero weather. The entire Lower 48 states were forecast to have their coldest average low temperature of -9.8F (-12.3C) — since January 2014.",
+    "article_id": "world/live/2026/jan/26/us-winter-storms-snow-ice-freezing-latest-news-updates",
+    "chunk_index": 10,
+    "total_chunks": 18
+  },
+  "chunk_b": {
+    "id": "us-news/2026/jan/26/winter-storm-snow-deaths-power-outages-travel#chunk_2",
+    "text_snippet": "Title: US winter storm: at least 30 people dead and nearly 200m under cold alerts\nDate: 2026-01-27\n\nContent: There were still more than 670,000 power outages in the nation Monday evening, according to poweroutage.com. Most of them were in the south, where weekend blasts of freezing rain caused tree limbs and power lines to snap, inflicting widespread outages on northern Mississippi and parts of Tennessee. Officials in parts of Mississippi have described the damage caused by the storm as “extensive”, saying that additional crews have been brought in to speed up the “tree removal and clearing” and to help with “restoration of replacing poles and lines”. The University of Mississippi also said that it has cancelled classes at the Oxford campus until Sunday, 1 February, “due to continued extreme winter weather conditions and ongoing recovery efforts”. “Throughout campus, the city and county, there are downed trees and power lines, power outages, falling ice and hazardous road conditions,” the school said.",
+    "article_id": "us-news/2026/jan/26/winter-storm-snow-deaths-power-outages-travel",
+    "chunk_index": 2,
+    "total_chunks": 5
+  },
+  "t_bridge": [
+    "Impact of January 2026 winter storm in Mississippi",
+    "Infrastructure and operational disruptions caused by extreme winter weather"
+  ],
+  "initial_question": {
+    "rag_input": "How did the extreme winter weather in Mississippi during January 2026 disrupt both major manufacturing operations and academic activities?",
+    "question": "How did the extreme winter weather in Mississippi during January 2026 disrupt both major manufacturing operations and academic activities?",
+    "answer": "In January 2026, the severe winter storm forced the Caterpillar manufacturing site in Corinth, Mississippi, to instruct employees to stay home for two days. Simultaneously, the University of Mississippi cancelled classes at its Oxford campus until February 1, citing hazardous conditions including downed trees, power lines, and ongoing recovery efforts.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Operational disruptions in Mississippi during the January 2026 winter storm."
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

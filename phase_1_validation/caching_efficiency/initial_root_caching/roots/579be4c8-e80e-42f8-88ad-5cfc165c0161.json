@@ -1,0 +1,37 @@
+{
+  "root_id": "579be4c8-e80e-42f8-88ad-5cfc165c0161",
+  "chunk_a": {
+    "id": "us-news/2026/mar/25/professor-texas-state-university-israel-palestine#chunk_1",
+    "text_snippet": "Title: Professor sues Texas university that terminated contract after Palestine talk\nDate: 2026-03-25\n\nContent: A tenure-track professor with four years of stellar performance reviews, according to the complaint, Robinson has been told he will no longer have a job in May, for a talk he gave two years earlier at a North Carolina anarchist book fair, in no way affiliated with the university. Robinson, the only Black philosophy professor at Texas State, said he filed the complaint because he “wants them to fulfill their side of the contract” – referring to his performance reviews and tenure track – and “to fight back against the prohibition of any discourse on Palestine that isn’t part of the mainstream political class”. The case is one of a growing number. Chloe Truong-Jones, an attorney at Palestine Legal, said her organization has seen a marked increase since 7 October 2023 in US faculty members seeking legal help after being disciplined for speech on Palestine – rising from 37 such requests in 2022 to 150 last year, a 305% increase.",
+    "article_id": "us-news/2026/mar/25/professor-texas-state-university-israel-palestine",
+    "chunk_index": 1,
+    "total_chunks": 9
+  },
+  "chunk_b": {
+    "id": "us-news/2026/apr/03/washington-college-professor-fired-iran-war-criticism#chunk_5",
+    "text_snippet": "Title: University of Washington professor fired from director job after sending email criticizing Iran war\nDate: 2026-04-03\n\nContent: Arab and Muslim faculty and students have been particularly affected. As of April, affiliates of Harvard University say they have filed more than 500 discrimination complaints, sparking renewed scrutiny over the institution’s response to allegations of anti-Arab, anti-Muslim and anti-Palestinian bias. Harvard was approached for comment. The complaints, which have been accumulating over the past year and escalating in recent weeks, detail what advocates describe as a systemic pattern of marginalization. These allegations include the cancellation of academic programming and persistent administrative inaction across several of the university’s schools. Chloe Truong-Jones, an attorney at Palestine Legal, told the Guardian in March that her organization has seen a marked increase since 7 October 2023 in US faculty members seeking legal help after being disciplined for speech on Palestine – rising from 37 such requests in 2022 to 150 last year, a 305% increase.",
+    "article_id": "us-news/2026/apr/03/washington-college-professor-fired-iran-war-criticism",
+    "chunk_index": 5,
+    "total_chunks": 6
+  },
+  "t_bridge": [
+    "Academic freedom",
+    "Palestine-related discourse on US campuses",
+    "Palestine Legal advocacy",
+    "Disciplinary actions against faculty"
+  ],
+  "initial_question": {
+    "rag_input": "What connection exists between the systemic pattern of marginalization described by Harvard affiliates in April 2026 and the legal arguments raised by professor Robinson regarding his terminated contract?",
+    "question": "What connection exists between the systemic pattern of marginalization described by Harvard affiliates in April 2026 and the legal arguments raised by professor Robinson regarding his terminated contract?",
+    "answer": "Both instances reflect a broader trend of suppressing discourse on Palestine, evidenced by Harvard affiliates reporting a systemic pattern of marginalization through over 500 discrimination complaints, which aligns with the experience of professor Robinson, who is suing his university for contract termination after his speech on Palestine, contributing to a 305% rise in faculty seeking help from Palestine Legal between 2022 and 2023.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Palestine-related discourse and systemic faculty disciplinary actions"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

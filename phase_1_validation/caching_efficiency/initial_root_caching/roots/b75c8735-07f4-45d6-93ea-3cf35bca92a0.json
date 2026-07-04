@@ -1,0 +1,36 @@
+{
+  "root_id": "b75c8735-07f4-45d6-93ea-3cf35bca92a0",
+  "chunk_a": {
+    "id": "us-news/2026/apr/06/arizona-bees-sting-hiker-phoenix#chunk_0",
+    "text_snippet": "Title: Arizona hiker stung more than 100 times by bees left in critical condition\nDate: 2026-04-06\n\nContent: A hiker was taken to a hospital in critical condition after bees stung him more than 100 times on an Arizona mountain trail over the Easter weekend – an emergency which required the help of a helicopter crew. The man reported “over 100 stings” had left him “unable to continue his descent” from the summit of Lookout Mountain Preserve in north Phoenix at about 10am on Saturday, the local fire department said in a statement. Technical rescue teams from Phoenix and Glendale responded and coordinated a hoist operation to extract him from the mountain through an airlift in a Firebird 10 helicopter. He was transferred to an awaiting ambulance at the trailhead and transported to the hospital in critical condition, the department said. The fire department used the occasion to advise hikers to “avoid disturbing hives, skip scented products when outdoors, wear light-colored clothing, and if you encounter a swarm – run away quickly and protect your head and face”.",
+    "article_id": "us-news/2026/apr/06/arizona-bees-sting-hiker-phoenix",
+    "chunk_index": 0,
+    "total_chunks": 3
+  },
+  "chunk_b": {
+    "id": "us-news/2026/apr/06/california-sixth-person-bitten-rattlesnake#chunk_0",
+    "text_snippet": "Title: California county records sixth person bitten by rattlesnake in under a month\nDate: 2026-04-06\n\nContent: A sixth person has been bitten by a rattlesnake in southern California’s Ventura county in just under a month, two-thirds of the number of people bitten in all of 2025. Andrew Dowd, a Ventura county fire department spokesperson, said paramedics responded to a call on Sunday for a man who had been bitten by a rattlesnake. The victim said he had been bitten near California State University Channel Islands. The victim was transported to a hospital with antivenom and was in stable condition on Sunday. In 2025, the county recorded nine rattlesnake bites. There have been two fatalities from rattlesnake bites in southern California this year. On 14 March, a 46-year-old woman died after she was bitten by a rattlesnake while hiking in Wildwood regional park. In Orange county, 25-year-old Julian Hernandez died after being bitten while biking near the Quail Hill Trailhead on 4 March.",
+    "article_id": "us-news/2026/apr/06/california-sixth-person-bitten-rattlesnake",
+    "chunk_index": 0,
+    "total_chunks": 3
+  },
+  "t_bridge": [
+    "Outdoor recreational hazards",
+    "Emergency responses to wildlife encounters",
+    "Regional hiker safety incidents"
+  ],
+  "initial_question": {
+    "rag_input": "How did the emergency responses differ for the hiker stung by bees in Phoenix on April 4, 2026, compared to the victims of the rattlesnake incidents in California during March 2026?",
+    "question": "How did the emergency responses differ for the hiker stung by bees in Phoenix on April 4, 2026, compared to the victims of the rattlesnake incidents in California during March 2026?",
+    "answer": "In the April 4, 2026, Arizona incident, the hiker required a technical rescue involving a helicopter hoist operation to be extracted from a mountain trail. In contrast, the rattlesnake victims in California in March 2026, such as the fatalities at Wildwood regional park on March 14 and Quail Hill Trailhead on March 4, were treated by paramedics and hospital staff using antivenom rather than requiring aerial hoist extractions.",
+    "type": "Initial",
+    "logic_type": "comparison",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Comparison of emergency wildlife encounter rescue methods"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "root_id": "a9a56ee7-5cff-46d7-9f16-b3b6a2a0ebe1",
+  "chunk_a": {
+    "id": "world/live/2026/feb/20/european-defence-meeting-ukraine-war-russia-latest-news#chunk_6",
+    "text_snippet": "Title: Zelenskyy says ‘real opportunities to end war with dignity still exist’ - as it happened\nDate: 2026-02-20\n\nContent: Successive chief executives of the pan-European aerospace company Airbus have warned the continent must consolidate these projects. Yet the collapse of FCAS would do the opposite, with a British-Italian-Japanese Tempest project and a mooted Gripen successor already in the mix. For a bloc that collectively spent €381bn (£333bn) on defence last year but struggles to turn that into military capability, the stakes are high. Threats from Russia are mounting and Donald Trump has told Europe it is time to pay for its own security. But for years, the companies building the Franco-German jet have not been able to agree who is in charge. Let’s briefly go back to the E5 defence minister’s words on closer cooperation and all great things they can achieve together (12:53, 13:02). As Alex Daniel will explain in a moment, it does not always work out that smoothly.",
+    "article_id": "world/live/2026/feb/20/european-defence-meeting-ukraine-war-russia-latest-news",
+    "chunk_index": 6,
+    "total_chunks": 20
+  },
+  "chunk_b": {
+    "id": "world/live/2026/feb/19/ukraine-russia-zelenskyy-putin-peace-talks-deal-donald-trump-europe-latest-news-updates#chunk_16",
+    "text_snippet": "Title: Russia ‘not ready for peace’ with ‘no tangible signs’ of serious engagement, EU says - as it happened\nDate: 2026-02-19\n\nContent: Guillaume Faury, Airbus’s chief executive, said on Thursday that the deadlock over the planned next-generation jet “should not jeopardise the entire future of this hi-tech European capability, which will bolster our collective defence. “If mandated by our customers, we would support a two-fighter solution and are committed to playing a leading role in such a reorganised FCAS delivered through European cooperation.” Earlier this week, the German chancellor, Friedrich Merz, signalled that the planned warplane did not suit Germany’s needs, in the latest blow to the project. The German military does not need a nuclear-capable fighter, while France does, he said on the German political podcast Machtwechsel, insisting it was “not a political dispute” but a technical one between the two countries. Europe’s FCAS, announced in 2017, has faced repeated hurdles amid Airbus and Dassault’s power struggle and, more recently, over what the French and German governments want from the project.",
+    "article_id": "world/live/2026/feb/19/ukraine-russia-zelenskyy-putin-peace-talks-deal-donald-trump-europe-latest-news-updates",
+    "chunk_index": 16,
+    "total_chunks": 29
+  },
+  "t_bridge": [
+    "European defense industry consolidation",
+    "Franco-German FCAS (Future Combat Air System) project challenges",
+    "Geopolitical implications of European military autonomy"
+  ],
+  "initial_question": {
+    "rag_input": "How does the technical disagreement over nuclear capabilities mentioned by Friedrich Merz in February 2026 threaten the broader consolidation goals Airbus leadership is pursuing for European defense?",
+    "question": "How does the technical disagreement over nuclear capabilities mentioned by Friedrich Merz in February 2026 threaten the broader consolidation goals Airbus leadership is pursuing for European defense?",
+    "answer": "Airbus leadership, including CEO Guillaume Faury, argues that the continent must consolidate aerospace projects to ensure collective defense and military capability. However, the FCAS project—a central pillar of this consolidation—is being jeopardized by a technical deadlock. As revealed on February 19, 2026, German Chancellor Friedrich Merz stated the warplane does not suit Germany’s needs because it requires nuclear-capable fighters, which France demands but Germany does not. This friction between French and German national requirements, coupled with the power struggle between Airbus and Dassault, risks the project's collapse, which would contradict the goal of consolidation and potentially force Europe toward fragmented alternatives like the British-Italian-Japanese Tempest project.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Consolidation challenges for FCAS"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "root_id": "8ce12d55-a6b1-48d8-b558-bf882770cc03",
+  "chunk_a": {
+    "id": "australia-news/commentisfree/2026/apr/13/iran-war-trump-nuclear-climate-threat-australia-role-responsibility#chunk_3",
+    "text_snippet": "Title: The Iran war has heightened the nuclear and climate threat. Australia must help the world step back from the brink\nDate: 2026-04-13\n\nContent: In my experience, this is precisely the sort of configuration in which wars go to places no one intended. Fourth, crimes against humanity have become a strategic threat. What worries me most is what we have seen developing in recent years and in this war – the nuclear threat, the trashing of the Geneva conventions, war propaganda based in apocalyptic religious language – may become a new norm. The closure of the strait of Hormuz has created an acute global energy shock. Higher oil prices will echo through the global economy for many months, if not years, accelerating inflation and economic instability across the Indo-Pacific. Countries with fragile energy transitions face pressure to extend fossil fuel use, precisely the opposite of what the climate requires. Military resources and political attention have been consumed by a conflict with no climate dividend.",
+    "article_id": "australia-news/commentisfree/2026/apr/13/iran-war-trump-nuclear-climate-threat-australia-role-responsibility",
+    "chunk_index": 3,
+    "total_chunks": 7
+  },
+  "chunk_b": {
+    "id": "us-news/2026/mar/31/trump-iran-war-fossil-fuel-policy-environment#chunk_3",
+    "text_snippet": "Title: Trump’s Iran war and drilling push show ‘dangerous volatility’ of fossil fuel era\nDate: 2026-03-31\n\nContent: The US president has said that if a deal with Iran is not struck that would reopen the strait of Hormuz shipping lane, the US would destroy “all of their Electric Generating Plants, Oil Wells and Kharg Island (and possibly all desalinization plants!)”. Destroying civilian infrastructure such as power and water facilities is illegal under the Geneva conventions and would constitute a war crime. It would also probably further raise global energy costs, including in the US. As well as promising to not start a war with Iran, Trump vowed before the 2024 election to lower costs for Americans – a pledge that he has so far largely failed to achieve. “The president is locking us into 20th-century energy systems when we have wind and solar that could loosen the chokehold on the strait of Hormuz,” said Hill.",
+    "article_id": "us-news/2026/mar/31/trump-iran-war-fossil-fuel-policy-environment",
+    "chunk_index": 3,
+    "total_chunks": 8
+  },
+  "t_bridge": [
+    "Strait of Hormuz",
+    "Iran-US conflict",
+    "Global energy security",
+    "Geneva conventions",
+    "Fossil fuel dependency"
+  ],
+  "initial_question": {
+    "rag_input": "How does the threatened destruction of Iranian civilian infrastructure described in March 2026 relate to the global energy shock observed by April 2026?",
+    "question": "How does the threatened destruction of Iranian civilian infrastructure described in March 2026 relate to the global energy shock observed by April 2026?",
+    "answer": "In March 2026, the US president threatened to destroy Iranian civilian infrastructure, such as electric generating plants and oil wells, if a deal to reopen the Strait of Hormuz was not reached. By April 2026, the actual closure of the Strait of Hormuz had materialized, resulting in an acute global energy shock and rising oil prices that have caused economic instability and pressured countries to increase fossil fuel dependency.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Strait of Hormuz energy impact"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

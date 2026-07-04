@@ -1,0 +1,36 @@
+{
+  "root_id": "b46e5c35-f793-46db-a72a-0a9b98fbe15c",
+  "chunk_a": {
+    "id": "us-news/2026/jan/27/black-women-healthcare-self-advocate#chunk_1",
+    "text_snippet": "Title: Black women on the nightmare of seeking healthcare in the US: ‘I have to be my own doctor’\nDate: 2026-01-27\n\nContent: It took four rounds of this before anyone agreed to schedule a biopsy. By then, months had passed. That experience reshaped how Brown approached medical care: it taught her that knowing her body better than the experts is vital. Additionally, it prompted her to seek out Black doctors whenever possible because she figured a Black physician would be more likely to believe her the first time around. A 2023 survey found that Black patients who have more visits with Black healthcare providers report having more positive medical experiences. Brown’s story is not unique. Across gynecology, primary care, and reproductive health, many Black women describe navigating medical care as a nightmare. “To be a Black woman in America is to have an adverse experience at the doctor’s office, and with her health,” Brown said.",
+    "article_id": "us-news/2026/jan/27/black-women-healthcare-self-advocate",
+    "chunk_index": 1,
+    "total_chunks": 10
+  },
+  "chunk_b": {
+    "id": "us-news/2026/apr/11/georgia-midwives-black-women-pregnancy-birth#chunk_0",
+    "text_snippet": "Title: Black women in Georgia turn to midwives for safer births – so why does the state criminalize many of them?\nDate: 2026-04-11\n\nContent: When Tamara Taitt moved to Georgia in 2023 to run the Atlanta Birth Center, she found herself in what she calls “an extraordinary position”. Under Georgia law, the center’s own executive director cannot provide routine clinical care for the center’s own clients. She could even face criminal charges for doing so. Taitt is a nationally accredited midwife. She directs one of the only freestanding birth centers in the state – a destination for women seeking to give birth outside a hospital, cared for by midwives rather than obstetricians. Families choose birth centers to access more holistic, less medicalized prenatal care and birth, and to avoid invasive medical interventions in a state where C-sections occur at three times the rate recommended by the World Health Organization. But in Georgia, not all midwives can provide that care. Taitt previously ran another birth center in Miami.",
+    "article_id": "us-news/2026/apr/11/georgia-midwives-black-women-pregnancy-birth",
+    "chunk_index": 0,
+    "total_chunks": 13
+  },
+  "t_bridge": [
+    "Systemic disparities in healthcare for Black women",
+    "Alternative approaches to navigating the US medical system",
+    "Barriers to equitable reproductive and maternal healthcare access"
+  ],
+  "initial_question": {
+    "rag_input": "Why do Black women prioritize seeking care from Black providers in 2023, and how does this mirror the motivations of families choosing Tamara Taitt’s Georgia birth center in 2026?",
+    "question": "Why do Black women prioritize seeking care from Black providers in 2023, and how does this mirror the motivations of families choosing Tamara Taitt’s Georgia birth center in 2026?",
+    "answer": "In 2023, Black patients sought out Black healthcare providers because these professionals were more likely to believe them, helping to navigate the nightmare of medical care where being dismissed is common. This mirrors the motivations of families in 2026 who turn to Tamara Taitt's birth center to secure holistic prenatal care and avoid invasive medical interventions, as both groups are proactively seeking alternative environments to ensure their experiences and bodily knowledge are respected outside of traditional medical systems.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Seeking alternative medical environments to mitigate systemic disparities"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "root_id": "a473e30f-4e71-4ce0-bad0-d5b755f0ca7c",
+  "chunk_a": {
+    "id": "australia-news/2026/apr/02/iranian-tourist-ban-doesnt-align-with-the-australian-values-hedieh-signed-up-to-as-a-citizen#chunk_2",
+    "text_snippet": "Title: Iranian tourist ban doesn’t align with the ‘Australian values’ Hedieh signed up to as a citizen\nDate: 2026-04-02\n\nContent: Jamshidian, who has lived in Australia for eight years, says the government’s decision makes the country feel like a “home that doesn’t support you”. “The Australian government was so quick to support this illegal war and shockingly quick to ban Iranian people who might have wanted to shelter from this war temporarily somewhere safer,” she says. “I don’t feel this is aligned with the ‘Australian values’ I committed to when I was granted Australian citizenship, such as ‘equality of all people’ and ‘equality of opportunity and a fair go’.” Iranian Australians question: ‘Why us?’ Mahdi, an Iranian Australian in Melbourne, remembers his brother, Hussain, in Tehran telling him not to bother trying to get him a tourist visa to Australia as Israel and US first dropped bombs on the capital. The 43-year-old, who has been a citizen since 2014, had previously brought his parents and elder brother to Australia for a short stay years ago.",
+    "article_id": "australia-news/2026/apr/02/iranian-tourist-ban-doesnt-align-with-the-australian-values-hedieh-signed-up-to-as-a-citizen",
+    "chunk_index": 2,
+    "total_chunks": 6
+  },
+  "chunk_b": {
+    "id": "world/2026/mar/25/massive-betrayal-iranian-nationals-with-valid-tourist-visas-blocked-from-entering-australia-for-six-months#chunk_2",
+    "text_snippet": "Title: ‘Massive betrayal’: Iranian nationals with valid tourist visas blocked from entering Australia for six months\nDate: 2026-03-26\n\nContent: However, the temporary entry ban will only apply to holders of tourist visas – also known as subclass 600 visas – which totals around 6,800. Nos Hosseini, spokesperson for the Iranian Women’s Association, said the decision was “disappointing” but not a surprise after the bill was quickly passed last sitting fortnight. “I think, given the circumstances, it should really be a time of compassion,” she told Guardian Australia. “As a community, we are grieving. We are under immense stress, and this was not the type of announcement we were expecting to hear.” The Warringah MP, Zali Steggall, said the “sweeping, unchecked” powers posed serious risks that warranted a further look by parliament. “We are now seeing the real-world impact – thousands of people who followed the rules, paid fees, and made plans in good faith are being left in limbo,” she said.",
+    "article_id": "world/2026/mar/25/massive-betrayal-iranian-nationals-with-valid-tourist-visas-blocked-from-entering-australia-for-six-months",
+    "chunk_index": 2,
+    "total_chunks": 5
+  },
+  "t_bridge": [
+    "Australian government's entry ban on Iranian nationals",
+    "Impact of subclass 600 visa suspension on Iranian Australians",
+    "Political and public reaction to the temporary entry ban"
+  ],
+  "initial_question": {
+    "rag_input": "How did the Australian government's March 2026 entry ban on subclass 600 visa holders affect the personal situation of Iranian Australians like Mahdi?",
+    "question": "How did the Australian government's March 2026 entry ban on subclass 600 visa holders affect the personal situation of Iranian Australians like Mahdi?",
+    "answer": "The entry ban, announced in late March 2026, targeted the approximately 6,800 holders of subclass 600 tourist visas, creating a situation where Iranian Australians like Mahdi, who had previously brought family members to Australia for short stays, were prevented from securing tourist visas for relatives during a period of conflict, leaving families in limbo and contradicting the values of 'equality' and 'a fair go' that citizens like Jamshidian associate with their Australian identity.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Impact of the subclass 600 visa ban on Iranian Australian families"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

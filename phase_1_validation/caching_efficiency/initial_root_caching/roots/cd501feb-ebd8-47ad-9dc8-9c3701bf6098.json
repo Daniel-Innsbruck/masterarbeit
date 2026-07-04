@@ -1,0 +1,37 @@
+{
+  "root_id": "cd501feb-ebd8-47ad-9dc8-9c3701bf6098",
+  "chunk_a": {
+    "id": "us-news/2026/jan/20/lawmakers-ice-facilities-judge-block#chunk_3",
+    "text_snippet": "Title: Judge allows Trump administration to block lawmakers’ access to ICE facilities\nDate: 2026-01-20\n\nContent: Meanwhile, the justice department responded on Monday to the lawsuit brought by Minnesota, and the cities of Minneapolis and St Paul, seeking an end to ICE activities, claiming the state was demanding an unprecedented veto over federal law enforcement. At a press conference last week announcing the action, Keith Ellison, the Minnesota attorney general, said the cities were being terrorized by federal actions, including the shooting death of Renee Good, an unarmed US citizen, by an ICE agent. “We allege that DHS’s use of excessive and lethal force, their warrantless, racist arrests, their targeting of our courts, our churches, houses of worship and schools are a violation of the Administrative Procedures Act on arbitrary and capricious federal actions,” he said. Justice department lawyers, however, called the lawsuit “an absurdity”, according to the New York Times.",
+    "article_id": "us-news/2026/jan/20/lawmakers-ice-facilities-judge-block",
+    "chunk_index": 3,
+    "total_chunks": 6
+  },
+  "chunk_b": {
+    "id": "us-news/2026/jan/12/minnesota-ice-lawsuit-trump-administration#chunk_0",
+    "text_snippet": "Title: Minnesota sues Trump administration to end surge of ICE agents in state\nDate: 2026-01-12\n\nContent: The Minnesota attorney general, Keith Ellison, announced a lawsuit on Monday against the federal government, seeking to end the surge of ICE agents in the state. The lawsuit against Department of Homeland Security (DHS) officials comes in the aftermath of an ICE agent fatally shooting Renee Nicole Good behind the wheel of her vehicle last week, leading to protests across the city and the country. “We allege that DHS’s use of excessive and lethal force, their warrantless, racist arrests, their targeting of our courts, our churches, houses of worship and schools are a violation of the Administrative Procedures Act on arbitrary and capricious federal actions. And we ask that the courts will end the surge of thousands of DHS agents in Minnesota,” Ellison said during a press conference. “The deployment of thousands of armed DHS agents to Minnesota has done our state serious harm.",
+    "article_id": "us-news/2026/jan/12/minnesota-ice-lawsuit-trump-administration",
+    "chunk_index": 0,
+    "total_chunks": 6
+  },
+  "t_bridge": [
+    "Minnesota lawsuit against DHS/ICE",
+    "Keith Ellison",
+    "Legal response to the death of Renee Good",
+    "Federal versus state jurisdiction over ICE activities"
+  ],
+  "initial_question": {
+    "rag_input": "How did the Justice Department's January 20, 2026 response to Minnesota's legal action frame the state's attempt to restrict ICE activities in light of the earlier January 12, 2026 complaint?",
+    "question": "How did the Justice Department's January 20, 2026 response to Minnesota's legal action frame the state's attempt to restrict ICE activities in light of the earlier January 12, 2026 complaint?",
+    "answer": "While Minnesota Attorney General Keith Ellison filed the lawsuit on January 12, 2026, to end the surge of thousands of ICE agents in the state, the Justice Department responded on January 20, 2026, by characterizing the state's demand to end those ICE activities as \"an absurdity\" and an attempt to exert an unprecedented veto over federal law enforcement.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Legal conflict between Minnesota and federal jurisdiction over ICE"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

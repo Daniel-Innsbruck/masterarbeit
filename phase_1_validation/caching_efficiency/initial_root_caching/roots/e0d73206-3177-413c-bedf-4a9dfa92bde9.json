@@ -1,0 +1,36 @@
+{
+  "root_id": "e0d73206-3177-413c-bedf-4a9dfa92bde9",
+  "chunk_a": {
+    "id": "world/2026/feb/25/cuba-says-border-guards-killed-four-gunmen-on-us-registered-speedboat#chunk_6",
+    "text_snippet": "Title: Cuba says it killed heavily armed exiles who attacked from US-registered speedboat\nDate: 2026-02-26\n\nContent: The US has also threatened to slap tariffs on other critical suppliers such as Mexico to halt deliveries of oil and fuel to Cuba. The directives from the US Treasury and Commerce departments said that oil and petroleum products could be sold to businesses and private households but not to any government institutions, in effect relying on the Cuban government to respect the arrangement. “This favourable licensing policy is directed towards transactions that support the Cuban people, including the Cuban private sector (eg, exports for commercial and humanitarian use in Cuba),” the guidance read, but banned transactions with “the Cuban military, intelligence services, or other government institutions”. At present the Cuban government is believed to have issued 10 licences to private businesses to bring in fuel in so-called ISO tanks, which fit the standard container spaces on cargo ships. But this will not ease the crisis by much.",
+    "article_id": "world/2026/feb/25/cuba-says-border-guards-killed-four-gunmen-on-us-registered-speedboat",
+    "chunk_index": 6,
+    "total_chunks": 9
+  },
+  "chunk_b": {
+    "id": "world/2026/mar/04/cuba-charges-six-exiles-terrorism-speedboat-attack#chunk_1",
+    "text_snippet": "Title: Cuba charges six exiles with terrorism in wake of deadly speedboat attack\nDate: 2026-03-04\n\nContent: Washington has effectively halted all oil shipments to the Communist-ruled island while demanding political and economic changes. Donald Trump’s administration has made no secret of its desire for regime change in Cuba. Cuban officials have alleged the purported infiltrators came armed with nearly 13,000 rounds of ammunition, 13 rifles and 11 pistols, displaying the captured armaments from the studio on a special television program on Friday. They also showed pictures of the vessels, each peppered with bullet holes from the firefight they said took place at a range of 20 metres (66 feet). Cuba has said at least two of those taken into custody had been previously placed on a list of accused terrorists. Cuba’s interior ministry alleged the men came from the US with the intent to sow chaos and attack military units on the island. Prosecutor Edward Robert Campbell told state television on Friday the accused faced a host of possible charges including crimes associated with terrorist acts.",
+    "article_id": "world/2026/mar/04/cuba-charges-six-exiles-terrorism-speedboat-attack",
+    "chunk_index": 1,
+    "total_chunks": 3
+  },
+  "t_bridge": [
+    "US-Cuba geopolitical tensions",
+    "Speedboat attack incident",
+    "Sanctions and trade policy"
+  ],
+  "initial_question": {
+    "rag_input": "How did the US government's specific trade policy shift regarding Cuban fuel deliveries in February 2026 relate to the geopolitical tensions highlighted by the speedboat incident involving terrorism charges in March 2026?",
+    "question": "How did the US government's specific trade policy shift regarding Cuban fuel deliveries in February 2026 relate to the geopolitical tensions highlighted by the speedboat incident involving terrorism charges in March 2026?",
+    "answer": "In February 2026, the US Treasury and Commerce departments issued guidance allowing fuel sales to private Cuban businesses for humanitarian and commercial use while explicitly banning transactions with the Cuban military and intelligence services. This policy reflected broader tensions leading into March 2026, where the US administration halted oil shipments and sought regime change, culminating in the arrest of six exiles accused by Cuba of using a US-registered speedboat to carry out a terrorist attack against military units on the island.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "US-Cuba trade policy and geopolitical conflict"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

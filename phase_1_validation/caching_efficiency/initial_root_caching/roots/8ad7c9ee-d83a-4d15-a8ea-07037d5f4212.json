@@ -1,0 +1,36 @@
+{
+  "root_id": "8ad7c9ee-d83a-4d15-a8ea-07037d5f4212",
+  "chunk_a": {
+    "id": "world/2026/mar/18/uk-says-it-remains-in-talks-over-escorting-ships-through-strait-of-hormuz#chunk_1",
+    "text_snippet": "Title: UK says it remains in talks over escorting ships through strait of Hormuz\nDate: 2026-03-18\n\nContent: About a fifth of seaborne crude oil traffic passed through the strait before the war, and a dramatic fall in exports has helped push prices above $100 a barrel. Donald Trump has criticised the UK and other Nato members for failing to offer warships to help patrol the strategic waterway. On Truth Social on Tuesday he said the United States “no longer ‘need’ or desire the Nato Countries’ assistance”. However, the UK said contacts continued about the issue at a military level, and additional British planners had been dispatched to liaise with US Central Command (Centcom), which is leading the American military effort against Iran. It is unclear what the UK would contribute to any maritime escort operation, though the Royal Navy could in theory redeploy HMS Dragon, a destroyer currently en route to Cyprus, into the Arabian sea. No other warships are immediately available.",
+    "article_id": "world/2026/mar/18/uk-says-it-remains-in-talks-over-escorting-ships-through-strait-of-hormuz",
+    "chunk_index": 1,
+    "total_chunks": 5
+  },
+  "chunk_b": {
+    "id": "uk-news/2026/mar/14/trump-warships-strait-of-hormuz-iran-oil-shipping#chunk_2",
+    "text_snippet": "Title: Trump calls on UK to send warships to keep strait of Hormuz open\nDate: 2026-03-14\n\nContent: An Ministry of Defence spokesperson said: “As we’ve said previously, we are currently discussing with our allies and partners a range of options to ensure the security of shipping in the region.” R Adm Neil Morisetti, who navigated and captained British warships in the region in the 1980s and 1990s, believes the risks are now “too great” to guarantee the safety of oil tankers in the strait of Hormuz. His warning comes after the UK sent HMS Dragon, which left for the Mediterranean on Tuesday. Morisetti, in charge of military escorts during the Iran-Iraq war, told the Sunday Times: “I think that’s why you’re hearing people saying we hope to escort the tankers shortly, because it’s probably too high a threat at the moment and the risks are too great.” Trump’s plea to the UK contrasts with comments made on the same social media site last week, when he accused prime minister Keir Starmer of attempting to join the conflict after he had already claimed victory.",
+    "article_id": "uk-news/2026/mar/14/trump-warships-strait-of-hormuz-iran-oil-shipping",
+    "chunk_index": 2,
+    "total_chunks": 4
+  },
+  "t_bridge": [
+    "HMS Dragon deployment",
+    "UK-US diplomatic coordination regarding the Strait of Hormuz",
+    "Donald Trump's criticism of NATO/UK naval contributions"
+  ],
+  "initial_question": {
+    "rag_input": "How did Donald Trump’s criticism of the UK in mid-March 2026 influence the potential deployment of HMS Dragon to the Strait of Hormuz?",
+    "question": "How did Donald Trump’s criticism of the UK in mid-March 2026 influence the potential deployment of HMS Dragon to the Strait of Hormuz?",
+    "answer": "Following Donald Trump's criticism on March 17, 2026, regarding the lack of NATO naval contributions to patrol the Strait of Hormuz, the UK clarified that while it continues to discuss military options with allies, the Royal Navy could potentially redeploy HMS Dragon—which had departed for the Mediterranean on March 10, 2026—into the Arabian Sea, as it is the only warship currently available for such an operation.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Diplomatic pressure on UK naval assets"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

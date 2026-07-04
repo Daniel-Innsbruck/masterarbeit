@@ -1,0 +1,36 @@
+{
+  "root_id": "f27f77ab-e97d-4716-91b9-ad10c293633b",
+  "chunk_a": {
+    "id": "australia-news/live/2026/mar/30/australia-politics-live-national-cabinet-fuel-prices-oil-crisis-labor-anthony-albanese-chris-bowen-coalition-angus-taylor-ntwnfb#chunk_68",
+    "text_snippet": "Title: Labor backs Greens inquiry into gas export tax – as it happened\nDate: 2026-03-30\n\nContent: It’s not sustainable, I can definitely tell you that. Like, it would only be there for a short period of time. So we think that if we have to pull that trigger, we’ve got to pull that trigger at the right time. Local business owner relieved Freeman located Scott Brandon, owner of the Bright Brewery, a few kilometres away from Porepunkah, has just told ABC Radio Melbourne that locals feel a “big relief” after the discovery of Dezi Freeman. He told host Raf Epstein: I think it’s a big relief for us to have this chapter resolved, if this news is correct. It’s certainly something that’s been weighing on our minds for several months now. Brandon said when initial search operations were under way there was a “big impact” on tourism in the area and it “caused a lot fear in the community”: Since then everything has pretty much returned to normal … but it’s certainly something that still gets discussed from time to time.",
+    "article_id": "australia-news/live/2026/mar/30/australia-politics-live-national-cabinet-fuel-prices-oil-crisis-labor-anthony-albanese-chris-bowen-coalition-angus-taylor-ntwnfb",
+    "chunk_index": 68,
+    "total_chunks": 94
+  },
+  "chunk_b": {
+    "id": "australia-news/live/2026/mar/13/iran-war-politics-market-reactions-anthony-albanese-labor-angus-taylor-liberals-matt-canavan-nationals-ntwnfb#chunk_14",
+    "text_snippet": "Title: Pocock repeats calls for 25% tax on gas exports – as it happened\nDate: 2026-03-13\n\nContent: Paramedics treated the man, believed to be aged in his 40s, but he died at the scene, police said. The man is yet to be formally identified. Victoria police say they will not proceed with charges against three people as part of their wider investigation into the alleged fatal shooting of two police officers by fugitive Dezi Freeman due to “insufficient evidence”. There have been no confirmed sightings of Freeman, 56, since he allegedly killed two police officers at a rural Victorian property last August. Police last month said they believed he died only hours after he fled into bushland after allegedly shooting the two officers. In a statement released this afternoon, police said: Victoria Police can confirm that we will not be proceeding with charges at this time against three people as part of the broader investigation into the fatal shooting of two police officers in Porepunkah last year.",
+    "article_id": "australia-news/live/2026/mar/13/iran-war-politics-market-reactions-anthony-albanese-labor-angus-taylor-liberals-matt-canavan-nationals-ntwnfb",
+    "chunk_index": 14,
+    "total_chunks": 57
+  },
+  "t_bridge": [
+    "Dezi Freeman case",
+    "Porepunkah incident",
+    "Public sentiment and resolution in Victoria"
+  ],
+  "initial_question": {
+    "rag_input": "What specific legal development occurred in March 2026 regarding the Porepunkah shooting investigation that followed the period of community fear associated with the search for Dezi Freeman?",
+    "question": "What specific legal development occurred in March 2026 regarding the Porepunkah shooting investigation that followed the period of community fear associated with the search for Dezi Freeman?",
+    "answer": "In March 2026, Victoria Police announced they would not proceed with charges against three people involved in the investigation of the fatal shooting, a development that occurred after the local community had experienced months of fear and a negative impact on tourism due to the search for Dezi Freeman.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Legal resolution and community sentiment following the Porepunkah incident"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

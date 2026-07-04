@@ -1,0 +1,37 @@
+{
+  "root_id": "4b68e6c7-e5b8-4c10-a693-ac83f6e23ac2",
+  "chunk_a": {
+    "id": "us-news/2026/mar/13/kyrsten-sinema-romantic-relationship-guard#chunk_2",
+    "text_snippet": "Title: Kyrsten Sinema says in court filings she had a ‘romantic’ relationship with guard\nDate: 2026-03-13\n\nContent: As part of the filing, Sinema detailed a half-dozen encounters in which she said she was “physically intimate” with Matthew. The first documented encounter was in Sonoma, California, in late May 2024, roughly two months after she announced her decision not to seek re-election and several months before he separated from his wife. She stated that they engaged in additional encounters in New York; Washington DC; Aspen, Colorado, and Phoenix, Arizona. According to Heather’s lawsuit, she had a “good and loving marriage” with her husband before Sinema’s “deliberate interference”. She accused Sinema of pursuing Matthew despite knowing he was married. Heather maintained she discovered messages exchanged between her husband and Sinema that “exceeded the bounds of a normal working relationship and were of romantic and lascivious natures”, including a photo of the then-senator wrapped in a towel.",
+    "article_id": "us-news/2026/mar/13/kyrsten-sinema-romantic-relationship-guard",
+    "chunk_index": 2,
+    "total_chunks": 7
+  },
+  "chunk_b": {
+    "id": "us-news/2026/feb/01/kyrsten-sinema-senator-bodyguard-payment#chunk_2",
+    "text_snippet": "Title: Kyrsten Sinema gave $9,000 to man she’s accused of having an affair with\nDate: 2026-02-01\n\nContent: In a lawsuit filed in North Carolina, Ammel’s wife, Heather Ammel, accused Sinema of damaging her marriage. The suit alleges Sinema purchased gifts and concert tickets for Ammel and encouraged his drug use, including to support psychedelic treatments she allegedly financed. Matthew and Heather Ammel had “a good and loving marriage” with “genuine love and affection” before Sinema interfered, pursuing Matthew Ammel despite knowing he was married, Heather Ammel alleges in her lawsuit. The Arizona lawmaker’s head of security hired Matthew Ammel after he retired from the army in 2022, according to the lawsuit, which says he accompanied her on travels to destinations including Napa Valley, California; Las Vegas and Saudi Arabia. Sinema left Congress after the 2024 election. She declined to seek re-election to the Senate, capping a tumultuous single term in which she alienated liberals and left the Democratic party to become an independent.",
+    "article_id": "us-news/2026/feb/01/kyrsten-sinema-senator-bodyguard-payment",
+    "chunk_index": 2,
+    "total_chunks": 4
+  },
+  "t_bridge": [
+    "Kyrsten Sinema",
+    "Matthew Ammel",
+    "Heather Ammel's lawsuit",
+    "alleged extramarital affair"
+  ],
+  "initial_question": {
+    "rag_input": "How did Matthew Ammel's professional role hired in 2022 connect to the nature of the relationship alleged in Heather Ammel's lawsuit and confirmed in Sinema's court filings?",
+    "question": "How did Matthew Ammel's professional role hired in 2022 connect to the nature of the relationship alleged in Heather Ammel's lawsuit and confirmed in Sinema's court filings?",
+    "answer": "Matthew Ammel was hired as part of Kyrsten Sinema’s security team in 2022 after retiring from the army. Heather Ammel’s lawsuit alleges this employment allowed Sinema to pursue an affair, while Sinema’s own court filings confirm she leveraged this professional proximity to engage in physically intimate, romantic, and lascivious encounters with Matthew.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Matthew Ammel's professional employment and the alleged affair"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

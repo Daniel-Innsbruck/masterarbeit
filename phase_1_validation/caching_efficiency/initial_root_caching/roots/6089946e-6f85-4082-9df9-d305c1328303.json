@@ -1,0 +1,36 @@
+{
+  "root_id": "6089946e-6f85-4082-9df9-d305c1328303",
+  "chunk_a": {
+    "id": "world/live/2026/apr/14/middle-east-crisis-live-hezbollah-urges-lebanon-to-pull-out-of-talks-with-israel-blockade-of-strait-of-hormuz-begins#chunk_79",
+    "text_snippet": "Title: US talks between Lebanon and Israel end – as it happened\nDate: 2026-04-15\n\nContent: Trump warned that any Iranian attack boats that challenged the blockade would be destroyed. Guterres on Monday called on “all parties” to respect freedom of navigation in the Hormuz strait. Mediator Pakistan and the gulf state Qatar have continued calls for the truce to be respected as diplomatic efforts continue. Australia’s PM will seek further assurances on the country’s fuel supply amid the Middle East war during the first prime ministerial visit to Brunei in more than a decade. Anthony Albanese departed Sydney on Tuesday for a four-day visit to Brunei and Malaysia for talks aimed at safeguarding the flow of petrol and diesel. Both nations play important roles in Australia’s fuel supply chains, and the trip will build on Albanese’s recent visit to Singapore, another vital exporter. He will meet with Brunei’s Sultan Hassanal Bolkiah on Wednesday, where fuel will be high on the agenda, reports Australian Associated Press.",
+    "article_id": "world/live/2026/apr/14/middle-east-crisis-live-hezbollah-urges-lebanon-to-pull-out-of-talks-with-israel-blockade-of-strait-of-hormuz-begins",
+    "chunk_index": 79,
+    "total_chunks": 86
+  },
+  "chunk_b": {
+    "id": "australia-news/live/2026/apr/13/australia-news-live-anthony-albanese-prime-minister-fuel-supply-diesel-oil-cost-of-living-inflation-budget-ntwnfb#chunk_48",
+    "text_snippet": "Title: Labor ‘not considering’ joining US blockade of strait of Hormuz – as it happened\nDate: 2026-04-13\n\nContent: The prime minister, Anthony Albanese, and foreign affairs minister, Penny Wong, will visit Brunei and Malaysia this week as the government seeks to shore up Australia’s supply of diesel, fertiliser and other critical goods in the wake of shortages ccaused by the US-Israel war on Iran. Albanese will travel first to Bandar Seri Begawan in Brunei on Tuesday for a meeting with the sultan, Hassanal Bolkiah, to discuss “energy, food security, and the flow of essential goods between our countries,” according to the PM’s office. Brunei supplies 9% of Australia’s diesel imports, and 11% of Australia’s fertiliser-grade urea imports, while Australia exports food and agricultural products to Brunei. In Malaysia, Albanese will meet the prime minister, Anwar Ibrahim, for similar negotiations, as Malaysia is Australia’s third-largest source of refined fuel and supplies 10% of Australian imports of fertiliser-grade urea, while Australia supplies 95% of Malaysia’s imported natural gas.",
+    "article_id": "australia-news/live/2026/apr/13/australia-news-live-anthony-albanese-prime-minister-fuel-supply-diesel-oil-cost-of-living-inflation-budget-ntwnfb",
+    "chunk_index": 48,
+    "total_chunks": 50
+  },
+  "t_bridge": [
+    "Anthony Albanese's diplomatic mission to Brunei and Malaysia",
+    "Australia's fuel supply security",
+    "Geopolitical impacts of the Middle East conflict on trade"
+  ],
+  "initial_question": {
+    "rag_input": "By what specific percentage of Australia's total diesel imports did Anthony Albanese aim to secure supply during his April 2026 trip, given the threat to the Hormuz strait?",
+    "question": "By what specific percentage of Australia's total diesel imports did Anthony Albanese aim to secure supply during his April 2026 trip, given the threat to the Hormuz strait?",
+    "answer": "Anthony Albanese visited Brunei and Malaysia to secure fuel supply chains amid the threat to the Hormuz strait, where potential blockades endangered oil flow; specifically, he sought to safeguard imports from Brunei, which provides 9% of Australia's total diesel imports.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Connecting Hormuz strait fuel security threats to specific trade dependency percentages from Brunei"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

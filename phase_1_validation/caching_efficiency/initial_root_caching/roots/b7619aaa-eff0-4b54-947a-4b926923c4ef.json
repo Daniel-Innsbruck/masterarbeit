@@ -1,0 +1,36 @@
+{
+  "root_id": "b7619aaa-eff0-4b54-947a-4b926923c4ef",
+  "chunk_a": {
+    "id": "world/2026/mar/16/french-political-parties-alliances-local-elections#chunk_4",
+    "text_snippet": "Title: French political parties seek alliances before final round of local elections\nDate: 2026-03-16\n\nContent: The LFI is also on track to take Roubaix, a symbol of France’s post-industrial north. In Toulouse, after the LFI scored higher than expected, its candidate made an alliance with the Socialist representative, hoping to beat the right-wing incumbent mayor, Jean-Luc Moudenc, who called it “the alliance of shame”. The LFI and Socialist candidates also joined forces in Avignon in the south-east. The centre-left Raphaël Glucksmann, seen as a potential presidential candidate for 2027, criticised any alliances between the centre left and the LFI, saying Mélenchon’s party had done well in cities such as Toulouse and Limoges but that the centre left had done broadly far better across France. In Marseille, Marine Le Pen’s far-right the National Rally (RN) saw a strong score for its mayoral candidate, Franck Allisio, in the first round, coming just behind the incumbent Benoît Payan, who leads the Printemps Marseillais left grouping which includes Socialists and Greens.",
+    "article_id": "world/2026/mar/16/french-political-parties-alliances-local-elections",
+    "chunk_index": 4,
+    "total_chunks": 7
+  },
+  "chunk_b": {
+    "id": "world/2026/mar/15/french-local-elections-first-round-results#chunk_1",
+    "text_snippet": "Title: First-round of French local elections sees strong showing for National Rally and LFI\nDate: 2026-03-15\n\nContent: The first-round results on Sunday showed a significant increase in votes in certain towns and large cities for the radical left La France Insoumise (LFI), whose leader Mélenchon is expected to make a fourth bid for president next year. The LFI, which has not historically had a large local presence, scored high in the north, in the town of Roubaix, where it could win the mayor’s position. It also had significant scores in cities including Toulouse, Lille and Limoges, having mobilised young voters. Anti-immigrationRN, which has traditionally fared less well in local elections, also celebrated scoring symbolically high in the first round alongside its allies. In France’s second biggest city, Marseille, Franck Allisio, the RN candidate who ran a campaign based on bringing “order” to the streets amid drug gang crime, scored level with the incumbent leftwing mayor, Benoît Payan, at about 35.4%, projections showed. There will now be a tense final-round runoff.",
+    "article_id": "world/2026/mar/15/french-local-elections-first-round-results",
+    "chunk_index": 1,
+    "total_chunks": 5
+  },
+  "t_bridge": [
+    "French local elections 2026",
+    "LFI and RN political performance",
+    "Toulouse and Marseille runoff dynamics"
+  ],
+  "initial_question": {
+    "rag_input": "How did the runoff dynamics in Toulouse and Marseille compare following the first round of the March 2026 local elections?",
+    "question": "How did the runoff dynamics in Toulouse and Marseille compare following the first round of the March 2026 local elections?",
+    "answer": "In Toulouse, the LFI candidate formed an alliance with the Socialist representative to challenge the right-wing incumbent, Jean-Luc Moudenc. In contrast, Marseille is heading toward a tense runoff between the incumbent left-wing mayor, Benoît Payan, and the RN candidate Franck Allisio, who finished at about 35.4%, level with Payan.",
+    "type": "Initial",
+    "logic_type": "comparison",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Runoff political strategies in 2026 French local elections"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

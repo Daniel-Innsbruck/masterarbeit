@@ -1,0 +1,37 @@
+{
+  "root_id": "f5746839-b6e3-419d-9097-0ff553103a0f",
+  "chunk_a": {
+    "id": "world/live/2026/feb/28/israel-attacks-iran-as-blasts-heard-in-tehran-live-updates#chunk_5",
+    "text_snippet": "Title: New strikes hit Tehran – as it happened\nDate: 2026-03-01\n\nContent: They must be held accountable. Donald Trump announced that Iran’s supreme leader had been killed in US-Israeli strikes launched on Tehran. The US president announced the death of Ayatollah Ali Khamenei, who has ruled Iran as supreme leader since 1989, in a post on Truth Social. “Khamenei, one of the most evil people in History, is dead,” Trump wrote. He said that the goal of the military campaign, which began on Saturday morning with a barrage of missiles and airstrikes, was regime change. Iran has not confirmed Khamenei’s death, and denied earlier reports that he had been killed. The supreme leader had not been heard from since the strikes began, and satellite images have showed extensive damage and black smoke at Khamenei’s compound in Tehran. Iranian state media is reporting that his daughter, son-in-law and grandchild were killed.",
+    "article_id": "world/live/2026/feb/28/israel-attacks-iran-as-blasts-heard-in-tehran-live-updates",
+    "chunk_index": 5,
+    "total_chunks": 126
+  },
+  "chunk_b": {
+    "id": "world/2026/feb/28/us-israel-launch-strikes-attack-iran-what-we-know-so-far-latest#chunk_0",
+    "text_snippet": "Title: US and Israel launch strikes on Iran: what we know so far\nDate: 2026-02-28\n\nContent: Iran’s supreme leader Ali Khamenei has been killed as the US and Israel launch a war on Iran to trigger regime change, Donald Trump has claimed. The US president announced the death of the ayatollah, who has ruled Iran as supreme leader since 1989, in a post on Truth Social. “Khamenei, one of the most evil people in History, is dead,” Trump wrote. The death of Iran’s supreme leader was announced after waves of air attacks across the country. Iran’s Red Crescent reported more than 200 deaths and 747 injuries in daylong attacks across 24 provinces. At least 100 people were reportedly killed in a strike on a primary school in Minab, in the south-east. Benjamin Netanyahu, the Israeli prime minister, had earlier said there were “many signs” Khamenei was “no longer alive”, and Israeli officials briefed media that his body had been recovered. Tehran fired retaliatory strikes against Israeli and US bases across the Middle East.",
+    "article_id": "world/2026/feb/28/us-israel-launch-strikes-attack-iran-what-we-know-so-far-latest",
+    "chunk_index": 0,
+    "total_chunks": 4
+  },
+  "t_bridge": [
+    "US-Israeli military campaign against Iran",
+    "Death of Ayatollah Ali Khamenei",
+    "Regime change objectives in Iran",
+    "Escalation of Middle East conflict"
+  ],
+  "initial_question": {
+    "rag_input": "Beyond the official casualty reports from the February 28, 2026 strikes, what specific evidence has been cited to suggest that the regime change objective involves the death of the supreme leader?",
+    "question": "Beyond the official casualty reports from the February 28, 2026 strikes, what specific evidence has been cited to suggest that the regime change objective involves the death of the supreme leader?",
+    "answer": "The regime change objective is linked to the death of Ayatollah Ali Khamenei through claims by Donald Trump on Truth Social and assertions by Benjamin Netanyahu that there were 'many signs' the leader was 'no longer alive,' further supported by Israeli officials who briefed that a body was recovered and satellite imagery showing extensive damage and black smoke at the leader's compound in Tehran following the start of the strikes on February 28, 2026.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Regime change objectives and verification of Ayatollah Ali Khamenei's death"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

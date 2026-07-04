@@ -1,0 +1,36 @@
+{
+  "root_id": "c83e0b3b-eec2-44bb-886c-89f5e71090a4",
+  "chunk_a": {
+    "id": "us-news/2026/feb/27/los-angeles-record-high-temperatures#chunk_0",
+    "text_snippet": "Title: Los Angeles faces record high temperatures week after winter storm\nDate: 2026-02-27\n\nContent: After a week of heavy downpours that left parts of Los Angeles flooded, the city is now facing unusually high temperatures for late February. By mid-afternoon Friday, it was 91F (33C) in downtown Los Angeles, according to the National Weather Service (NWS). That breaks the daily record for 27 February, which was 88F (31C), set last year. The NWS forecast office in Los Angeles shows a map on their website with Friday’s temperatures, labeling them as “very warm conditions”. Friday’s temperatures pose an “elevated risk for heat illness for populations sensitive to heat”, reads the warning by NWS. It also suggests staying hydrated, limiting outdoor activities during the afternoon hours and not leaving children or animals alone in the backseat of a parked vehicle. The spike in temperatures comes after California was battered by a massive winter storm that brought thunderstorms, high winds and heavy snow to mountain areas early last week.",
+    "article_id": "us-news/2026/feb/27/los-angeles-record-high-temperatures",
+    "chunk_index": 0,
+    "total_chunks": 2
+  },
+  "chunk_b": {
+    "id": "us-news/2026/mar/19/march-heatwave-weather-us#chunk_0",
+    "text_snippet": "Title: Historic March heatwave in US west shatters high-temperature records\nDate: 2026-03-19\n\nContent: States across the US south-west recorded blistering temperatures at the tail end of winter, including some of the hottest March temperatures ever recorded in the US, with forecasts indicating hotter days are still to come. California, Nevada and Arizona were all under heat warnings on Thursday amid record-breaking temperatures. In California, the National Weather Service (NWS) said the Los Angeles area was facing “extremely rare heat for March”, warning residents of a high risk for heat illness. Palm Springs, about 100 miles (160km) east of Los Angeles, is expected to reach a high of 108F on Thursday. Heat alerts remain in effect through Sunday.",
+    "article_id": "us-news/2026/mar/19/march-heatwave-weather-us",
+    "chunk_index": 0,
+    "total_chunks": 5
+  },
+  "t_bridge": [
+    "Record-breaking temperatures in Los Angeles",
+    "National Weather Service heat illness warnings",
+    "Late winter/early spring climate anomalies in California"
+  ],
+  "initial_question": {
+    "rag_input": "How did the heat illness risk warnings issued for Los Angeles in February 2026 differ from those issued in March 2026?",
+    "question": "How did the heat illness risk warnings issued for Los Angeles in February 2026 differ from those issued in March 2026?",
+    "answer": "In February 2026, the National Weather Service characterized the heat as an 'elevated risk' for heat illness among sensitive populations, while the March 2026 heatwave was described as 'extremely rare' and posed a 'high risk' for heat illness across the area.",
+    "type": "Initial",
+    "logic_type": "comparison",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Comparison of heat illness risk levels between late winter and early spring climate anomalies."
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

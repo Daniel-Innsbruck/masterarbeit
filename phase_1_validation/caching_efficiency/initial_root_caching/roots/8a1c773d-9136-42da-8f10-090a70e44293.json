@@ -1,0 +1,36 @@
+{
+  "root_id": "8a1c773d-9136-42da-8f10-090a70e44293",
+  "chunk_a": {
+    "id": "politics/2026/feb/18/why-dispute-ruling-on-palestine-action-but-accept-legal-challenge-on-elections#chunk_0",
+    "text_snippet": "Title: Why dispute ruling on Palestine Action, but accept legal challenge on elections?\nDate: 2026-02-18\n\nContent: Faced with adverse legal advice, the government has reinstated local elections and will pay £100,000 for Reform UK’s legal costs (Report, 17 February). But last Friday, faced with a unanimous unlawful verdict from three judges on the proscription of Palestine Action, the government intends to appeal. Why is it that the law, both in the UK and internationally, can always be ignored when it comes to Palestine? Phil Tate Chester • One of the finest songs inspired by a book (From Brontë to Ballard, Orwell to Okri: the best songs inspired by literature – ranked!, 12 February) is Woody Guthrie’s Tom Joad, based on John Steinbeck’s novel The Grapes of Wrath. In 17 verses, Guthrie distilled the essence of Steinbeck’s harrowing chronicle of the Joad family’s enforced migration from Oklahoma to California in the Great Depression. Mike Pender Cardiff • You say (Pass notes, 16 February) cabbage is “having a moment”. You’re a bit behind the times.",
+    "article_id": "politics/2026/feb/18/why-dispute-ruling-on-palestine-action-but-accept-legal-challenge-on-elections",
+    "chunk_index": 0,
+    "total_chunks": 2
+  },
+  "chunk_b": {
+    "id": "world/2026/feb/16/monday-briefing-how-did-the-government-get-it-so-wrong-on-palestine-action#chunk_1",
+    "text_snippet": "Title: Monday briefing: How did the government get it so wrong on Palestine Action? \nDate: 2026-02-16\n\nContent: Palestine Action is now the first group in British history to successfully challenge its proscription. It is worth noting that although the high court has ruled the ban unlawful, Palestine Action remains a proscribed organisation for now. The ban stays in place pending appeal. To understand how we got here, and what happens next, I speak to Haroon Siddique, the Guardian’s legal correspondent. That’s after the headlines. Five big stories Defence policy | Britain and Germany’s highest ranking military leaders have made an unprecedented joint appeal to the public to accept the “moral” case for rearmament and prepare for the threat of war with Russia. UK politics | Keir Starmer is facing calls by MPs for an inquiry into the commissioning of a report that made “baseless claims” about journalists who were investigating a thinktank linked to the prime minister.",
+    "article_id": "world/2026/feb/16/monday-briefing-how-did-the-government-get-it-so-wrong-on-palestine-action",
+    "chunk_index": 1,
+    "total_chunks": 15
+  },
+  "t_bridge": [
+    "Palestine Action legal status",
+    "Government response to high court rulings",
+    "Proscription of Palestine Action"
+  ],
+  "initial_question": {
+    "rag_input": "Why is the government appealing the proscription ruling against Palestine Action despite the High Court declaring the ban unlawful on February 13, 2026?",
+    "question": "Why is the government appealing the proscription ruling against Palestine Action despite the High Court declaring the ban unlawful on February 13, 2026?",
+    "answer": "While the High Court ruled the ban on Palestine Action unlawful on February 13, 2026, making them the first group in British history to successfully challenge their proscription, the government intends to appeal the decision. Consequently, the ban remains in effect pending the outcome of that appeal, unlike the government's decision to accept legal challenges regarding local elections.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Legal status and government appeal of Palestine Action"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

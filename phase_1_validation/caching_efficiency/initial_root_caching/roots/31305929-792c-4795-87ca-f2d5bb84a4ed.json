@@ -1,0 +1,36 @@
+{
+  "root_id": "31305929-792c-4795-87ca-f2d5bb84a4ed",
+  "chunk_a": {
+    "id": "us-news/2026/mar/13/tenants-strike-landlords-rent-increases#chunk_0",
+    "text_snippet": "Title: ‘One of the last places of safety’: US tenants are striking against their landlords over steep rent hikes\nDate: 2026-03-13\n\nContent: Nadia Langley had been organizing tenants in and around her south Minneapolis neighborhood since 2024, when, two months ago, the fledgling union saw a sudden explosion in interest. The jump was prompted not by a downturn in housing conditions or a rise in rents, but by the arrival of thousands of federal agents in the city as part of the Trump administration’s recent mass immigration crackdown. Many immigrants and residents of color were afraid of agent run-ins and wouldn’t leave their homes, even to go to work. To protect their neighbors, residents organized group chats to alert their communities about immigration agent sightings and to provide food, aid and more. “We were thinking, where do we fit into this?” Langley, 24, said about the city’s rapid response network.",
+    "article_id": "us-news/2026/mar/13/tenants-strike-landlords-rent-increases",
+    "chunk_index": 0,
+    "total_chunks": 11
+  },
+  "chunk_b": {
+    "id": "us-news/2026/feb/12/ice-immigration-union-fundraisers#chunk_2",
+    "text_snippet": "Title: ‘Standing up for our workers’: US unions raise thousands for victims of ICE crackdown\nDate: 2026-02-12\n\nContent: The Minneapolis Regional Labor Federation, an AFL-CIO affiliate, has raised more than $126,000 to support workers in Minnesota with legal assistance, including representation when attending asylum hearings. “Things that used to just be simple immigration-related activities to keep people’s status current have turned into things that we have to really support and could put them at risk because of the profiling that’s being done,” said Chelsie Glaubitz Gabiou, the union federation’s president. The union is also providing mutual aid to members who are sheltering in place, offering help with grocery deliveries, transportation and financial support for those who can’t go into work. Glaubitz Gabiou noted that the sweeping ICE operations have caused a downturn in economic activity. Minneapolis’s city government estimates local businesses are losing $10m to $20m in sales every week due to the ICE operations.",
+    "article_id": "us-news/2026/feb/12/ice-immigration-union-fundraisers",
+    "chunk_index": 2,
+    "total_chunks": 5
+  },
+  "t_bridge": [
+    "Minneapolis mass immigration crackdown",
+    "Mutual aid and community support",
+    "Impact of federal immigration enforcement on local residents"
+  ],
+  "initial_question": {
+    "rag_input": "How did the mutual aid efforts organized in response to the federal crackdown of February and March 2026 assist Minneapolis residents who stopped going to work?",
+    "question": "How did the mutual aid efforts organized in response to the federal crackdown of February and March 2026 assist Minneapolis residents who stopped going to work?",
+    "answer": "To assist residents sheltering in place during the federal crackdown, neighborhood unions and the Minneapolis Regional Labor Federation provided food, aid, grocery deliveries, transportation, and financial support to those afraid to leave their homes or unable to go to work due to the presence of federal agents.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Mutual aid during immigration enforcement"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

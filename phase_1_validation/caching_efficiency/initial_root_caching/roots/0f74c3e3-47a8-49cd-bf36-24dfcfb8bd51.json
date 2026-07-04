@@ -1,0 +1,36 @@
+{
+  "root_id": "0f74c3e3-47a8-49cd-bf36-24dfcfb8bd51",
+  "chunk_a": {
+    "id": "australia-news/2026/feb/05/teens-experience-australia-social-media-ban#chunk_9",
+    "text_snippet": "Title: Five young teens on life under Australia’s social media ban: ‘It’s not a big deal any more’\nDate: 2026-02-05\n\nContent: Before the restrictions, giving your phone number seemed quite intimate, but the bans seemed to break that barrier down a bit. It means I have been able to develop closer friendships with people I was just acquainted with, because before I was one of the only ones without social media and was left out. But that’s really just a happy accident, not a real consequence of the ban I don’t think. When the ban was first announced everyone was like CODE RED! Thinking of ways to get around it and stressing out. But it was easy to get around if you wanted to. People still talk about it, but it’s not a big deal any more. At worst, for kids who want to be on the socials, it’s an inconvenience. What upsets me most is the waste of resources that has gone into this whole thing. That money should have been spent figuring out ways to regulate the platforms rather than trying to regulate kids. Or at least put towards educating kids and parents on the best ways to avoid online harms.",
+    "article_id": "australia-news/2026/feb/05/teens-experience-australia-social-media-ban",
+    "chunk_index": 9,
+    "total_chunks": 12
+  },
+  "chunk_b": {
+    "id": "australia-news/2026/mar/04/australia-social-media-ban-under-16s-three-month-review#chunk_2",
+    "text_snippet": "Title: Three months into Australia’s world-first social media ban for under-16s, has it been a success?\nDate: 2026-03-04\n\nContent: Schools have reported little change so far – many already banned devices in school hours. Until eSafety begins reporting its findings, any measurement of success can only be based on vibes. Teenagers Guardian Australia spoke to two months after the ban came into effect had differing views. “I’ve got new accounts on TikTok and Snapchat, and Instagram hasn’t flagged my old account as underage yet,” Sarai Ades, 14, said. “It was so much easier than we thought it would be.” “The ban has made me realise that we sometimes depend on social media a bit too much and there are different ways to communicate and get entertainment,” Grace Guo, 14, said. Even those who have strongly pushed for the ban say it will take time to see any changes.",
+    "article_id": "australia-news/2026/mar/04/australia-social-media-ban-under-16s-three-month-review",
+    "chunk_index": 2,
+    "total_chunks": 5
+  },
+  "t_bridge": [
+    "Australia's social media ban for under-16s",
+    "Teenage perspectives on social media regulation effectiveness",
+    "Circumvention of digital restrictions"
+  ],
+  "initial_question": {
+    "rag_input": "How did Australian teenagers' experiences with circumventing the social media ban differ between February 2026 and March 2026?",
+    "question": "How did Australian teenagers' experiences with circumventing the social media ban differ between February 2026 and March 2026?",
+    "answer": "In February 2026, teenagers reported that although the ban was easy to circumvent, the initial 'CODE RED' panic had subsided and it was no longer considered a big deal. By March 2026, specific teenagers like 14-year-old Sarai Ades confirmed that circumvention remained very easy, noting they had successfully created new accounts on TikTok and Snapchat, while reporting that existing Instagram accounts had not yet flagged them as underage.",
+    "type": "Initial",
+    "logic_type": "comparison",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Circumvention of social media ban"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

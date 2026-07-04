@@ -1,0 +1,36 @@
+{
+  "root_id": "a95e359c-49bf-4749-81dc-7f38e9d8bb17",
+  "chunk_a": {
+    "id": "world/2026/apr/13/deadline-passes-for-us-blockade-on-ships-using-iranian-ports-to-begin#chunk_3",
+    "text_snippet": "Title: US starts naval blockade of Iranian ports after deadline passes\nDate: 2026-04-14\n\nContent: Trump ordered the blockade following US-Iranian talks in Islamabad that ended after 21 hours without agreement. The tactic is aimed at strangling the heavily oil-dependent Iranian economy, and forcing Tehran to meet US demands to reopen the Hormuz strait to ships from the ports of Gulf allies, and to accept a complete ban on uranium enrichment. Miad Maleki, a former US treasury official now at the Foundation for the Defense of Democracies, said on X that the US naval blockade would cost Iran approximately $276m a day in lost exports and disrupt $159m a day in imports – representing combined economic damage of $13bn a month. The Iranian regime has insisted that it would in effect still have control of the Hormuz strait and can determine which ships would be allowed to pass, and has claimed that the US blockade would result in higher oil prices, which climbed back to above $100 a barrel since the diplomatic breakdown in Islamabad.",
+    "article_id": "world/2026/apr/13/deadline-passes-for-us-blockade-on-ships-using-iranian-ports-to-begin",
+    "chunk_index": 3,
+    "total_chunks": 9
+  },
+  "chunk_b": {
+    "id": "us-news/2026/apr/14/first-thing-us-starts-naval-blockade-of-iranian-ports-after-deadline-passes#chunk_0",
+    "text_snippet": "Title: First Thing: US starts naval blockade of Iranian ports after deadline passes\nDate: 2026-04-14\n\nContent: Good morning. The US has begun blocking ships from using Iranian ports in the Gulf, transforming the US-Israeli war against Iran into a test of economic endurance. US Central Command (Centcom) made no formal announcement of the start of the blockade but said it would begin on Monday at 5.30pm Iranian time and would apply to any ships entering or departing Iranian ports or coastal areas. Ships using non-Iranian ports would not be affected. It appeared that US naval forces were going to try to enforce the blockade east of the strait of Hormuz, in the Gulf of Oman, beyond easy reach for Iranian missiles and drones. The American strategy aims to wreck the Iranian economy, which is heavily dependent on oil, forcing Tehran to reopen the strait of Hormuz to ships from the ports of Gulf allies and accept a complete ban on uranium enrichment. Iran has said that Donald Trump’s blockade will burden ordinary Americans with higher fuel costs.",
+    "article_id": "us-news/2026/apr/14/first-thing-us-starts-naval-blockade-of-iranian-ports-after-deadline-passes",
+    "chunk_index": 0,
+    "total_chunks": 8
+  },
+  "t_bridge": [
+    "US naval blockade of Iran",
+    "Economic impact of the blockade",
+    "Strait of Hormuz"
+  ],
+  "initial_question": {
+    "rag_input": "How does the specific location chosen by the US for the 14 April 2026 naval blockade compare to the regime's stated intent regarding control over the Strait of Hormuz?",
+    "question": "How does the specific location chosen by the US for the 14 April 2026 naval blockade compare to the regime's stated intent regarding control over the Strait of Hormuz?",
+    "answer": "While the US strategy aims to force Iran to reopen the Strait of Hormuz to ships from Gulf allies, the US naval forces are enforcing the blockade east of the Strait in the Gulf of Oman, as detailed in Context B. Simultaneously, the Iranian regime insists that it retains control of the Strait of Hormuz and maintains the authority to determine which ships are permitted to pass, according to Context A.",
+    "type": "Initial",
+    "logic_type": "comparison",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Strait of Hormuz and US naval blockade location"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

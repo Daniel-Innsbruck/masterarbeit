@@ -1,0 +1,37 @@
+{
+  "root_id": "f335aaa6-bcf0-4d68-ae49-92b79c0999d3",
+  "chunk_a": {
+    "id": "world/2026/jan/30/settler-only-idf-units-functioning-as-vigilante-militias-in-west-bank#chunk_4",
+    "text_snippet": "Title: Settler-only IDF units functioning as ‘vigilante militias’ in West Bank\nDate: 2026-01-30\n\nContent: “It’s a level of complicity that goes beyond anything we have seen before. You can see the impact if you look at how many Palestinian communities were forcibly transferred by settler violence before 7 October, and how many after.” Settler attacks have completely displaced 29 Palestinian communities since October 2023, more than one a month on average, UN data shows. In 2022 and the first nine months of 2023, four communities were displaced, or one every five months. The UN warned this month that the “growing phenomenon of ‘settler-soldiers’ … is further blurring the line between state and settler violence”. Settlers had killed, destroyed property and livelihoods, forced Palestinians from their homes and ripped communities apart, a report from the office of the high commissioner for human rights found. The creation of hagmar units enabled these attacks and “further cemented” impunity for perpetrators, the report noted.",
+    "article_id": "world/2026/jan/30/settler-only-idf-units-functioning-as-vigilante-militias-in-west-bank",
+    "chunk_index": 4,
+    "total_chunks": 14
+  },
+  "chunk_b": {
+    "id": "world/2026/jan/14/settlers-violence-ethnic-cleansing-west-bank-village#chunk_5",
+    "text_snippet": "Title: ‘The settlers brought the violence’: the ethnic cleansing of a West Bank village\nDate: 2026-01-14\n\nContent: Last year when a court ordered the army to coordinate the return of Palestinians driven out of neighbouring Mu’arrajat, the soldiers only stayed a few hours. When they left settlers descended, driving residents out again. In the two years since October 2023, Israeli soldiers and settlers have killed over 1,000 Palestinians across the occupied West Bank, one in five of them children. No one has been tried or convicted for any of these deaths. Last year, settlers beat an American citizen to death, prompting US senators to warn there was no accountability for Palestinian lives, and shot a prominent activist on camera. The Israeli military recorded a 25% increase in settler violence last year, Haaretz reported, much of it attributed to larger and better organised groups getting support from politicians and well-known activists.",
+    "article_id": "world/2026/jan/14/settlers-violence-ethnic-cleansing-west-bank-village",
+    "chunk_index": 5,
+    "total_chunks": 12
+  },
+  "t_bridge": [
+    "Settler-IDF complicity",
+    "Displacement of Palestinian communities",
+    "Systemic impunity for settler violence",
+    "Escalation of violence in the West Bank post-October 2023"
+  ],
+  "initial_question": {
+    "rag_input": "How did the change in the frequency of Palestinian community displacements after October 2023 correlate with the accountability for the 1,000 deaths recorded during that same period?",
+    "question": "How did the change in the frequency of Palestinian community displacements after October 2023 correlate with the accountability for the 1,000 deaths recorded during that same period?",
+    "answer": "After October 2023, the displacement rate of Palestinian communities by settler violence accelerated to an average of more than one community per month (29 communities total), whereas only four communities were displaced in the 21 months prior. This escalation occurred alongside a complete lack of accountability, as no one has been tried or convicted for any of the over 1,000 Palestinian deaths caused by soldiers and settlers during the same period since October 2023.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Correlation between displacement rates and systemic impunity"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

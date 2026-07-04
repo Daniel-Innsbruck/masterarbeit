@@ -1,0 +1,36 @@
+{
+  "root_id": "b789e874-1f00-49de-a0f5-412e2c5e600a",
+  "chunk_a": {
+    "id": "australia-news/live/2026/jan/08/australia-news-live-bluescope-stokes-extreme-weather-heatwave-bushfire-bondi-royal-commission-anthony-albanese-antisemitism-ntwnfb#chunk_61",
+    "text_snippet": "Title: PM says government has been working on inquiry logistics ‘for weeks’ – as it happened\nDate: 2026-01-08\n\nContent: A bushfire at Longwood in central Victoria has seen early reports of property losses, with firefighters battling the blaze amid strong winds that Heffernan described as a “dynamic and volatile situation”. He told ABC News this morning the forecast is troubling: I think such is the word of the rating in itself, catastrophic. This is the worst conditions that fire can burn in. Australian homes aren’t designed to withstand fire conditions such has been predicted in some parts of the state. Any fire, let alone these two fires we have burning at the moment, any fire in the landscape, when those conditions kick in on Friday – tomorrow – will be very much concerning and we are seeing the return of those very hot temperatures. The winds on Friday will be the peak concern for us.",
+    "article_id": "australia-news/live/2026/jan/08/australia-news-live-bluescope-stokes-extreme-weather-heatwave-bushfire-bondi-royal-commission-anthony-albanese-antisemitism-ntwnfb",
+    "chunk_index": 61,
+    "total_chunks": 69
+  },
+  "chunk_b": {
+    "id": "australia-news/live/2026/jan/22/bondi-terror-attack-national-day-of-mourning-coalition-crisis-nationals-liberals-david-littleproud-sussan-ley-ntwnfb#chunk_42",
+    "text_snippet": "Title: PM tells memorial ‘I am deeply and profoundly sorry’ government could not protect victims – as it happened\nDate: 2026-01-22\n\nContent: But again, circumstances can change with this hot weather coming ahead for firefighters in that part of the world. CFA chief officer, Jason Heffernan, says last night, the Longwood fire – the biggest blaze to begin earlier this month covering 144,00 hectares – was contained. Of the 434 homes destroyed in blazes across the state, 320 are located in this region. He says: Containment lines have been well established, and fire crews are now actively patrolling and monitoring to ensure that the fire stays within the planned containment line … It does not mean the fire is out, so within the next couple of days of heatwave conditions, particularly those very hot days, we are expecting to see internal fire and pockets of maybe unburned fuel reignite or flare up. Firefighters and fire authorities will be on hand to deal with those as they occur.",
+    "article_id": "australia-news/live/2026/jan/22/bondi-terror-attack-national-day-of-mourning-coalition-crisis-nationals-liberals-david-littleproud-sussan-ley-ntwnfb",
+    "chunk_index": 42,
+    "total_chunks": 93
+  },
+  "t_bridge": [
+    "Longwood bushfire",
+    "Jason Heffernan",
+    "fire containment and progression"
+  ],
+  "initial_question": {
+    "rag_input": "How did Jason Heffernan's assessment of the Longwood bushfire containment status change between the warning issued on 8 January 2026 and his update on 22 January 2026?",
+    "question": "How did Jason Heffernan's assessment of the Longwood bushfire containment status change between the warning issued on 8 January 2026 and his update on 22 January 2026?",
+    "answer": "On 8 January 2026, Jason Heffernan described the Longwood bushfire as a 'dynamic and volatile situation' due to catastrophic weather conditions and expected high winds. By 22 January 2026, he reported that the 144,000-hectare fire had been contained, though he cautioned that the fire was not fully extinguished and remained susceptible to reignition due to upcoming heatwave conditions.",
+    "type": "Initial",
+    "logic_type": "temporal",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Progression of the Longwood fire containment status."
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "root_id": "20d9a834-999f-4a00-b9d5-e66e9d35e93e",
+  "chunk_a": {
+    "id": "politics/live/2026/jan/11/tories-ban-under-16s-social-media-badenoch-uk-politics-live#chunk_20",
+    "text_snippet": "Title: Mandelson praises Trump’s ‘graciousness’ and declines to apologise for friendship with Jeffrey Epstein – as it happened\nDate: 2026-01-11\n\nContent: That is not my job. Conservative party leader Kemi Badenoch is speaking to Laura Kuenssberg now on the BBC in what is the second of the new year interviews with party leaders (Keir Starmer was first up last week). The Conservative party has been leaking members and elected officials to Reform UK, which polling suggests has a broad voter coalition that stretches from struggling workers and frustrated graduates to wealthy retirees. Tory leader Kemi Badenoch has been praised by commentators for her recent PMQ performances but her appeal to voters still appears to be limited. However, Badenoch would have been happy with the latest YouGov poll putting her party ahead of Labour for the first time since the 2024 general election. The poll had the Tories on 19% and Labour on 17% – both behind Reform UK, which had 26%.",
+    "article_id": "politics/live/2026/jan/11/tories-ban-under-16s-social-media-badenoch-uk-politics-live",
+    "chunk_index": 20,
+    "total_chunks": 25
+  },
+  "chunk_b": {
+    "id": "politics/live/2026/feb/05/peter-mandelson-keir-starmer-jeffrey-epstein-labour-updates-latest-news#chunk_22",
+    "text_snippet": "Title: Starmer has ‘full confidence’ in Morgan McSweeney, No 10 says amid calls for his sacking – as it happened\nDate: 2026-02-05\n\nContent: And now it is the turn of Conservative leader Kemi Badenoch to give a press conference. She is speaking in central London. Of course, she opens up with an attack on the prime minister for his handling of the Peter Mandelson scandal. She says: What he should apologise for is ignoring security advice and vetting that showed him Mandelson should never have been appointed in the first place. But, ladies and gentlemen, you will notice he cannot bring himself to do that because his self-righteousness is his greatest weakness. Badenoch turns her ire on Nigel Farage’s Reform UK next, mocking his unveiling of a new Welsh leader “after the last one was sent to prison in November for taking bribes from Russia”. She says a Reform government would mean more drama and incompetence. Asked why, as a lawyer, he believed Mandelson when he downplayed the extent of his friendship with Epstein, Starmer says he had no reason to believe he was telling lies.",
+    "article_id": "politics/live/2026/feb/05/peter-mandelson-keir-starmer-jeffrey-epstein-labour-updates-latest-news",
+    "chunk_index": 22,
+    "total_chunks": 42
+  },
+  "t_bridge": [
+    "Kemi Badenoch",
+    "Peter Mandelson",
+    "Political criticism and scandals"
+  ],
+  "initial_question": {
+    "rag_input": "How did Kemi Badenoch’s political focus regarding Peter Mandelson’s appointment change between the January 2026 YouGov poll showing her party’s standing and her February 2026 press conference?",
+    "question": "How did Kemi Badenoch’s political focus regarding Peter Mandelson’s appointment change between the January 2026 YouGov poll showing her party’s standing and her February 2026 press conference?",
+    "answer": "In the January 11, 2026, context, Kemi Badenoch was focused on party performance and polling, with the Conservatives at 19% behind Reform UK. By the February 5, 2026, press conference, her focus shifted to a direct attack on the Prime Minister regarding the Peter Mandelson scandal, specifically criticizing the Prime Minister for ignoring security advice and vetting that should have prevented Mandelson's appointment.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Badenoch's evolving political attacks concerning Mandelson's appointment."
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

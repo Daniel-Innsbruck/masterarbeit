@@ -58,13 +58,39 @@ n = 5             # Target number of turns per conversation
 max_conversations = 50 # number conversations'
 
 # Logging & Output
-output_file = "./data/test.jsonl"#"./data/45ea68d7-6e88-4ba9-a8d3-cb2366b1651a.jsonl"
-log_file = "./data/test.log"#"./data/45ea68d7-6e88-4ba9-a8d3-cb2366b1651a.log"
-metrics_file = "./data/test.jsonl"#"./data/cache_metrics_45ea68d7-6e88-4ba9-a8d3-cb2366b1651a.jsonl"
+output_file = "./data/50_root_conversations.jsonl"#"./data/45ea68d7-6e88-4ba9-a8d3-cb2366b1651a.jsonl"
+log_file = "./data/50_root_conversations.log"#"./data/45ea68d7-6e88-4ba9-a8d3-cb2366b1651a.log"
+metrics_file = "./data/50_root_conversations.jsonl"#"./data/cache_metrics_45ea68d7-6e88-4ba9-a8d3-cb2366b1651a.jsonl"
 
 # Role = "You are a highly attentive conversationalist who asks context-aware questions. Your questions should build naturally on previous exchanges, using referring expressions like 'this', 'that', or 'it' to maintain coherence and continuity."
 Role = "Your questions are very short and precise"
 # Role = "You are a very confused and forgetful person who always misunderstands what has been said. You repeatedly ask the same questions as if you never heard the answer, often mixing up details and getting things wrong. Your questions are unclear or off-topic, and you struggle to follow the flow of conversation, causing you to constantly reask and seek clarification."
+
+#logging helper class
+def log_root_bootstrap_metrics(conversation_id, cd_time, cd_in, cd_out,
+                               cg_metrics=None, cv_metrics=None,
+                               retries=0, success=False, reason=""):
+    entry = {
+        "conversation_id": conversation_id,
+        "success": success,
+        "fail_reason": reason,
+        "cd_latency_sec": round(cd_time or 0.0, 2),
+        "cd_tokens_in": cd_in or 0,
+        "cd_tokens_out": cd_out or 0,
+        "cg_latency_sec": round((cg_metrics or {}).get("time", 0.0), 2),
+        "cg_tokens_in": (cg_metrics or {}).get("in", 0),
+        "cg_tokens_out": (cg_metrics or {}).get("out", 0),
+        "cv_latency_sec": round((cv_metrics or {}).get("time", 0.0), 2),
+        "cv_tokens_in": (cv_metrics or {}).get("in", 0),
+        "cv_tokens_out": (cv_metrics or {}).get("out", 0),
+        "cv_rejections": retries
+    }
+    with open("./data/root_bootstrapping_metrics.jsonl", "a", encoding="utf-8") as f:
+        f.write(json.dumps(entry) + "\n")
+    print(f"  [METRICS] success={success} | reason={reason}")
+    print(f"    CD: {entry['cd_latency_sec']}s, In/Out: {entry['cd_tokens_in']}/{entry['cd_tokens_out']}")
+    print(f"    CG: {entry['cg_latency_sec']}s, In/Out: {entry['cg_tokens_in']}/{entry['cg_tokens_out']}")
+    print(f"    CV: {entry['cv_latency_sec']}s, In/Out: {entry['cv_tokens_in']}/{entry['cv_tokens_out']}")
 
 # =========================================================
 # LLM Request Wrapper
@@ -278,6 +304,17 @@ def generate_conversation():
             cd_in, cd_out = model.get_and_reset_turn_tokens()
             if not discovered_context:
                 print(f"No semantic bridges found after {MAX_RETRIES} attempts. Restarting whole conversation.")
+                log_root_bootstrap_metrics(
+                    conversation_id=counter + 1,
+                    cd_time=cd_time,
+                    cd_in=cd_in,
+                    cd_out=cd_out,
+                    cg_metrics={"in": 0, "out": 0, "time": 0.0},
+                    cv_metrics={"in": 0, "out": 0, "time": 0.0},
+                    retries=0,
+                    success=False,
+                    reason="no_context_bridge_found"
+                )
                 consecutive_fails += 1
                 continue
 
@@ -294,7 +331,19 @@ def generate_conversation():
             # =========================================================
 
             if not question:
-                print(f"Initial multi-hop generation failed after {MAX_RETRIES} retries. Restarting whole conversation.")
+                print(
+                    f"Initial multi-hop generation failed after {MAX_RETRIES} retries. Restarting whole conversation.")
+                log_root_bootstrap_metrics(
+                    conversation_id=counter + 1,
+                    cd_time=cd_time,
+                    cd_in=cd_in,
+                    cd_out=cd_out,
+                    cg_metrics=cg_metrics,
+                    cv_metrics=cv_metrics,
+                    retries=turn_0_retries,
+                    success=False,
+                    reason="init_multihop_validation_failed"
+                )
                 consecutive_fails += 1
                 model.reset_chat()
                 continue
@@ -302,33 +351,18 @@ def generate_conversation():
             # =========================================================
             # log measurements
             # =========================================================
-            metrics_entry = {
-                "conversation_id": counter + 1,
-                # Context Discoverer Costs
-                "cd_latency_sec": round(cd_time, 2),
-                "cd_tokens_in": cd_in,
-                "cd_tokens_out": cd_out,
-                # Conversation Generator Costs (inkl. Retries)
-                "cg_latency_sec": round(cg_metrics["time"], 2),
-                "cg_tokens_in": cg_metrics["in"],
-                "cg_tokens_out": cg_metrics["out"],
-                # Conversation Validator Costs (inkl. Retries)
-                "cv_latency_sec": round(cv_metrics["time"], 2),
-                "cv_tokens_in": cv_metrics["in"],
-                "cv_tokens_out": cv_metrics["out"],
-                # Retries / Rejections
-                "cv_rejections": turn_0_retries
-            }
-
-            # write to jsonl
-            with open("./data/root_bootstrapping_metrics.jsonl", "a", encoding="utf-8") as f:
-                f.write(json.dumps(metrics_entry) + "\n")
-
-            # console prints for monitoring
+            log_root_bootstrap_metrics(
+                conversation_id=counter + 1,
+                cd_time=cd_time,
+                cd_in=cd_in,
+                cd_out=cd_out,
+                cg_metrics=cg_metrics,
+                cv_metrics=cv_metrics,
+                retries=turn_0_retries,
+                success=True,
+                reason=""
+            )
             print(f"Root {counter + 1} Done | Retries: {turn_0_retries}")
-            print(f"  -> CD: {cd_time:.1f}s, Tokens In/Out: {cd_in}/{cd_out}")
-            print(f"  -> CG: {cg_metrics['time']:.1f}s, Tokens In/Out: {cg_metrics['in']}/{cg_metrics['out']}")
-            print(f"  -> CV: {cv_metrics['time']:.1f}s, Tokens In/Out: {cv_metrics['in']}/{cv_metrics['out']}")
 
             # save cached roots
             if BUILD_CACHE:

@@ -1,0 +1,36 @@
+{
+  "root_id": "f2aea109-5263-4ade-a551-d663e121c593",
+  "chunk_a": {
+    "id": "australia-news/live/2026/apr/15/anthony-albanese-brunei-jim-chalmers-washington-iran-war-fuel-prices-economy-angus-taylor-labor-coalition-political-reactions-ntwnfb#chunk_41",
+    "text_snippet": "Title: Usman Khawaja condemns ‘appalling’ Coalition immigration comments – as it happened\nDate: 2026-04-15\n\nContent: So you can’t always give punity to such soldiers. Therefore, it’s under very prudent research. Newman added: We express deep sorrow for the family, but you must understand that while we [are] still checking this issue, there’s a problem in implicating the soldiers themselves until we know exactly what happened and what the findings of the investigation are. The high court has ruled that Victoria’s election donations laws are unconstitutional. The case was brought by Paul Hopper and Melissa Lowe, two independent candidates who contested the 2022 state election. They had argued the major parties’ exemption to electoral laws – that allowed them to access unlimited funds via their “nominated entities” – was a breach of the constitution’s implied freedom of political communication. This morning, all seven judges of the court agreed the section of the electoral act “impermissibly burdens” freedom of political communication.",
+    "article_id": "australia-news/live/2026/apr/15/anthony-albanese-brunei-jim-chalmers-washington-iran-war-fuel-prices-economy-angus-taylor-labor-coalition-political-reactions-ntwnfb",
+    "chunk_index": 41,
+    "total_chunks": 70
+  },
+  "chunk_b": {
+    "id": "australia-news/2026/apr/15/labor-lashes-coalition-immigration-plan-as-usman-khawaja-calls-policy-appalling#chunk_1",
+    "text_snippet": "Title: Labor lashes Coalition immigration plan as Usman Khawaja calls policy ‘appalling’\nDate: 2026-04-15\n\nContent: Sign up for the Breaking News Australia email Burke said on Wednesday that Taylor’s plan – the first in a series of promised announcements – was a decision about “what sort of country we are”. “I still want them to provide the example of the person who we can’t currently cancel or refuse a visa to, who they want us to be able to,” he said. “Mr Taylor has been asked a couple of times to provide this exact example and hasn’t, simply because what they are wanting is a discussion and a meme. “There is no policy attached to what they’ve announced.” Cricket great Usman Khawaja called the policy “appalling” on social media. He challenged Taylor to say plainly that the policy would discriminate against Muslims. “Don’t beat around the bush by using words such as ‘extremist, ‘fundamentalist’ and ‘dictators’. Most of the world shares the same values as Australia, presumably the most important in any democracy, respect everyone and don’t break the law.",
+    "article_id": "australia-news/2026/apr/15/labor-lashes-coalition-immigration-plan-as-usman-khawaja-calls-policy-appalling",
+    "chunk_index": 1,
+    "total_chunks": 5
+  },
+  "t_bridge": [
+    "Usman Khawaja's public criticism",
+    "Coalition immigration policy controversy",
+    "Political debate in Australian media"
+  ],
+  "initial_question": {
+    "rag_input": "How does the criticism voiced by Usman Khawaja on 15 April 2026 contrast with the High Court's ruling on electoral laws regarding political communication?",
+    "question": "How does the criticism voiced by Usman Khawaja on 15 April 2026 contrast with the High Court's ruling on electoral laws regarding political communication?",
+    "answer": "On 15 April 2026, Usman Khawaja criticized the Coalition's immigration policy as 'appalling' and accused it of being discriminatory, essentially challenging the political rhetoric used in public debate. In contrast, on the same day, the High Court ruled that Victoria's election donation laws were unconstitutional because they impermissibly burdened the implied freedom of political communication, protecting the ability of independent candidates to participate in the political process.",
+    "type": "Initial",
+    "logic_type": "comparison",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Usman Khawaja's criticism versus High Court rulings on political freedom"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

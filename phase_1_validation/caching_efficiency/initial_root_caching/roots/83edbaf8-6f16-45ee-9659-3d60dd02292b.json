@@ -1,0 +1,36 @@
+{
+  "root_id": "83edbaf8-6f16-45ee-9659-3d60dd02292b",
+  "chunk_a": {
+    "id": "politics/2026/mar/14/starmer-trump-iran-middle-east-us-israel-conflict-britain#chunk_8",
+    "text_snippet": "Title: ‘Could be the making of him’: Starmer’s allies praise stance on Trump and Iran \nDate: 2026-03-14\n\nContent: While an unprecedented leak to the Spectator of a national security council meeting showed Ed Miliband, Rachel Reeves and Yvette Cooper had strongly supported blocking the US from using Britain’s military bases, at least one senior cabinet minister is worried that the longer-term impact on the transatlantic relationship will be disastrous for the UK’s standing and security. Thornberry is more confident that the relationship will recover. “We will always be close to America,” she said. “They are our closest ally. But there are times when you can disagree. We survived Vietnam, we will survive this. And it’s not like we haven’t been led by them into some pretty disastrous decisions in the near past. “People get – well, men particularly get – particularly excited about wars, and it’s quite popular to start with. And then, as they begin to think through what it means and what the ramifications are, then the war starts to affect daily life, war starts to kind of lose popularity.",
+    "article_id": "politics/2026/mar/14/starmer-trump-iran-middle-east-us-israel-conflict-britain",
+    "chunk_index": 8,
+    "total_chunks": 10
+  },
+  "chunk_b": {
+    "id": "politics/2026/mar/08/starmer-speaks-with-trump-after-president-criticises-lack-of-uk-support-for-iran-strikes#chunk_4",
+    "text_snippet": "Title: Starmer speaks with Trump after president criticises lack of UK support for Iran strikes\nDate: 2026-03-08\n\nContent: While some oppose any role for UK facilities in US operations in Iran, Labour MPs rallied around Starmer on Sunday over Blair’s comments. Emily Thornberry, the Labour chair of the foreign affairs select committee, said Starmer had taken the right approach, which was backed by Labour MPs and the public. A YouGov poll of 6,285 adults in Britain published this week found that Britons oppose the initial US-Israel attacks on Iran by 49% to 28%, while nearly half (46%) believe the UK military position should be purely defensive. A Labour MP while Blair was prime minister, Thornberry compared Starmer’s position with that of Robin Cook, who resigned from government over Blair’s stance on the war. “I would say that Keir is much more Robin Cook than he is Tony Blair, and I’m really pleased about that,” she said.",
+    "article_id": "politics/2026/mar/08/starmer-speaks-with-trump-after-president-criticises-lack-of-uk-support-for-iran-strikes",
+    "chunk_index": 4,
+    "total_chunks": 8
+  },
+  "t_bridge": [
+    "Emily Thornberry's perspective on Starmer's foreign policy",
+    "UK government's stance on US military operations in Iran",
+    "Comparison of Keir Starmer's leadership style to previous Labour leaders"
+  ],
+  "initial_question": {
+    "rag_input": "Why does Emily Thornberry believe the government's stance on US military operations in Iran during March 2026 aligns with Robin Cook's legacy rather than past foreign policy mistakes?",
+    "question": "Why does Emily Thornberry believe the government's stance on US military operations in Iran during March 2026 aligns with Robin Cook's legacy rather than past foreign policy mistakes?",
+    "answer": "In March 2026, Emily Thornberry praised Starmer's refusal to support US military operations in Iran, explicitly stating, 'I would say that Keir is much more Robin Cook than he is Tony Blair.' She favors this approach because it avoids the 'disastrous decisions' of the past, such as the Vietnam War, which she notes were driven by men who became 'excited about wars' before the ramifications affected daily life. By aligning Starmer with Cook—who famously resigned over foreign intervention—she justifies the current government's decision to maintain a defensive military position despite the potential strain on the transatlantic relationship.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Connecting Thornberry's historical comparison of Starmer/Cook to her justification of the Iran military stance."
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

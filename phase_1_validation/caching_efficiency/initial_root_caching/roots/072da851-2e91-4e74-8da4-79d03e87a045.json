@@ -1,0 +1,36 @@
+{
+  "root_id": "072da851-2e91-4e74-8da4-79d03e87a045",
+  "chunk_a": {
+    "id": "us-news/2026/feb/19/us-labor-secretary-husband#chunk_2",
+    "text_snippet": "Title: Trump labor secretary’s husband barred from department over sexual assault allegations, reports say\nDate: 2026-02-20\n\nContent: I will absolutely, categorically fight everything in this,” he said. The labor department did not immediately respond to requests for comment. Chavez-DeRemer, a former congresswoman who lost her seat representing part of the Portland metro area in 2024, was nominated to Trump’s cabinet shortly after he won the election. Since then, she has faced several controversies of her own. In January, a security officer assigned to protect the labor secretary was reportedly placed on leave as officials investigate an alleged romantic relationship between them. Two of the secretary’s top aides were also placed on leave as the department’s inspector general reportedly investigated allegations that Chavez-DeRemer drank in her office during work hours and used taxpayer funds to pay for personal trips to destinations such as Las Vegas. One of those trips was allegedly with a staffer she was reportedly having an inappropriate relationship with.",
+    "article_id": "us-news/2026/feb/19/us-labor-secretary-husband",
+    "chunk_index": 2,
+    "total_chunks": 4
+  },
+  "chunk_b": {
+    "id": "us-news/live/2026/feb/19/donald-trump-first-board-of-peace-washington-us-politics-live#chunk_11",
+    "text_snippet": "Title: Trump responds to Obama’s viral interview, saying he will ask Pentagon to release files on UFOs and extraterrestrials – as it happened\nDate: 2026-02-20\n\nContent: The husband of Donald Trump’s labor secretary, Lori Chavez-DeRemer, has reportedly been barred from the labor department’s headquarters in Washington DC after at least two female staff members accused him of sexually assaulting them, the New York Times reports. According to the Times, the allegations against Dr Shawn DeRemer, which led to the filing of a police report, are that he touched women inappropriately at the department’s main building, which is named for Frances Perkins, FDR’s labor secretary from 1933 to 1945, and the first woman ever to serve in the US cabinet. One of the incidents, during working hours in December, was recorded on office security cameras, unnamed sources told the Times. The video, allegedly showing Dr DeRemer giving one of the women an extended embrace, was reviewed as part of a criminal investigation the source said.",
+    "article_id": "us-news/live/2026/feb/19/donald-trump-first-board-of-peace-washington-us-politics-live",
+    "chunk_index": 11,
+    "total_chunks": 57
+  },
+  "t_bridge": [
+    "Lori Chavez-DeRemer",
+    "Department of Labor",
+    "Scandals/Controversies in the Trump Administration"
+  ],
+  "initial_question": {
+    "rag_input": "What specific controversies involving Lori Chavez-DeRemer and her husband were reported by February 20, 2026?",
+    "question": "What specific controversies involving Lori Chavez-DeRemer and her husband were reported by February 20, 2026?",
+    "answer": "By February 20, 2026, Lori Chavez-DeRemer faced investigations into allegations of drinking in her office, misusing taxpayer funds for personal trips to Las Vegas, and having an inappropriate relationship with a staffer, while her husband, Dr. Shawn DeRemer, was barred from the Department of Labor headquarters following accusations of sexually assaulting two female staff members.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Lori Chavez-DeRemer's personal and family-related controversies within the Department of Labor."
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}
