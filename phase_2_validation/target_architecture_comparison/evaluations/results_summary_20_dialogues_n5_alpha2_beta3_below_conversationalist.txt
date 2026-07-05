@@ -1,0 +1,9 @@
+#Baseline
+[MULTI-HOP]  Correctness: 0.48 | Faithfulness: 0.89 | Precision: 0.94 | Recall: 0.47
+[SINGLE-HOP] Correctness: 0.61 | Faithfulness: 0.88 | Precision: 0.73 | Recall: 0.63
+Forgetfulness: 0.20 | Context Retention: 0.85
+
+#Advanced
+[MULTI-HOP]  Correctness: 0.92 | Faithfulness: 0.79 | Precision: 0.92 | Recall: 0.77
+[SINGLE-HOP] Correctness: 0.71 | Faithfulness: 0.66 | Precision: 0.67 | Recall: 0.56
+Forgetfulness: 0.10 | Context Retention: 0.90

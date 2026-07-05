@@ -1,0 +1,723 @@
+{
+    "file_path": "./phase_1_validation/system_baseline_n5_alpha2_beta3_below_conversationalist.jsonl",
+    "multi_hop_evaluation": {
+        "average_scores": {
+            "correctness_aspect_critic": 0.4782608695652174,
+            "faithfulness_aspect_critic": 0.8923748353096179,
+            "context_precision_critic": 0.9434782608465216,
+            "context_recall_critic": 0.4739130434782609
+        },
+        "detailed_results": [
+            {
+                "content": "How did the RBA's policy outlook mentioned by Governor Bullock on March 3, 2026, evolve by the time of the board's narrow vote on March 17, 2026, regarding their reaction to persistent inflationary pressures?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the reporting on the missile strike in Minab on March 1, 2026, evolve regarding the casualty count when compared to the visual analysis conducted by the Guardian on March 6, 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.6666666666666666,
+                "context_precision_critic": 0.6791666666496875,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did the initial timeline of Nancy Guthrie\u2019s movements on 31 January, which concluded when her garage door closed at 9:50pm, influence the subsequent public perception and official investigation status as reported by 14 February?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.999999999975,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did the Department of Justice's April 2026 description of Hernandez's criminal background differ from the claims ICE continued to maintain about him following his arrest?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.7142857142857143,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How do the allegations regarding Hernandez being 'wanted in El Salvador' (as claimed by ICE on April 9) contrast with the Department of Justice's decision to charge him with assault on April 15, and what does this reveal about their narratives?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How does the approach to public order signaled by Jos\u00e9 Antonio Kast, who takes office in March 2026, connect to the concerns over potential institutional impunity raised by the judicial outcome involving the riot officer and Fabi\u00e1n Gatica in February 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9375,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did President Volodymyr Zelenskyy's reaction to intelligence warnings in the period leading up to the 2022 Russian invasion mirror the skepticism held by European intelligence services regarding the nature of the threat?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.5454545454545454,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the shift in Marjorie Taylor Greene\u2019s stance toward Donald Trump on April 8th and 9th, 2026, correlate with the volatile swings seen in Brent crude oil prices during that same two-day period?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.6666666666666666,
+                "context_precision_critic": 0.999999999975,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "While Anas Sarwar's press secretary confirmed on February 11, 2026, that Keir Starmer supports Sarwar to be First Minister, how does this stance on Starmer's participation in the campaign reconcile with the specific legislative concerns raised by the 20 MSPs regarding the party's election strategy?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.8333333333333334,
+                "context_precision_critic": 0.94999999997625,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "How did the political climate surrounding the Trump administration in February 2026 shape the environment in which Analilia Mejia eventually secured her New Jersey House seat victory on April 17, 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.8666666666666667,
+                "context_precision_critic": 0.699999999965,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did the extreme storm cycle that began in January 2026 affect regional infrastructure in Portugal, and in what way does the atmospheric shift identified during that same season help explain the broader damage seen across the western Mediterranean?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.875,
+                "context_precision_critic": 0.8874999999778125,
+                "context_recall_critic": 0.4
+            },
+            {
+                "content": "How did the US military's decision to shift assets away from South Korea during the events of March 12, 2026, align with the broader strategic response to the conflict in the Middle East reported two days later?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.999999999975,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did the conflict involving the Hashed al-Shaabi in March 2026 influence the International Energy Agency's decision to release oil from strategic stockpiles?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.6791666666496875,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did Jack Smith\u2019s deposition testimony from January 2026 contrast with the specific administrative policies the Trump administration implemented regarding foreign aid and research funding during that same month?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 0.3333333333333333
+            },
+            {
+                "content": "How did Tom Homan's decision to draw down federal agents in Minnesota by February 2026 correlate with his claims about the effectiveness of the state's local law enforcement coordination?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did the legal standard of proof that led to Ben Roberts-Smith losing his defamation case in June 2023 differ from the threshold required for the criminal proceedings initiated against him by April 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Was the fuel crisis that caused industry warnings in April 2026 caused by the Middle East conflict mentioned in reports regarding household stockpiling?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.8571428571428571,
+                "context_precision_critic": 0.999999999975,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did Governor Tim Walz's public reaction to the death of Renee Nicole Macklin Good on 7 January evolve by the time he addressed the federal government's actions in Minneapolis on 25 January?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How has the Trump administration's stated opposition to West Bank annexation since February 2026 reconciled with the concurrent rise in settlement activity and the expansion of consular services in those same areas?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.8333333333333334,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 0.25
+            },
+            {
+                "content": "How does Jess Walsh\u2019s government reconcile its stated commitment to supporting children with complex needs in mainstream settings, as noted in February 2026, with the concerns raised by advocates regarding the proposed shift toward unregulated care models mentioned in March 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.8041666666465626,
+                "context_recall_critic": 0.25
+            },
+            {
+                "content": "How has the Redfern Legal Centre's stance on the proportionality of police bail conditions evolved from the concerns raised in February 2026 to their criticism regarding the treatment of protesters like Aydin in April 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How does the administration\u2019s strategy of leveraging federal funding threats against the Smithsonian in January 2026 relate to their broader ideological agenda for national cultural symbols like the proposed triumphal arch?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "How is the Trump administration handling the leadership and operations at the Kennedy Center to ensure their ideological goals are being met, beyond the funding threats directed at other cultural institutions?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9285714285714286,
+                "context_precision_critic": 0.999999999975,
+                "context_recall_critic": 1.0
+            }
+        ]
+    },
+    "single_hop_evaluation": {
+        "average_scores": {
+            "correctness_aspect_critic": 0.6103896103896104,
+            "faithfulness_aspect_critic": 0.8768899157459127,
+            "context_precision_critic": 0.7311147185821568,
+            "context_recall_critic": 0.632034632034632
+        },
+        "detailed_results": [
+            {
+                "content": "What specific economic factors, such as the state of the jobs market or international conflicts, were cited as reasons why four members of the RBA board preferred to wait until the May meeting to hike interest rates instead of joining the majority in the March 17, 2026, decision?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.6,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the RBA's decision to hike interest rates in mid-March 2026 compare to the policy actions taken by other global central banks, such as those in the US, UK, and European Union, during that same period?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.6666666666666666,
+                "context_precision_critic": 0.8874999999778125,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What was the level of inflation in Australia immediately before the RBA's decision to hike interest rates in mid-March 2026, a move that distinguished its policy from other global central banks?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.4166666666458333,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What timeframe did the RBA board provide for bringing inflation down to their target while trying to preserve employment gains, as mentioned during their deliberations in March 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.75,
+                "context_precision_critic": 0.49999999995,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Is there any evidence provided in the reports that the US-Israeli-led military operations were specifically targeting the Shajareh Tayyebeh school in Minab as a strategic point?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What details do the reports provide regarding the proximity of the IRGC complex to the Shajareh Tayyebeh school in Minab and its potential role in the targeting of that area?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8571428571428571,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Why was the Shajareh Tayyebeh school still being associated with the IRGC complex in aftermath reports despite the fact that the school had been walled off from the compound for eight years?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.625,
+                "context_precision_critic": 0.9999999999666667,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Has there been any further official acknowledgment from the US Central Command or other involved parties regarding the civilian casualties at the Shajareh Tayyebeh school in Minab beyond the initial statement from Capt. Tim Hawkins?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.75,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Were there any suspects identified in the investigation of Nancy Guthrie's disappearance in the weeks following the start of the case?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8571428571428571,
+                "context_precision_critic": 0.3333333333,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What specific physical evidence was discovered at Nancy Guthrie's home that led investigators to treat her disappearance as a crime scene?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.7142857142857143,
+                "context_precision_critic": 0.19999999998,
+                "context_recall_critic": 0.3333333333333333
+            },
+            {
+                "content": "Why did investigators link a mysterious white van to the crime scene at Nancy Guthrie's home, in addition to the blood evidence discovered there?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.75,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What is the significance of the ransom note that was reportedly sent in the case of the missing Nancy Guthrie?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.94999999997625,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Does Hernandez actually have a connection to the 18th Street Gang, or is the claim regarding his membership considered a fabrication by his legal counsel given his history?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.4166666666458333,
+                "context_recall_critic": 0.3333333333333333
+            },
+            {
+                "content": "Regarding Hernandez's background in El Salvador, what evidence or court record details exist concerning the murder accusations he previously faced, and how was that matter resolved?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Why has the Department of Homeland Security (DHS) maintained its original claim that Hernandez is a 'wanted gang member' even after inquiries were made regarding the inconsistencies between their narrative and the Department of Justice's stance?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.8,
+                "context_precision_critic": 0.5833333333041666,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What specific action did Jos\u00e9 Antonio Kast announce on the night of his December runoff vote to address public order, and how did the perceived results of outgoing president Gabriel Boric's term contribute to the public demand for such measures?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9166666666361111,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What was the judicial outcome for the riot officer who blinded Fabi\u00e1n Gatica in February 2026, and how did the officer's reaction to the verdict compare to the reaction of Gatica himself?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.8666666666377778,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "How many people were murdered and how many were forcibly disappeared under the dictatorship of Augusto Pinochet, the leader whose regime is supported by the incoming president, Jos\u00e9 Antonio Kast?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.3333333333,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What does the 2024 Gallup security report state regarding the prevalence of fear among people walking in their neighborhoods at night in Chile?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What were the consequences for the Ukrainian military's preparedness once its intelligence and military elite began making limited attempts to prepare for the 2022 invasion behind the back of the political leadership?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What specific lesson do officials currently draw regarding the danger of dismissing scenarios that seem to fall outside the realm of the rational or possible, following the failure to heed intelligence warnings prior to the 2022 invasion?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8888888888888888,
+                "context_precision_critic": 0.8041666666465626,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "What are European spy services and politicians currently doing to adjust how they handle intelligence assessments as they reflect on the failures of 2022 and face a new period of geopolitical uncertainty?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8181818181818182,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Was the Ukrainian and European failure to prepare for the 2022 Russian invasion primarily caused by a lack of intelligence or a deliberate decision by political leadership to disregard the warnings provided?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.6363636363636364,
+                "context_precision_critic": 0.999999999975,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How much did Brent crude oil drop on April 9, 2026, and what was the primary event cited as the cause for this price decrease?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did the specific 10-point proposal drawn up by Iran relate to the subsequent decline in Brent crude oil prices?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.42857142857142855,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Is the explanation regarding electricity prices and renewable energy actually related to the Iran ceasefire and its impact on oil prices, or has the topic shifted incorrectly?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.5,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How was the 25th Amendment discussed in relation to the conflict with Iran and the leadership of Donald Trump?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.5888888888692593,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How does Douglas Alexander intend to balance his role as the Scottish secretary, who supports Keir Starmer, with his duties as the co-chair of the Scottish Labour election campaign working for Anas Sarwar, given that many Scottish Labour MSPs are calling for Starmer to resign?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8125,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Have the peacemaking efforts by Douglas Alexander changed the negative outlook of the Scottish ministers who were previously described as furious regarding Anas Sarwar's intervention and its impact on Labour's electoral chances in the upcoming Holyrood elections?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How does Anas Sarwar justify welcoming Keir Starmer to campaign in Scotland while he simultaneously maintains his previously stated position that Starmer should resign from his leadership role?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.7,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did the Scottish Labour MSPs who previously endorsed Anas Sarwar's call for Keir Starmer to resign react to the subsequent arrangement that Starmer would campaign in Scotland for the upcoming Holyrood elections?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.6999999999766667,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What did the president claim occurred during his brief encounter at Dover with the person he previously endorsed for Congress, and how does this account compare to his actions regarding that individual's subsequent congressional runs?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.8666666666377778,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "In the same social media post where the president claimed he barely knew the individual he had previously endorsed, what specific derogatory labels did he use to describe that person?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.249999999975,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What specific construction project was the Committee for the Preservation of the White House working on that prompted the president to publicly praise the committee members as 'terrific people' who love the country?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "While the president was focused on the $300 million East Wing renovation project in February 2026, what was happening within the Democratic party, specifically regarding the special House election and the race involving Analilia Mejia?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.8,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Were the 16 rapid-fire storms that occurred during the 2026 season linked to the marine heatwave that took place in early February 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999666667,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "How many storms have occurred during the current western Mediterranean storm season, and how many separate storm-related events did firefighters have to respond to during that same period?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How many storms were recorded in the western Mediterranean this season, and how many storm-related events did firefighters respond to during that time?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.75,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did studies regarding the recent storm cycle find that carbon pollution increased the intensity of the rainfall and the severity of the flooding in the affected regions?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What reason do officials cite for downplaying the removal of the missile-defence system from South Korea as reported on March 12, 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How many Iranian mine-laying vessels did the US military destroy in the vicinity of the Strait of Hormuz during the events reported on March 12, 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.8055555555287036,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What measures is the United States taking to address the volatility in oil markets following the recent military engagements with Iran?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.75,
+                "context_precision_critic": 0.8055555555287036,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Where are the oil supplies coming from that the US and other international partners are releasing to help lower market prices during the conflict with Iran?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.5714285714285714,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "In the attack that occurred on March 12, 2026, in Kirkuk, how many individuals were reported killed, and what was their affiliation?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Does the report dated March 12, 2026, mention an airstrike in the city of Kirkuk that resulted in casualties among the Hashed al-Shaabi forces?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.8666666666377778,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What was the total financial cost to the US for the first six days of the war on Iran according to the reported Pentagon estimates?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.6999999999766667,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How many barrels of oil did the International Energy Agency and its member nations agree to release from their strategic stockpiles in March 2026 to help stabilize global markets during the Iran war?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.6666666666666666,
+                "context_precision_critic": 0.9999999999666667,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What decision did the Trump administration make regarding federal childcare funding for Minnesota according to the report from January 1, 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.999999999975,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What decision did the Trump administration make on January 23, 2026, regarding public funding for biomedical research that utilizes human fetal tissue?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Did Jack Smith, the former special counsel, defend his decision to seek criminal charges against Donald Trump during the same House panel session held on January 23, 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999666667,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "During his testimony before the House panel, did Jack Smith state whether he had any communication with Joe Biden regarding the criminal cases he led against Donald Trump?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.8,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did the response of suburban residents to federal immigration enforcement in Minnesota differ from the response of residents in the urban core during the period the agents were active?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "How did the coordination between Minnesota local law enforcement, county jails, and federal immigration agents facilitate the removal of undocumented individuals during the period the federal surge was active?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.6666666666666666,
+                "context_precision_critic": 0.8041666666465626,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Was the deployment of the 2,000 federal agents in Minnesota intended to be a permanent presence in the state, or was it always planned as a temporary measure that would conclude at a specific time?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.75,
+                "context_precision_critic": 0.94999999997625,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "How does the planned duration of the federal immigration surge in Minnesota relate to the uncertainty regarding when local community members might feel comfortable resuming normal activities?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9411764705882353,
+                "context_precision_critic": 0.6388888888675925,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "Is there a chance that Ben Roberts-Smith will avoid entering a plea for the criminal charges initiated against him for several months?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.94999999997625,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Is Ben Roberts-Smith currently out on bail while facing criminal allegations related to the 2009 killing of a man at Whiskey 108 and the 2012 incident in Darwan?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What impact has the conflict in the Middle East had on the availability of essential household pantry items?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.699999999965,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did the crowd's reaction to officers on 9 January compare to the federal agent's presence in Minneapolis leading up to the 25 January incident?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.94999999997625,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What specifically made the protests on 9 January feel like a 'show' to Governor Tim Walz, as he referenced while addressing the immigration operations?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.94999999997625,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "How did Governor Tim Walz's criticism of the Trump administration's account of the shooting on 25 January differ from his initial responses following the 7 January shooting?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.3333333333,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How do the complaints voiced by the public following the 7 January shooting compare to the core problems Governor Tim Walz identified regarding the federal presence in Minneapolis in his 25 January speech?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Besides the White House official's February 10, 2026 statement regarding regional peace and stability, has the Trump administration taken any other specific, non-diplomatic steps in the West Bank to address security concerns?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.5,
+                "context_precision_critic": 0.4777777777618519,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Does the Trump administration's policy regarding the West Bank address the recent rise in settler violence, such as the killing of a Palestinian American man or the arson attacks that occurred in February 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.999999999975,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Does the Trump administration's policy regarding the West Bank prioritize supporting settlement interests over its stated opposition to annexation, given the revocation of sanctions and the expansion of consular services?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8888888888888888,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How does the Trump administration reconcile the policy of providing passport and consular services to U.S. citizens living in West Bank settlements with its stated official stance that it opposes Israeli annexation of the West Bank and does not treat those settlements as part of Israel?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.8571428571428571,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What is the official stance of the early education minister, Jess Walsh, regarding the inclusion of nannies and grandparents in childcare subsidy schemes as of March 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Why have experts and advocates raised concerns about the potential implementation of a voucher system for childcare subsidies for nannies and grandparents?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.75,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How many children were supported by the Inclusion Support Programme (ISP) in 2020-21 compared to the number supported in 2024-25 under the current government?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Regarding the reports on children with complex needs being turned away from childcare in Australia, what specific detail is provided about the individual who requested their surname remain unpublished?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.7499999999625,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What specific argument did Samantha Lee of the Redfern Legal Centre make in February 2026 regarding why it is 'harsh' to stipulate that a person cannot attend any protest while on bail?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What was the reason cited for the physical altercation involving Jace Turner near the light-rail tracks?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.999999999975,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What is the maximum prison sentence for the offense that led to the bail conditions imposed on protesters on February 19, 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.875,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What is the maximum prison sentence for the offense related to the protesters who were barred from inner Sydney on February 19, 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.8,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What specific documentation is the Trump administration demanding from the Smithsonian Institution as a condition for receiving federal funding?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8571428571428571,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Are there any additional cultural construction projects in Washington being proposed by the Trump administration to promote their ideological agenda, beyond the ones already discussed?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.6666666666666666,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What is the current status of the proposed White House renovation projects, including the ballroom, the Rose Garden, and the Oval Office gilding?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.875,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.5
+            }
+        ]
+    }
+}

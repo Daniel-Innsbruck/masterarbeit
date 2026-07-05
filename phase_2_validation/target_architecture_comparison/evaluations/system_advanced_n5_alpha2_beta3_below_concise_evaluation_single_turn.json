@@ -1,0 +1,723 @@
+{
+    "file_path": "./phase_1_validation/system_advanced_n5_alpha2_beta3_below_concise.jsonl",
+    "multi_hop_evaluation": {
+        "average_scores": {
+            "correctness_aspect_critic": 0.88,
+            "faithfulness_aspect_critic": 0.8551792230101053,
+            "context_precision_critic": 0.9902222221405481,
+            "context_recall_critic": 0.7066666666666667
+        },
+        "detailed_results": [
+            {
+                "content": "How do the fiscal efficiency risks identified in the April 2026 reports compare between Reform UK\u2019s proposed administration savings and the funding required for Welsh Labour\u2019s spending ambitions?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Are the funding risks for the Scottish Conservatives' policy package based solely on administration savings, or is the gap larger than those identified for Welsh political plans?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did the 2017 formal complaint regarding Antonia Romeo's conduct as consul general influence the internal response to her appointment as cabinet secretary in February 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9090909090909091,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "How do the administration and oversight of the death penalty described by the governor in April 2026 compare to the specific experiences reported by the journalist witnessing procedures in January 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9583333333333334,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "How does the reporter's eyewitness account of the administration of executions in South Carolina align with the governor's claim that the death penalty is being administered fairly and proportionately?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.4444444444444444,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.3333333333333333
+            },
+            {
+                "content": "How do the bureaucratic risks of obtaining a British passport, as identified on 18 February 2026, complicate the political dilemma of divided national loyalties mentioned in the 9 April 2026 account?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": NaN,
+                "context_precision_critic": 0.7555555555303703,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did the introduction of border controls that restricted dual nationals on 25 February 2026 occur around the same time as the concerns expressed on 9 April 2026 regarding a potential war between Russia and the West?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.5,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the April 2026 court ruling regarding the implied right to political communication affect the Minns government's ability to restrict the protest slogan 'globalise the intifada'?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the reporting from the Guardian on March 24, 2026, complicate the internal review process initiated by Bard's board in February 2026 regarding Leon Botstein?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.6470588235294118,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How many total children were reported displaced in Lebanon by Unicef between the estimates provided on March 10 and March 18, 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "How did the sex abuse cover-up scandal in 2024 trigger P\u00e9ter Magyar's political shift against the Fidesz party?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How do the legislative proposals introduced by Bernie Sanders and Alexandria Ocasio-Cortez on March 26 and March 27, 2026, collectively address the risks posed by AI development?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did Trump\u2019s January 2026 threats to seize Greenland influence the daily civilian experience in Nuuk despite the official Danish rejection of his claims?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9230769230769231,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "How did Malcolm Turnbull's March 2026 warning about Australian independence from the US relate to the fuel supply challenges faced by rural Australians in April 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999666667,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the 2026 Iran-US crisis change the context of Marco Rubio's diplomatic outreach to Israel compared to his assessment of the military threat facing US troops?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.6470588235294118,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "How does the administration\u2019s strategy of reclassifying stationary power plant emissions as non-dangerous in February 2026 affect the EPA's ability to pursue multi-million dollar penalties for Clean Air Act violations?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.6666666666666666,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the Australian government's support for a March 2026 Senate inquiry into gas tax settings address the specific economic concerns raised by investors regarding sudden tax regime changes?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the maintenance tasks performed by the Artemis II crew in April 2026 differ from the goals NASA set for the mission back in February 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Does the report of astronauts repairing a $30m toilet and checking spacesuits in an April 6, 2026, briefing confirm that the crew was active in space despite the launch delays mentioned in February 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How does Kemi Badenoch justify the removal of VAT on energy bills in March 2026 as an alternative to the government's approach of taxing families to fund support schemes?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the Trump administration's policy regarding the targeting of Iran's energy infrastructure evolve between the March 8th and March 25th, 2026 reports?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999666667,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did Jesse Jackson\u2019s voter registration work after the 1965 Voting Rights Act helped broaden the scope of who could participate in the democratic process?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.6666666666666666,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.3333333333333333
+            },
+            {
+                "content": "Following the March 18, 2026, strike on the South Pars gasfield, what specific administrative connection existed between the deceased intelligence minister Esmail Khatib and the leadership transition involving Mojtaba Khamenei?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.42857142857142855,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 0.3333333333333333
+            },
+            {
+                "content": "How did Peter Mandelson's December 2009 communications with Jeffrey Epstein influence the specific Treasury policy regarding bankers' bonuses?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8333333333333334,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "Did Peter Mandelson's failure to influence the Treasury policy on bankers' bonuses lead to any legal or professional consequences for him after the Epstein emails were leaked in 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            }
+        ]
+    },
+    "single_hop_evaluation": {
+        "average_scores": {
+            "correctness_aspect_critic": 0.7066666666666667,
+            "faithfulness_aspect_critic": 0.7040018352518352,
+            "context_precision_critic": 0.6644444443831111,
+            "context_recall_critic": 0.6255555555555555
+        },
+        "detailed_results": [
+            {
+                "content": "Can the giveaway proposals from the Scottish Conservatives be credibly funded through back-office and administrative savings?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Does Welsh Labour face the necessity of service cuts due to their budget ambitions and funding constraints, regardless of the administrative efficiency targets proposed by other parties?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Are there any specific fiscal measures included in the Scottish Conservatives' package to offset the costs, or is the plan reliant solely on back-office and administrative savings?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Why did former cabinet secretary Gus O'Donnell publicly defend Antonia Romeo's appointment as cabinet secretary despite the resurfacing of 2017 bullying allegations?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Did Gus O'Donnell publicly defend Antonia Romeo's appointment as cabinet secretary by describing it as excellent despite the bullying allegations?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Did Gus O'Donnell speak on Radio 4's The World at One to defend Antonia Romeo's appointment?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Why did Antonia Romeo's former colleagues express dismay regarding her appointment as cabinet secretary even though she had been cleared of bullying allegations following a 2017 investigation?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9090909090909091,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Does the media or reporting on capital punishment advocate for a specific execution method being more 'fair' than others based on the experiences witnessed by reporters like Jeffrey Collins?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Why do advocacy groups like Conservatives Concerned About the Death Penalty prioritize leveraging general conservative skepticism of government competence over relying primarily on eyewitness accounts of botched executions to argue for capital punishment reform?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.6666666666666666,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the coalition led by Demetrius Minor successfully save the life of Charles Burton despite Governor Ivey's history of presiding over 25 executions and her public support for the death penalty?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Does the feeling of alienation caused by Home Office border policies, such as the requirement to submit a foreign passport for an unknown duration to obtain a British one, also impact individuals who purposefully naturalized as British citizens later in life?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Does the inability to travel freely due to the requirement to submit passports for an unknown duration, as experienced by those avoiding the loss of their right to live and work in the UK, represent a greater challenge than the risk of losing that settled status entirely?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8666666666666667,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Is the distress experienced by dual nationals facing passport application hurdles, such as the requirement to submit foreign passports for an unknown duration, the same situation as the one involving families fearing the loss of residency and access to medical care?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What were the specific legal reasons cited by the NSW court of appeal in April 2026 for striking down the anti-protest law?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Given the court's ruling that the anti-protest law was unconstitutional, what is the status of the 26 people who were charged in the aftermath of the February anti-Herzog protest?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Was the April 2026 court ruling the first time the Minns government had an anti-protest law struck down for impermissibly burdening the implied constitutional right to freedom of political communication?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.75,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Why did the police commissioner, Mal Lanyon, maintain the protest restrictions in parts of Sydney\u2019s CBD for an extended period throughout the summer?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8461538461538461,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Is there any evidence linking the emails regarding 'Casablanca' directly to the college administration or specifically to Leon Botstein?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.16666666666666666,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Why did the board at Bard College commission the WilmerHale firm in February 2026 to review the full scope of communications between Leon Botstein and Jeffrey Epstein if specific items like the 'Casablanca' email cannot be definitively linked to the president?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.85,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What was the official purpose of the 2015 meeting between Leon Botstein and the parents of Svetlana Pozhidaeva, which reportedly increased their trust in Jeffrey Epstein?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.75
+            },
+            {
+                "content": "Is the internal review currently being conducted by WilmerHale the same inquiry that the Bard College board promised would clear Leon Botstein, or does it represent a broader investigation into his total scope of communications with Jeffrey Epstein?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What are the specific living conditions or shelter arrangements for children displaced in Lebanon as of March 18, 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What are the broader psychological and emotional risks facing children in Lebanon due to the ongoing conflict and displacement as of March 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Besides the psychological impact, which specific types of civilian infrastructure has Unicef urged all parties to protect from the conflict in Lebanon?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Does the estimate of 700,000 people displaced since March 2, 2026, include those who were already displaced from previous escalations in Lebanon?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What specific socio-economic factors contributed to the resonance of P\u00e9ter Magyar\u2019s movement among Hungarian citizens after he began speaking out against the Fidesz party?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What specific professional and personal connections did P\u00e9ter Magyar have with the Fidesz party elite prior to his 2024 political shift?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How many people attended the protest led by P\u00e9ter Magyar in March 2024?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did P\u00e9ter Magyar describe the energy at his political rallies compared to his previous professional experiences?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Does the Trump administration's request to investigate New York attorney general Letitia James for insurance fraud have any impact on the legislative efforts led by Bernie Sanders and Alexandria Ocasio-Cortez regarding AI regulation?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8181818181818182,
+                "context_precision_critic": 0.49999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How are Bernie Sanders and Alexandria Ocasio-Cortez responding to the Trump administration's nomination of big tech billionaires to an advisory committee aimed at promoting unfettered AI development?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8333333333333334,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What specific infrastructure-related restrictions, such as limits on datacenters or chip exports, have Bernie Sanders and Alexandria Ocasio-Cortez included in their legislative proposals to regulate AI development?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How does the proposed legislative ban on the export of AI chips operate, specifically regarding which countries are targeted and why?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Are there any official government-issued safety guidelines or evacuation plans currently available to the citizens of Greenland to help them manage the anxiety caused by the threat of a US invasion?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Are there any reports of Greenlandic citizens actively attempting to leave the territory for Denmark due to the fears surrounding the US military threats?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9090909090909091,
+                "context_precision_critic": 0.9999999999666667,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Are the citizens of Greenland reporting their observations of US aircraft and vessels in the skies and seas around Greenland to the local authorities?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What public statements have Danish authorities made to the residents of Greenland regarding their role in defending the territory against the potential US military threats currently being discussed in Washington?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Did any Australian political movements other than the major parties express concerns regarding the country's political climate or electoral prospects around March 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8666666666666667,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Besides the Greens, was the party that analysts were watching for their electoral test in South Australia also involved in the public debates regarding the conflict in the Middle East around March 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.9090909090909091,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Did the Australian government or the Prime Minister publicly respond to Malcolm Turnbull\u2019s March 2026 warning about the need for Australia to become more independent from the US due to the president's attitude toward allies?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.85,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Besides the defense and diplomatic debates, did any scrutiny regarding the US-Australian relationship around April 2026 involve confusion or surprise over public statements made by high-profile media personalities or political spouses?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.8,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Does the estimate of more than 30,000 people killed during the recent unrest include the specific 1,000 deaths from the June air campaign in Tehran, where approximately 12 million people reside?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "If the 30,000 figure refers to US military personnel in the region rather than casualties, who were the 30,000 people identified by activists as having been killed during the recent unrest?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8333333333333334,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How do reports of more than 30,000 deaths during recent internal unrest in Iran affect the defensive strategy regarding the 30,000 U.S. military personnel stationed in the region?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999666667,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What specific details regarding the threat Iran poses to regional stability were conveyed by the U.S. to the Israeli prime minister during the diplomatic call with Marco Rubio?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did both the 2023 BP settlement in Indiana and the 2023 Norfolk Southern settlement in East Palestine, Ohio, involve enforcement actions under the Clean Air Act?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8333333333333334,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Does the Trump EPA's proposal to reclassify power plant emissions as not contributing significantly to dangerous air pollution apply to the same Clean Air Act standards that governed the enforcement action against BP in 2023?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "If the EPA successfully implements its proposal to find that power plant emissions do not contribute significantly to dangerous air pollution, will that change the regulation of toxic VOC emissions like those emitted by BP in 2023?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.5714285714285714,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What was the combined total monetary value of the 2023 EPA settlement with BP and the 2023 settlement with Norfolk Southern?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Who is leading the select committee on gas tax settings established in March 2026, and what is the deadline for their report?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Is there a specific deadline set for the select committee on gas tax settings to report back in relation to the 12 May budget?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Is the select committee established to examine gas tax settings expected to complete its work and release its findings by the 12 May budget?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What is the estimated annual revenue that could be generated by the proposed 25% gas export levy being pushed by the Greens?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How does the waste management system used by the Artemis II crew in 2026 compare to the methods used during the historical Apollo missions?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Does the current Artemis II mission aim to break the distance records set by the Apollo missions, and how far will it travel beyond the moon?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How does the preparatory work being conducted by the Artemis II crew on their current mission directly support NASA's broader objective of establishing a continuous human base on the moon by 2028?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.6363636363636364,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How does the Conservative party's projected revenue from increased North Sea drilling compare to the specific financial savings they claim the VAT removal on energy bills will provide to the average household?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "How much would the Conservative plan to remove VAT from energy bills cost the government, and how does this expenditure relate to their stated goal of easing the cost of living for families?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Besides removing VAT from energy bills, what is the Conservative party's specific stance on targeted energy support schemes, and how does Kemi Badenoch justify this position?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Besides removing VAT from energy bills, what is the Conservative party's specific stance on targeted energy support schemes, and how does Kemi Badenoch justify this position?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.4444444444444444,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What was the specific status or impact on the Tehran fuel facility mentioned in the March 8th report following the administration's pivot to productive talks later in March?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": NaN,
+                "context_precision_critic": 0.3333333333,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What were the specific reported outcomes of the military actions occurring in Kuwait and Beirut during the March 2026 escalations?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Was an oil refinery in Kuwait attacked, or was the reported incident specifically limited to the international airport?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Was there any report of a drone attack on Kuwait\u2019s international airport, or was the incident strictly limited to an oil refinery?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.7777777777777778,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did Jesse Jackson focus his grassroots voter registration approach on international voters as well as the efforts he led in the United States between 1982 and 1984?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.9375,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did Jesse Jackson collaborate with Simon Woolley to conduct voter registration efforts in the UK?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did Jesse Jackson view his voter registration efforts and broader activism as part of the same legacy that followed the 1965 Voting Rights Act?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.4,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did Jesse Jackson explain the connection between inclusion-led growth and the rules governing the playing field?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.7272727272727273,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How does the status of intelligence minister Esmail Khatib compare to that of the other two senior Iranian figures, Ali Larijani and Gholamreza Soleimani, who were also killed during the same 24-hour period?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.5454545454545454,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "For what specific actions did the US Treasury sanction the Iranian intelligence minister Esmail Khatib in 2022?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Was Esmail Khatib sanctioned by the US Treasury in 2022 due to his alleged involvement in cyber operations targeting Washington and its allies?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Who originally appointed Esmail Khatib as Iran\u2019s intelligence minister?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Are there currently any internal political efforts to prevent Peter Mandelson from returning to the House of Lords following the fallout from the Epstein email leaks?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.7142857142857143,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did Nick Macpherson, the former permanent secretary to the Treasury, express any concerns regarding leaks during the period Mandelson was communicating with Epstein?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Were there other senior bankers who contacted Alistair Darling regarding the new tax on bankers' bonuses, or was the lobbying effort limited to Jamie Dimon?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.8333333333333334,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            }
+        ]
+    }
+}

@@ -1,0 +1,723 @@
+{
+    "file_path": "./phase_1_validation/system_baseline_n5_alpha2_beta3_below_concise.jsonl",
+    "multi_hop_evaluation": {
+        "average_scores": {
+            "correctness_aspect_critic": 0.52,
+            "faithfulness_aspect_critic": 0.8742380952380953,
+            "context_precision_critic": 0.908444444417713,
+            "context_recall_critic": 0.44
+        },
+        "detailed_results": [
+            {
+                "content": "How does the strategic role of Kharg Island, described in the March 31, 2026 report, help explain why experts like Amir Handjani characterize Trump\u2019s April 1, 2026 demands as an attempt to hijack national natural resources?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "Why did the Pentagon decide to classify Anthropic as a national security risk on February 28, 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.7555555555303703,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How does the empirical study launched in March 2026 differ from the consultation approach championed by Liz Kendall regarding social media access for under-16s?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.6875,
+                "context_precision_critic": 0.49999999995,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How does the implementation of the six-week pilot program involving app restrictions for teenagers in the UK interact with the government's parallel consultation process led by Liz Kendall that seeks input from parents on their concerns regarding children's screen time and phone usage?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9375,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "Why did the Trump administration shift from initially meeting with Mar\u00eda Corina Machado in January 2026 to backing Delcy Rodr\u00edguez by April 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "How did the Trump administration justify backing Delcy Rodr\u00edguez in April 2026 to secure oil and mineral resources after they had hosted Mar\u00eda Corina Machado at the White House in January 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the Monopolkommission link the German fuel price surge following the March 2026 US-Israeli military action to the pricing policies the Bundestag is now trying to regulate?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.999999999975,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the 4 March 2026 letter from Rob Bonta differ from his later formal petition to the state supreme court regarding the ongoing investigation into the Riverside election?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.8874999999778125,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Why did the National Party frontbench resign in January 2026 following the passage of the hate speech legislation?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.8874999999778125,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "How did the primary election results for New Jersey's 11th district change between February 6, 2026, and February 10, 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.6,
+                "context_precision_critic": 0.999999999975,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "How did the experiences of prisoners liberated in April 1945 relate to the specific goals of the International Holocaust Memorial Day commemorations held on 27 January 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8888888888888888,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "How did John Healey justify the UK\u2019s defensive military posture in the Middle East following the March 1, 2026, airstrikes that killed Ali Khamenei?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8333333333333334,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How has the broader UK political landscape reacted to the UK government's decision to deploy military planes for defensive operations in the Middle East following the death of Ali Khamenei?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.94999999997625,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "How did the US president's threat of trade tariffs influence India\u2019s role as a buyer of Russian crude compared to the criticism directed at the EU for its trade deal in February 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Does India's recent reduction in Russian crude oil purchases effectively offset the Russian economy's oil and gas revenue, or is Russia's revenue still suffering primarily due to other factors like energy infrastructure strikes and lower global prices?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.7777777777777778,
+                "context_precision_critic": 0.7499999999625,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did Rachel Reeves describe the Iran war started on 14 April 2026, and how does this conflict relate to the UK's humanitarian priorities for the third anniversary of the Sudan war mentioned on 15 April 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.8874999999778125,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "How did the shift in Donald Trump\u2019s rhetoric toward Iran between January 2026 and April 2026 affect his public stance on Australia?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.5,
+                "context_precision_critic": 0.8874999999778125,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did Keir Starmer\u2019s diplomatic strategy shift between the press conference on January 20, 2026, and his rebuttal to Donald Trump\u2019s claims about Afghanistan by January 23, 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.7142857142857143,
+                "context_precision_critic": 0.4499999999775,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How does Trump plan to enforce voter ID for the midterms if the Save America Act fails to pass the Senate after its February 2026 House approval?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.6666666666666666,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "Why does Donald Trump insist that he will impose voter ID and mail-in ballot requirements for the midterm elections regardless of whether Congress approves the Save America Act, despite the legislation already including specific provisions for such requirements?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.875,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 0.3333333333333333
+            },
+            {
+                "content": "How do the performance methods used by protesters in Los Angeles on February 5, 2026, contrast with the audience reaction to the staging of Tiago Rodrigues\u2019s play in Bochum on February 16, 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.875,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How do the political narratives regarding the Epstein scandal on February 1 and February 3, 2026, differ in the specific groups Trump targets for potential litigation?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.8055555555287036,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Why did Donald Trump attribute the March 18, 2026, elementary school strike to Iran despite the CIA's findings about the missile's origin?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did the Supreme Court ruling on February 20, 2026, impact the status of trade agreements involving countries like India while simultaneously altering the White House's ability to shape trade policy?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the Home Office\u2019s March 2026 approach to transitioning migrants from asylum accommodation affect the monitoring systems introduced after the deaths reported since 2015?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.6,
+                "context_precision_critic": 0.94999999997625,
+                "context_recall_critic": 0.5
+            }
+        ]
+    },
+    "single_hop_evaluation": {
+        "average_scores": {
+            "correctness_aspect_critic": 0.6,
+            "faithfulness_aspect_critic": 0.8567966107966107,
+            "context_precision_critic": 0.6014999999766921,
+            "context_recall_critic": 0.5244444444444445
+        },
+        "detailed_results": [
+            {
+                "content": "Does Amir Handjani's professional background as a partner at the strategic advisory firm Karv Global influence his critique of the military's current strategy?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.3333333333,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What is the mission of the Quincy Institute for Responsible Statecraft, the think tank where Amir Handjani serves as a resident fellow?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.25,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What specific concerns has Amir Handjani expressed regarding the impact of the war on Iran and the justifications given for it?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.249999999975,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "How does Trump's labeling of environmentalists as 'terrorists' contrast with his perception of those who support his goals of securing oil assets such as Kharg Island?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8181818181818182,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What happens to the $200m two-year agreement between the Pentagon and Anthropic following the government's decision to terminate its contracts on February 28, 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Does the system have the details regarding the $200m, two-year agreement between the Pentagon and Anthropic that was impacted by the decision to cease use of the company's technology?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8333333333333334,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What specific military applications did Anthropic refuse to permit, which led to the impasse with the Department of Defense and the eventual contract termination?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What reasoning did Defense Secretary Pete Hegseth provide for his directive that no contractor or partner doing business with the U.S. military may conduct commercial activity with Anthropic?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8,
+                "context_precision_critic": 0.36666666664833336,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Are technology companies, which held at least 639 meetings with government ministers leading up to October 2025, involved in the six-week pilot program that monitors the social media usage of 300 UK teenagers?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.625,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Which specific social media platforms have been identified by the UK government as subject to the usage caps and restrictions during the six-week pilot study involving 300 teenagers?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.8333333332916666,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Does the government pilot study on social media usage involve a control group that experiences no restrictions at all, allowing their experiences to be compared with those of the teenagers who have their app access disabled or capped?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.6666666666666666,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What specific event does the text cite as the point of contact between the US government and Venezuelan officials following the January 3, 2026 capture of Nicol\u00e1s Maduro?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8333333333333334,
+                "context_precision_critic": 0.3333333333,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did the Trump administration's plan to meet with F\u00e9lix Plasencia to reopen the Venezuelan embassy coexist with their high-stakes talks with Mar\u00eda Corina Machado in January 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What specific justification did Donald Trump provide in April 2026 for backing Delcy Rodr\u00edguez instead of the opposition leader Mar\u00eda Corina Machado?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What specific powers will the German Federal Cartel Office have under the proposed Bundestag legislation to address the industry profiteering and pricing problems observed during the March 2026 crisis?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.8666666666377778,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What are the specific financial consequences or penalties for businesses that violate the new Bundestag rule requiring petrol stations to only raise prices once a day at 12 midday?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.75,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Can you clarify the enforcement measures for fuel price regulation in Germany, specifically correcting the previous mention of authorities like the CMA and Ofcom which seem unrelated to the Bundestag's draft law?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.5384615384615384,
+                "context_precision_critic": 0.3333333333,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "What specific authority does the draft law in Germany give additional powers to for the purpose of combating price gouging in the fuel industry?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What specifically did the Riverside Election Integrity Team claim was wrong with the November special election vote tallies that prompted Sheriff Bianco to begin his investigation?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.94999999997625,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did local election officials agree with the Riverside Election Integrity Team's claim of a 45,896 vote discrepancy, or was that number disputed?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did Sheriff Bianco respond to Attorney General Rob Bonta's characterization of his investigation as an amateur and dubious recount?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.699999999965,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What prompted the lawsuit filed by UCLA\u2019s Voting Rights Project against Sheriff Bianco regarding his election investigation?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did the January 2026 political crisis involving the National Party frontbench resignations prevent the government from announcing decisions regarding the operation of the Eraring coal-fired power plant?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.3333333333333333
+            },
+            {
+                "content": "Was there an official announcement regarding the extension of the Eraring coal-fired power plant's operation during the same period in January 2026 that the National Party frontbench resigned?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What update did Frank Calabria provide on January 21, 2026, regarding the Eraring coal-fired power plant?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.8055555555287036,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What specific justification did the CEO of Origin Energy, Frank Calabria, provide on January 21, 2026, for extending the operation of the Eraring coal-fired power plant until 2029?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Which political party were Analilia Mejia and Tom Malinowski representing during the special primary for New Jersey's 11th congressional district?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.999999999975,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What event caused the US House of Representatives seat representing New Jersey's 11th congressional district to become vacant?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Did Mikie Sherrill resign from her position as the representative for New Jersey's 11th congressional district after being elected governor, thereby creating the vacancy that prompted the special primary?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.999999999975,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How many Democratic candidates in total were running in the special primary to fill the vacant House seat in New Jersey's 11th district?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.5,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Do the warnings from Holocaust survivors about modern antisemitism reach the far-right politicians they are criticizing, or is it mostly a symbolic gesture?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "Is the act of directly confronting far-right politicians in government settings a common practice among Holocaust survivors, or is Tova Friedman\u2019s approach unique compared to how others have responded to modern antisemitism?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.875,
+                "context_precision_critic": 0.4166666666458333,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "In our conversation, you mentioned a survivor named Eva who spoke to prison inmates; could you clarify where that information came from, as I don't recall that being part of our discussion?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.3333333333333333
+            },
+            {
+                "content": "Based on our discussion, what specific details are available regarding the conditions faced by prisoners in the camps at the time of their liberation?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.8666666666377778,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did the UK government permit the use of its military bases for the US and Israeli airstrikes, or did it maintain a distance from those actions?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.875,
+                "context_precision_critic": 0.999999999975,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What specific actions has John Healey attributed to the Iranian regime that justify his assessment that it poses a direct threat to the United Kingdom?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.75,
+                "context_precision_critic": 0.8874999999778125,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Does anyone else in the UK political sphere support John Healey's characterization of the Iranian regime as an 'evil' entity that sponsors terror?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.8571428571428571,
+                "context_precision_critic": 0.499999999975,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Does the EU trade deal with India that was criticized by the US treasury secretary include any specific provisions regarding flag states or maritime regulations intended to curb the circumvention of Russian oil sanctions?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.699999999965,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Why does the US treasury secretary, Scott Bessent, claim that the EU's trade deal with India constitutes 'financing the war,' despite the existing measures like sanctions on Indian refineries and the blocking of sanctioned tankers?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.75,
+                "context_precision_critic": 0.999999999975,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Is India's recent reduction in Russian crude oil purchases considered the primary factor for the decline of Russia's federal budget revenues to their lowest levels since July 2020?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Besides the ongoing Iran war, what other domestic policy issues or challenges is the Keir Starmer administration currently addressing?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.25
+            },
+            {
+                "content": "Are the release of Jeffrey Epstein files and the deployment of troops against citizens in Minnesota part of the current domestic agenda being addressed by the Keir Starmer administration?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.5,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Besides the economic proposals being suggested by Labour MPs, what specific action is the UK government taking to double funding for human rights defenders to ensure they can document and investigate violations?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Did the UK government announce a plan to double funding for local human rights defenders to support the documentation and investigation of violations in the context of the Sudan war?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.8666666666377778,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Why did the political climate in the United States in April 2026 lead long-term residents like Simon Adams to feel that returning to Australia was an escape?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.5555555555555556,
+                "context_precision_critic": 0.9999999999666667,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Did the professional tennis players interviewed in Melbourne in January 2026 express any frustrations regarding the social or political shifts in the United States similar to those cited by Simon Adams?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.8888888888888888,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Is the targeted hostility and online abuse faced by professional tennis players caused by the same 'performative cruelty' that is influencing residents like Simon Adams to leave the United States?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How does the US president's condemnation of Australia in April 2026 compare to the tone of his warnings toward Iran in January 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.6666666666666666,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 0.3333333333333333
+            },
+            {
+                "content": "What specific events triggered Keir Starmer's shift from a strategy of calm, pragmatic diplomacy toward Donald Trump to his later, more aggressive public rebuttal?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Did Keir Starmer have any conflict with Donald Trump regarding the Chagos Islands deal or the performance of British troops in Afghanistan?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.8041666666465626,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Does the information available mention anything about US bombers or Iran in relation to the diplomatic tensions between Keir Starmer and Donald Trump?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Was there any link between the diplomatic tensions surrounding the Chagos Islands deal and the authorization of US military operations from British bases against Iran?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.3333333333333333,
+                "context_precision_critic": 0.6999999999766667,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Does Donald Trump's plan to impose voter ID requirements for the midterm elections without Congressional approval include the same restrictions on mail-in ballots that were outlined in the Save America Act?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.75,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Does the Save America Act, as passed by the House, explicitly contain the mail-in ballot limitations that Donald Trump stated would allow exceptions for military, disability, illness, or travel?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.6999999999766667,
+                "context_recall_critic": 0.75
+            },
+            {
+                "content": "Given that the Save America Act faces an uphill battle in the Senate and is unlikely to move without ending the filibuster, what are the prospects for Donald Trump's stated strategy to impose voter ID and other requirements via executive order instead of through the legislative process?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.25,
+                "context_precision_critic": 0.36666666664833336,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What happened during the February 16, 2026, performance of Tiago Rodrigues\u2019s play in Bochum, Germany, and how did the audience respond to the actor's monologue?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.8055555555287036,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Did the stage invasion at the theatre in Bochum occur on February 16, 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.19999999998,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What occurred during the performance of the play Catarina, or the Beauty of Killing Fascists in Bochum?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.8874999999778125,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What specific goal were the protestors in Los Angeles pursuing on February 5, 2026, regarding the Trump administration's impact on the arts?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.5,
+                "context_precision_critic": 0.94999999997625,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What specific role did Donald Trump attribute to Michael Wolff regarding the Jeffrey Epstein files in his comments from February 1, 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What connection did Donald Trump draw between his administration's plan regarding protected status for Haitians in the US and the Epstein scandal in his public remarks on February 3, 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.6,
+                "context_precision_critic": 0.699999999965,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How does Donald Trump\u2019s claim that he never visited Jeffrey Epstein's island compare to the specific allegations he made against 'Crooked Democrats' and their donors regarding the same location?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Did Donald Trump provide any evidence or specific details to support his accusations that Bill Clinton visited Jeffrey Epstein's island dozens of times?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.5888888888692593,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Besides the UK, which other nations are known to possess the Tomahawk cruise missile?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Which specific nations are known to use the Tomahawk cruise missile, as that detail seems to have been missed in the previous response?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.4166666666458333,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Why did the CIA initially believe the missile used in the elementary school strike was not a United States munition before later concluding it was a Tomahawk?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.875,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the initial intelligence confusion regarding the missile's identity influence the public position taken by Defense Secretary Pete Hegseth while the investigation was ongoing?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.9,
+                "context_precision_critic": 0.8666666666377778,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How exactly are US business groups proposing the White House use the opportunity provided by the Supreme Court ruling to change its approach to trade policy?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8,
+                "context_precision_critic": 0.249999999975,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Does the Business Roundtable's proposal for a more targeted U.S. trade policy mean that countries like India, the UK, and Japan\u2014which were previously expected to abandon their recent trade deals\u2014will now choose to maintain them?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.8181818181818182,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.3333333333333333
+            },
+            {
+                "content": "How does the proposed 15% global tariff described by U.S. Trade Representative Jamieson Greer differ in nature or scope from the bilateral trade agreements that were previously concluded with countries like India, Japan, and the UK?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.6666666666666666,
+                "context_precision_critic": 0.999999999975,
+                "context_recall_critic": 0.3333333333333333
+            },
+            {
+                "content": "Does the White House currently possess the legal authority to enforce bilateral trade agreements with partner countries following the Supreme Court's ruling that struck down the administration's broader use of tariff authority?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.8333333333333334,
+                "context_precision_critic": 0.99999999998,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What are councils specifically required to do when a care leaver dies, according to the official records?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What specific commitments has the government made regarding the process of transitioning individuals from asylum accommodation to independent living?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.8666666666377778,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What does official government guidance state regarding the support provided to young refugees who face eviction from asylum hotels?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Is Migrant Help the organisation that local councils work with to mitigate the risk of homelessness for individuals transitioning from asylum accommodation?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999666667,
+                "context_recall_critic": 1.0
+            }
+        ]
+    }
+}
