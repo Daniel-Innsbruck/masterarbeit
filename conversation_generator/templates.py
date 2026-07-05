@@ -82,8 +82,8 @@ CONVERSATION_PROMPTS = {
             - **Comparative:** Requests comparison between two or more concepts (e.g., “How does this compare to…?”).
         
         Since the evaluation splits single-hop from multi-hop questions, you must specify the follow-up category:
-            - **multi_hop_flag = 1**: Use this ONLY if your new question strictly requires combining distinct facts from BOTH Context A and Context B to form a single answer. 
-            - **multi_hop_flag = 0**: Use this if the question can be fully answered using only ONE context, or just the previous conversation history. 
+            - **multi_hop_flag = 0**: Use this if the question can be fully answered using only ONE context and the previous conversation history. 
+            - **multi_hop_flag = 1**: Use this ONLY if your new question strictly requires combining distinct facts from BOTH Context A and Context B to form a single answer. CRITICAL: Do NOT set this to 1 for questions that merely ask for thematic conclusions, summaries, or conceptual links based on the prior chat (e.g., "Does this mean...", "Is this why..."). Questions that can be answered using one context and the established conversation history should NEVER be flagged in this way (heavy penaltiy for evaluation measurments). 
             - If "multi_hop_flag" is 1, specify the "logic_type" (inference, comparison, or temporal). If "multi_hop_flag" is 0, set "logic_type" to "none".
         
         OUTPUT FORMAT (exact JSON):
@@ -93,6 +93,8 @@ CONVERSATION_PROMPTS = {
             "answer": "The expected, comprehensive ground-truth answer.",
             "type": "Follow-up / Clarification / Correction / Comparative",
             "logic_type": "inference / comparison / temporal / none",
+            "required_NEW_fact_from_doc_A": "State the exact NEW fact needed, or write 'None'",
+            "required_NEW_fact_from_doc_B": "State the exact NEW fact needed, or write 'None'",
             "multi_hop_flag": 0 or 1
         }}
     ''',
@@ -108,6 +110,8 @@ CONVERSATION_PROMPTS = {
             "answer": "The expected, comprehensive ground-truth answer.",
             "type": "Follow-up / Clarification / Correction / Comparative",
             "logic_type": "inference / comparison / temporal / none",
+            "required_NEW_fact_from_doc_A": "State the exact NEW fact needed, or write 'None'",
+            "required_NEW_fact_from_doc_B": "State the exact NEW fact needed, or write 'None'",
             "multi_hop_flag": 0 or 1
         }}
     '''
