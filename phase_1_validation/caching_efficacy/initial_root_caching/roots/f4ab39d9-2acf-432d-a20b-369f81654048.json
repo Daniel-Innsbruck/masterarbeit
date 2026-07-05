@@ -1,0 +1,37 @@
+{
+  "root_id": "f4ab39d9-2acf-432d-a20b-369f81654048",
+  "chunk_a": {
+    "id": "us-news/2026/feb/06/trump-obama-video-racist#chunk_4",
+    "text_snippet": "Title: Trump’s toxic, racist video surpasses previous levels of debasement\nDate: 2026-02-06\n\nContent: Invoking the amendment’s section 4 – needed to remove a president – would be complicated and seems a far-fetched possibility. It would need the vice-president, JD Vance, and a majority of the cabinet to declare Trump unfit, a hard-to-imagine scenario considering the obsequious displays of fealty the president demands of cabinet members. Even if that hurdle were to be overcome, support from two-thirds of both the houses of Congress would be required if Trump were to contest an effort to remove him – as seems likely. And to Democrats, comparisons with Joe Biden may be jarring. Speculation about Biden’s supposed cognitive decline increased during the last year of his presidency, although evidence was limited as his White House handlers sought to cocoon him and restrict his public appearances.",
+    "article_id": "us-news/2026/feb/06/trump-obama-video-racist",
+    "chunk_index": 4,
+    "total_chunks": 7
+  },
+  "chunk_b": {
+    "id": "us-news/2026/apr/14/congress-25th-amendment-commission-trump-jd-vance#chunk_3",
+    "text_snippet": "Title: House Democrats call for commission led by JD Vance to oust Trump\nDate: 2026-04-14\n\nContent: None of the members could be current government employees or elected officials. “This body should have been set up by Congress when the 25th Amendment was added to the Constitution in 1967. We have 535 Members of Congress but just one president and this body is a necessary element of successful continuity of government,” Raskin said. Joe Biden faced similar calls in 2024, in the wake of his disastrous debate performance against Trump that intensified concerns about his age and led him to drop out of the presidential race. Several House Republicans filed resolutions calling for Kamala Harris, then the vice-president, to convene the cabinet to remove Biden from office, but none were ever voted on. Trump defeated Harris in that year’s presidential election.",
+    "article_id": "us-news/2026/apr/14/congress-25th-amendment-commission-trump-jd-vance",
+    "chunk_index": 3,
+    "total_chunks": 4
+  },
+  "t_bridge": [
+    "25th Amendment",
+    "Presidential removal procedures",
+    "JD Vance",
+    "Joe Biden's cognitive fitness concerns"
+  ],
+  "initial_question": {
+    "rag_input": "How did the 25th Amendment removal process proposed for JD Vance in April 2026 differ in its political feasibility from the calls made against Joe Biden in 2024?",
+    "question": "How did the 25th Amendment removal process proposed for JD Vance in April 2026 differ in its political feasibility from the calls made against Joe Biden in 2024?",
+    "answer": "In April 2026, the proposal regarding JD Vance involved House Democrats calling for a commission of non-government employees to oversee removal, whereas in 2024, calls regarding Joe Biden specifically urged then-Vice President Kamala Harris to convene the cabinet to trigger the 25th Amendment. Furthermore, removal of a president via the 25th Amendment is described as a complicated and far-fetched scenario requiring the vice president and a majority of the cabinet to act, followed by potential two-thirds congressional support if contested; in the 2024 Biden case, several House Republican resolutions were filed but never voted on, while in the 2026 Trump scenario, the cabinet's obsequious fealty makes such an effort unlikely.",
+    "type": "Initial",
+    "logic_type": "comparison",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Comparison of 25th Amendment removal procedures for Biden (2024) and Trump/Vance (2026)."
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

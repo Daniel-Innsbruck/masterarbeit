@@ -1,0 +1,36 @@
+{
+  "root_id": "6cdf7c96-3385-4f3c-852c-0a500111ffe4",
+  "chunk_a": {
+    "id": "world/2026/feb/05/dubai-real-estate-fortune-hunters-entrepreneurs-population#chunk_2",
+    "text_snippet": "Title: Dubai’s potent lure: the reality behind the real-estate frenzy \nDate: 2026-02-05\n\nContent: As a measure of the city’s popularity, figures from the international estate agent Knight Frank reveal a frenzied trade in property last year. It reported that more homes worth $2.5m to $10m were bought in Dubai than any other city in the world in the fourth quarter, ahead of New York, Los Angeles, Hong Kong and London. In the $10m-plus bracket, there were 9,050 sales in Dubai compared with 6,577 in New York and 3,089 in London. In 2022, the UK capital was kingpin and sales of $10m-plus homes reached 5,826 against 4,543 in Los Angeles and 3,982 in Dubai. However, legions of middle-income fortune hunters are also swelling the 4-million population by about 200,000 a year. One of Dubai’s main attractions is zero income tax. The local government relies on sales taxes, a modest corporate tax, and substantial administration fees and charges levied by public authorities for the money to provide state services.",
+    "article_id": "world/2026/feb/05/dubai-real-estate-fortune-hunters-entrepreneurs-population",
+    "chunk_index": 2,
+    "total_chunks": 8
+  },
+  "chunk_b": {
+    "id": "world/2026/mar/11/the-shine-has-been-taken-off-dubai-faces-existential-threat-as-foreigners-flee-conflict#chunk_3",
+    "text_snippet": "Title: ‘The shine has been taken off’: Dubai faces existential threat as foreigners flee conflict\nDate: 2026-03-11\n\nContent: Over 90% of its residents are foreigners, including one of the world’s highest concentration of billionaires, savouring the lack of tax on income, capital gains and inheritance. Unlike other Gulf emirates, Dubai does not have vast oil resources to fall back on. Analysts say the financial losses will be stark if the war drags on and the city’s reputation as a haven for tourism and western confidence in business, banking and real estate investments continues to erode. On Wednesday, Citibank and Standard Chartered bank evacuated their Dubai employees “due to heightened security concerns”. “Already Dubai is losing out significantly,” said Khaled Almezaini, a professor at UAE’s Zayed university and co-author of An Introduction to Gulf Politics.",
+    "article_id": "world/2026/mar/11/the-shine-has-been-taken-off-dubai-faces-existential-threat-as-foreigners-flee-conflict",
+    "chunk_index": 3,
+    "total_chunks": 9
+  },
+  "t_bridge": [
+    "Dubai real estate investment trends",
+    "Economic dependence on foreign residents and capital",
+    "Impact of geopolitical instability on Dubai's financial market"
+  ],
+  "initial_question": {
+    "rag_input": "How did the security concerns leading to bank evacuations in March 2026 threaten the real estate investment growth observed in late 2025?",
+    "question": "How did the security concerns leading to bank evacuations in March 2026 threaten the real estate investment growth observed in late 2025?",
+    "answer": "In the fourth quarter of 2025, Dubai experienced a frenzied real estate market where it led the world in luxury home sales, with 9,050 sales in the $10m-plus bracket. However, because Dubai lacks oil reserves and relies heavily on foreign capital and residents for economic stability, the security concerns that prompted banks like Citibank and Standard Chartered to evacuate employees in March 2026 threaten this growth by eroding Western confidence in the city's banking and real estate sectors.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Geopolitical impact on real estate investment"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

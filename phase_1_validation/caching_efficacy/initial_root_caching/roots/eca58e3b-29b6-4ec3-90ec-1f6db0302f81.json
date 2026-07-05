@@ -1,0 +1,36 @@
+{
+  "root_id": "eca58e3b-29b6-4ec3-90ec-1f6db0302f81",
+  "chunk_a": {
+    "id": "australia-news/2026/mar/29/victoria-free-public-transport-april-petrol-prices#chunk_3",
+    "text_snippet": "Title:  Victoria and Tasmania get free public transport in fuel crisis but NSW and WA to keep collecting fares\nDate: 2026-03-29\n\nContent: Those who do accidentally will not be charged, and if for some reason they are, they can get a refund. Myki passes, including yearly passes, will automatically be paused and resume after April, the government said. People travelling on V/Line coaches outside the Myki network will need to book a free ticket to secure their seat. However, people will not need a ticket to travel on trains outside the Myki network. The public transport minister, Gabrielle Williams, said the government expected public transport to get busier but that it could meet the increase in demand. “We expect to see increases in patronage across trains, buses and trams over the month ahead,” Williams said. “This is why it’s so important that we’ve not only expanded our public transport network but also added thousands of services to it.” The premier, Jacinta Allan, said she was determined to do everything within her control to help Victorians deal with rising fuel prices.",
+    "article_id": "australia-news/2026/mar/29/victoria-free-public-transport-april-petrol-prices",
+    "chunk_index": 3,
+    "total_chunks": 5
+  },
+  "chunk_b": {
+    "id": "australia-news/2026/mar/31/the-arguments-for-and-against-making-public-transport-free-as-australian-fuel-costs-soar#chunk_0",
+    "text_snippet": "Title: Welfare for the wealthy or an easy fix? Why free public transport might not be the answer to the fuel crisis\nDate: 2026-03-30\n\nContent: Governments are looking for ways to help Australians cope with the soaring cost of fuel, from encouraging public servants to work more from home to Monday’s announcement of a three-month halving of the fuel tax. One way we can save on petrol and ease demand for fuel is by not driving when we are out and about. With that in mind, Victoria’s government on Sunday announced public transport would be free until the end of April. Tasmanians will also travel for free on buses and Derwent River ferries until 1 July. New South Wales’s government is wary of committing to a similar plan, with the state’s Treasury estimating it would cost $140m a month in lost Opal revenue. That’s about twice as much as it’s expected to cost in Victoria. So is it worth it? Two transport professors weighed in on the pros and cons of temporary free public transport as a policy to address the fuel crisis.",
+    "article_id": "australia-news/2026/mar/31/the-arguments-for-and-against-making-public-transport-free-as-australian-fuel-costs-soar",
+    "chunk_index": 0,
+    "total_chunks": 5
+  },
+  "t_bridge": [
+    "Public transport policy during fuel crisis",
+    "State government fiscal responses to fuel price inflation",
+    "Regional variation in public transport fare policies"
+  ],
+  "initial_question": {
+    "rag_input": "How does the fiscal impact of Victoria's March 2026 free transport policy compare to the operational requirements Gabrielle Williams cited for managing the resulting increase in demand?",
+    "question": "How does the fiscal impact of Victoria's March 2026 free transport policy compare to the operational requirements Gabrielle Williams cited for managing the resulting increase in demand?",
+    "answer": "While the Victorian government faces the fiscal burden of making public transport free until the end of April 2026, Public Transport Minister Gabrielle Williams stated that they are prepared to manage the resulting surge in patronage by expanding the network and adding thousands of additional services to accommodate higher demand.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "State government fiscal responses and operational public transport policy"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "root_id": "cdabcedb-61c9-484e-8426-ab098f28db4f",
+  "chunk_a": {
+    "id": "world/2026/feb/24/drugs-denial-and-stigma-babies-and-children-fiji-hiv-epidemic#chunk_15",
+    "text_snippet": "Title: Drugs, denial and stigma: the babies and children swept up in Fiji’s HIV nightmare\nDate: 2026-02-24\n\nContent: ‘Oh, that’s for sex workers. That’s for drug addicts.’ But that’s why so many people are dying. Because it’s too late.” When people Biyau suspects have HIV come in, she presents them with Josy Ralulu. A giggly, glowing picture of health, Ralulu is a sex worker who found out she had HIV in 2022 after Biyau urged her to get tested when she had symptoms of what she thought was syphilis. “At first, I was shocked,” Ralulu says. “I thought I was dead. And then the doctor told me, calm down. There’s medication for it that’s gonna make you live.” For Biyau, who the girls here call mother, the only way forward is with love, and with hope. In a culture that’s so close-knit, it’s the only thing she sees working. “You got infected with HIV. But that’s not the end of the world. You know, you can write a new chapter. You can have a new story to tell. This is what happened, and this is hope. You still can live.” *Names have been changed",
+    "article_id": "world/2026/feb/24/drugs-denial-and-stigma-babies-and-children-fiji-hiv-epidemic",
+    "chunk_index": 15,
+    "total_chunks": 16
+  },
+  "chunk_b": {
+    "id": "australia-news/2026/feb/10/women-hiv-high-risk-group-australia#chunk_4",
+    "text_snippet": "Title: Heather contracted HIV on an overseas holiday. Women like her are more likely to be overlooked by doctors in Australia\nDate: 2026-02-09\n\nContent: Removing the stigma of HIV The National Association of People with HIV Australia, in partnership with Positive Women Victoria, hopes the creation of a new education tool for healthcare sector will improve awareness of Australian women living with HIV. The audiovisual education tool called Women &amp; HIV Today aims to educate everyone from medical students through to dentists, nurses and doctors about women who are living with HIV, to improve awareness and practice so women are not diagnosed late with HIV, alongside the clinical evidence of the treatments. Ellis is the project lead. She say it was important that it was co-designed and delivered by women living with HIV as “when people talk about their lived experience, it has far greater impact, it’s far more memorable for [healthcare workers]”.",
+    "article_id": "australia-news/2026/feb/10/women-hiv-high-risk-group-australia",
+    "chunk_index": 4,
+    "total_chunks": 7
+  },
+  "t_bridge": [
+    "HIV-related stigma",
+    "Late diagnosis of HIV in women",
+    "Lived experience in healthcare education"
+  ],
+  "initial_question": {
+    "rag_input": "How does the lived experience approach used in the 2026 'Women & HIV Today' project address the barriers to diagnosis faced by women like those described in Fiji during 2022?",
+    "question": "How does the lived experience approach used in the 2026 'Women & HIV Today' project address the barriers to diagnosis faced by women like those described in Fiji during 2022?",
+    "answer": "The 'Women & HIV Today' project, launched in February 2026, uses the lived experience of women living with HIV to educate healthcare workers because such stories are more memorable and impactful, helping to prevent the late diagnoses that occur when medical professionals overlook women or associate HIV only with specific stereotypes; this directly counters the stigma and denial identified in Fiji in 2022, where women like Josy Ralulu were initially overlooked or shocked by a diagnosis because symptoms were attributed to other conditions.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Using lived experience to reduce stigma and late diagnosis"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

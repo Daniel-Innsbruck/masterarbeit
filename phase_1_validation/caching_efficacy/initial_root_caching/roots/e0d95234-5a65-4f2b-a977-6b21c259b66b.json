@@ -1,0 +1,37 @@
+{
+  "root_id": "e0d95234-5a65-4f2b-a977-6b21c259b66b",
+  "chunk_a": {
+    "id": "us-news/ng-interactive/2026/mar/29/no-kings-protest-next-steps-activism#chunk_4",
+    "text_snippet": "Title: So you went to a No Kings protest. Now what?\nDate: 2026-03-29\n\nContent: But probably the most recognizable form of protest is the one in the streets, immortalized in the marches, freedom rides and sit-ins of the civil rights movement for social justice and equal rights in the 1950s and 1960s. Over the past 10 years, numerous mass protests have swept through the country, including March for Our Lives in 2018 to demand stricter gun control measures, the Black Lives Matter protests, triggered by the police killing of George Floyd in 2020, and the No Kings protests against the Trump administration last October. In 2025, the first year of Trump’s second term, more people protested in the streets than in 2017, the first year of his first term, according to data from the open-source project Crowd Counting Consortium “The amount of people protesting is record-breaking,” said Hunter Dunn, an organizer with the grassroots organization 50501, which co-founded No Kings.",
+    "article_id": "us-news/ng-interactive/2026/mar/29/no-kings-protest-next-steps-activism",
+    "chunk_index": 4,
+    "total_chunks": 15
+  },
+  "chunk_b": {
+    "id": "us-news/2026/jan/28/third-no-kings-protest-march-minnesota-ice#chunk_6",
+    "text_snippet": "Title: What to know about the third No Kings protests happening in March\nDate: 2026-03-23\n\nContent: She said that the guiding principle of No Kings was that it is only one of many ways to resist. “We want to get the big show of defiance, but what we think is actually more important is the ways in which these large-scale gatherings fuel ongoing organizing,” said Greenberg. “If we’re doing it right, it’s all connected, and it’s all designed to support the kind of activism that is possible only when there’s genuine local leadership and people who are owning the fight everywhere in the country.” Do protests work? Whether or not the No Kings protests will alter the course taken by the Trump administration remains to be seen, though experts and historians say that in general protests do have the power to change policy and public opinion. In Trump’s second term, Americans have adopted various protest strategies, especially when responding to ICE. When ICE agents arrived in Los Angeles in June, protesters chased them out of their hotels with bullhorns and a band playing Mexican songs.",
+    "article_id": "us-news/2026/jan/28/third-no-kings-protest-march-minnesota-ice",
+    "chunk_index": 6,
+    "total_chunks": 9
+  },
+  "t_bridge": [
+    "No Kings protest movement",
+    "Efficacy of protest strategies",
+    "Political impact of mass demonstrations",
+    "Grassroots organizing"
+  ],
+  "initial_question": {
+    "rag_input": "How did the 50501 organization leverage the record-breaking protest turnout seen in October 2025 to support their specific grassroots strategy during the March 2026 demonstrations?",
+    "question": "How did the 50501 organization leverage the record-breaking protest turnout seen in October 2025 to support their specific grassroots strategy during the March 2026 demonstrations?",
+    "answer": "The grassroots organization 50501, which co-founded the No Kings movement, uses the momentum from record-breaking turnouts—such as the October 2025 protests mentioned by organizer Hunter Dunn—to fuel ongoing, locally-led organizing, as the movement’s leadership believes these large-scale gatherings are intended to support and connect with the activism of people owning the fight locally throughout the country.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Grassroots organizing and political impact of mass demonstrations"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

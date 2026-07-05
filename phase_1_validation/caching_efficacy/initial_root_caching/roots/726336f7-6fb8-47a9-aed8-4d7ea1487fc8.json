@@ -1,0 +1,36 @@
+{
+  "root_id": "726336f7-6fb8-47a9-aed8-4d7ea1487fc8",
+  "chunk_a": {
+    "id": "australia-news/2026/mar/28/the-cost-of-fuel-for-australians-who-can-its-time-to-embrace-green-transport#chunk_5",
+    "text_snippet": "Title: The cost of fuel: for Australians who can, it’s time to embrace ‘green’ transport\nDate: 2026-03-27\n\nContent: Then do “a little drop test” – dropping your bike and catching it to see if anything rattles. “If you’ve got concerns about any of those, go to your local bike shop.” Take your bike for a spin around the block and build on that, she says. Swap out one or two trips to the shops, or to work. “Once you master that, the whole world opens up.” Neighbourhood bike shops and community groups can provide local information about the best and safest routes. Workplaces can help by providing end-of-trip facilities, such as bike storage, showers and lockers. Ebikes might be an option for people travelling longer distances, helping families ditch the second car, she says. McCormack says most people who can cycle find it brings lots of benefits. It’s cheap, green and social. “You feel better. The endorphins kick in,” she says. The Asia Pacific regional manager for cycling advocacy organisation Love to Ride, Christina Sorbello, says it is “also a really nice way to get out in your neighbourhood”.",
+    "article_id": "australia-news/2026/mar/28/the-cost-of-fuel-for-australians-who-can-its-time-to-embrace-green-transport",
+    "chunk_index": 5,
+    "total_chunks": 7
+  },
+  "chunk_b": {
+    "id": "australia-news/2026/mar/25/fuel-crisis-australia-experiences#chunk_8",
+    "text_snippet": "Title: Swapping the car for a bike and seeing loved ones less: how the fuel crisis is affecting Australians\nDate: 2026-03-25\n\nContent: We were expecting around 150 vehicles, it’s quite a big gathering. This is the first time a non-Covid issue has affected us since we started in 2012. Electric vehicles rise up Tom, Perth, Western Australia The crisis hasn’t impacted our household. My husband bought an electric car last year, and I’ve been commuting by ebike for several years. I sold my car after the Covid crisis to promote my health, budget and resilience against increasing chaos. I hope this crisis leads to permanent positive changes with increased public transport, improved cycle infrastructure, and flow-on benefits. Dave, Mount Gambier, South Australia I’m a reluctantly retired 68-year-old. I still occasionally pick up the odd day, and am a musician. My partner is a full-time artist. We have owned EVs since early 2021. We also ride motorcycles, which run on petrol … Our EVs and bicycles are our day-to-day transport. We charge our EVs at home except when travelling. We have solar and a home battery.",
+    "article_id": "australia-news/2026/mar/25/fuel-crisis-australia-experiences",
+    "chunk_index": 8,
+    "total_chunks": 10
+  },
+  "t_bridge": [
+    "Electric bicycles (ebikes) as a transport alternative",
+    "Impact of fuel costs/crisis on Australian commuting habits",
+    "Transitioning from personal vehicles to green transport"
+  ],
+  "initial_question": {
+    "rag_input": "How did the fuel crisis occurring in March 2026 influence the motivation for Australians to transition from personal vehicles to ebikes as a daily transport alternative?",
+    "question": "How did the fuel crisis occurring in March 2026 influence the motivation for Australians to transition from personal vehicles to ebikes as a daily transport alternative?",
+    "answer": "As of March 2026, the fuel crisis has prompted Australians to consider ebikes as a viable alternative for ditching second cars, particularly for longer-distance travel. Individuals have reported that adopting ebikes and electric vehicles provides resilience against the rising fuel costs and economic chaos, while also serving as a way to promote personal budget, health, and neighbourhood engagement.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Transitioning to ebikes during the fuel crisis"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

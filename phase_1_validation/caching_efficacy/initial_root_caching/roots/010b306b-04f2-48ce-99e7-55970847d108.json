@@ -1,0 +1,36 @@
+{
+  "root_id": "010b306b-04f2-48ce-99e7-55970847d108",
+  "chunk_a": {
+    "id": "world/2026/feb/24/ukraine-war-briefing-russia-exporting-more-oil-now-than-before-war-despite-sanctions-report#chunk_5",
+    "text_snippet": "Title: Ukraine war briefing: Russia exporting more oil now than before war despite sanctions – report\nDate: 2026-02-24\n\nContent: The attacks targeted multiple sites, officials said. At one location, a drone slammed into a factory building next to a nine-storey residential block, sparking a fire that spread over 200 sq metres. When the first Ukrainian-designed drone to be made in a German factory was finished last month, Zelenskyy knew it marked a turning point for the economy. With drone-making joint ventures also well advanced in Finland and Denmark, Ukraine has shown how its businesses can adapt and break out of their bomb-threatened domestic confines, becoming more integrated into the EU’s industrial network, reports Phillip Inman. At the war’s fourth anniversary, the Ukrainian economy continues to show resilience under great strain. An explosion on Monday evening in the southern Ukrainian city of Mykolaiv wounded seven Ukrainian police officers, authorities said.",
+    "article_id": "world/2026/feb/24/ukraine-war-briefing-russia-exporting-more-oil-now-than-before-war-despite-sanctions-report",
+    "chunk_index": 5,
+    "total_chunks": 7
+  },
+  "chunk_b": {
+    "id": "world/2026/feb/10/ukraine-war-briefing-france-to-start-making-weapons-with-kyiv#chunk_1",
+    "text_snippet": "Title: Ukraine war briefing: France to start making weapons with Kyiv\nDate: 2026-02-10\n\nContent: Ukraine is opening up exports of its domestically produced weapons, President Volodymyr Zelenskyy said – a way for Kyiv to cash in on its wartime technological advances to generate badly needed funds. He said 10 “export centres” for Ukrainian weapons would be opened in 2026 across Europe, adding that combat drones, also known as Unmanned Aerial Vehicles (UAVs), would be among the exports. “Today, Europe’s security is built on technology and drones,” Zelenskyy said. “All of this will be based largely on Ukrainian technology and Ukrainian specialists.” Russian attacks damaged production sites of Ukraine’s state-run oil and gas company Naftogaz in the Poltava and Sumy regions, the company’s CEO said on Monday. The facilities in the Poltava region came under attack for a second day in a row, Sergii Koretskyi said on Facebook, adding it was the 20th attack on the company’s infrastructure since the start of the year.",
+    "article_id": "world/2026/feb/10/ukraine-war-briefing-france-to-start-making-weapons-with-kyiv",
+    "chunk_index": 1,
+    "total_chunks": 6
+  },
+  "t_bridge": [
+    "Ukrainian drone manufacturing industry",
+    "International defense partnerships and exports",
+    "Wartime economic adaptation"
+  ],
+  "initial_question": {
+    "rag_input": "How did Ukraine's drone-making joint ventures in European countries by February 2026 support the new export strategy announced by President Zelenskyy?",
+    "question": "How did Ukraine's drone-making joint ventures in European countries by February 2026 support the new export strategy announced by President Zelenskyy?",
+    "answer": "By February 2026, Ukraine had established joint ventures for drone production in countries like Germany, Finland, and Denmark, allowing its industry to break out of domestic, bomb-threatened confines and integrate into the EU's industrial network. This operational shift supports the broader export strategy announced by President Zelenskyy in February 2026, which aims to generate funds by using these established production capabilities and Ukrainian technology to supply combat drones through ten new 'export centres' across Europe.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Ukrainian drone industry exports and international partnerships"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

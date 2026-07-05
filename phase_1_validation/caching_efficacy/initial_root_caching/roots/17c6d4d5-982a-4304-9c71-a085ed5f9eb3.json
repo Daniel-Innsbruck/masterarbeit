@@ -1,0 +1,36 @@
+{
+  "root_id": "17c6d4d5-982a-4304-9c71-a085ed5f9eb3",
+  "chunk_a": {
+    "id": "world/2026/feb/05/aukus-nuclear-submarine-deal-us-australia#chunk_2",
+    "text_snippet": "Title: Possibility of US ever selling Australia nuclear submarines is increasingly remote, Aukus critics say\nDate: 2026-02-05\n\nContent: “This could weaken rather than strengthen deterrence and warfighting capability in connection with a US-China crisis or conflict,” the report says. The defence minister, Richard Marles, dismissed the report as “commentary” when asked on Thursday, insisting Aukus was “full steam ahead”. “You’re going to hear a whole lot of commentary at the end of the day from the US Congress,” Marles said. “We’ve heard the US president make clear the position of the United States in respect of this question, and he has said that we are full steam ahead in respect of this, and it includes the transfer of the Virginias.” A spokesperson for the Australian Submarine Agency told the Guardian that Aukus remained firmly in the strategic interests of its three partners – Australia, the US and the UK – and that “Australia’s commitment to the Aukus partnership is unwavering”.",
+    "article_id": "world/2026/feb/05/aukus-nuclear-submarine-deal-us-australia",
+    "chunk_index": 2,
+    "total_chunks": 8
+  },
+  "chunk_b": {
+    "id": "australia-news/live/2026/feb/05/australian-politics-live-anthony-albanese-sussan-ley-labor-liberal-question-time-chalmers-budget-cost-of-living-marles-defence-leadership-challenge-spill-ntwnfb#chunk_58",
+    "text_snippet": "Title: Greens senator claims One Nation the party of ‘billionaires, not battlers’ – as it happened\nDate: 2026-02-05\n\nContent: Defence minister and deputy prime minister, Richard Marles, has dismissed the findings of a report by the US Congressional Research Service, Congress’s policy research arm, which openly contemplates not selling any nuclear submarines to Australia – as promised under the Aukus agreement – because America wants to retain control of the submarines for a potential conflict with China over Taiwan. Asked about the report, published by Guardian Australia, Marles says there will be “a whole lot of commentary” on Aukus, and adds that Aukus defence ministers met in Washington in December. Marles said: You’re going to hear a whole lot of commentary at the end of the day. We’re working with the US administration, and we’ve heard the United States president make clear the position of the United States in respect of this question, and he has said that we are full steam ahead in respect of this and it includes the transfer of the Virginia [class submarines].",
+    "article_id": "australia-news/live/2026/feb/05/australian-politics-live-anthony-albanese-sussan-ley-labor-liberal-question-time-chalmers-budget-cost-of-living-marles-defence-leadership-challenge-spill-ntwnfb",
+    "chunk_index": 58,
+    "total_chunks": 84
+  },
+  "t_bridge": [
+    "AUKUS nuclear submarine deal",
+    "Richard Marles' response to US Congressional Research Service report",
+    "US-Australia defense policy"
+  ],
+  "initial_question": {
+    "rag_input": "How does the Australian Submarine Agency's February 2026 statement regarding the AUKUS partnership address the specific concerns raised by the US Congressional Research Service report about US-China tensions?",
+    "question": "How does the Australian Submarine Agency's February 2026 statement regarding the AUKUS partnership address the specific concerns raised by the US Congressional Research Service report about US-China tensions?",
+    "answer": "While the US Congressional Research Service report questions the submarine transfer due to US desires to retain control of vessels for a potential conflict with China over Taiwan, the Australian Submarine Agency insists that the AUKUS partnership remains firmly in the strategic interests of its three partners and that Australia’s commitment to the agreement is unwavering.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Reconciling the Australian Submarine Agency's commitment with the US Congressional Research Service's concerns over the China-Taiwan conflict."
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

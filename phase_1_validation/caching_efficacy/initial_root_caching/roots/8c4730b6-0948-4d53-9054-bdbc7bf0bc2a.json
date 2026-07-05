@@ -1,0 +1,37 @@
+{
+  "root_id": "8c4730b6-0948-4d53-9054-bdbc7bf0bc2a",
+  "chunk_a": {
+    "id": "world/2026/apr/18/venezuelas-machado-to-hold-madrid-rally-as-opposition-frozen-out-after-maduro-capture#chunk_0",
+    "text_snippet": "Title: Venezuela’s Machado to hold Madrid rally as opposition frozen out after Maduro capture\nDate: 2026-04-18\n\nContent: Venezuela’s opposition leader, María Corina Machado, will seek to revive her push for political change with a rally in Madrid on Saturday, having found herself sidelined by Donald Trump after the abduction of the president Nicolás Maduro. “Venezuela will be free,” the Nobel peace prize winner insisted in an interview on the eve of this weekend’s demonstration in the Puerta del Sol square, which is expected to draw tens of thousands of protesters. Supporters had hoped Machado, whose movement is widely believed to have beaten Maduro in Venezuela’s 2024 presidential election, would take power after US troops captured her autocratic rival on 3 January. Instead, Trump backed Maduro’s vice-president, Delcy Rodríguez, in exchange for concessions involving Venezuela’s vast oil and mineral resources. “We’re very happy with the president-elect that we have right now,” Trump said earlier this month, despite Rodríguez not having been elected.",
+    "article_id": "world/2026/apr/18/venezuelas-machado-to-hold-madrid-rally-as-opposition-frozen-out-after-maduro-capture",
+    "chunk_index": 0,
+    "total_chunks": 7
+  },
+  "chunk_b": {
+    "id": "us-news/2026/jan/15/trump-maria-corina-machado-venezuela#chunk_0",
+    "text_snippet": "Title: Trump to discuss Venezuela’s future with Machado after Maduro’s capture\nDate: 2026-01-15\n\nContent: Donald Trump will host María Corina Machado, the Venezuelan opposition leader and 2025 Nobel peace prize winner, at the White House on Thursday for high-stakes talks on the oil-rich nation’s future following the US capture of Nicolás Maduro. Many in Venezuela and abroad had expected Machado to take charge after an elite US military team seized Maduro in a pre-dawn raid on 3 January and transported him to a New York City jail. But the White House has largely sidelined Machado, instead recognizing Maduro’s former vice-president, Delcy Rodríguez, as Venezuela’s interim leader even as Trump insists the US will “run” the country. A close Rodríguez ally, Venezuela’s ambassador to the UK Félix Plasencia, was also set to land in Washington on Thursday to meet Trump officials as part of the dramatic rapprochement brought about by Maduro’s downfall. That official visit – the first in years – was reportedly partly designed to pave the way for the reopening of the Venezuelan embassy.",
+    "article_id": "us-news/2026/jan/15/trump-maria-corina-machado-venezuela",
+    "chunk_index": 0,
+    "total_chunks": 6
+  },
+  "t_bridge": [
+    "María Corina Machado",
+    "Donald Trump's policy on Venezuela",
+    "The political aftermath of Nicolás Maduro's capture",
+    "Recognition of Delcy Rodríguez"
+  ],
+  "initial_question": {
+    "rag_input": "Why did Donald Trump switch from hosting María Corina Machado for talks in January 2026 to backing Delcy Rodríguez by April 2026?",
+    "question": "Why did Donald Trump switch from hosting María Corina Machado for talks in January 2026 to backing Delcy Rodríguez by April 2026?",
+    "answer": "Following the US capture of Nicolás Maduro on January 3, 2026, Trump initially held talks with Machado regarding Venezuela's future. However, the administration subsequently sidelined her in favor of recognizing Delcy Rodríguez as the interim leader in exchange for concessions regarding Venezuela's oil and mineral resources.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Shift in US recognition from Machado to Rodríguez post-Maduro capture"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

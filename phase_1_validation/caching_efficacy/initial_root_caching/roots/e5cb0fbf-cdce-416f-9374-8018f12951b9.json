@@ -1,0 +1,36 @@
+{
+  "root_id": "e5cb0fbf-cdce-416f-9374-8018f12951b9",
+  "chunk_a": {
+    "id": "politics/live/2026/feb/17/reform-farage-shadow-cabinet-local-council-elections-labour-starmer-latest-news-updates#chunk_52",
+    "text_snippet": "Title: UK politics: Farage insults female reporter as Braverman says Reform UK wants to scrap Equality Act – as it happened\nDate: 2026-02-17\n\nContent: Less than 18 months ago Jenrick was runner-up in the contest to be Conservative party leader. But Yusuf told Times Radio this morning that ex-Tories would not dominate a Nigel Farage cabinet. Yusuf said: I can tell people listening to this that the majority of our parliamentary class will be people who are fresh to politics. I think the majority of Nigel’s cabinet, if we win and he’s the prime minister, will also have people who are not career politicians. Farage has repeatedly talked of his desire to give cabinet jobs to people who are not MPs and who have experience outside Westminster. His appointees could be given peerages, but Farage has also floated the idea of appointing some ministers who do not sit in parliament. This is constitutionally permissible, but has only happened in the past very rarely. Yusuf himself is expected to be named today as the party’s home affairs spokesperson.",
+    "article_id": "politics/live/2026/feb/17/reform-farage-shadow-cabinet-local-council-elections-labour-starmer-latest-news-updates",
+    "chunk_index": 52,
+    "total_chunks": 57
+  },
+  "chunk_b": {
+    "id": "politics/2026/feb/17/nigel-farage-unveils-reform-uk-frontbench-team#chunk_4",
+    "text_snippet": "Title: Nigel Farage unveils Reform UK frontbench team and warns over dissent\nDate: 2026-02-18\n\nContent: Jenrick was to announce changes to the OBR, however, bringing in outside experts to ensure “diversity of opinion”. Asked whether voters should be suspicious of Reform handing senior jobs to two former Conservatives who had served in governments Farage had labelled as appalling failures, the Reform leader said Jenrick and Braverman were different because they had resigned or been “eased out of their positions”. Braverman was sacked twice as home secretary. Farage, who has set a deadline of May for any more defectors from the Conservatives to sign up, indicated he did not expect many more incomers. “There are very, very few – hardly any – left in the frontlines of the Conservative party who we would even be vaguely interested in,” he said.",
+    "article_id": "politics/2026/feb/17/nigel-farage-unveils-reform-uk-frontbench-team",
+    "chunk_index": 4,
+    "total_chunks": 6
+  },
+  "t_bridge": [
+    "Reform UK cabinet composition",
+    "Integration of former Conservative politicians into Nigel Farage's frontbench",
+    "Role of Robert Jenrick and Suella Braverman in Reform UK"
+  ],
+  "initial_question": {
+    "rag_input": "How does Farage's plan to fill his cabinet with non-career politicians reconcile with his appointment of Robert Jenrick and Suella Braverman to the frontbench as of February 2026?",
+    "question": "How does Farage's plan to fill his cabinet with non-career politicians reconcile with his appointment of Robert Jenrick and Suella Braverman to the frontbench as of February 2026?",
+    "answer": "While Farage stated that the majority of his potential cabinet would consist of people fresh to politics or with experience outside Westminster, he justifies the inclusion of former Conservatives like Jenrick and Braverman by arguing they are different because they were either eased out or resigned from the previous government, rather than being career politicians he would avoid.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Reform UK cabinet composition and integration of former Conservative politicians"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

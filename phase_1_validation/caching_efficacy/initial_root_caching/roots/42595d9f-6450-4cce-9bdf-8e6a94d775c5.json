@@ -1,0 +1,37 @@
+{
+  "root_id": "42595d9f-6450-4cce-9bdf-8e6a94d775c5",
+  "chunk_a": {
+    "id": "us-news/2026/mar/05/trump-justice-department-politicization#chunk_11",
+    "text_snippet": "Title: ‘A subversion of the justice system’: DoJ shifts into Trump’s ‘political wing’ as criminal investigations accelerate\nDate: 2026-03-05\n\nContent: “It’s very possible that the claims being made by Trump and his Department of Justice of widespread voting fraud in multiple states are part of an effort to set the stage for challenging election results if they don’t like [them].” Noble’s concerns were underscored by a February podcast after the FBI raid, during which Trump called for Republicans to “nationalize” elections, and soon after told reporters in the Oval Office that “the federal government should get involved” in elections, citing a list of cities where he claimed without evidence there was voter fraud in 2020. Other election experts voice strong concerns about what the Fulton county raid portends for this year’s elections.",
+    "article_id": "us-news/2026/mar/05/trump-justice-department-politicization",
+    "chunk_index": 11,
+    "total_chunks": 15
+  },
+  "chunk_b": {
+    "id": "us-news/2026/feb/07/trump-interference-voting-midterms#chunk_1",
+    "text_snippet": "Title: Alarm bells sound over Trump’s ‘take over the voting’ call\nDate: 2026-02-07\n\nContent: Shortly after the raid, Trump escalated his attack even further, saying the federal government should take over elections. “The Republicans should say, ‘We want to take over,’” he said during a recent interview with Dan Bongino, the former deputy FBI director who has returned to hosting a podcast. “We should take over the voting, the voting in at least many – 15 places. The Republicans ought to nationalize the voting.” Democracy experts believe there is no longer any doubt about Trump’s desire to interfere with this fall’s elections. “We should not be waiting for the next shoe to drop,” said Wendy Weiser, vice-president for democracy at the Brennan Center for Justice. “There is a full-blown effort to seize control of some of the mechanisms of our elections and to lay the foundation for interfering in upcoming elections.” The president has no power over federal elections, and the US constitution is not ambiguous on the matter.",
+    "article_id": "us-news/2026/feb/07/trump-interference-voting-midterms",
+    "chunk_index": 1,
+    "total_chunks": 8
+  },
+  "t_bridge": [
+    "Trump's proposal to nationalize elections",
+    "Allegations of voter fraud",
+    "Efforts to interfere with upcoming elections",
+    "Department of Justice involvement in election administration"
+  ],
+  "initial_question": {
+    "rag_input": "How did Trump connect his claims of voter fraud in early 2026 to his specific call for federal control of elections?",
+    "question": "How did Trump connect his claims of voter fraud in early 2026 to his specific call for federal control of elections?",
+    "answer": "In February 2026, Trump cited unsubstantiated claims of voter fraud in specific cities to argue that Republicans should 'nationalize' the voting process. He escalated this by suggesting in a February 7 interview with Dan Bongino that the federal government should take over voting in at least 15 locations, a position he later reiterated to reporters in the Oval Office in March 2026 to set the stage for challenging future election results.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Connection between voter fraud allegations and federal election takeover proposals."
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

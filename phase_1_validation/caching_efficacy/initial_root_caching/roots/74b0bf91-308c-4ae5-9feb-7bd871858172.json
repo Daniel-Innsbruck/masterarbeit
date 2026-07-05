@@ -1,0 +1,36 @@
+{
+  "root_id": "74b0bf91-308c-4ae5-9feb-7bd871858172",
+  "chunk_a": {
+    "id": "us-news/2026/jan/21/trump-retribution-campaign#chunk_4",
+    "text_snippet": "Title: ‘Who will stand up and oppose it?’: Trump’s relentless campaign of retribution in his second term\nDate: 2026-01-21\n\nContent: In his second term, Trump has installed close and loyal allies in key positions across the government. He has also moved swiftly to remove any official who has taken any action that paints his administration in an unflattering way. Erika McEntarfer, the head of the Bureau of Labor Statistics, was fired in August after disappointing jobs data was released. Cameron Hamilton, the acting head of Fema, was fired after publicly saying he did not think the agency should be abolished, putting him at odds with the administration. “We are witnessing the most severe reduction of governmental capacity and erosion of the career civil service in contemporary American history,” said Max Stier, CEO of Partnership for Public Service.",
+    "article_id": "us-news/2026/jan/21/trump-retribution-campaign",
+    "chunk_index": 4,
+    "total_chunks": 6
+  },
+  "chunk_b": {
+    "id": "us-news/2026/feb/05/trump-administration-federal-workers#chunk_1",
+    "text_snippet": "Title: Trump administration issues rule that makes it easier to fire federal workers\nDate: 2026-02-05\n\nContent: On Trump’s first day in office on 20 January 2025, he issued an executive order to reclassify thousands of federal employees as political appointees. “If these government workers refuse to advance the policy interests of the President, or are engaging in corrupt behavior, they should no longer have a job,” Trump wrote on his Truth Social platform in April 2025 after the OPM proposed the rule to reclassify the federal civil service employees as political appointees. “This is common sense, and will allow the federal government to finally be ‘run like a business.’” During Trump’s first term, he sought to enact these changes in October 2020 under a rule known as Schedule F, but the change was rescinded when Biden took office before it could be implemented. The latest rule will be reviewed by a federal judge, and critics, notably the American Federation of Government Employees (AFGE) union and Democracy Forward non-profit, have already expressed intent to challenge the rule in court.",
+    "article_id": "us-news/2026/feb/05/trump-administration-federal-workers",
+    "chunk_index": 1,
+    "total_chunks": 4
+  },
+  "t_bridge": [
+    "Trump administration federal workforce reclassification",
+    "Schedule F executive order implementation",
+    "Politicization of the federal civil service"
+  ],
+  "initial_question": {
+    "rag_input": "How did the executive order issued on 20 January 2025 influence the dismissals of federal agency heads like Cameron Hamilton?",
+    "question": "How did the executive order issued on 20 January 2025 influence the dismissals of federal agency heads like Cameron Hamilton?",
+    "answer": "The executive order issued on 20 January 2025 reclassified federal employees as political appointees to ensure they advance the President's policy interests. This policy environment led to the dismissal of officials who held opposing views, such as Cameron Hamilton, the acting head of FEMA, who was fired after stating he disagreed with the administration's stance that the agency should be abolished.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Impact of Schedule F-style reclassification on federal workforce turnover"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

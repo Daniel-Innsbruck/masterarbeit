@@ -1,0 +1,36 @@
+{
+  "root_id": "e34b46c6-557f-4c06-87a9-7ca48326072a",
+  "chunk_a": {
+    "id": "uk-news/2026/apr/02/children-as-young-as-12-buying-and-selling-knives-and-weapons-via-the-internet#chunk_3",
+    "text_snippet": "Title: Children as young as 12 buying and selling knives and weapons via the internet\nDate: 2026-04-02\n\nContent: In February, David Lammy said children who carry knives would be given earlier and more targeted support after two pupils were seriously injured after being stabbed at a secondary school in Brent, north-west London. The deputy prime minister said every child in England and Wales caught with a sharp weapon would be given a mandatory, specialised plan from the authorities.",
+    "article_id": "uk-news/2026/apr/02/children-as-young-as-12-buying-and-selling-knives-and-weapons-via-the-internet",
+    "chunk_index": 3,
+    "total_chunks": 4
+  },
+  "chunk_b": {
+    "id": "uk-news/2026/feb/11/children-who-carry-knives-to-get-support-earlier-in-england-and-wales#chunk_0",
+    "text_snippet": "Title: Children who carry knives to get support earlier in England and Wales\nDate: 2026-02-11\n\nContent: Children who carry knives will be given earlier and more targeted support in the wake of stabbings at a secondary school, David Lammy has said. The deputy prime minister said every child in England and Wales caught with a sharp weapon will be given a mandatory, specialised plan from the authorities. It comes after two pupils at Kingsbury high school, in Brent, north-west London, were left seriously injured after being stabbed at lunchtime on Tuesday. A 13-year-old boy is thought to be a former pupil who disguised himself in the correct uniform to carry out the attack. Police will refer every child knife possession case to youth justice services – locally led teams spanning health, education and community services tasked with mandating targeted action to help each child. They could also could be forced to attend mentoring to stay in education or social skills training to boost employability, officials said.",
+    "article_id": "uk-news/2026/feb/11/children-who-carry-knives-to-get-support-earlier-in-england-and-wales",
+    "chunk_index": 0,
+    "total_chunks": 3
+  },
+  "t_bridge": [
+    "David Lammy's policy on knife possession in schools",
+    "Brent secondary school stabbing incident",
+    "Youth justice interventions for knife-carrying minors"
+  ],
+  "initial_question": {
+    "rag_input": "What connection does the April 2026 data on children buying knives online have with the mandatory youth justice plans David Lammy announced after the Brent school stabbing incident in February 2026?",
+    "question": "What connection does the April 2026 data on children buying knives online have with the mandatory youth justice plans David Lammy announced after the Brent school stabbing incident in February 2026?",
+    "answer": "The policy announced by David Lammy in February 2026 mandates that any child in England and Wales caught with a sharp weapon—such as those increasingly bought and sold by children as young as 12 via the internet according to April 2026 data—must be referred to local youth justice services to receive a specialised, mandatory intervention plan to keep them in education and improve social skills.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Link between online weapon access and mandatory youth justice intervention policy"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

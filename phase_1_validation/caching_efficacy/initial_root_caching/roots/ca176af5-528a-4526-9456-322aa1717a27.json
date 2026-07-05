@@ -1,0 +1,36 @@
+{
+  "root_id": "ca176af5-528a-4526-9456-322aa1717a27",
+  "chunk_a": {
+    "id": "us-news/2026/jan/23/trump-news-at-a-glance-starmer#chunk_5",
+    "text_snippet": "Title: Trump news at a glance: Starmer rebukes Trump for ‘diminishing’ British soldiers who fought and died in Afghanistan\nDate: 2026-01-24\n\nContent: The US military said on Friday that it carried out a strike on a vessel in the eastern Pacific, killing two people. It marked the first known attack since Trump ordered the US military to capture the Venezuelan leader Nicolás Maduro earlier this month. A federal grand jury in Maryland has indicted a Pentagon contractor whose alleged leaking of classified documents sparked an “outrageous” FBI raid on a Washington Post reporter’s home. Three days into its immigration crackdown in Maine, the Department of Homeland Security said Immigration and Customs Enforcement (ICE) agents had arrested “more than 100 illegal aliens”. Senator Elizabeth Warren and fellow Democrats have accused Donald Trump of letting white-collar criminals “off the hook” by diverting crucial resources to his sweeping immigration crackdown. Ryan Wedding, the Canadian Olympic snowboarder turned alleged drug kingpin, has been arrested, US law enforcement officials announced on Friday.",
+    "article_id": "us-news/2026/jan/23/trump-news-at-a-glance-starmer",
+    "chunk_index": 5,
+    "total_chunks": 7
+  },
+  "chunk_b": {
+    "id": "us-news/2026/jan/07/trump-administration-news-latest-updates-today#chunk_3",
+    "text_snippet": "Title: Trump news at a glance: A tale of two tankers (seized by US)\nDate: 2026-01-08\n\nContent: Read the full story Venezuela attack splits Washington along predictable lines The full Senate on Wednesday heard details of the 3 January attack, which involved US special forces from Delta Force swooping into Venezuela before dawn to seize Maduro and his wife, Cilia Flores. Republicans have rallied behind Trump’s characterization of the raid as a straightforward law enforcement action to arrest an indicted drug trafficker. Democrats warn of an illegal act of war that could plunge Venezuela into chaos and set a dangerous precedent for unilateral presidential action. Read the full story Trump says he plans crackdown on defense firms Trump has claimed he plans to target executive compensation and shareholder payouts at military defense contractors, as his administration ramps up spending on the armed forces. In a post on social media, the US president said defense giants had been failing to swiftly deliver “vital” equipment to the US military and its allies across the world.",
+    "article_id": "us-news/2026/jan/07/trump-administration-news-latest-updates-today",
+    "chunk_index": 3,
+    "total_chunks": 7
+  },
+  "t_bridge": [
+    "Trump administration military actions in Venezuela",
+    "US military strategy regarding Nicolás Maduro",
+    "Controversy over Trump's executive actions"
+  ],
+  "initial_question": {
+    "rag_input": "How did the 3 January 2026 military operation in Venezuela lead to the specific strike that occurred on 23 January 2026?",
+    "question": "How did the 3 January 2026 military operation in Venezuela lead to the specific strike that occurred on 23 January 2026?",
+    "answer": "The 3 January 2026 operation involved Delta Force special forces attempting to capture Nicolás Maduro and his wife. Following this initial attempt, the US military carried out a strike on a vessel in the eastern Pacific on 23 January 2026, which was the first known attack since Trump ordered the military to capture Maduro earlier that month.",
+    "type": "Initial",
+    "logic_type": "temporal",
+    "multi_hop_flag": 1,
+    "bridging_topic": "US military strategy regarding Nicolás Maduro"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

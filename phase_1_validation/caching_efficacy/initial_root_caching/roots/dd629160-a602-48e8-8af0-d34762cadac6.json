@@ -1,0 +1,35 @@
+{
+  "root_id": "dd629160-a602-48e8-8af0-d34762cadac6",
+  "chunk_a": {
+    "id": "uk-news/2026/feb/04/who-would-want-to-lead-the-british-fbi#chunk_1",
+    "text_snippet": "Title: Who would want to lead the ‘British FBI’?\nDate: 2026-02-04\n\nContent: These are all different skills, and staff will have to be transferred from their existing positions. Much frontline work, including cyber and fraud, is carried out by constables and sergeants; in the police, higher ranks and better salaries go to managers and administrators. , Because of poor career progression, the National Crime Agency and other elite units have a staff retention problem, which needs resolving. Who would want to lead the NPS? Peter Sommer London • Have an opinion on anything you’ve read in the Guardian today? Please email us your letter and it will be considered for publication in our letters section.",
+    "article_id": "uk-news/2026/feb/04/who-would-want-to-lead-the-british-fbi",
+    "chunk_index": 1,
+    "total_chunks": 2
+  },
+  "chunk_b": {
+    "id": "uk-news/2026/jan/24/home-office-to-launch-british-fbi-to-deal-with-serious-uk-wide#chunk_5",
+    "text_snippet": "Title: Home Office to launch ‘British FBI’ to deal with serious crime UK-wide \nDate: 2026-01-24\n\nContent: Such a body would enable us to improve how we protect the public, our communities and the country.” Sir Mark Rowley, the head of the Metropolitan police, has also previously supported the idea of the national responsibility for counter-terrorism being removed from his force. But the plans were met with concern on the part of Graham Wettone, a policing analyst. Wettone is a former frontline operational officer of 30 years’ experience who specialised in public order, policing protests and demonstrations. He said: “Hopefully they have consulted with those people actually doing the job: operational frontline officers and frontline detectives, the detectives actually going out investigating crime, police officers in uniform answering calls. “I don’t believe they have.",
+    "article_id": "uk-news/2026/jan/24/home-office-to-launch-british-fbi-to-deal-with-serious-uk-wide",
+    "chunk_index": 5,
+    "total_chunks": 7
+  },
+  "t_bridge": [
+    "British FBI (National Policing Service/NCA)",
+    "Operational challenges and staffing concerns in new UK law enforcement agencies"
+  ],
+  "initial_question": {
+    "rag_input": "Why are operational experts concerned that the National Policing Service launch plans from January 2026 fail to address the long-term staffing retention issues identified in February 2026?",
+    "question": "Why are operational experts concerned that the National Policing Service launch plans from January 2026 fail to address the long-term staffing retention issues identified in February 2026?",
+    "answer": "Policing analyst Graham Wettone expressed concern that the January 2026 plans for the National Policing Service (the 'British FBI') were created without consulting frontline operational officers and detectives who actually perform the investigative work. This oversight is critical because, as identified in February 2026, these units face significant staff retention problems due to poor career progression and salary structures that favor administrators over the frontline staff, such as constables and sergeants, who handle essential work like cybercrime and fraud.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Operational staffing challenges and consultant feedback for the NPS."
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "root_id": "3439a416-62d7-4ce7-9b67-368204b24ae3",
+  "chunk_a": {
+    "id": "world/2026/apr/07/reparations-slavery-colonialism-explainer-reform-uk#chunk_7",
+    "text_snippet": "Title: What are reparations for slavery and colonialism – and will the UK pay?\nDate: 2026-04-07\n\nContent: What do experts say? The Jamaican jurist Patrick Robinson, a former judge of the international court of justice, has said the UK will “not be able to resist” the movement for reparations, which are “required by history and law”, adding: “reparations have been paid for other wrongs and obviously far more quickly.” Cristina Duarte, a Cape Verdean politician and special adviser on Africa to the UN secretary general, has said: “The structures that enabled colonialism, enslavement, and racial domination have morphed into new forms.",
+    "article_id": "world/2026/apr/07/reparations-slavery-colonialism-explainer-reform-uk",
+    "chunk_index": 7,
+    "total_chunks": 9
+  },
+  "chunk_b": {
+    "id": "politics/2026/apr/07/reform-uk-stop-visas-countries-seeking-reparations-slavery#chunk_2",
+    "text_snippet": "Title: Reform UK would stop visas for people from countries seeking slavery reparations\nDate: 2026-04-07\n\nContent: “While countries like Jamaica, Nigeria and Ghana ramp up their demands for reparations, the Westminster establishment has rewarded them. Enough is enough.” Reform UK has previously pledged to scrap international aid for countries demanding reparations. In 2023, a report on reparations for the transatlantic slave trade, written and compiled by Patrick Robinson, a former judge of the International Court of Justice, concluded the UK alone should pay $24tn (£18.8tn) as reparations for transatlantic slavery in 14 countries. Last year the Caricom Reparations Commission (CRC), which was set up to progress the Caribbean’s pursuit of justice for centuries of enslavement and colonisation by European countries, addressed misleading press reports that suggested the commission’s aim was to “break the British Treasury” by demanding trillions of pounds.",
+    "article_id": "politics/2026/apr/07/reform-uk-stop-visas-countries-seeking-reparations-slavery",
+    "chunk_index": 2,
+    "total_chunks": 4
+  },
+  "t_bridge": [
+    "Reparations for slavery and colonialism",
+    "Patrick Robinson",
+    "International legal and political arguments for reparations"
+  ],
+  "initial_question": {
+    "rag_input": "How does Patrick Robinson’s 2023 legal argument for reparations, which views them as required by history and law, contrast with the political policy responses adopted by Reform UK?",
+    "question": "How does Patrick Robinson’s 2023 legal argument for reparations, which views them as required by history and law, contrast with the political policy responses adopted by Reform UK?",
+    "answer": "Patrick Robinson, a former judge of the International Court of Justice, argues that reparations are 'required by history and law' and posits that the UK will be unable to resist these historical claims. In direct contrast to this legal perspective, the political party Reform UK has rejected these demands, proposing to stop issuing visas to citizens of countries that seek such reparations and threatening to scrap international aid to those nations.",
+    "type": "Initial",
+    "logic_type": "comparison",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Legal justification vs political opposition to reparations"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

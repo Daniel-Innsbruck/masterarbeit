@@ -1,0 +1,36 @@
+{
+  "root_id": "7d264d06-e7e5-4096-8d86-27cda33d924c",
+  "chunk_a": {
+    "id": "us-news/live/2026/apr/17/house-congress-republicans-trump-administration-us-politics-news-live#chunk_32",
+    "text_snippet": "Title: Senate passes short-term extension of surveillance law – as it happened\nDate: 2026-04-18\n\nContent: Following the Senate’s move to pass the short-term extension of section 702 of Fisa, my colleagues Nick Robins-Early and Sanya Mansoor have dug into the contentious surveillance law, specifically how the measure allows intelligence agencies to monitor vast swaths of Americans’ emails, text messages and phone calls without a warrant. A reminder that congressional lawmakers will have Read their full report here: During another contentious hearing on Capitol Hill today, health secretary Robert F Kennedy Jr said he would not insist that Donald Trump undergo an “assessment of his mental fitness and emotional stability”.",
+    "article_id": "us-news/live/2026/apr/17/house-congress-republicans-trump-administration-us-politics-news-live",
+    "chunk_index": 32,
+    "total_chunks": 53
+  },
+  "chunk_b": {
+    "id": "us-news/2026/apr/17/congress-fisa-extension-warrantless-surveillance-law#chunk_0",
+    "text_snippet": "Title: US Congress passes 10-day extension of surveillance law amid Republican infighting\nDate: 2026-04-17\n\nContent: Both chambers of Congress voted in quick succession on Friday to pass a brief 10-day extension of a controversial warrantless surveillance law after Republican infighting tanked plans for a much longer renewal of the law with no changes. Donald Trump had repeatedly demanded that Republican holdouts “UNIFY” behind Mike Johnson, the US House speaker, in favor of an extension of section 702 of the Foreign Intelligence Surveillance Act (Fisa) without changes. But chaos ensued on Thursday evening and into the early hours of Friday as Republican leadership tried and failed twice in votes attempting to reauthorize the surveillance program, before resorting to a stopgap measure. The law was originally set to expire on 20 April because of a sunset provision that requires it be periodically reauthorized. Section 702, first enacted in 2008, allows national security agencies to collect and review texts and emails sent to and from foreigners living outside the US without a warrant.",
+    "article_id": "us-news/2026/apr/17/congress-fisa-extension-warrantless-surveillance-law",
+    "chunk_index": 0,
+    "total_chunks": 5
+  },
+  "t_bridge": [
+    "Section 702 of the Foreign Intelligence Surveillance Act (FISA)",
+    "Legislative process of the 10-day surveillance extension",
+    "Republican political strategy regarding surveillance renewal"
+  ],
+  "initial_question": {
+    "rag_input": "How did the 10-day surveillance extension passed on 17 April 2026 differ in legislative outcome from the surveillance program monitoring concerns highlighted in the 18 April 2026 report?",
+    "question": "How did the 10-day surveillance extension passed on 17 April 2026 differ in legislative outcome from the surveillance program monitoring concerns highlighted in the 18 April 2026 report?",
+    "answer": "On 17 April 2026, Republican infighting forced the passage of a brief 10-day stopgap extension for Section 702 after plans for a long-term renewal failed. Following this, the 18 April 2026 report highlighted that this program, as enacted, facilitates the monitoring of vast swaths of emails, text messages, and phone calls—specifically identifying that these communications involve both foreigners and Americans, creating a contrast between the procedural failure of the long-term renewal and the expansive surveillance reach documented by analysts.",
+    "type": "Initial",
+    "logic_type": "comparison",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Comparison of legislative procedural outcomes and surveillance scope impact"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

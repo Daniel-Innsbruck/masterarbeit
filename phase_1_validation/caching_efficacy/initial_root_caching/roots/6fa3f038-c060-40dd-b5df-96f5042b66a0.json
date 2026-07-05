@@ -1,0 +1,36 @@
+{
+  "root_id": "6fa3f038-c060-40dd-b5df-96f5042b66a0",
+  "chunk_a": {
+    "id": "us-news/2026/jan/26/trump-administration-childcare-funding-freeze#chunk_1",
+    "text_snippet": "Title: US families face ‘impossible choices’ as White House pushes to freeze childcare funding\nDate: 2026-01-26\n\nContent: This is a support network for the entire community. Our workforce allows the rest of the workforce in the city and the state to function.” According to the Department of Health and Human Services, the funds affected by the freeze include nearly $2.4bn through the Child Care and Development Fund (CCDF), $7.35bn through the Temporary Assistance for Needy Families (TANF), and $869m through the Social Services Block Grant (SSBG). The claims of fraud that incited the freeze come in the wake of a viral video from a conservative influencer, who worked with Minnesota Republicans, who made claims about fraud at a Somali daycare center in Minnesota. The allegations were debunked by media outlets which found no evidence of any of the childcare centers misusing federal funds.",
+    "article_id": "us-news/2026/jan/26/trump-administration-childcare-funding-freeze",
+    "chunk_index": 1,
+    "total_chunks": 8
+  },
+  "chunk_b": {
+    "id": "us-news/2026/jan/08/trump-billions-social-funds-programs#chunk_5",
+    "text_snippet": "Title: ‘Catastrophic’: fears for families after Trump officials cut $10bn in social funds\nDate: 2026-01-08\n\nContent: Cutting staff means cutting spots for kids, whether they receive assistance or not. In many cases, it means closing childcare centers altogether. It means a collapse of the childcare system in Minnesota.” The health department first announced that it would suspend federal funding for childcare in a brief video last week, after a self-described “independent journalist” sparked massive outrage on the right by claiming, in a YouTube video, that Minnesota daycare centers operated by Somali Americans were committing mass fraud. While local and national news media have extensively covered allegations of exploitation of Minnesota’s social safety net over the last several years, the specific allegations in the YouTube video have not been verified by other news sources. However, it was initially unclear whether the suspension applied to the entire US or only to Minnesota, as was originally reported. Now it’s unclear when or if federal funding will be restored.",
+    "article_id": "us-news/2026/jan/08/trump-billions-social-funds-programs",
+    "chunk_index": 5,
+    "total_chunks": 7
+  },
+  "t_bridge": [
+    "Federal childcare funding freeze",
+    "Allegations of fraud at Minnesota Somali daycare centers",
+    "Impact of social safety net funding cuts on childcare accessibility"
+  ],
+  "initial_question": {
+    "rag_input": "How did the unverified claims made in a YouTube video about Minnesota daycare centers in January 2026 lead to the specific amount of federal childcare funding being frozen?",
+    "question": "How did the unverified claims made in a YouTube video about Minnesota daycare centers in January 2026 lead to the specific amount of federal childcare funding being frozen?",
+    "answer": "Following a viral YouTube video by an 'independent journalist' that alleged fraud at Somali-operated daycare centers in Minnesota, the Department of Health and Human Services announced a freeze on federal childcare funding. This freeze affects a total of approximately $10.624 billion in funds, specifically consisting of nearly $2.4 billion through the Child Care and Development Fund (CCDF), $7.35 billion through the Temporary Assistance for Needy Families (TANF), and $869 million through the Social Services Block Grant (SSBG).",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Fraud allegations inciting federal funding freeze"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

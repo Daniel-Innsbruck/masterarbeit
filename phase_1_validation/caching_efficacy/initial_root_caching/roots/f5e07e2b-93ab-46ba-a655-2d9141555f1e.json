@@ -1,0 +1,36 @@
+{
+  "root_id": "f5e07e2b-93ab-46ba-a655-2d9141555f1e",
+  "chunk_a": {
+    "id": "politics/2026/jan/04/durham-mining-union-hall-redhills-reopens-after-14m-pounds-restoration#chunk_0",
+    "text_snippet": "Title: ‘Durham’s other cathedral’: mining union hall reopens after £14m restoration\nDate: 2026-01-04\n\nContent: Outside the impressively grand, Edwardian baroque building in Durham are two wooden benches, each dedicated to men who died too young. They were, the inscription reads, both “sacked and victimised” during the 1984-85 miners’ strike. Yet they’re in grounds that look as if they might have been owned by rich, exploitative mine owners. The building is Redhills, the headquarters since 1915 of the Durham Miners’ Association, which has reopened after a £14m restoration with a hugely ambitious purpose that aligns with the original aims of the site. Redhills is considered one of the world’s finest trade union buildings. Famed for its “pitmen’s parliament” and regarded as “Durham’s other cathedral”, it was once named as one of the 10 buildings that helped change Britain. Andrew McIntyre, the interim CEO of Redhills, said it was far more than just a building. “You’re kind of standing on the spot where the welfare state was first imagined,” he said.",
+    "article_id": "politics/2026/jan/04/durham-mining-union-hall-redhills-reopens-after-14m-pounds-restoration",
+    "chunk_index": 0,
+    "total_chunks": 6
+  },
+  "chunk_b": {
+    "id": "uk-news/2026/jan/20/historic-newcastle-building-keelmans-hospital-affordable-homes#chunk_0",
+    "text_snippet": "Title: Almshouse to haunted student digs: historic Newcastle building to become affordable homes\nDate: 2026-01-20\n\nContent: It was built 300 years ago as an almshouse for men who did some of the most backbreaking and dangerous work on the River Tyne. Most recently it provided fun, if chilly, accommodation for students. Now a new chapter is to be written in the history of a building considered the most at-risk structure in Newcastle, with the announcement of £4.6m lottery money to convert it into affordable housing. It is an ambitious project being watched closely by others across the UK, grappling with the problem of what to do with important but derelict and difficult listed buildings. The project is being managed by the Tyne &amp; Wear Building Preservation Trust in partnership with Newcastle city council, which is matching the money coming from the National Lottery Heritage Fund (NLHF). Keelmen’s hospital is Grade II* listed, just one step down from the Grade I listing held by buildings such as York Minster and Buckingham Palace.",
+    "article_id": "uk-news/2026/jan/20/historic-newcastle-building-keelmans-hospital-affordable-homes",
+    "chunk_index": 0,
+    "total_chunks": 6
+  },
+  "t_bridge": [
+    "Heritage building restoration projects",
+    "Funding of historical site preservation in North East England",
+    "Adaptive reuse of culturally significant structures"
+  ],
+  "initial_question": {
+    "rag_input": "How do the restoration funding sources for Redhills in January 2026 compare to the financial support secured for the Keelmen’s hospital project announced later that same month?",
+    "question": "How do the restoration funding sources for Redhills in January 2026 compare to the financial support secured for the Keelmen’s hospital project announced later that same month?",
+    "answer": "The restoration of Redhills involved a £14m project to preserve the site, whereas the Keelmen’s hospital project secured £4.6m from the National Lottery Heritage Fund, which is being matched by Newcastle city council.",
+    "type": "Initial",
+    "logic_type": "comparison",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Funding of historical site preservation in North East England"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

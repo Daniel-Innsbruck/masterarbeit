@@ -1,0 +1,36 @@
+{
+  "root_id": "2305de91-2796-49f2-b524-bc2eb7a9e0f5",
+  "chunk_a": {
+    "id": "us-news/live/2026/jan/28/ilhan-omar-attack-trump-minneapolis-ecuador-embassy-rubio-venezuela-machado-iran-iraq-latest-news-updates#chunk_43",
+    "text_snippet": "Title: US congressman meets five-year-old Liam Ramos and his father at ICE detention center – as it happened\nDate: 2026-01-29\n\nContent: “This makes every child in America a capitalist from birth,” Gerstner said. Nicki Minaj also made a short appearance. Her comments mostly focused on how people are “bullying” Trump, with whom Minaj briefly held hands. “I am probably the president’s No 1 fan,” the rapper told the crowd assembled at the summit. “The hate or what people have to say – it does not affect me, at all. It actually motivates me to support him more.” Bruce Springsteen has released a new song in response to what he described as “the state terror being visited on the city of Minneapolis”. Springsteen said in a statement on Tuesday that he wrote the song on Saturday and recorded it on Tuesday. He said that the song, titled Streets of Minneapolis, is “dedicated to the people of Minneapolis, our innocent immigrant neighbors and in memory of Alex Pretti and Renee Good”.",
+    "article_id": "us-news/live/2026/jan/28/ilhan-omar-attack-trump-minneapolis-ecuador-embassy-rubio-venezuela-machado-iran-iraq-latest-news-updates",
+    "chunk_index": 43,
+    "total_chunks": 65
+  },
+  "chunk_b": {
+    "id": "us-news/live/2026/jan/27/gregory-bovino-tim-walz-donald-trump-minnesota-minneapolis-ice-alex-pretti-us-politics-live-news#chunk_17",
+    "text_snippet": "Title: Ilhan Omar sprayed with unknown substance during town hall in Minneapolis – as it happened\nDate: 2026-01-28\n\nContent: Attorneys for the family have said the father and son have an active asylum case and had entered the US at an authorized port of entry. Donald Trump said his administration plans to “de-escalate” in Minnesota after weeks of a massive, and deadly, immigration enforcement operation in Minneapolis-St Paul. In an interview with Fox News on Tuesday, the US president defended his administration’s campaign in the state, stating that ICE had taken “thousands of criminals out of Minnesota”. The operation and the killings of two US citizens, Renee Good and Alex Pretti, by federal agents has drawn fierce condemnation and major protests. Trump said border czar Tom Homan met with Minnesota governor Tim Walz and Minneapolis mayor Jacob Frey on Tuesday, and that “we’re gonna de-escalate a little bit”. Congressman Joaquin Castro is set to meet with Liam Ramos, the preschooler who was detained by US Immigration and Customs Enforcement in Minnesota, and his father at a Texas detention center.",
+    "article_id": "us-news/live/2026/jan/27/gregory-bovino-tim-walz-donald-trump-minnesota-minneapolis-ice-alex-pretti-us-politics-live-news",
+    "chunk_index": 17,
+    "total_chunks": 59
+  },
+  "t_bridge": [
+    "Immigration enforcement in Minneapolis",
+    "Renee Good and Alex Pretti",
+    "Joaquin Castro's involvement with Liam Ramos and his father"
+  ],
+  "initial_question": {
+    "rag_input": "What connection does Bruce Springsteen’s song from January 2026 have to the immigration enforcement actions in Minneapolis that prompted Joaquin Castro’s meeting with Liam Ramos?",
+    "question": "What connection does Bruce Springsteen’s song from January 2026 have to the immigration enforcement actions in Minneapolis that prompted Joaquin Castro’s meeting with Liam Ramos?",
+    "answer": "Bruce Springsteen wrote the song 'Streets of Minneapolis' in January 2026 to honor the memory of Alex Pretti and Renee Good, two US citizens who were killed by federal agents during the massive immigration enforcement operation in Minneapolis. This same enforcement operation led to the detention of five-year-old Liam Ramos and his father, which prompted Congressman Joaquin Castro to meet with them at a Texas detention center.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Connecting the victims of Minneapolis immigration enforcement to the humanitarian response by Springsteen and Castro."
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

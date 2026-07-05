@@ -1,0 +1,36 @@
+{
+  "root_id": "25954640-8df4-431c-8c78-122d83e9031c",
+  "chunk_a": {
+    "id": "world/2026/feb/14/us-airstrikes-syria-islamic-state-targets#chunk_0",
+    "text_snippet": "Title: US launches airstrikes on dozens of Islamic State targets in Syria\nDate: 2026-02-14\n\nContent: The US military conducted 10 strikes on more than 30 Islamic State targets in Syria between 3 and 12 February as part of a campaign against the extremist group in Iraq and Syria. US Central Command (Centcom) said in a statement on Saturday that the US had struck IS infrastructure and weapons storage targets. The attacks formed part of Operation Hawkeye Strike, in which the US killed or captured what it said were IS fighters and hit more than 100 IS targets. The campaign began after a member of Syria’s general security forces affiliated with IS ambushed US and Syrian forces in the city of Palmyra, killing two US soldiers and an interpreter, and wounding three members of the Syrian government forces. The US has led the international coalition to defeat IS in Syria and Iraq since 2014, partnering with the Kurdish-led Syrian Democratic Forces (SDF) to defeat the radical group.",
+    "article_id": "world/2026/feb/14/us-airstrikes-syria-islamic-state-targets",
+    "chunk_index": 0,
+    "total_chunks": 3
+  },
+  "chunk_b": {
+    "id": "world/2026/jan/11/syrian-forces-expel-kurdish-fighters-as-us-strikes-islamic-state-targets#chunk_2",
+    "text_snippet": "Title: Syrian forces expel Kurdish fighters as US strikes Islamic State targets\nDate: 2026-01-11\n\nContent: Both sides have blamed the other for initiating the clashes. US and allied forces said they had carried out “large-scale” strikes against the Islamic State jihadist group in Syria on Saturday, in the latest response to an attack last month that left three Americans dead. Washington said a lone gunman from the militant group carried out the 13 December attack in Palmyra, which killed two US soldiers and a US civilian interpreter. The area is home to Unesco-listed ancient ruins and was once controlled by jihadist fighters. “The strikes today targeted Isis throughout Syria” and were part of Operation Hawkeye Strike, which was launched “in direct response to the deadly Isis attack on US and Syrian forces in Palmyra”, US Central Command said in a statement. The Jordanian army said it had participated in the strikes in coordination “with partners within the framework of the international coalition … to neutralise the capabilities of terrorist groups and prevent them from reorganising”.",
+    "article_id": "world/2026/jan/11/syrian-forces-expel-kurdish-fighters-as-us-strikes-islamic-state-targets",
+    "chunk_index": 2,
+    "total_chunks": 5
+  },
+  "t_bridge": [
+    "Operation Hawkeye Strike",
+    "Palmyra ambush",
+    "US military strategy against Islamic State"
+  ],
+  "initial_question": {
+    "rag_input": "How did the casualty toll of the 13 December attack in Palmyra differ between the statements released in January and February 2026?",
+    "question": "How did the casualty toll of the 13 December attack in Palmyra differ between the statements released in January and February 2026?",
+    "answer": "The statement from January 11, 2026, reported that the 13 December attack killed two US soldiers and a US civilian interpreter. The statement from February 14, 2026, described the same attack as killing two US soldiers and an interpreter, but it added the detail that three members of the Syrian government forces were also wounded during the ambush.",
+    "type": "Initial",
+    "logic_type": "comparison",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Comparison of casualty reports for the Palmyra ambush across two reporting dates"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

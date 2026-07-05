@@ -1,0 +1,37 @@
+{
+  "root_id": "cde51702-d1a1-499a-b8c5-b7b147b3d1f1",
+  "chunk_a": {
+    "id": "politics/2026/apr/12/britain-single-market-rules-uk-eu-reset#chunk_1",
+    "text_snippet": "Title:  Britain could adopt single market rules without MPs’ vote as part of UK-EU reset\nDate: 2026-04-12\n\nContent: But it will also allow the UK to quickly implement evolving single market rules if it determines it is in the national interest, without having to face full parliamentary scrutiny each time. The move is possible under so-called Henry VIII powers, named after the 1539 law that allowed the monarch to rule by decree, which allow ministers to approve laws without full scrutiny from parliament using secondary legislation. The bill will enable deals the government is negotiating on food and drink and emissions trading to come into force, and allow it to follow future EU changes in these areas. But the Guardian understands that if the new bill – expected to be introduced before the summer – is passed, negotiators could seek to adopt EU rules on everything from cars to farming using secondary legislation. Parliament can either approve or reject secondary legislation, but cannot amend it, which would probably mean MPs will “rubber-stamp” new deals rather than debate and vote on every one.",
+    "article_id": "politics/2026/apr/12/britain-single-market-rules-uk-eu-reset",
+    "chunk_index": 1,
+    "total_chunks": 9
+  },
+  "chunk_b": {
+    "id": "politics/2026/apr/13/what-new-eu-bill-uk-ministers-henry-viii-type-powers#chunk_0",
+    "text_snippet": "Title: What is the new EU bill and could it give UK ministers Henry VIII-type powers?\nDate: 2026-04-13\n\nContent: Ministers in Britain are planning a new bill that would bring into force a food and drink trade deal with the EU but also contain powers enabling the government to “dynamically align” with Europe. It would allow the UK to quickly implement evolving single market rules if it determines it is in the national interest, without having to face full parliamentary scrutiny. Why is the government introducing this change? Keir Starmer has made it clear he wants the UK to go much further in terms of the economic relationship with the EU. A summit is planned for early summer with Brussels, which Starmer has stated he hopes will go further than the deal struck last year at Lancaster House that covered food and drink imports, as well as plans for emissions trading and electricity. To implement the food and drink deal, the government will introduce a bill with a so-called “dynamic alignment mechanism” that will allow the government to align UK standards as the EU evolves its own rules.",
+    "article_id": "politics/2026/apr/13/what-new-eu-bill-uk-ministers-henry-viii-type-powers",
+    "chunk_index": 0,
+    "total_chunks": 5
+  },
+  "t_bridge": [
+    "Henry VIII powers",
+    "Dynamic alignment mechanism",
+    "UK-EU trade bill",
+    "Secondary legislation"
+  ],
+  "initial_question": {
+    "rag_input": "How does the proposed UK-EU trade bill introduced in April 2026 use Henry VIII powers to enable the dynamic alignment mechanism?",
+    "question": "How does the proposed UK-EU trade bill introduced in April 2026 use Henry VIII powers to enable the dynamic alignment mechanism?",
+    "answer": "The proposed bill, expected before the summer of 2026, includes a 'dynamic alignment mechanism' to allow the UK to adopt evolving EU single market rules for sectors like food and drink. To facilitate this without full parliamentary scrutiny, the government intends to use 'Henry VIII powers'—named after the 1539 law—to approve these changes through secondary legislation. This mechanism enables ministers to align UK standards as the EU evolves its rules while limiting Parliament's role to a simple approval or rejection, preventing them from amending the specific deals.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Implementation of dynamic alignment via Henry VIII powers in the 2026 trade bill."
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

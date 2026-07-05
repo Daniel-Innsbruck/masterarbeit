@@ -1,0 +1,36 @@
+{
+  "root_id": "6e394e95-5822-4c62-8af2-21ea6a31d3d9",
+  "chunk_a": {
+    "id": "us-news/live/2026/feb/26/us-politics-latest-news-hillary-clinton-jeffrey-epstein-donald-trump#chunk_53",
+    "text_snippet": "Title: Hillary Clinton says she answered every question in Epstein testimony and confirms Republican asked about UFOs and Pizzagate – as it happened\nDate: 2026-02-27\n\nContent: She started the role in April 2023. She will step down in three months. McCain said in a statement that was stepping down with a “heavy heart”. “I’ve seen firsthand WFP’s ability to save lives in the most dangerous, destitute, and remote locations of the world, where people need us the most,” she said. “Time and time again, I have seen the WFP team show up where no one else can, no matter the odds. I had truly hoped I could finish out my term, but my health has not recovered to a level that allows me to fully serve the enormous demands of this job. This is one of the most difficult decisions I have ever had to make.” She said she would “remain WFP’s biggest champion and continue to be an unwavering voice for those struggling with hunger everywhere”.",
+    "article_id": "us-news/live/2026/feb/26/us-politics-latest-news-hillary-clinton-jeffrey-epstein-donald-trump",
+    "chunk_index": 53,
+    "total_chunks": 68
+  },
+  "chunk_b": {
+    "id": "us-news/2026/feb/27/hillary-clinton-deposition-testimony-jeffrey-epstein#chunk_2",
+    "text_snippet": "Title: From a leaked photo to questions on UFOs: key points from Hillary Clinton’s Epstein testimony\nDate: 2026-02-27\n\nContent: Clinton was referring to false, widely disseminated musings in 2016 that a Washington DC pizzeria was a front for a child sex ring run by her, and that New York City police had discovered a paedophilia ring linked to Democrats. Session briefly derailed by leaked photo The deposition of Clinton was interrupted when Lauren Boebert, a Republican member of the committee, leaked a photo from the room. Conservative influencer Benny Johnson published the image on social media platform X stating that Clinton “does not look happy”. The hearing was temporarily suspended at the request of Clinton’s legal team. It is against the rules for witnesses or lawmakers to take pictures during closed-door congressional hearings. “We had agreed upon rules, based on the fact it was going to be a closed hearing, at their demand,” Clinton said after the session.",
+    "article_id": "us-news/2026/feb/27/hillary-clinton-deposition-testimony-jeffrey-epstein",
+    "chunk_index": 2,
+    "total_chunks": 6
+  },
+  "t_bridge": [
+    "Hillary Clinton's Epstein testimony",
+    "Congressional hearing procedures",
+    "UFOs and Pizzagate mentions"
+  ],
+  "initial_question": {
+    "rag_input": "How did the 27 February 2026 congressional hearing rules regarding prohibited conduct intersect with the reasons for Cindy McCain's resignation?",
+    "question": "How did the 27 February 2026 congressional hearing rules regarding prohibited conduct intersect with the reasons for Cindy McCain's resignation?",
+    "answer": "The hearing rules were violated when Lauren Boebert leaked a photo during Hillary Clinton's testimony, which is prohibited in closed-door congressional hearings. This event occurred on the same day, 27 February 2026, that Cindy McCain announced her resignation from the WFP due to her health failing to recover to a level that allows her to serve the demands of her job.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Congressional hearing procedures and WFP leadership timeline"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

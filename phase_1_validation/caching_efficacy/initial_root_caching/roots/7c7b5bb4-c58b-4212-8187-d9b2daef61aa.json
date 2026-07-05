@@ -1,0 +1,36 @@
+{
+  "root_id": "7c7b5bb4-c58b-4212-8187-d9b2daef61aa",
+  "chunk_a": {
+    "id": "politics/2026/jan/26/former-home-secretary-suella-braverman-defects-to-reform-uk#chunk_7",
+    "text_snippet": "Title: Tories criticised over claim Braverman defected to Reform after ‘mental health’ issues\nDate: 2026-01-26\n\nContent: Reform figures have briefed in the past that neither Braverman nor Truss would be welcome in the party. Braverman told the event she would be setting out her reasons for leaving the Tories later in the day, as she used her speech to lambast previous Conservative governments. She revisited her sacking by Sunak, saying she had gone to him when she was home secretary to express her concerns about the impact of the European convention on human rights (ECHR) on Britain’s ability to enforce immigration policies. “First he ignored me and then he sacked me,” she said. Farage is coming under growing pressure over claims that Reform is turning into another Conservative party, and he was reluctant to be drawn on whether Truss could be next to join his party. Reform’s press team told the Guardian last week that Truss would never join the party. Asked again on Monday about closing the door to her entry, Farage replied: “I didn’t say that.",
+    "article_id": "politics/2026/jan/26/former-home-secretary-suella-braverman-defects-to-reform-uk",
+    "chunk_index": 7,
+    "total_chunks": 9
+  },
+  "chunk_b": {
+    "id": "politics/live/2026/jan/26/labour-andy-burnham-byelection-blocked-police-reforms-starmer-streeting-farage-uk-politics-live-news-updates#chunk_7",
+    "text_snippet": "Title: Tories withdraw ‘mental health’ briefing about Suella Braverman after former Tory home secretary joins Reform – UK politics live\nDate: 2026-01-26\n\nContent: Braverman praises Nigel Farage for being consistent. And she says journalists will not find past tweets from her criticising Farage – because she has always largely agreed with him. Suella Braverman is speaking at the Reform UK press conference. She is listing a series of policy issues where she says Tory colleagues ignored her views when the Tories were in office, including: immigration policy; leaving the European convention on human rights; Islamic marches, multiculturalism and trans policy. She also points out that in 2024, after the general election, Kemi Badenoch reportedly told shadow cabinet that Braverman was having a nervous breakdown. That was “something she seems to have repeated again today,” Braverman said. Nigel Farage is holding his press conference now. There is a live feed here. He starts by claiming that the Conservatives are today “attempting to move to the centre ground to become more liberal than a Liberal Democrats”.",
+    "article_id": "politics/live/2026/jan/26/labour-andy-burnham-byelection-blocked-police-reforms-starmer-streeting-farage-uk-politics-live-news-updates",
+    "chunk_index": 7,
+    "total_chunks": 54
+  },
+  "t_bridge": [
+    "Suella Braverman's defection to Reform UK",
+    "Controversy over Conservative Party briefings regarding Braverman's mental health",
+    "Policy disagreements between Braverman and the Conservative Party"
+  ],
+  "initial_question": {
+    "rag_input": "How did Suella Braverman’s 26 January 2026 explanation of her dismissal by Rishi Sunak contrast with the claims Conservative figures briefed regarding her move to Reform UK?",
+    "question": "How did Suella Braverman’s 26 January 2026 explanation of her dismissal by Rishi Sunak contrast with the claims Conservative figures briefed regarding her move to Reform UK?",
+    "answer": "On 26 January 2026, Braverman stated she was sacked by Sunak because she expressed concerns about the European Convention on Human Rights (ECHR) affecting immigration policy. This explanation contrasts with the narrative briefed by Conservative figures, who attempted to characterize her defection to Reform UK as being prompted by 'mental health' issues—a briefing the Conservatives later withdrew.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Braverman's sacking reasons and the mental health briefing controversy"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}
