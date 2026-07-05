@@ -5,7 +5,7 @@ Prompt templates for rag_to_be_tested evaluation
 CONVERSATION_PROMPTS = {
     'init_multihop_prompt': '''
             You are an expert evaluator of conversational AI systems, specialising in assessing Retrieval-Augmented Generation (rag_to_be_tested) models dynamically.
-    
+
             Your task: Write the FIRST question to start a conversation with a RAG system. 
             You must create a Multi-Hop question based on the provided bridging topics and contexts.
 
@@ -26,12 +26,12 @@ CONVERSATION_PROMPTS = {
             5. **No Premise Leakage:** Do not explicitly summarise the facts from both Context A and Context B in your question. A true multi-hop question asks for the connection WITHOUT giving it away. 
                - BAD: "Given that flour prices have tripled [Context B], how did the Iran attack [Context A] cause this?"
                - GOOD: "What direct impact did the recent escalation with Iran have on the pricing of basic baking ingredients like flour?"
-                        
+
             ### PRECISION RULES
-            
+
             - **No Vague Temporal Language:** NEVER use "recently", "lately", "not long ago", etc. Use **specific dates, months, or years** from the contexts (e.g., "in March 2024", "after the 14 April strike").
             - **Specific Answers:** The ground-truth answer must contain concrete facts (dates, numbers, names) that narrow down the possible reference ground truths to precisely the references sources that are given to you to formulate the question.
-            
+
             ### CONFIGURATION
             - **Logic Type:** Choose the reasoning required: 'inference' (connecting premises), 'comparison' (comparing entities), or 'temporal' (timelines/sequences).
             - **First Turn Rule:** Because this is the very first message, `rag_input` and `question` MUST be strictly identical.
@@ -69,23 +69,23 @@ CONVERSATION_PROMPTS = {
         This was the provided answer from the rag_to_be_tested system:
 
         **{RAG_answer}**
-        
+
         Your task is to write the **next turn in the conversation** — a natural follow-up question that assumes a shared conversational context, but **does not refer to any documents, sources, or retrieval process.**
 
         You are evaluating how well the system can maintain internal consistency, resolve ambiguities, and reason based on prior conversation turns. Do **not** break character or refer to any underlying documents.
-        
+
         Choose one of the following Types:
-                    
+
             - **Follow-up:** Builds on a previous answer (e.g., “What about…”, “How about…”).
             - **Clarification:** Seeks to resolve ambiguity (e.g., “You mean…?”, “Does that mean…?”).
             - **Correction:** Rectifies a misunderstanding or error (e.g., “No, that’s not what I meant.”).
             - **Comparative:** Requests comparison between two or more concepts (e.g., “How does this compare to…?”).
-        
+
         Since the evaluation splits single-hop from multi-hop questions, you must specify the follow-up category:
-            - **multi_hop_flag = 1**: Use this ONLY if your new question strictly requires combining distinct facts from BOTH Context A and Context B to form a single answer. 
-            - **multi_hop_flag = 0**: Use this if the question can be fully answered using only ONE context, or just the previous conversation history. 
+            - **multi_hop_flag = 0**: Use this if the question can be fully answered using only ONE context and the previous conversation history. 
+            - **multi_hop_flag = 1**: Use this ONLY if your new question strictly requires combining distinct facts from BOTH Context A and Context B to form a single answer. CRITICAL: Do NOT set this to 1 for questions that merely ask for thematic conclusions, summaries, or conceptual links based on the prior chat (e.g., "Does this mean...", "Is this why..."). Questions that can be answered using one context and the established conversation history should NEVER be flagged in this way (heavy penaltiy for evaluation measurments). 
             - If "multi_hop_flag" is 1, specify the "logic_type" (inference, comparison, or temporal). If "multi_hop_flag" is 0, set "logic_type" to "none".
-        
+
         OUTPUT FORMAT (exact JSON):
         {{
             "rag_input": "A concise, context-aware follow-up in your persona, containing pronouns like 'this' or 'it' to continue the conversation naturally.",
@@ -93,6 +93,8 @@ CONVERSATION_PROMPTS = {
             "answer": "The expected, comprehensive ground-truth answer.",
             "type": "Follow-up / Clarification / Correction / Comparative",
             "logic_type": "inference / comparison / temporal / none",
+            "required_NEW_fact_from_doc_A": "State the exact NEW fact needed, or write 'None'",
+            "required_NEW_fact_from_doc_B": "State the exact NEW fact needed, or write 'None'",
             "multi_hop_flag": 0 or 1
         }}
     ''',
@@ -108,6 +110,8 @@ CONVERSATION_PROMPTS = {
             "answer": "The expected, comprehensive ground-truth answer.",
             "type": "Follow-up / Clarification / Correction / Comparative",
             "logic_type": "inference / comparison / temporal / none",
+            "required_NEW_fact_from_doc_A": "State the exact NEW fact needed, or write 'None'",
+            "required_NEW_fact_from_doc_B": "State the exact NEW fact needed, or write 'None'",
             "multi_hop_flag": 0 or 1
         }}
     '''
