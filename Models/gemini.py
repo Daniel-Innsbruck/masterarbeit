@@ -50,6 +50,11 @@ class GEMINI:
             model=self.MODEL_NAME,
             contents=prompt,
         )
+
+        if response.usage_metadata:
+            self.current_input_tokens += response.usage_metadata.prompt_token_count
+            self.current_output_tokens += response.usage_metadata.candidates_token_count
+
         # usage_data = response.usage_metadata
 
         # # Ensure log directory exists

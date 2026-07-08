@@ -15,6 +15,8 @@ model_name= 'gpt-5-mini'
 model = chat_gpt.ChatGPT(model_name)
 parser = parser.LLMResponseParser()
 
+MAX_RETRIES = 5
+
 def send_request_to_LLM_validation(prompt):
     success = False
     response = None
@@ -22,7 +24,7 @@ def send_request_to_LLM_validation(prompt):
     #total_in_tokens = 0
     #total_out_tokens = 0
 
-    while not success:
+    for attempt in range(MAX_RETRIES):
         try:
             # We use .prompt() for single-turn stateless validation
             llm_response = model.prompt(prompt)
@@ -33,24 +35,29 @@ def send_request_to_LLM_validation(prompt):
             #total_out_tokens += out_tok
 
             response = parser.parse_and_validate_validation(llm_response)
-            if response != "":
-                success = True
+            if response is not None:
+                return response#, total_in_tokens, total_out_tokens
+            print(
+                f"Attempt {attempt + 1}/{MAX_RETRIES}: "
+                "Validator returned invalid JSON. Retrying..."
+            )
+
         except Exception as e:
             if '429' in str(e) or '503' in str(e):
-                print("Rate limit or Server Error. Waiting for 60 seconds before evaluating next batch")
+                print("Rate limit or server error. Waiting 60 seconds...")
                 time.sleep(60)
             else:
-                success = True
                 print(f"Error generating validation data: {e}")
                 return None#, total_in_tokens, total_out_tokens
 
+    print("Validation failed after maximum retries.")
     return response#, total_in_tokens, total_out_tokens
 
 def validate_init_prompt_all_in_one(question, document):
     # Capture all new keys for Multi-Hop validation
     if question is None:
         return {"correct": False,
-                "reason": "LLM output format was invalid or missing required keys (Parser returned None)."}
+                "reason": "Generator output was invalid or could not be parsed."}
     question_dict = {
         'rag_input': question.get('rag_input', question.get('question')),
         'question': question.get('question', ''),
