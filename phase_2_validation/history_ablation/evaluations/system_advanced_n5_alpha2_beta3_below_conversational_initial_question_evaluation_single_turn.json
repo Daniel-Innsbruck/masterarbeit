@@ -1,0 +1,723 @@
+{
+    "file_path": "../data/historyAblation_systemB_turns5_maxRetries3_dialogues20_initial_question.jsonl",
+    "multi_hop_evaluation": {
+        "average_scores": {
+            "correctness_aspect_critic": 0.8571428571428571,
+            "faithfulness_aspect_critic": 0.8290053756576952,
+            "context_precision_critic": 0.8571428570777778,
+            "context_recall_critic": 0.6031746031746031
+        },
+        "detailed_results": [
+            {
+                "content": "How did Simon Foster\u2019s public position on Craig Guildford\u2019s conduct evolve between his comments on January 15, 2026, and his subsequent decision to contact the Independent Office for Police Conduct on January 19, 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.7,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "How does the personal loss of political leadership experienced in San Benito in March 2026 compare to the professional challenges faced by violence prevention specialists in Oakland by April 2026 regarding the ongoing struggle against gun-related tragedies in California?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9259259259259259,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.3333333333333333
+            },
+            {
+                "content": "Considering the criticisms voiced on February 11, 2026, regarding JD Vance's stance on the Armenian genocide, how do the justifications he offered on February 13, 2026, about his awareness of the president's social media activity characterize his approach to political accountability?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.6666666666666666,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 0.3333333333333333
+            },
+            {
+                "content": "How has the Trump administration's legislative focus since the start of 2026 influenced the growing frustration expressed by anti-abortion activists regarding the upcoming midterm election cycle?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8888888888888888,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did Keir Starmer\u2019s cautious political reaction on 3 January 2026 to the US military operation in Venezuela contrast with the criticisms raised about the 'special relationship' during that same event?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did the Reform party leverage the city's ongoing housing emergency to influence public discourse regarding immigration after the events of December 2025?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999666667,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "How did the statistics provided by the Human Rights Activists News Agency regarding deaths and arrests shift between January 14 and January 15, 2026, amid the United States government's consideration of military action?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.999999999975,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "In the wake of the March 13, 2026, attack in Michigan, how are the financial burdens of institutional security measures mentioned by Jewish leaders being managed to address such ongoing threats?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "How does Trump\u2019s justification for the January 2026 operation in Caracas relate to his stated views on the constraints of international law and his own executive power?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How does Trump's stated intent to manage Venezuela\u2019s oil and finances compare to his earlier claims that the January 2026 operation was a necessary response to Maduro sending gang members and drugs into the US?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8235294117647058,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Why did Kemi Badenoch mention the 1983 Grenada invasion on 5 January 2026 when explaining her refusal to condemn the US seizure of Nicol\u00e1s Maduro, and how does this contrast with the broader concerns raised by others regarding international law?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How does the DHS assertion from March 2026 regarding the consistency of death rates in custody compare to the reality of the deaths documented in the first month of that same year?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How many of the individuals housed at the Panorama prison facility could potentially remain there if the 150 inmates relocated by US Central Command in the airlift announced on January 27, 2026, were selected from that specific prison population?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did the National Park Service justify its decision to remove slavery-related panels at the President\u2019s House site in the context of the executive order issued in March 2025?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Considering the stance on diplomacy reported on 26 February 2026, how do the specific advisors influencing Trump's decision to potentially order airstrikes against Iran compare to the domestic political distractions he faced during the same week in February 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How does the federal government's February 2026 plan to sell off sites like the Victoria Barracks align with Clare O\u2019Neil\u2019s stated urban housing development policy regarding the goals for well-located dwellings?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.7272727272727273,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the federal pardon issued for Tina Peters in early 2026 relate to the legal outcome of her state-level conviction regarding the election interference charges reviewed by the court of appeals on April 2, 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.75,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the specific market-sensitive document leaks involving Peter Mandelson in 2010 lead to the calls for his removal from the House of Lords and the Privy Council?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.926829268292683,
+                "context_precision_critic": 0.999999999975,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How does the federal subpoena involving Arizona election records on March 9, 2026, relate to the legislative priorities the Trump administration has been pushing to Congress as of March 10, 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999666667,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How do the investigations currently looking into Prince Andrew's conduct during his time as a UK trade envoy relate to the specific request made of his former protection officers on February 23, 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did the air defense operations reported in the 2026-03-27 update compare to the total number of missiles and drones destroyed by regional air defenses since the start of the conflict as of 2026-03-06?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            }
+        ]
+    },
+    "single_hop_evaluation": {
+        "average_scores": {
+            "correctness_aspect_critic": 0.759493670886076,
+            "faithfulness_aspect_critic": 0.7788870939187394,
+            "context_precision_critic": 0.7721518986601266,
+            "context_recall_critic": 0.6350210970464135
+        },
+        "detailed_results": [
+            {
+                "content": "What was the specific police intelligence issue regarding the Birmingham safety advisory group that led Simon Foster to refer Craig Guildford to the IOPC for a misconduct investigation?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did the Independent Office for Police Conduct (IOPC) have the legal authority to investigate Craig Guildford\u2019s conduct independently, or were they strictly required to wait for a formal referral from the police and crime commissioner, Simon Foster?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Why did the Independent Office for Police Conduct (IOPC) indicate that it was important to understand why the appropriate authorities had not made a referral before the IOPC decided to use its power of initiative to launch an investigation into the chief constable?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Does the Independent Office for Police Conduct (IOPC) have the authority to remove a chief constable from office, or does that power rest solely with the police and crime commissioner, Simon Foster?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.7,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "What professional backgrounds do Sergio Diaz and C\u00e9sar Flores bring to their respective roles in community work and local government?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "How does the motivation for civic engagement in local political leaders like C\u00e9sar Flores differ from the motivation of violence prevention specialists who rely on their own history of trauma and incarceration?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Does the loss of political leadership in a community like San Benito, such as the death of Mayor Jim West, impact the availability of social services like medical benefits that violence prevention specialists in urban areas like Oakland attempt to secure for their clients?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Are rural communities like San Benito currently utilizing the same non-profit, specialist-led intervention models as those seen in Oakland to address their respective challenges regarding gun violence and mental health?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What specific comments did JD Vance make to reporters on February 13, 2026, regarding the racist video posted on the president's social media account?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9090909090909091,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did the administration provide an official response to the Armenian Assembly of America\u2019s request for an explanation regarding the deleted social media post about the Armenian genocide?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did the Armenian National Committee of America, specifically in the context of their concerns about foreign pressure from Ankara, identify any specific individuals within the administration as being responsible for the deletion of the social media post?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8333333333333334,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did any Republican supporters who denounced the racist video posted on the president's social media account also make public statements criticizing the administration's deletion of the social media post referring to the Armenian genocide?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What does the Trump administration's decision to investigate Planned Parenthood over government loans and its move to ban the use of fetal tissue in government research suggest about its strategy for using federal funding to influence abortion-related policy?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.6666666666666666,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Does the Trump administration's expansion of an anti-abortion policy to block foreign aid for groups promoting DEI initiatives represent a strategic shift for the 2026 midterm election cycle, or does it align with the administration's broader goal of avoiding federal abortion legislation?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9090909090909091,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How does the administration's aggressive policy agenda, which includes blocking foreign aid for DEI initiatives, align with the President's broader domestic priorities, specifically regarding his efforts to reform the federal workforce?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9444444444444444,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How is the Trump administration's focus on overhauling the federal workforce affecting its ability to advance its legislative priorities, such as healthcare or abortion, in Congress?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8571428571428571,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "In the context of the hypothetical political debate regarding the 'special relationship' between the UK and the US, how is that relationship argued to potentially prevent a UK leader from condemning international law violations?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9523809523809523,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Which government officials in the UK, besides Keir Starmer, were publicly called upon to state their position regarding the US military operation in Venezuela?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.25,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What does the political idiom 'playing a straight bat' signify when a leader uses it in the context of their response to international geopolitical events?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.16666666666666666,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What specific argument did Zack Polanski provide regarding how the UK's strategy of fostering the 'special relationship' with Donald Trump\u2014specifically through actions like inviting him for a state visit\u2014has impacted the government's current ability to respond to Trump's actions?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "If political actors were not primarily focusing on the housing emergency, what caused the increased visibility of racism and identity tensions in Scotland during early 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Does the evidence suggest that the perception of Scotland as being more progressive on immigration issues compared to the rest of the UK is inaccurate?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "If the perception of Scotland as a progressive nation is an illusion, how does this discrepancy affect the way local authorities like the Glasgow city council manage the practical challenges of refugee resettlement?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9090909090909091,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How do political leaders in Glasgow reconcile the city's ambition to remain a welcoming sanctuary for refugees with the significant financial and social strain that this reputation places on its infrastructure and housing resources?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.6,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.3333333333333333
+            },
+            {
+                "content": "In the context of the January 2026 protests in Iran, what is the composition of the group suffering from the reported gunshot eye injuries, and are those injuries primarily affecting protesters?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.75,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What is the current guidance from the United States State Department regarding the safety of US citizens in Iran amid the ongoing protest crackdown?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What are the specific instructions and safety advice provided by the United States government for American citizens currently attempting to depart Iran due to the ongoing protest crackdown?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What is the total number of people who have been arrested in the Iranian protest crackdown according to the latest statistics available as of January 15, 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Beyond the request for congressional funding to manage the high costs of security, what specific, non-monetary proactive safety measures have Jewish institutions in Michigan taken to prepare for potential attacks?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.5714285714285714,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Beyond the safety drills and security preparations taken by Jewish institutions, what broader public or institutional actions have been taken to condemn the recent attack in Michigan and address the violence against the community?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.3333333333333333
+            },
+            {
+                "content": "Regarding the March 13, 2026, attack in Michigan, what were the official public responses and security commitments made by mayors of major cities and local civil rights organizations?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Are the security funding requests and the reported $765 million annual costs for protecting Jewish communities representative of a national trend in the United States, or are they localized to the specific areas where recent attacks have occurred?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "How does Trump's stated relationship with interim president Delcy Rodr\u00edguez reconcile with his concurrent claims that he is personally 'in charge' of Venezuela and that the US will be managing the country's oil and finances?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.42857142857142855,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Does Trump have a specific timeline for how long he intends to remain in charge of Venezuela and its operations?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.49999999995,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Does Trump view his long-term involvement in Venezuela as a precedent that could be applied to a potential Chinese takeover of Taiwan or Russia\u2019s control over Ukraine?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8888888888888888,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did Kemi Badenoch provide a specific reason for why the government should prioritize maintaining relations with the US regarding the seizure of Nicol\u00e1s Maduro, or is that justification for the government's position provided by other figures like Emily Thornberry?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Did the government's desire to prioritize the US relationship over condemning the Maduro seizure lead to a public disagreement with the opposition regarding a potential UN Security Council resolution?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did Keir Starmer offer any specific thoughts on the legality of the US seizure of Nicol\u00e1s Maduro, or did he avoid addressing the legal implications entirely while focusing on diplomatic relations?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did Emily Thornberry propose a way to balance the UK's opposition to the US seizure of Nicol\u00e1s Maduro with the need to maintain a strong relationship with America, or was she suggesting a break in ties?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8571428571428571,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.75
+            },
+            {
+                "content": "How does the Department of Homeland Security justify the quality of healthcare provided to detainees in light of the deaths that occurred in early 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How does the Department of Homeland Security address the criminal histories of detainees who have died in their custody when defending their standard of care?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How does the Department of Homeland Security justify the rapid expansion of bed space in detention facilities despite the ongoing reports of deaths and concerns regarding the quality of medical care?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.5,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What are the details surrounding the death of N\u00fa\u00f1ez in ICE custody, and does the Department of Homeland Security's official response acknowledge any such specific failures in medical care?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9166666666666666,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Are the families of the detainees included in the count of approximately 4,500 people held at the Panorama prison, or is that figure exclusively for the male inmates?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.5,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Has the Syrian army taken any actions at the detention sites where Kurdish forces are present?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.6666666666666666,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Beyond the approximately 150 dangerous male inmates recently airlifted by the US military, what other categories of detainees are held in Kurdish-majority areas of north-east Syria?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Have any Islamic State detainees or their families currently held in Kurdish-run areas been repatriated to countries like the UK or Canada?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What legal actions did the city of Philadelphia take to prevent the federal government from making further changes to the President's House exhibit?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the Department of Interior justify the removal of the President's House exhibit in Philadelphia to the court or the public, given the legal challenge?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What specific language was used in the executive order issued in March 2025 to justify the administration's authority to alter historical materials?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Does the Trump administration's executive order include language regarding the correction of historical materials that were improperly changed within the last five years?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.42857142857142855,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How does the withholding of $259 million in Medicaid funds, which Tim Walz accused Trump of using to punish blue states, align with the 'other tools' JD Vance claimed the president is keeping available to use against Iran?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What specific criteria or indicators did the administration state they would use to judge whether Iran is stalling during the nuclear negotiations in Geneva?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.5,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What potential consequences or actions did the administration indicate would follow if the nuclear negotiations in Geneva fail to result in Iran relinquishing its capacity to produce nuclear weapons?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How is the deployment of massed naval and air assets in the Middle East being coordinated with the diplomatic negotiations being conducted by special envoys Steve Witkoff and Jared Kushner in Geneva?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What specific heritage or local concerns have been raised regarding the potential redevelopment of the Victoria Barracks if the federal government proceeds with its sale?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8125,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How does the federal government's policy of selling defence properties relate to Clare O'Neil's target of increasing urban density within 10km of the Sydney CBD?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.6923076923076923,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the New South Wales government initially react upon learning that the Victoria Barracks were included in the federal government's plan to sell over 60 defence properties?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8333333333333334,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Does the New South Wales government officially support the development of housing at the Victoria Barracks site if the federal government proceeds with selling it?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What specific reason did the Colorado court of appeals provide in its April 2, 2026, ruling for ordering the resentencing of Tina Peters instead of upholding her original nine-year prison term?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Besides the court-ordered resentencing, is there any possibility of Tina Peters avoiding her prison term through state-level intervention, such as action from the governor?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.3333333333333333
+            },
+            {
+                "content": "Did Peter Ticktin, the lawyer for Tina Peters, explicitly confirm that the governor would commute her sentence during that week in March 2026, or was his expectation based on speculation?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How does the trial judge's motivation for Tina Peters' original nine-year sentence compare to the specific legal justification provided by the Colorado court of appeals for vacating that sentence in April 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.5555555555555556,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Besides the policy on bankers' bonuses and the euro bailout package, what other specific government policies did Peter Mandelson claim to be trying to change or influence in his emails to Jeffrey Epstein?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Does the Metropolitan Police investigation into Peter Mandelson's leaked emails focus on the same specific content identified in the initial Cabinet Office review of the US Department of Justice files, which noted the presence of market-sensitive information regarding the 2008 financial crash?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8333333333333334,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Was Prime Minister Keir Starmer the person who publicly called for Peter Mandelson to resign from the House of Lords after it was revealed that Mandelson had shared confidential information intended for the prime minister's office with Jeffrey Epstein?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Were there any other members of the House of Lords besides Peter Mandelson who faced specific calls from Harriet Harman for removal from the Privy Council and the upper chamber during her interview?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.75,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Has the Trump administration provided a specific timeline or deadline to Congress for the passage of the voter ID bill mentioned in the March 10, 2026, reports?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.7142857142857143,
+                "context_precision_critic": 0.49999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What other major national events were reported on March 10, 2026, alongside the Trump administration's legislative push for the voter ID bill?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.75,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Did the 'No Kings' protests or incidents involving ICE occur on March 9-10, 2026, or were those developments unrelated to that specific timeframe?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What specific security incidents were reported on March 10, 2026, aside from the administration's legislative priorities?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How does the Cabinet Office's preparedness to release government documents concerning Prince Andrew's time as a trade envoy relate to the recent police move to interview his former protection officers?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.7777777777777778,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Which body administered Prince Andrew's role as a UK trade envoy, and why is that body no longer functioning in that capacity?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8571428571428571,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Which government department is responsible for sorting through documents related to Prince Andrew's time as a trade envoy in response to police inquiries?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.5,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Is the Cabinet Office still the lead department for government document inquiries, or has that responsibility shifted entirely to the Department for Business and Trade?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.25
+            },
+            {
+                "content": "What is the specific number of healthcare workers killed or injured, and what is the extent of the damage to health infrastructure in Iran reported as a result of the US-Israeli campaign?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What specific property damage and number of civilian injuries were recorded in the Arab-Israeli town of Kfar Qasim due to the air defense operations that occurred on March 27, 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.75,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What specific property damage and number of civilian injuries were recorded in the Arab-Israeli town of Kfar Qasim due to the air defense operations that occurred on March 27, 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.5,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What were the military actions reported against Hezbollah in Beirut on March 6, 2026, and what was the estimated population of the Dahiyeh area affected by the subsequent evacuation order?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            }
+        ]
+    }
+}
