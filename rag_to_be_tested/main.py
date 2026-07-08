@@ -22,7 +22,7 @@ def ask_question(request: QuestionRequest):
     result = agentic_rag(
         request.question,
         current_thread_id,
-        history_mode="initial_turn"#"no_history"
+        history_mode="last_3_turns"#"no_history"
     )
     return {"answer": result["answer"], "context": result["context"]}
     if request.mode == "baseline":

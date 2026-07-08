@@ -58,8 +58,8 @@ n = 5             # Target number of turns per conversation
 max_conversations = 20 # number conversations'
 
 # Logging & Output
-output_file = "./data/historyAblation_systemB_turns5_maxRetries3_dialogues20_initial_question.jsonl"#"./data/45ea68d7-6e88-4ba9-a8d3-cb2366b1651a.jsonl"
-log_file = "./data/historyAblation_systemB_turns5_maxRetries3_dialogues20_initial_question.log"#"./data/45ea68d7-6e88-4ba9-a8d3-cb2366b1651a.log"
+output_file = "./data/historyAblation_systemB_turns5_maxRetries3_dialogues20_last_three_turns.jsonl"#"./data/45ea68d7-6e88-4ba9-a8d3-cb2366b1651a.jsonl"
+log_file = "./data/historyAblation_systemB_turns5_maxRetries3_dialogues20_last_three_turns.log"#"./data/45ea68d7-6e88-4ba9-a8d3-cb2366b1651a.log"
 metrics_file = "./data/test.jsonl"#"./data/cache_metrics_45ea68d7-6e88-4ba9-a8d3-cb2366b1651a.jsonl"
 
 Role = "You are a highly attentive conversationalist who asks context-aware questions. Your questions should build naturally on previous exchanges, using referring expressions like 'this', 'that', or 'it' to maintain coherence and continuity."
