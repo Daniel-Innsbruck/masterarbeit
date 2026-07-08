@@ -18,11 +18,11 @@ class QuestionRequest(BaseModel):
 @app.post("/rag")
 def ask_question(request: QuestionRequest):
     current_thread_id = request.thread_id
-    current_thread_id = f"isolated_{uuid.uuid4()}"
+    #current_thread_id = f"isolated_{uuid.uuid4()}"
     result = agentic_rag(
         request.question,
         current_thread_id,
-        history_mode="no_history"
+        history_mode="initial_turn"#"no_history"
     )
     return {"answer": result["answer"], "context": result["context"]}
     if request.mode == "baseline":

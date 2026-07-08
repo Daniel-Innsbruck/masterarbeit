@@ -18,7 +18,7 @@ evaluator_llm = LangchainLLMWrapper(ChatOpenAI(
 
 # INSERT THE PATH TO YOUR GENERATED .jsonl FILE HERE
 paths = [
-    "../data/historyAblation_systemB_turns5_maxRetries3_dialogues20.jsonl"
+    "../data/historyAblation_systemB_turns5_maxRetries3_dialogues20_initial_question.jsonl"
 ]
 
 for path in paths:

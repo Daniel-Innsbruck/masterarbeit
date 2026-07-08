@@ -28,7 +28,7 @@ evaluator_llm = LangchainLLMWrapper(ChatOpenAI(
 ))
 
 paths = [
-    "../data/historyAblation_systemB_turns5_maxRetries3_dialogues20.jsonl"
+    "../data/historyAblation_systemB_turns5_maxRetries3_dialogues20_initial_question.jsonl"
 ]
 
 def calculate_safe_average(result_list, key):
