@@ -1,0 +1,723 @@
+{
+    "file_path": "../data/historyAblation_systemB_turns5_maxRetries3_dialogues20_last_three_turns.jsonl",
+    "multi_hop_evaluation": {
+        "average_scores": {
+            "correctness_aspect_critic": 0.8214285714285714,
+            "faithfulness_aspect_critic": 0.7638946555633748,
+            "context_precision_critic": 0.9107142856375,
+            "context_recall_critic": 0.6071428571428571
+        },
+        "detailed_results": [
+            {
+                "content": "How did Ukraine respond to Iran\u2019s specific claim regarding the defense agreements it signed with Gulf states on 29 March 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Did the authorities in the United Arab Emirates or Oman provide confirmation regarding damage to their local infrastructure following the events on 29 March 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.7142857142857143,
+                "context_precision_critic": 0.49999999995,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did the internal investigation conducted by Warner Bros during the production of The Cleaning Lady contrast with the accusations later brought forward by authorities regarding Timothy Busfield's behavior on that same set?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "How has Melissa Gilbert responded to the public scrutiny and the sexual misconduct allegations leveled against her husband, Timothy Busfield, since they became a matter of legal record?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did the shift toward diffused protest mobilization throughout 2025 influence the specific grassroots strategies, such as those used in 'Freedom Fridays,' to maintain resistance against the Trump administration?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8888888888888888,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How does the hyperlocal protest approach used by neighborhood groups, such as 'Freedom Fridays,' fit into the broader pattern of diffused protest mobilization observed throughout 2025?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did the 28 January 2026 announcement by police regarding the Invasion Day rally incident shape the feelings of mistrust and fear expressed by members of the First Nations community the following day?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9333333333333333,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.75
+            },
+            {
+                "content": "During the meetings held on 28 January 2026 between WA Police Commissioner Blanch and Noongar elders regarding the bomb incident, did the police address the broader context of the recent death in custody in Kalgoorlie and the cancellation of the Survival Day festival?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.8,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the UK government's February 2026 expansion of the visa scheme for Hongkongers relate to the diplomatic discussions Keir Starmer held with Xi Jinping regarding Jimmy Lai's imprisonment?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.75,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "What specific humanitarian concerns have MPs raised regarding the permanent residency requirements for Hongkongers, and how does this contrast with the government's official position on the prosecution of Jimmy Lai?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "How did the funding rescissions announced on January 13, 2026, impact the 2,800 organizations relying on Samhsa, and what specific challenges did these program directors face in the days immediately following that notification?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9523809523809523,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "How does the impact of the budget cuts experienced by the Substance Abuse and Mental Health Services Administration (Samhsa) throughout 2025 compare to the immediate effects of the rescission of 2,800 federal grants that occurred in January 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "While the Met is investigating Peter Mandelson for his alleged links to Epstein, how does the current role of the Thames Valley police in the Mountbatten-Windsor inquiry compare to their participation in the broader national group established on February 14, 2026, to address trafficking allegations at UK airports?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9285714285714286,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "How did the payment made by Andrew Mountbatten-Windsor in 2022 link to the specific legal grounds currently being used by politicians to justify his removal from the line of succession following his February 19, 2026 arrest?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How are the evolving operational priorities of police forces, as described in the April 2026 reports, shaping their strategies for mitigating criminal harm across both county lines exploitation and the rising stalking epidemic?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8666666666666667,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What do the Epstein files released in February 2026 reveal about the moral standards of the elite social networks that enabled his behavior?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "How did the 16 February 2026 report concerning the traffic infringement numbers from the recent road operations contrast with the police strategy that Yasmin Catley later advocated for in the 27 February 2026 update regarding the use of drones for operational matters?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.5,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did Keir Starmer's specific diplomatic approach to Donald Trump regarding the Greenland crisis on January 19, 2026, differ in context from the collective security discussions held with other European allies earlier that month?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "How does the instability caused by the Labour government's approach to deporting long-term residents, as seen in the case reported in February 2026, impact the ability of immigrant communities to integrate into society by March 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.96,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "How did the ministerial activities of Wes Streeting on March 19, 2026, compare to the public engagements held by Nigel Farage during his party appearances in both March and April 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 0.25
+            },
+            {
+                "content": "How did the ministerial activities of Foreign Secretary Yvette Cooper on March 19, 2026, compare to the ministerial responsibilities of Housing Secretary Steve Reed on April 13, 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Considering the administration's stated goal in January 2026 to reframe American identity, how did they coordinate their influence over the Kennedy Center differently than their approach toward the Smithsonian Institution?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9310344827586207,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the protectionist rhetoric expressed by the Trump administration as of March 2026 affect the diplomatic relationship with Canada compared to the warnings issued by officials in February 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.75,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How does the specific concern raised by Chuck Schumer regarding the February 24, 2026, State of the Union address relate to the political significance of the guests chosen by Hakeem Jeffries for that same event?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.625,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Why do experts dismiss the public's suggestions for rescuing the whale known as Timmy despite the high-stakes 'Operation Cushion' launched on 16 April 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.5,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Beyond his stance on energy costs for households mentioned on Truth Social in January 2026, what legal action did Donald Trump take against the US government on that same day?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.8888888888888888,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did Sarah Knafo\u2019s performance in the March 2026 Paris local elections influence the strategic importance of electoral alliances for the second round?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Does the recent performance of Sarah Knafo in the March 2026 Paris local elections mean that other political figures, such as Pierre-Yves Bournazel and those backed by Renaissance, are struggling to form a coherent defense against her candidacy?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            }
+        ]
+    },
+    "single_hop_evaluation": {
+        "average_scores": {
+            "correctness_aspect_critic": 0.7638888888888888,
+            "faithfulness_aspect_critic": 0.6941815265344676,
+            "context_precision_critic": 0.6500771604316486,
+            "context_recall_critic": 0.599537037037037
+        },
+        "detailed_results": [
+            {
+                "content": "Besides the alleged strike on a Ukrainian anti-drone depot in Dubai, what other specific military target did Iran claim to have attacked in the Gulf region on March 29, 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Does the 48-hour suspension of operations at the Port of Salalah following the 29 March 2026 drone attack specifically account for the medical recovery of the foreign worker who was injured in the incident?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What happened to the foreign worker who was reported injured during the drone attack at the Port of Salalah in Oman on 29 March 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What is the current status of the legal proceedings against Timothy Busfield, and when is his trial tentatively scheduled to take place?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What are the specific details of the allegations of criminal sexual contact against Timothy Busfield regarding the victims involved on the set of The Cleaning Lady?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What are some of the notable professional acting credits in Timothy Busfield's career prior to his involvement in the series The Cleaning Lady?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.6666666666666666,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How do hyperlocal protest groups, such as those practicing 'Freedom Fridays', choose and utilize visual symbols to communicate their resistance to passing drivers?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.7142857142857143,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the nature of protest mobilization in 2025 change following the anti-ICE protests that took place over the summer, fall, and winter of that year?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What were the specific types of protest actions held across the United States, including in rural locations, throughout 2025?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Besides the 28 January 2026 bomb incident, what other specific events, such as the situation in Kalgoorlie or the cancellation of local festivals, have contributed to the grief and anger within the First Nations community?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did the meeting between Megan Krakouer, Noongar elders, and the WA police commissioner on 28 January 2026 result in the police agreeing to investigate the bomb incident specifically as a hate crime?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.9,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the feelings expressed by community leaders like Megan Krakouer after the 28 January 2026 meeting with police compare to the initial reactions they reported immediately following the Invasion Day bomb incident?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.3333333333333333
+            },
+            {
+                "content": "How did the UK government's February 2026 expansion of the visa scheme for Hongkongers address the specific issue of family eligibility gaps?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How many people have successfully moved to the UK under the visa scheme for Hongkongers since it was originally launched?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.75,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How does the UK government's acknowledgement of the situation regarding Jimmy Lai's imprisonment align with the specific concerns expressed by his family about his declining health?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9411764705882353,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.3333333333333333
+            },
+            {
+                "content": "Was there any advance notice provided to staff working within the Substance Abuse and Mental Health Services Administration (Samhsa) regarding the funding cuts before they were implemented?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did the Substance Abuse and Mental Health Services Administration (Samhsa) experience any other significant financial instability or budget cuts throughout the year 2025, prior to the events of January 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.5,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What specific types of mental health and substance use services were the 2,800 organizations providing before their federal funding was rescinded in January 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Does the former prime minister Gordon Brown have any official role in the criminal inquiries related to the Epstein allegations, or is his involvement limited to his recent public comments regarding UK airports?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.5,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Besides Gordon Brown, have any other individuals or organizations publicly called for police action regarding the Epstein human trafficking network allegations or the related criminal enterprise described by the UN experts?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8461538461538461,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Are the Thames Valley police or the Metropolitan Police officially responding to public criticism or calls for more urgency regarding their investigations into the Epstein case?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.7142857142857143,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Is the Metropolitan Police's participation in the national group established on February 14, 2026, limited to their criminal investigation of Peter Mandelson, or does their remit within that group include assessing allegations about the use of UK airports for trafficking?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.6666666666666666,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Does the ongoing police investigation into Andrew Mountbatten-Windsor and the potential legislative efforts to remove him from the line of succession mean he currently maintains the authority to act as a counsellor of state if King Charles were incapacitated?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Why does Andrew Mountbatten-Windsor currently hold the title of counsellor of state despite no longer being a working royal, and when was he stripped of his other royal titles?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.8055555555287036,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How does Andrew Mountbatten-Windsor's current position in the line of succession compare to that of Prince William and Prince Harry?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Does King Charles have the unilateral authority to remove Andrew Mountbatten-Windsor from the line of succession, or is the passage of new government legislation required to achieve this removal?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.49999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Are there any specific indicators currently being tracked by police to measure the success of prevention and early intervention efforts for county lines exploitation and stalking?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How does the challenge of measuring the success of prevention efforts in county lines exploitation compare to the police approach for addressing the rise in stalking cases that involve new technology?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.55,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Is the reported increase in stalking offences primarily driven by improved police and public reporting rather than an actual change in the frequency of perpetrator behavior?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.125,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Is the police strategy for addressing county lines exploitation primarily focused on the identification of victims or on the reduction of the scale of gang operations?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Is the casual, flippant attitude toward abusive behavior common across the entire network of powerful people surrounding Epstein, or is it limited only to the individuals in his immediate inner circle?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Does the sense of entitlement and moral detachment among the elite network surrounding Epstein imply that all these individuals were actively participating in his wrongdoing, or does it suggest a different nature to their relationship?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Did Epstein target specific types of powerful individuals to build his influence, or was his broad reach within those circles a result of his own position as a wheeler-dealer?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8333333333333334,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Was Epstein's primary role within his elite social circles to provide powerful individuals from various sectors, such as finance, tech, and politics, with access to one another?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "Does the plan to integrate drones for operational matters like break-ins mean that the NSW government intends to reduce the high-visibility road safety patrols that were recently used to detect drug and drink-driving offences?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8181818181818182,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Does Yasmin Catley still maintain that high-visibility police presence on roadways is a priority for preventing traffic offences, given her recent focus on the new drone trial?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Does Yasmin Catley view the adoption of drones as a budget-saving replacement for the intensive on-the-road enforcement operations, such as those that involve stopping thousands of drivers for drug and breath tests?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How many of the 604 positive drug tests and 167 drink-driving offences that were detected during the recent road operations were identified using drone technology?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.5,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What was the primary motivation cited by Keir Starmer for his de-escalatory approach toward Donald Trump during their January 19, 2026, phone call regarding the threat of tariffs?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did Keir Starmer's message to Danish Prime Minister Mette Frederiksen regarding the Greenland crisis differ between his phone call with her on January 6, 2026, and his subsequent call on January 19, 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.49999999995,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "During his phone call with Donald Trump on January 19, 2026, did Keir Starmer explicitly convey his position that applying tariffs on allies for pursuing collective security is wrong?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Did any media outlets provide a description of the tone for the phone call between Keir Starmer and Donald Trump on January 19, 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.5,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Are there any examples of active efforts to support integration in London, specifically within the fields of arts or fashion, that contrast with the government's deportation policies?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.875,
+                "context_precision_critic": 0.49999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did Aamna Sundus Abdi report on a designer named Kazna Asker incorporating the rhythm of the holy month of Ramadan into a London fashion week show?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did Aamna Sundus Abdi report that the designer Kazna Asker built her fashion presentation around the rhythm of the holy month of Ramadan?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.6363636363636364,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did the designer Kazna Asker build her fashion presentation around the rhythm of the holy month of Ramadan?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Which reports were published at noon on March 19, 2026, and April 13, 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What specific events were listed as occurring at noon on March 19, 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.3333333333333333,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Was there an inquiry report concerning the NHS published on March 19, 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.6,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did the administration's broader effort to reframe the American cultural narrative and sense of identity in early 2026 involve the construction of new statues or monuments in Washington?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.6,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How do the current administration's active interventions against specific figures in cultural institutions differ from the approach taken by the first Trump administration regarding these cultural matters?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Does the administration's policy of actively reframing American identity and culture also involve physical construction projects, such as building a triumphal arch in Washington?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Besides the Smithsonian Institution and the Kennedy Center, what other types of institutions is the Trump administration targeting in their second term to shift the national narrative?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.6666666666666666,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Does the local business community near the US-Canada border feel ignored by the Trump administration's protectionist policies, given the negative impact of his rhetoric on cross-border relations?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9285714285714286,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How does the Trump administration's aggressive rhetoric toward Canada impact the United States' broader geopolitical standing, particularly in relation to China, based on warnings from officials?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How do Republican lawmakers reconcile the Trump administration's aggressive rhetoric toward allies with concerns about the long-term damage this causes to U.S. interests and the respect owed to local populations in territories like Greenland?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.25
+            },
+            {
+                "content": "What specific legislative actions were identified in February 2026 regarding the imposition of secondary sanctions on countries that do business with Russia?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.8461538461538461,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Were the U.S. men's and women's Olympic hockey teams invited to attend the 2026 State of the Union address as guests, and what is the status of their attendance?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.6666666666666666,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Why did the U.S. women's Olympic hockey team decline President Trump's invitation to the 2026 State of the Union address?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Besides the controversy over the Epstein files and the invitation of hockey teams, what other legal challenge was occurring in February 2026 involving the Department of Homeland Security and a project in Maryland?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Was the lawsuit filed by Maryland attorney general Anthony Brown against the Department of Homeland Security regarding an immigrant detention facility related to the security or legal tensions surrounding the February 2026 State of the Union address?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What is the intended outcome of 'Operation Cushion' once the rescue team successfully lifts the whale onto the pontoon and begins towing it?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8333333333333334,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How do the whale's reported back wounds and skin infections influence the experts' belief that the animal is beyond saving, despite the ongoing rescue efforts?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.75
+            },
+            {
+                "content": "Was a fishing net caught in the whale's jaw actually identified as a contributing factor to the animal's declining health?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How have rescue teams been able to approach the whale to implement 'Operation Cushion' if it is suffering from a fishing net caught in its jaw?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "How did the Senate's strategy to address the potential partial government shutdown on January 30, 2026, influence the specific policy goals Democrats announced for reining in ICE?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How are the major tech companies that are driving data center growth linked to the energy concerns and projected electricity cost increases for households in the Pennsylvania-New Jersey-Maryland region?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How does Donald Trump\u2019s demand that tech companies 'pay their own way' to prevent electricity cost increases compare to the legislative approach taken by Senator Van Hollen in his 'Power for the People Act' to manage the energy bills of US households?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the political strategies regarding the potential government shutdown on January 30, 2026, connect to the specific immigration enforcement policy goals that Democrats were demanding for the Department of Homeland Security (DHS) bill?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Is Sarah Knafo, who performed well in the March 2026 Paris local elections, the same person whose partner is the TV pundit \u00c9ric Zemmour, a man known for his convictions regarding the incitement of racial hatred?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.49999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Besides Sarah Knafo, are there other political figures involved in the March 2026 local elections in Paris who are facing their own legal or ethical scrutiny?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.7692307692307693,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Was Rachida Dati facing any legal or ethical scrutiny related to her past work as a member of the European Parliament, specifically regarding allegations of lobbying for the Renault-Nissan group?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            }
+        ]
+    }
+}

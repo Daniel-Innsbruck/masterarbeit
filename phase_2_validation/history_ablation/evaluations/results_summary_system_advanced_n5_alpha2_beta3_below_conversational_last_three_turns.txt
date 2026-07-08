@@ -1,0 +1,3 @@
+[MULTI-HOP]  Correctness: 0.82 | Faithfulness: 0.76 | Precision: 0.91 | Recall: 0.61
+[SINGLE-HOP] Correctness: 0.76 | Faithfulness: 0.69 | Precision: 0.65 | Recall: 0.60
+Forgetfulness: 0.25 | Context Retention: 0.95
