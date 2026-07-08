@@ -4,7 +4,7 @@ from qa_chains.qa_chain import get_rag_graph
 from qa_chains.qa_chain_baseline import baseline_rag
 from qa_chains.qa_chain_advanced import agentic_rag
 from langchain_core.messages import HumanMessage
-
+import uuid
 app = FastAPI()
 rag_graph = get_rag_graph()
 
@@ -12,13 +12,19 @@ class QuestionRequest(BaseModel):
     question: str
     thread_id: str
     mode: str = "default"  # "default" or "baseline" or "advanced"
+    history_mode: str = "full"
+
 
 @app.post("/rag")
 def ask_question(request: QuestionRequest):
-    # für tests: advanced rag
-    result = agentic_rag(request.question, request.thread_id)
+    current_thread_id = request.thread_id
+    current_thread_id = f"isolated_{uuid.uuid4()}"
+    result = agentic_rag(
+        request.question,
+        current_thread_id,
+        history_mode="no_history"
+    )
     return {"answer": result["answer"], "context": result["context"]}
-
     if request.mode == "baseline":
         return baseline_rag(request.question, request.thread_id)
 

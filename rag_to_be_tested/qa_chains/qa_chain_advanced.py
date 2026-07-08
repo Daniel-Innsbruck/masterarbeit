@@ -146,18 +146,31 @@ AGENT_SYSTEM_PROMPT = """
 """
 
 
-def agentic_rag(question: str, thread_id: str, max_hops: int = 5) -> dict:
+def agentic_rag(question: str, thread_id: str, max_hops: int = 5, history_mode: str = "full") -> dict:
     """
     Agentic RAG with Parent Document Retrieval and multi-hop reasoning.
+    history_mode options: "full", "no_history", "initial_turn", "last_3_turns"
     """
 
     if thread_id not in conversation_store:
         conversation_store[thread_id] = []
 
+    full_history = conversation_store[thread_id]
+
     chat_history = conversation_store[thread_id]
+
+
+    if history_mode == "no_history":
+        chat_history = []
+    elif history_mode == "initial_turn":
+        chat_history = full_history[:2]
+    elif history_mode == "last_3_turns":
+        chat_history = full_history[-6:]
+    else:
+        chat_history = full_history
+
     context_memory = []
     all_retrieved_contents = []
-
     seen_article_ids = set()
 
     for hop in range(max_hops):
