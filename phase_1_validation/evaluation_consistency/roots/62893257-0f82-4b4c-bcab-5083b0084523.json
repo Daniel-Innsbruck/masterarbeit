@@ -1,0 +1,47 @@
+{
+  "root_id": "62893257-0f82-4b4c-bcab-5083b0084523",
+  "chunk_a": {
+    "id": "world/2026/mar/27/cuba-aid-boats-missing-en-route-mexico-our-america-convoy#chunk_3",
+    "text_snippet": {
+      "id": "world/2026/mar/27/cuba-aid-boats-missing-en-route-mexico-our-america-convoy#chunk_3",
+      "text_snippet": "Title: Missing aid boats have safely reached Cuba, US confirms\nDate: 2026-03-27\n\nContent: “The aim of the criminal blockade is clear: to starve the Cuban people into submission,” Corbyn wrote in Novara Media. The aid convoy’s organisers said they had sought to bring “critical humanitarian aid”, including food and medicine, to Cuba’s people in the face of “the criminal US blockade”. “There is no time to waste, as the Trump administration ramps up its assault on the island and its campaign to isolate its people,” they said on the eve of the convoy’s arrival.",
+      "article_id": "world/2026/mar/27/cuba-aid-boats-missing-en-route-mexico-our-america-convoy",
+      "chunk_index": 3,
+      "total_chunks": 4
+    },
+    "article_id": "world/2026/mar/27/cuba-aid-boats-missing-en-route-mexico-our-america-convoy",
+    "chunk_index": 3,
+    "total_chunks": 4
+  },
+  "chunk_b": {
+    "id": "us-news/2026/mar/29/us-russian-oil-tanker-cuba-blockade#chunk_4",
+    "text_snippet": {
+      "id": "us-news/2026/mar/29/us-russian-oil-tanker-cuba-blockade#chunk_4",
+      "text_snippet": "Title: Trump appears to relax oil blockade on Cuba as Russian tanker arrives\nDate: 2026-03-30\n\nContent: On Sunday, Trump denied Russia’s oil delivery would provide salvation for Cuba’s embattled leaders. “Cuba’s finished. They have a bad regime. They have very bad and corrupt leadership and whether or not they get a boat of oil, it’s not going to matter,” the US president said, adding that he favoured allowing the delivery “because the people need heat and cooling and all of the other things”.",
+      "article_id": "us-news/2026/mar/29/us-russian-oil-tanker-cuba-blockade",
+      "chunk_index": 4,
+      "total_chunks": 5
+    },
+    "article_id": "us-news/2026/mar/29/us-russian-oil-tanker-cuba-blockade",
+    "chunk_index": 4,
+    "total_chunks": 5
+  },
+  "t_bridge": [
+    "Trump administration's stance on humanitarian aid vs. strategic assets in Cuba",
+    "Cross-document contextual link"
+  ],
+  "initial_question": {
+    "rag_input": "How does President Trump's March 2026 justification for allowing the Russian oil tanker to reach Cuba contrast with his administration's general approach toward aid convoys described earlier that same month?",
+    "question": "How does President Trump's March 2026 justification for allowing the Russian oil tanker to reach Cuba contrast with his administration's general approach toward aid convoys described earlier that same month?",
+    "answer": "While the Trump administration was described by aid convoy organizers in March 2026 as ramping up an 'assault' on Cuba and attempting to isolate its people through a blockade, President Trump personally justified allowing a Russian oil tanker to dock on March 30, 2026, by stating that he favored the delivery because the Cuban people needed the resources for heating and cooling, despite his assertion that the regime itself is corrupt and failing.",
+    "type": "Initial",
+    "logic_type": "comparison",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Trump administration's stance on humanitarian aid vs. strategic assets in Cuba"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

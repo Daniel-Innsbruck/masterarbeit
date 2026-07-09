@@ -1,0 +1,47 @@
+{
+  "root_id": "61f1a621-1ee4-44e3-82eb-bb586ae7fb9b",
+  "chunk_a": {
+    "id": "us-news/2026/mar/20/puerto-rico-voting-machines-trump-2020-election-loss-venezuela#chunk_1",
+    "text_snippet": {
+      "id": "us-news/2026/mar/20/puerto-rico-voting-machines-trump-2020-election-loss-venezuela#chunk_1",
+      "text_snippet": "Title: Gabbard testimony on Puerto Rico voting machines raises questions about role of Venezuela conspiracy theory\nDate: 2026-03-20\n\nContent: Other complaints involved dead voters, stolen ballots, mail-in ballot fraud and mass voting by noncitizens. A judge in 2023 ruled the voting machine conspiracy involving Dominion Voting and Venezuela was false, and some news organizations that made the allegations have retracted them and paid what amounted to hundreds of millions in defamation claims. Still, as president, Trump appeared to express support for the theory, even days after he ordered a military incursion into Venezuela to capture Maduro this year. It was in early 2025 that the theory got a rehearing in Trump’s justice department. Two longtime proponents, former CIA official Gary Berntsen and Venezuela expatriate Martin Rodil, made the case for it to the US attorney for the district of Puerto Rico, W Stephen Muldrow, three sources told the Guardian. The three sources said Berntsen and Rodil also briefed the office of the director of national intelligence (ODNI) with the same claims.",
+      "article_id": "us-news/2026/mar/20/puerto-rico-voting-machines-trump-2020-election-loss-venezuela",
+      "chunk_index": 1,
+      "total_chunks": 6
+    },
+    "article_id": "us-news/2026/mar/20/puerto-rico-voting-machines-trump-2020-election-loss-venezuela",
+    "chunk_index": 1,
+    "total_chunks": 6
+  },
+  "chunk_b": {
+    "id": "us-news/2026/mar/27/trump-voting-election-conspiracy-midterms#chunk_9",
+    "text_snippet": {
+      "id": "us-news/2026/mar/27/trump-voting-election-conspiracy-midterms#chunk_9",
+      "text_snippet": "Title: How an election conspiracy theorist has Trump’s ear on voting laws and midterms\nDate: 2026-03-27\n\nContent: Last May, a team working for Gabbard investigated Puerto Rico’s voting machines without finding evidence of Venezuelan meddling, but her office told Reuters it found “concerning cyber security and operational deployment practices that pose a significant risk to U.S. elections”. Still, to press the case for a new executive order, Ticktin suggested that since Nicolás Maduro, the former Venezuelan president, is in US custody after being captured in January, he “has a choice to give us the information he has about the manipulation of elections, or start to spend the rest of his life in a supermax” prison. Larry Noble, a former general counsel at the Federal Election Commission who now teaches law at American University, told the Guardian he’s alarmed at the prospect of an executive order being pushed by Trump’s election-denying allies given their track record.",
+      "article_id": "us-news/2026/mar/27/trump-voting-election-conspiracy-midterms",
+      "chunk_index": 9,
+      "total_chunks": 17
+    },
+    "article_id": "us-news/2026/mar/27/trump-voting-election-conspiracy-midterms",
+    "chunk_index": 9,
+    "total_chunks": 17
+  },
+  "t_bridge": [
+    "Gabbard's investigation vs. Trump administration's engagement with Venezuela conspiracy theories.",
+    "Cross-document contextual link"
+  ],
+  "initial_question": {
+    "rag_input": "How did the investigation into Puerto Rico’s voting machines led by Tulsi Gabbard’s team in May 2025 relate to the specific claims of Venezuelan election interference that were being presented to the Justice Department during that same year?",
+    "question": "How did the investigation into Puerto Rico’s voting machines led by Tulsi Gabbard’s team in May 2025 relate to the specific claims of Venezuelan election interference that were being presented to the Justice Department during that same year?",
+    "answer": "In May 2025, Tulsi Gabbard’s team investigated Puerto Rico’s voting machines and found no evidence of Venezuelan meddling, despite identifying other operational and cybersecurity risks. This occurred during the same year that proponents like Gary Berntsen and Martin Rodil were actively lobbying the US attorney for the district of Puerto Rico, W. Stephen Muldrow, and the ODNI to legitimize the conspiracy theory that Venezuela was manipulating U.S. voting machines—a theory that had been ruled false by a judge in 2023.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Gabbard's investigation vs. Trump administration's engagement with Venezuela conspiracy theories."
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

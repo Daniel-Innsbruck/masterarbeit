@@ -1,0 +1,47 @@
+{
+  "root_id": "017e1283-dd7d-4554-9ca8-295ca89fa127",
+  "chunk_a": {
+    "id": "australia-news/live/2026/apr/17/anthony-albanese-richard-marles-geelong-refinery-fire-fuel-supply-crisis-prices-labor-coalition-political-reactions-ntwnfb#chunk_39",
+    "text_snippet": {
+      "id": "australia-news/live/2026/apr/17/anthony-albanese-richard-marles-geelong-refinery-fire-fuel-supply-crisis-prices-labor-coalition-political-reactions-ntwnfb#chunk_39",
+      "text_snippet": "Title: PM to join summit on reopening strait of Hormuz – as it happened\nDate: 2026-04-17\n\nContent: He said the fire has temporarily affected the plant’s production capability and did not give a timeline on when it would be back to normal. The blaze at the Viva Energy facility in Corio – one of two refineries left in the country – broke out just after 11pm Wednesday, with Fire Rescue Victoria alerted to the blaze by multiple calls to triple zero reporting explosions and flames. Speaking at the refinery, Albanese thanked the staff and firefighters for their work to contain the fire. He said the blaze was “regrettable”, especially given the timing, but: The advice that we have received today is that 80% of diesel production is continuing, 80% of aviation fuel is continuing, ongoing. It has been slowed down just slightly because of the circumstances which are there, but 60% of petrol production [is] proceeding today as well. We hope that … that ramps up over the coming period as well. The prime minister, Anthony Albanese, is speaking in Corio, Victoria.",
+      "article_id": "australia-news/live/2026/apr/17/anthony-albanese-richard-marles-geelong-refinery-fire-fuel-supply-crisis-prices-labor-coalition-political-reactions-ntwnfb",
+      "chunk_index": 39,
+      "total_chunks": 49
+    },
+    "article_id": "australia-news/live/2026/apr/17/anthony-albanese-richard-marles-geelong-refinery-fire-fuel-supply-crisis-prices-labor-coalition-political-reactions-ntwnfb",
+    "chunk_index": 39,
+    "total_chunks": 49
+  },
+  "chunk_b": {
+    "id": "australia-news/2026/apr/17/albanese-no-fuel-restrictions-geelong-refinery-fire#chunk_1",
+    "text_snippet": {
+      "id": "australia-news/2026/apr/17/albanese-no-fuel-restrictions-geelong-refinery-fire#chunk_1",
+      "text_snippet": "Title: Fuel prices fall despite Geelong refinery blaze as Albanese says facility production has slipped by 40%\nDate: 2026-04-17\n\nContent: “It has been slowed down just slightly because of the circumstances which are there, but 60% of petrol production [is] proceeding today as well. “We hope that … ramps up over the coming period.” Albanese did not give a timeline on when production would return to normal. The prime minister will join the leaders of France, the UK and more than 30 other countries at a virtual summit on reopening the strait of Hormuz on Friday night. Leaders will discuss international efforts to restore freedom of navigation in the strategic waterway, a key choke point in global energy supply since the start of US and Israeli-led bombings in Iran. The French president, Emmanuel Macron, and British prime minister, Keir Starmer, will lead the discussions. The US president, Donald Trump, will not take part.",
+      "article_id": "australia-news/2026/apr/17/albanese-no-fuel-restrictions-geelong-refinery-fire",
+      "chunk_index": 1,
+      "total_chunks": 7
+    },
+    "article_id": "australia-news/2026/apr/17/albanese-no-fuel-restrictions-geelong-refinery-fire",
+    "chunk_index": 1,
+    "total_chunks": 7
+  },
+  "t_bridge": [
+    "Geopolitical impacts on domestic fuel supply during local refinery disruptions",
+    "Cross-document contextual link"
+  ],
+  "initial_question": {
+    "rag_input": "How does the Prime Minister's participation in the virtual summit on 17 April 2026 regarding the strait of Hormuz reconcile with his public statements about the operational status of the Viva Energy facility?",
+    "question": "How does the Prime Minister's participation in the virtual summit on 17 April 2026 regarding the strait of Hormuz reconcile with his public statements about the operational status of the Viva Energy facility?",
+    "answer": "On 17 April 2026, Prime Minister Anthony Albanese attended the Viva Energy facility in Corio following a fire, where he reported that while production was slowed, 80% of diesel and aviation fuel production and 60% of petrol production were still proceeding. That same day, it was confirmed he would join a virtual summit on the evening of 17 April 2026 to discuss reopening the strait of Hormuz, a critical global energy choke point, which highlights the dual pressure on domestic fuel supply from both the local refinery fire and broader international geopolitical instability.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Geopolitical impacts on domestic fuel supply during local refinery disruptions"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

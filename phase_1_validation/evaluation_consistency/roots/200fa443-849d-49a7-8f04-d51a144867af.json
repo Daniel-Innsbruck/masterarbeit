@@ -1,0 +1,47 @@
+{
+  "root_id": "200fa443-849d-49a7-8f04-d51a144867af",
+  "chunk_a": {
+    "id": "australia-news/2026/mar/07/oat-soy-plant-based-milk-sustainability-environmental-comparison#chunk_1",
+    "text_snippet": {
+      "id": "australia-news/2026/mar/07/oat-soy-plant-based-milk-sustainability-environmental-comparison#chunk_1",
+      "text_snippet": "Title: How green is your milk? We compare the environmental cost of dairy and plant-based options\nDate: 2026-03-06\n\nContent: “You need to consider what the purpose of drinking the milk is,” Hadjikakou says. “If I was looking for a milk for my children, I probably would make a different decision than if I was looking for a milk for my coffee.” Aside from nutritional considerations, there are many factors to assess for environmental impacts. Fertiliser use, water consumption, packaging and processing as well as emissions all come into play. So, does dairy, oat, soy or almond come out on top? What’s better for the environment, plant-based or cow milk? Emissions are the first thing that comes to mind when considering the environmental impacts of milk. “All of the plant-based options are pretty low on emissions,” Hadjikakou says. “Soy, oat and almond all have lower emissions [than dairy].” Cows produce methane during their digestive processes, which is then burped out into the atmosphere. In Australia, it’s estimated that 11% of our total greenhouse gas emissions comes from ruminant livestock digestion.",
+      "article_id": "australia-news/2026/mar/07/oat-soy-plant-based-milk-sustainability-environmental-comparison",
+      "chunk_index": 1,
+      "total_chunks": 8
+    },
+    "article_id": "australia-news/2026/mar/07/oat-soy-plant-based-milk-sustainability-environmental-comparison",
+    "chunk_index": 1,
+    "total_chunks": 8
+  },
+  "chunk_b": {
+    "id": "us-news/2026/jan/17/rfk-jr-new-dietary-guidelines-health#chunk_3",
+    "text_snippet": {
+      "id": "us-news/2026/jan/17/rfk-jr-new-dietary-guidelines-health#chunk_3",
+      "text_snippet": "Title: RFK Jr’s new diet guidelines pose risks for health and the environment, experts say\nDate: 2026-01-17\n\nContent: Beef and lamb especially have really high methane emissions,” Waterman added. Methane emanates from the poop, burps and farts of cows and other animals, and is 80 times more potent than carbon dioxide. If Americans would consume more plant-based foods and proteins and less meat, Waterman said it would accomplish two goals at once. “We’re fortunate that those things actually align with each other, that if we shift our diets toward more plant-based foods, that’s going to be better for the environment and for health,” she said, noting that the new guidelines move in the opposite direction. It’s unclear how big an impact the guidelines will have on US adults’ behavior. Waterman said Americans have tended to ignore past iterations of the DGA that encourage more fruit and vegetable consumption, but “this could be different in the sense that people want to eat more meat and dairy”.",
+      "article_id": "us-news/2026/jan/17/rfk-jr-new-dietary-guidelines-health",
+      "chunk_index": 3,
+      "total_chunks": 6
+    },
+    "article_id": "us-news/2026/jan/17/rfk-jr-new-dietary-guidelines-health",
+    "chunk_index": 3,
+    "total_chunks": 6
+  },
+  "t_bridge": [
+    "Environmental impact of ruminant methane vs plant-based alternatives",
+    "Cross-document contextual link"
+  ],
+  "initial_question": {
+    "rag_input": "Considering that ruminant livestock digestion accounts for 11% of total greenhouse gas emissions in Australia as of March 2026, why do experts suggest that shifting away from these animals toward the plant-based alternatives discussed in January 2026 would be beneficial for the environment?",
+    "question": "Considering that ruminant livestock digestion accounts for 11% of total greenhouse gas emissions in Australia as of March 2026, why do experts suggest that shifting away from these animals toward the plant-based alternatives discussed in January 2026 would be beneficial for the environment?",
+    "answer": "Experts suggest this shift is beneficial because ruminant livestock, such as cows, produce significant methane emissions through their digestive processes—emissions that are 80 times more potent than carbon dioxide. Since plant-based milk alternatives like soy, oat, and almond have lower emission profiles compared to dairy, increasing the consumption of plant-based foods while reducing meat and dairy intake helps mitigate these potent methane contributions to greenhouse gas emissions.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Environmental impact of ruminant methane vs plant-based alternatives"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "root_id": "e5c9a157-4825-4578-937f-d2f5db2b8695",
+  "chunk_a": {
+    "id": "us-news/2026/jan/26/los-angeles-maternity-wards-closing#chunk_9",
+    "text_snippet": {
+      "id": "us-news/2026/jan/26/los-angeles-maternity-wards-closing#chunk_9",
+      "text_snippet": "Title: As LA maternity wards close, patients are giving birth in ERs: ‘There’s no system to care for these women’\nDate: 2026-01-26\n\nContent: “The maternal complications and mortality rates for women of color are abysmal and completely unacceptable. California has both a moral and structural obligation to act now.” Weber authored a measure during the 2023-24 California legislative session that would have required hospitals to notify the state of potential maternity ward closures, but it was vetoed by Newsom. Last year, she authored another bill that would have created standards for the “geographic accessibility of perinatal units” across the state – but it did not make it through the state assembly. Short of opening new maternity wards, maternal health advocates say there are other measures that could help fill in the gaps, including expanding access to midwives and doulas, who help coach pregnant patients through the birthing process. Birthing centers often rely more heavily on midwives and doulas, but more of those have been closing, too.",
+      "article_id": "us-news/2026/jan/26/los-angeles-maternity-wards-closing",
+      "chunk_index": 9,
+      "total_chunks": 13
+    },
+    "article_id": "us-news/2026/jan/26/los-angeles-maternity-wards-closing",
+    "chunk_index": 9,
+    "total_chunks": 13
+  },
+  "chunk_b": {
+    "id": "us-news/2026/apr/11/georgia-midwives-black-women-pregnancy-birth#chunk_4",
+    "text_snippet": {
+      "id": "us-news/2026/apr/11/georgia-midwives-black-women-pregnancy-birth#chunk_4",
+      "text_snippet": "Title: Black women in Georgia turn to midwives for safer births – so why does the state criminalize many of them?\nDate: 2026-04-11\n\nContent: But in the US, there is no single standardized pathway to midwifery: certified nurse-midwives, like those who care for clients at hospitals, hold nursing degrees, while “direct-entry” midwives (which includes CPMs and more traditional “lay” or “community” midwives) enter the field more directly, through training and apprenticeship. Georgia faces a maternal health crisis in which half the state’s counties lack an obstetrics provider, a third of counties qualify as “maternal health deserts” and more than 40 labor and delivery units have shuttered since 1994. Midwives and lawmakers have long been at odds. A century ago, thousands of traditional midwives served families across the state of Georgia, according to research from Black Mamas Matter Alliance.",
+      "article_id": "us-news/2026/apr/11/georgia-midwives-black-women-pregnancy-birth",
+      "chunk_index": 4,
+      "total_chunks": 13
+    },
+    "article_id": "us-news/2026/apr/11/georgia-midwives-black-women-pregnancy-birth",
+    "chunk_index": 4,
+    "total_chunks": 13
+  },
+  "t_bridge": [
+    "Regulatory barriers to midwives as a solution for maternal health deserts",
+    "Cross-document contextual link"
+  ],
+  "initial_question": {
+    "rag_input": "How do the specific obstacles to midwifery practice, as reported in Georgia by April 2026, hinder the effectiveness of the alternative care strategies that advocates have been proposing to address maternity ward closures since the 2023-24 California legislative session?",
+    "question": "How do the specific obstacles to midwifery practice, as reported in Georgia by April 2026, hinder the effectiveness of the alternative care strategies that advocates have been proposing to address maternity ward closures since the 2023-24 California legislative session?",
+    "answer": "Advocates have proposed expanding access to midwives as a vital solution to fill gaps left by maternity ward closures, such as those that sparked legislative efforts in California during the 2023-24 session. However, this strategy is hindered by systemic challenges like those found in Georgia, where as of April 2026, the state criminalizes many direct-entry and traditional midwives, and where there is no standardized pathway for the profession, making it difficult to rely on these providers to address the regional maternal health crises.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Regulatory barriers to midwives as a solution for maternal health deserts"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

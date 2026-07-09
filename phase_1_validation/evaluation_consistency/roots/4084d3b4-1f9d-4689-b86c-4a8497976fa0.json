@@ -1,0 +1,47 @@
+{
+  "root_id": "4084d3b4-1f9d-4689-b86c-4a8497976fa0",
+  "chunk_a": {
+    "id": "uk-news/2026/jan/02/man-51-dies-trying-to-rescue-woman-in-sea-off-brighton-beach#chunk_2",
+    "text_snippet": {
+      "id": "uk-news/2026/jan/02/man-51-dies-trying-to-rescue-woman-in-sea-off-brighton-beach#chunk_2",
+      "text_snippet": "Title: Man, 51, dies after getting into difficulty in sea off Brighton beach\nDate: 2026-01-02\n\nContent: We are urging anyone entering the water to be aware of the dangers, check sea conditions carefully and to understand their own limitations. “With the sea temperatures still dropping and reaching their coldest around March, the effects of cold water, combined with weather conditions and any personal health issues, should be taken seriously before venturing in. If it’s your first time in open water, we’d recommend you speak to your GP first, particularly for those with cardiac or underlying health conditions.”",
+      "article_id": "uk-news/2026/jan/02/man-51-dies-trying-to-rescue-woman-in-sea-off-brighton-beach",
+      "chunk_index": 2,
+      "total_chunks": 3
+    },
+    "article_id": "uk-news/2026/jan/02/man-51-dies-trying-to-rescue-woman-in-sea-off-brighton-beach",
+    "chunk_index": 2,
+    "total_chunks": 3
+  },
+  "chunk_b": {
+    "id": "uk-news/2026/jan/02/search-under-way-for-two-people-missing-off-withernsea-in-east-riding-of-yorkshire#chunk_3",
+    "text_snippet": {
+      "id": "uk-news/2026/jan/02/search-under-way-for-two-people-missing-off-withernsea-in-east-riding-of-yorkshire#chunk_3",
+      "text_snippet": "Title: Second body recovered from sea off Withernsea as search resumes for third person\nDate: 2026-01-03\n\nContent: We are urging anyone entering the water to be aware of the dangers, check sea conditions carefully and to understand their own limitations. “With the sea temperatures still dropping and reaching their coldest around March, the effects of cold water, combined with weather conditions and any personal health issues, should be taken seriously before venturing in.” A 51-year-old man died in the sea at Brighton on New Year’s Day. Sussex police were alerted at 10.35am on Thursday after the swimmer, from Kettering, Northamptonshire, was recovered from the water to the west of Brighton Palace Pier.",
+      "article_id": "uk-news/2026/jan/02/search-under-way-for-two-people-missing-off-withernsea-in-east-riding-of-yorkshire",
+      "chunk_index": 3,
+      "total_chunks": 4
+    },
+    "article_id": "uk-news/2026/jan/02/search-under-way-for-two-people-missing-off-withernsea-in-east-riding-of-yorkshire",
+    "chunk_index": 3,
+    "total_chunks": 4
+  },
+  "t_bridge": [
+    "Medical safety advice for swimmers versus the geographical locations of separate sea rescue incidents",
+    "Cross-document contextual link"
+  ],
+  "initial_question": {
+    "rag_input": "Regarding the 51-year-old man who died in the sea off Brighton on January 1, 2026, what specific medical advice does the report from the following day provide for first-time open water swimmers, and how does this compare to the geographical context of the subsequent search operation reported on January 3, 2026?",
+    "question": "Regarding the 51-year-old man who died in the sea off Brighton on January 1, 2026, what specific medical advice does the report from the following day provide for first-time open water swimmers, and how does this compare to the geographical context of the subsequent search operation reported on January 3, 2026?",
+    "answer": "The report from January 2, 2026 (Context A) provides specific medical advice for first-time open water swimmers, recommending they consult their GP first, especially if they have cardiac or underlying health conditions. This contrasts with the report from January 3, 2026 (Context B), which details a search operation for a third person at a different geographical location, Withernsea, rather than the site of the Brighton fatality near the palace pier.",
+    "type": "Initial",
+    "logic_type": "comparison",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Medical safety advice for swimmers versus the geographical locations of separate sea rescue incidents"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

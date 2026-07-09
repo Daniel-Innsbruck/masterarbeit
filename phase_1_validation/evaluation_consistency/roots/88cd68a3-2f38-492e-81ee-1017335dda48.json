@@ -1,0 +1,47 @@
+{
+  "root_id": "88cd68a3-2f38-492e-81ee-1017335dda48",
+  "chunk_a": {
+    "id": "world/2026/feb/23/punch-monkey-japan-macaque-why-do-mother-animals-abandon-offspring#chunk_1",
+    "text_snippet": {
+      "id": "world/2026/feb/23/punch-monkey-japan-macaque-why-do-mother-animals-abandon-offspring#chunk_1",
+      "text_snippet": "Title: The tragedy of Punch the monkey: why do mother animals abandon their offspring? \nDate: 2026-02-23\n\nContent: The videos have prompted questions about why monkeys abandon their babies. Alison Behie, a primatology expert at Australian National University, said such abandonment is unusual but can occur under certain conditions, citing “age, health and inexperience” as possible factors. Behie said: “In Punch’s case, their mother was a first-time mother, indicating inexperience. “Zookeepers also suggest Punch was born during a heatwave, which would be a high stress environment. In environments where survival is threatened from outside stress, mothers may prioritise their own health and future reproduction rather than continue to care for an infant whose health may be compromised by those environmental conditions.” Following Punch’s abandonment, zookeepers introduced the stuffed orangutan after trying alternatives, including rolling towels to different thicknesses for him to cling to. “Baby Japanese macaques immediately cling on to their mother’s body after birth to build muscle strength.",
+      "article_id": "world/2026/feb/23/punch-monkey-japan-macaque-why-do-mother-animals-abandon-offspring",
+      "chunk_index": 1,
+      "total_chunks": 5
+    },
+    "article_id": "world/2026/feb/23/punch-monkey-japan-macaque-why-do-mother-animals-abandon-offspring",
+    "chunk_index": 1,
+    "total_chunks": 5
+  },
+  "chunk_b": {
+    "id": "world/2026/mar/05/punch-the-monkey-outgrowing-ikea-plushie-djungelskog#chunk_1",
+    "text_snippet": {
+      "id": "world/2026/mar/05/punch-the-monkey-outgrowing-ikea-plushie-djungelskog#chunk_1",
+      "text_snippet": "Title: Social climber: Punch the monkey starts to outgrow his Ikea plushie\nDate: 2026-03-05\n\nContent: “He is adorable!” Other visitors have posted video clips of Punch in which he appears to be mixing with other monkeys. “Helping Punch learn the rules of monkey society and being accepted as a member is our most important task,” said Kosuke Kano, a 24-year-old zookeeper. Punch was abandoned by his mother after his birth, presumably because of exhaustion. Zookeepers nursed him and gave him the toy to train him to cling, an ability newborn macaques need to survive. He was then filmed multiple times being dragged and chased by older Japanese macaques inside the enclosure. Early clips showed him wandering alone with the toy after being pushed away by other monkeys, and clutching it tightly while being harassed. The videos prompted questions about why monkeys abandon their babies. Alison Behie, a primatology expert at Australian National University, said such abandonment is unusual but can occur under certain conditions, citing age, health and inexperience as possible factors.",
+      "article_id": "world/2026/mar/05/punch-the-monkey-outgrowing-ikea-plushie-djungelskog",
+      "chunk_index": 1,
+      "total_chunks": 4
+    },
+    "article_id": "world/2026/mar/05/punch-the-monkey-outgrowing-ikea-plushie-djungelskog",
+    "chunk_index": 1,
+    "total_chunks": 4
+  },
+  "t_bridge": [
+    "Connecting maternal abandonment reasons to the subsequent social integration challenges of hand-reared infants.",
+    "Cross-document contextual link"
+  ],
+  "initial_question": {
+    "rag_input": "How did the lack of maternal care for Punch the monkey, as noted by experts like Alison Behie around February 2026, complicate the zookeepers' efforts to help him integrate into his social group by March 2026?",
+    "question": "How did the lack of maternal care for Punch the monkey, as noted by experts like Alison Behie around February 2026, complicate the zookeepers' efforts to help him integrate into his social group by March 2026?",
+    "answer": "Punch's mother abandoned him due to factors like inexperience, exhaustion, and high-stress environmental conditions, which forced zookeepers to provide a plush toy to help him develop essential survival skills like clinging. However, because he relied on this surrogate toy for early development rather than his mother, he struggled to learn the 'rules of monkey society,' leading to instances where he was harassed, chased, and dragged by older macaques when he attempted to join the group.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Connecting maternal abandonment reasons to the subsequent social integration challenges of hand-reared infants."
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

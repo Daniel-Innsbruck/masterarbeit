@@ -1,0 +1,47 @@
+{
+  "root_id": "9f22b4da-3f7c-40f0-9d39-5ceba4eabfff",
+  "chunk_a": {
+    "id": "world/2026/apr/15/pope-leo-peace-unity-trump-white-house-spat#chunk_0",
+    "text_snippet": {
+      "id": "world/2026/apr/15/pope-leo-peace-unity-trump-white-house-spat#chunk_0",
+      "text_snippet": "Title: Pope Leo shares message of unity amid spat with Trump: ‘We can live in peace’\nDate: 2026-04-15\n\nContent: The ongoing squabble between the Trump administration and the Vatican over the war in Iran took another twist on Wednesday when Pope Leo shared a message of peace and healing after the latest angry broadside from the White House. On Tuesday, JD Vance capped several days of insults by insinuating the pontiff was not being truthful in matters of theology, and did not understand the concept of war. “How can you say that God is never on the side of those who wield the sword?” the vice-president said during a Turning Point USA event at the University of Georgia, at which he was heckled by anti-war protesters.",
+      "article_id": "world/2026/apr/15/pope-leo-peace-unity-trump-white-house-spat",
+      "chunk_index": 0,
+      "total_chunks": 6
+    },
+    "article_id": "world/2026/apr/15/pope-leo-peace-unity-trump-white-house-spat",
+    "chunk_index": 0,
+    "total_chunks": 6
+  },
+  "chunk_b": {
+    "id": "us-news/2026/apr/14/jd-vance-defends-trump-pope-leo-spat#chunk_0",
+    "text_snippet": {
+      "id": "us-news/2026/apr/14/jd-vance-defends-trump-pope-leo-spat#chunk_0",
+      "text_snippet": "Title: JD Vance defends Trump amid spat with Pope Leo: ‘Stick to matters of morality’\nDate: 2026-04-14\n\nContent: JD Vance has weighed in on Donald Trump’s feud with Pope Leo, effectively telling the pontiff to stay in his lane after the head of the Catholic church criticized the White House over the Iran war. “It would be best for the Vatican to stick to matters of morality, to stick to matters of what’s going on in the Catholic church and let the president of the United States stick to dictating American public policy,” the vice-president – a Catholic convert himself – said in an interview on Fox News on Monday night. His comments represented the latest twist in the spat between Trump and the first US-born pope that began on Saturday when Pope Leo XIV suggested during evening prayers at St Peter’s Basilica in Vatican City that a “delusion of omnipotence” surrounded the Iran war.",
+      "article_id": "us-news/2026/apr/14/jd-vance-defends-trump-pope-leo-spat",
+      "chunk_index": 0,
+      "total_chunks": 6
+    },
+    "article_id": "us-news/2026/apr/14/jd-vance-defends-trump-pope-leo-spat",
+    "chunk_index": 0,
+    "total_chunks": 6
+  },
+  "t_bridge": [
+    "JD Vance's criticism of Pope Leo in the context of the Iran war.",
+    "Cross-document contextual link"
+  ],
+  "initial_question": {
+    "rag_input": "How did JD Vance’s public challenges toward Pope Leo on April 15, 2026, relate to the broader political friction between the Trump administration and the Vatican regarding the war in Iran?",
+    "question": "How did JD Vance’s public challenges toward Pope Leo on April 15, 2026, relate to the broader political friction between the Trump administration and the Vatican regarding the war in Iran?",
+    "answer": "The friction began when Pope Leo XIV criticized the Trump administration's involvement in the Iran war, suggesting it was driven by a \"delusion of omnipotence.\" In response, JD Vance escalated the conflict by telling the Vatican to stay out of public policy on April 14 and subsequently accused the Pope of being untruthful regarding theology and failing to understand war during a university event on April 15, 2026.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "JD Vance's criticism of Pope Leo in the context of the Iran war."
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}
