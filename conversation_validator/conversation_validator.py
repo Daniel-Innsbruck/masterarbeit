@@ -85,6 +85,9 @@ def validate_init_prompt_all_in_one(question, document):
 # Validate follow-up questions in one step
 def validate_follow_up_question_all_in_one(question, history, current_active_context):
     # Capture all keys including logic_type and multi_hop_flag
+    if question is None:
+        return {"correct": False,
+                "reason": "Generator output was invalid or could not be parsed."}
     question_dict = {
         'rag_input': question.get('rag_input', ''),
         'type': question.get('type', ''),
