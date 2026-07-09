@@ -1,0 +1,35 @@
+{
+  "root_id": "d04f72eb-cc55-4e6e-b52c-07c8ae57878b",
+  "chunk_a": {
+    "id": "world/2026/apr/01/uk-needs-ambitious-new-eu-ties-amid-iran-war-starmer-says#chunk_6",
+    "text_snippet": "Title: Starmer calls for ‘ambitious’ new UK-EU ties as Trump threatens to quit Nato\nDate: 2026-04-01\n\nContent: A Cabinet Office source said any discussions on this were limited because there were no defined programmes in play that the UK could seek to join in the short term. While some EU states are frustrated with the British government’s use of rhetorical language, which is seen as lacking specifics, the speech was well received by some. A diplomat at one EU embassy said: “This is the second speech after Rachel Reeves’s a few days ago with very positive tones when it comes to economic cooperation.” The same source said the failure to progress UK involvement in the Safe European defence initiative was regrettable, adding: “When it comes to the economy, we are open to something ambitious.” However, Anand Menon, of Britain in a Changing Europe, said that beyond the ongoing talks, there was a problem over what substantive agreements could be achieved at the end of the “reset agenda”. “Starmer wasn’t just talking about the EU,” Menon said.",
+    "article_id": "world/2026/apr/01/uk-needs-ambitious-new-eu-ties-amid-iran-war-starmer-says",
+    "chunk_index": 6,
+    "total_chunks": 8
+  },
+  "chunk_b": {
+    "id": "politics/2026/feb/01/uk-should-consider-resuming-talks-on-eu-defence-pact-starmer-says#chunk_1",
+    "text_snippet": "Title: UK should consider resuming talks on EU defence pact, Starmer says \nDate: 2026-02-01\n\nContent: Asked on his trip to China whether there was a case for the UK going back into a second-round Safe defence pact if the price was right, Starmer said: “Europe, including the UK, needs to do more on security and defence … that’s an argument I’ve been making for many months now. “We’ve got to step up and do more. It’s not only President Trump who thinks Europe needs to do more but other presidents as well. I think the same. That’s why we’ve made commitments to greater spending. I think we need to go beyond that.” The Guardian revealed on Friday that the UK and EU were exploring the prospect of new talks on closer defence cooperation. Maroš Šefčovič, the EU’s trade commissioner, is due in London for talks on Monday, when trade, energy and fisheries will be on the agenda.",
+    "article_id": "politics/2026/feb/01/uk-should-consider-resuming-talks-on-eu-defence-pact-starmer-says",
+    "chunk_index": 1,
+    "total_chunks": 6
+  },
+  "t_bridge": [
+    "Stalled UK-EU defence cooperation",
+    "Cross-document contextual link"
+  ],
+  "initial_question": {
+    "rag_input": "Given that Keir Starmer suggested in February 2026 that the UK should consider resuming talks on an EU defence pact, why did a diplomat by April 2026 describe the lack of progress on the Safe European defence initiative as regrettable despite these earlier overtures?",
+    "question": "Given that Keir Starmer suggested in February 2026 that the UK should consider resuming talks on an EU defence pact, why did a diplomat by April 2026 describe the lack of progress on the Safe European defence initiative as regrettable despite these earlier overtures?",
+    "answer": "While Starmer expressed a willingness to pursue closer security and defence ties in February 2026, by April 2026, progress remained stalled because there were no defined programmes in place that the UK could realistically join in the short term, leading to frustration among EU diplomats over the UK's rhetorical approach.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Stalled UK-EU defence cooperation"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

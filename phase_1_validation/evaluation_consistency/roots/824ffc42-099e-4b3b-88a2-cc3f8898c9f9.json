@@ -1,0 +1,35 @@
+{
+  "root_id": "824ffc42-099e-4b3b-88a2-cc3f8898c9f9",
+  "chunk_a": {
+    "id": "us-news/2026/jan/08/democrats-homeland-security-renee-nicole-good#chunk_1",
+    "text_snippet": "Title: Democrats threaten to withhold funding after ICE killing in Minneapolis\nDate: 2026-01-09\n\nContent: “Democrats cannot vote for a [Department of Homeland Security] budget that doesn’t restrain the growing lawlessness of this agency,” Chris Murphy, a Democratic senator of Connecticut, wrote on X, sharing a video of the shooting. Axios reported on Thursday that Murphy was preparing to introduce a sweeping reform package that would require a warrant for arrests, ban agents from wearing masks during enforcement operations and limit border patrol agents from operating in cities far from the border. Many Democrats are loath to trigger another shutdown fight after a protracted and bruising showdown last year over healthcare subsidies. Some Democrats remain skittish on the issue of immigration, having argued that progressive slogans like “Abolish ICE” helped Trump climb back to power by promising a sweeping crackdown.",
+    "article_id": "us-news/2026/jan/08/democrats-homeland-security-renee-nicole-good",
+    "chunk_index": 1,
+    "total_chunks": 8
+  },
+  "chunk_b": {
+    "id": "us-news/live/2026/jan/08/minneapolis-shooting-ice-minnesota-protests-vigils-donald-trump-latest-news-updates#chunk_3",
+    "text_snippet": "Title: US immigration agents shoot two people – as it happened\nDate: 2026-01-09\n\nContent: Chris Murphy, a Democratic senator of Connecticut, wrote on X, sharing a video of the shooting: “Democrats cannot vote for a [Department of Homeland Security] budget that doesn’t restrain the growing lawlessness of this agency.” Axios reported on Thursday that Murphy was preparing to introduce a sweeping reform package that would require a warrant for arrests, ban agents from wearing masks during enforcement operations and limit border patrol agents from operating in cities far from the border. Many Democrats are loath to trigger another shutdown fight after a protracted showdown last year over healthcare subsidies, but public opinion has shifted as Trump escalates what has become an increasingly violent federal enforcement campaign.",
+    "article_id": "us-news/live/2026/jan/08/minneapolis-shooting-ice-minnesota-protests-vigils-donald-trump-latest-news-updates",
+    "chunk_index": 3,
+    "total_chunks": 73
+  },
+  "t_bridge": [
+    "Connecting the legislative response to the Minneapolis shooting with the historical political risks of the 'Abolish ICE' rhetoric.",
+    "Cross-document contextual link"
+  ],
+  "initial_question": {
+    "rag_input": "Considering that Chris Murphy's reform package is being introduced specifically because of the January 9, 2026, shooting, why do some Democrats fear that pushing for this specific budget constraint could mirror the political fallout they previously experienced with the 'Abolish ICE' movement?",
+    "question": "Considering that Chris Murphy's reform package is being introduced specifically because of the January 9, 2026, shooting, why do some Democrats fear that pushing for this specific budget constraint could mirror the political fallout they previously experienced with the 'Abolish ICE' movement?",
+    "answer": "While the reform package is a response to the January 9, 2026, shooting, some Democrats are skittish because they have previously argued that progressive slogans like 'Abolish ICE' helped Trump win by allowing him to promise a sweeping crackdown, and they worry that aggressive budget stances now could similarly empower his current, increasingly violent federal enforcement campaign.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Connecting the legislative response to the Minneapolis shooting with the historical political risks of the 'Abolish ICE' rhetoric."
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

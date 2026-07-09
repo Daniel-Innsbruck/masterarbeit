@@ -1,0 +1,35 @@
+{
+  "root_id": "f5092361-cc28-4f1d-9397-613048e9c58a",
+  "chunk_a": {
+    "id": "world/2026/mar/03/israelis-mourn-after-deadly-iranian-attack#chunk_4",
+    "text_snippet": "Title: ‘I can’t digest it’: deadliest attack on Israel since war began kills nine and destroys synagogue\nDate: 2026-03-03\n\nContent: “No shelter can provide 100% security 100% of the time,” he acknowledged. “This specific bomb shelter was built over 50 years ago, which means it is not modern standards, it is not the most protected surroundings that we have.” David Azulai said his family was saved by a safe room built into their house, just two dozen metres from where the missile hit. “The explosion was huge, it shook our shelter, and when we came out this is what we found,” he said waving at a collapsed roof and shattered windows. His car was in flames across the road. On Monday, packing up a few possessions, Azulai said he felt more grateful than afraid. “Thank God it was the house and the car, not us.” The synagogue was not his usual place of worship, but he went there for some holidays and knew all the community. His two children are struggling a bit more, he admitted.",
+    "article_id": "world/2026/mar/03/israelis-mourn-after-deadly-iranian-attack",
+    "chunk_index": 4,
+    "total_chunks": 7
+  },
+  "chunk_b": {
+    "id": "world/2026/apr/09/lebanon-beirut-israel-strikes-hundreds-killed#chunk_4",
+    "text_snippet": "Title: The deadliest 10 minutes in decades: Lebanese reel from Israeli strikes that killed hundreds\nDate: 2026-04-09\n\nContent: “You said it was a Volkswagen?” he said, haplessly looking at the crowd around him as he inspected the car. Its badge had been blown off the bumper and the twisted metal left the car unrecognisable. Rakha watched as the civil defence worked. “I really didn’t think something like this would happen here. Nothing like this happened in the last war [and] because of that all of the refugees came here for safety,” the 38-year-old supermarket owner said, his head wrapped in a blood-stained bandage. Barbour, like many of the areas in Beirut that Israel struck on Wednesday, is a mixed neighbourhood where Hezbollah enjoys little support. As more than 1.1 million people were displaced by Israeli bombing over the last month, schools in Barbour opened their doors to shelter the fleeing families. The neighbourhood had not previously been considered within the scope of Israel’s war in Lebanon.",
+    "article_id": "world/2026/apr/09/lebanon-beirut-israel-strikes-hundreds-killed",
+    "chunk_index": 4,
+    "total_chunks": 8
+  },
+  "t_bridge": [
+    "Limitations of shelter safety compared across two conflict sites.",
+    "Cross-document contextual link"
+  ],
+  "initial_question": {
+    "rag_input": "How did the perceived safety of shelters in civilian areas during the March 2026 synagogue attack differ from the expectations of refugees fleeing to neighborhoods like Barbour in April 2026?",
+    "question": "How did the perceived safety of shelters in civilian areas during the March 2026 synagogue attack differ from the expectations of refugees fleeing to neighborhoods like Barbour in April 2026?",
+    "answer": "In the March 2026 synagogue attack, the reality was that no shelter, including those built 50 years ago that do not meet modern standards, could provide 100% security. This stands in contrast to the expectations of refugees in April 2026, who had sought safety in areas like Barbour—a neighborhood not previously considered within the scope of the war—specifically because they believed it would be protected from the conflict, unlike the areas they had previously fled.",
+    "type": "Initial",
+    "logic_type": "comparison",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Limitations of shelter safety compared across two conflict sites."
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

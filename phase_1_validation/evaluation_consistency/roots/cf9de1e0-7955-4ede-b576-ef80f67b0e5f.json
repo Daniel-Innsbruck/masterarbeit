@@ -1,0 +1,35 @@
+{
+  "root_id": "cf9de1e0-7955-4ede-b576-ef80f67b0e5f",
+  "chunk_a": {
+    "id": "world/live/2026/mar/14/middle-east-crisis-live-iran-warns-of-retaliation-after-trump-says-military-targets-on-kharg-island-obliterated#chunk_16",
+    "text_snippet": "Title: President renews call for allies to secure strait of Hormuz – as it happened\nDate: 2026-03-15\n\nContent: Responding to a post by Trump in which he accused the “Fake News Media” of running an “intentionally misleading headline” regarding the five US air force refuelling planes that had reportedly been hit in an Iranian strike in Saudi Arabia, Carr doubled down on claims that the media is pushing fake news and appeared to again advocate for revoking news stations’ broadcast licenses. “Broadcasters that are running hoaxes and news distortions - also known as the fake news - have a chance now to correct course before their license renewals come up,” Carr wrote. “The law is clear,” he continued.",
+    "article_id": "world/live/2026/mar/14/middle-east-crisis-live-iran-warns-of-retaliation-after-trump-says-military-targets-on-kharg-island-obliterated",
+    "chunk_index": 16,
+    "total_chunks": 61
+  },
+  "chunk_b": {
+    "id": "us-news/live/2026/mar/16/donald-trump-administration-tariffs-latest-updates#chunk_48",
+    "text_snippet": "Title: All living former US presidents deny Trump’s claim one of them privately backed his war on Iran – as it happened\nDate: 2026-03-17\n\nContent: This comes after Trump told the Financial Times on Sunday he might postpone the meeting if China did not help to unblock the strait of Hormuz. In his interview, the president said China’s reliance on oil from the Middle East means it ought to help with a new coalition he is trying to put together to get oil tanker traffic moving through the strait. Trump said “we’d like to know” before the trip whether Beijing will help. “We may delay,” Trump added. The only Democratic member of the Federal Communications Commission (FCC) hit back at chair Brendan Carr’s threats over the weekend to cancel broadcasters’ licenses for pushing “hoaxes and news distortions”. Carr added that “fake news” outlets now “have a chance now to correct course before their license renewals come up”. “The law is clear. Broadcasters must operate in the public interest, and they will lose their licenses if they do not,” Carr wrote on social media.",
+    "article_id": "us-news/live/2026/mar/16/donald-trump-administration-tariffs-latest-updates",
+    "chunk_index": 48,
+    "total_chunks": 54
+  },
+  "t_bridge": [
+    "Connection between Trump's rhetoric on the Iran strike and Carr's broadcast license threats.",
+    "Cross-document contextual link"
+  ],
+  "initial_question": {
+    "rag_input": "How did the accusations made by Trump regarding the Iran strike on March 15, 2026, influence the specific actions Brendan Carr threatened against broadcasters by the weekend of March 17, 2026?",
+    "question": "How did the accusations made by Trump regarding the Iran strike on March 15, 2026, influence the specific actions Brendan Carr threatened against broadcasters by the weekend of March 17, 2026?",
+    "answer": "Following Trump's March 15, 2026, accusation that the \"Fake News Media\" published misleading headlines about five US refuelling planes being hit in an Iranian strike, Brendan Carr used that rhetoric to reinforce his threat that broadcasters spreading such \"hoaxes and news distortions\" would face license revocation, a stance he reiterated over the weekend of March 17, 2026, by claiming they must correct course before their license renewals.",
+    "type": "Initial",
+    "logic_type": "inference",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Connection between Trump's rhetoric on the Iran strike and Carr's broadcast license threats."
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}

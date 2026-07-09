@@ -1,0 +1,35 @@
+{
+  "root_id": "6bd8f5fa-cb75-441f-b7b6-e0b4896e4b57",
+  "chunk_a": {
+    "id": "us-news/live/2026/mar/05/donald-trump-war-powers-latest-news-updates#chunk_13",
+    "text_snippet": "Title: ‘Maga warrior’ nominated by Trump to lead DHS said shooting of January 6 rioter Ashli Babbitt was justified – as it happened\nDate: 2026-03-06\n\nContent: “Less than 24 hours after Judiciary Democrats laid bare the staggering corruption, cruelty, and incompetence of Secretary Kristi Noem before the American people, President Trump finally did what should have been done months ago: he fired her. Under her watch, federal agents trampled the Constitution on a daily basis and gunned down two American citizens exercising their constitutional rights. Countless families have been terrorized and beaten under this reign of terror and lawlessness, and this chaos will forever be her legacy,” Raskin wrote. “Although Noem may be gone from DHS, our effort to rein in this out-of-control agency –and hold it accountable to the American people– must intensify with this breakthrough. From day one, it has been clear that Stephen Miller was actually in charge of this lawless and heartless immigration policy.",
+    "article_id": "us-news/live/2026/mar/05/donald-trump-war-powers-latest-news-updates",
+    "chunk_index": 13,
+    "total_chunks": 62
+  },
+  "chunk_b": {
+    "id": "us-news/2026/mar/05/trump-administration-news-updates-today#chunk_1",
+    "text_snippet": "Title: Trump news at a glance: president shows Kristi Noem the door, but already has another job lined up for her\nDate: 2026-03-06\n\nContent: Democrats have cheered Noem’s departure, with Hakeem Jeffries, the US House minority leader, saying at a press conference: “Good riddance. She was a disaster.” But Jeffries said it would not change Democrats’ stance towards funding the homeland security department, which has been partly shut down since mid-February. Noem’s firing was the first major personnel shakeup of Trump’s second term – a notable shift from the president’s first term, during which the White House nearly had to install a revolving door to keep up with the pace of cabinet turnover. Trump ousts DHS secretary Kristi Noem In a statement on Twitter/X, Noem thanked Trump for appointing her to the new role, while promoting her record leading the department. News of the firing broke just before she spoke to a group of police officials in Nashville, but Noem did not bring the subject up on stage.",
+    "article_id": "us-news/2026/mar/05/trump-administration-news-updates-today",
+    "chunk_index": 1,
+    "total_chunks": 7
+  },
+  "t_bridge": [
+    "Political conflict over DHS accountability and funding",
+    "Cross-document contextual link"
+  ],
+  "initial_question": {
+    "rag_input": "How did the specific criticisms regarding the unconstitutional actions of the DHS under Kristi Noem's leadership, which were laid bare by Judiciary Democrats, compare to the stated position of House Minority Leader Hakeem Jeffries regarding the future of the department's funding after her March 6, 2026, firing?",
+    "question": "How did the specific criticisms regarding the unconstitutional actions of the DHS under Kristi Noem's leadership, which were laid bare by Judiciary Democrats, compare to the stated position of House Minority Leader Hakeem Jeffries regarding the future of the department's funding after her March 6, 2026, firing?",
+    "answer": "Judiciary Democrats, led by Raskin, characterized Noem's tenure as a 'reign of terror' marked by corruption, incompetence, and the unconstitutional shooting of citizens, which they argued necessitated an intensification of efforts to rein in the agency; however, Hakeem Jeffries, despite agreeing that her departure was a positive event, explicitly stated that the firing would not change the Democrats' current stance toward the funding of the department, which has remained partially shut down since mid-February.",
+    "type": "Initial",
+    "logic_type": "comparison",
+    "multi_hop_flag": 1,
+    "bridging_topic": "Political conflict over DHS accountability and funding"
+  },
+  "expansion_config": {
+    "alpha": 2,
+    "beta": 3,
+    "direction": "below"
+  }
+}
