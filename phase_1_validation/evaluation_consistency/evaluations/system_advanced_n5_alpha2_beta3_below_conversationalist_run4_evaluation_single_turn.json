@@ -1,0 +1,723 @@
+{
+    "file_path": "../data/system_advanced_n5_alpha2_beta3_below_conversationalist_run4.jsonl",
+    "multi_hop_evaluation": {
+        "average_scores": {
+            "correctness_aspect_critic": 0.9047619047619048,
+            "faithfulness_aspect_critic": 0.8321541553684411,
+            "context_precision_critic": 0.8849206348478175,
+            "context_recall_critic": 0.6984126984126984
+        },
+        "detailed_results": [
+            {
+                "content": "How did the media investigation published in March 2026 change the way Nigel Farage managed his presence on the Cameo platform after he was linked to neo-Nazi propaganda and white nationalist slogans?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the investigation into Puerto Rico\u2019s voting machines led by Tulsi Gabbard\u2019s team in May 2025 relate to the specific claims of Venezuelan election interference that were being presented to the Justice Department during that same year?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "Regarding the 51-year-old man who died in the sea off Brighton on January 1, 2026, what specific medical advice does the report from the following day provide for first-time open water swimmers, and how does this compare to the geographical context of the subsequent search operation reported on January 3, 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.875,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "How does President Trump's March 2026 justification for allowing the Russian oil tanker to reach Cuba contrast with his administration's general approach toward aid convoys described earlier that same month?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.8333333333333334,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Considering that Chris Murphy's reform package is being introduced specifically because of the January 9, 2026, shooting, why do some Democrats fear that pushing for this specific budget constraint could mirror the political fallout they previously experienced with the 'Abolish ICE' movement?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How does the Prime Minister's participation in the virtual summit on 17 April 2026 regarding the strait of Hormuz reconcile with his public statements about the operational status of the Viva Energy facility?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.6,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "How did the perceived safety of shelters in civilian areas during the March 2026 synagogue attack differ from the expectations of refugees fleeing to neighborhoods like Barbour in April 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8333333333333334,
+                "context_precision_critic": 0.5833333333041666,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How does the proposed legislative change regarding social media access for children, as discussed in the House of Lords on 2026-01-21, align with the specific concerns raised by educators on 2026-01-22 regarding the need for regulatory intervention during adolescence?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the discrepancy between the 28,000 personnel cited in January 2026 and the 25,000 personnel mentioned in February 2026 affect the claims regarding the reallocation of staff to ICE operations following the August 2025 document release?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8571428571428571,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did the suicide of Santos-Aviles in September 2025 influence the chain of events that eventually caused Brandon Herrera to replace Gonzales as the Republican nominee?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9166666666666666,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "How did the accusations made by Trump regarding the Iran strike on March 15, 2026, influence the specific actions Brendan Carr threatened against broadcasters by the weekend of March 17, 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8333333333333334,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did JD Vance\u2019s public challenges toward Pope Leo on April 15, 2026, relate to the broader political friction between the Trump administration and the Vatican regarding the war in Iran?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "How did the specific criticisms regarding the unconstitutional actions of the DHS under Kristi Noem's leadership, which were laid bare by Judiciary Democrats, compare to the stated position of House Minority Leader Hakeem Jeffries regarding the future of the department's funding after her March 6, 2026, firing?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Considering that ruminant livestock digestion accounts for 11% of total greenhouse gas emissions in Australia as of March 2026, why do experts suggest that shifting away from these animals toward the plant-based alternatives discussed in January 2026 would be beneficial for the environment?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8333333333333334,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "How did the lack of maternal care for Punch the monkey, as noted by experts like Alison Behie around February 2026, complicate the zookeepers' efforts to help him integrate into his social group by March 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How do the specific obstacles to midwifery practice, as reported in Georgia by April 2026, hinder the effectiveness of the alternative care strategies that advocates have been proposing to address maternity ward closures since the 2023-24 California legislative session?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.6363636363636364,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Given that Keir Starmer suggested in February 2026 that the UK should consider resuming talks on an EU defence pact, why did a diplomat by April 2026 describe the lack of progress on the Safe European defence initiative as regrettable despite these earlier overtures?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "How does the resistance towards including women in long-standing institutions like the Garrick Club in 2024 compare to the dismissive attitudes toward female authors that were still being expressed by literary figures 15 years after the 2011 Women\u2019s prize events?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.7692307692307693,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the media's reaction to Princess Eugenie's February 2026 trip to the Middle East contrast with the tone used to describe the geopolitical landscape in that region during the following month?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9375,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Following the global reporting on the March 2026 attacks on Iran, did media outlets update or modify their narrative regarding Princess Eugenie's February 2026 trip to Art Basel Qatar in light of the changing geopolitical landscape?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Why did David Littleproud turn down Sussan Ley\u2019s request for talks regarding the Liberal-National Coalition ahead of the 30 January 2026 return of parliament?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.75,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            }
+        ]
+    },
+    "single_hop_evaluation": {
+        "average_scores": {
+            "correctness_aspect_critic": 0.6329113924050633,
+            "faithfulness_aspect_critic": 0.6679744589989742,
+            "context_precision_critic": 0.6392405062700421,
+            "context_recall_critic": 0.5339662447257384
+        },
+        "detailed_results": [
+            {
+                "content": "Has Cameo released any information regarding whether Nigel Farage's account status of 'unavailable' is a temporary measure or if they plan to permanently ban him from the platform?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Has the fallout from the controversy surrounding Nigel Farage's Cameo videos impacted his other business ventures or professional activities?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.9230769230769231,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Has Nigel Farage faced any regulatory or legal consequences for his promotional activities related to the cryptocurrency projects he is involved with?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "Has there been any public response or reaction from the cryptocurrency companies or platforms that Nigel Farage has promoted regarding his recent controversies?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Is the audit log capability found in the Smartmatic voting machines used in the 2004 Venezuelan recall referendum a standard feature across all voting machine models used in Venezuela, or is it unique to this specific model?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did the transition from Dominion electronic voting machines to a paper ballot system in Puerto Rico following the 2024 contract termination affect the speed of the final vote count?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What conclusions have official investigations drawn regarding the nature of the relationship between Dominion Voting Systems and foreign government entities, such as the government of Venezuela?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Did the ODNI and FBI investigation into the Dominion voting machines used in Puerto Rico clarify whether the identified cybersecurity and operational risks were rooted in the software, the hardware configuration, or both?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.75,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Were there any reports regarding missing swimmers in the sea off Brighton following the death of the 51-year-old man on January 1, 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Were the medical safety recommendations issued following the Brighton death of a 51-year-old on January 1, 2026, also applied or referenced in the reports concerning the Christmas Day disappearances in Budleigh Salterton?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.6666666666666666,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did the RNLI elaborate on the specific reasons why cold water poses a significant danger to individuals participating in open-water festive dips?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9411764705882353,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Does the RNLI warning regarding the risks of cold water shock extend beyond the festive period through the spring months, given that sea temperatures continue to drop until March?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did the Trump administration historically approach the oversight and management of international aid convoys during his previous term in office (2017\u20132021)?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "What official justification did the Trump administration provide for expanding the Mexico City policy to specifically exclude diversity, equity, and inclusion (DEI) initiatives and 'gender ideology' from foreign aid funding?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "How did the Trump administration's decision to defund DEI and gender-related programs impact the delivery of broader health, nutrition, and development programs that were previously receiving U.S. foreign aid?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did other nations or international organizations attempt to step in and fill the funding gap left by the Trump administration's withdrawal of U.S. foreign aid for health and nutrition programs, and if so, how successful were these efforts?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.75,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.75
+            },
+            {
+                "content": "Could the concerns regarding a potential government shutdown, specifically those rooted in the fear of political fallout over budget constraints, lead to the total collapse of Chris Murphy's reform package, or are there legislative strategies to avoid such an outcome?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.5,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "If Senate Republicans refuse to support Senator Patty Murray's proposal to split the Department of Homeland Security funding from the broader legislative package, are Senate Democrats likely to maintain their block of the funding, or will they eventually concede to avoid a government shutdown?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What specific policy reforms is Senator Chris Murphy proposing for the Department of Homeland Security that are currently being tied to the funding negotiations?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Besides the fear of triggering a government shutdown, what other factors or challenges are identified as obstacles to the progress of Senator Chris Murphy's reform package?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How does the agreement with Indonesia for the supply of urea fertilizer relate to Australia's efforts to address the national fuel crisis?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What percentage of the Geelong refinery's total production capacity was impacted by the recent fire, specifically regarding its petrol and diesel output?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Did Prime Minister Albanese explain the specific measures or definitions involved in 'stage 3' of the national fuel plan when he addressed the impact of the Geelong refinery fire?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.8888888888888888,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Does the Prime Minister\u2019s participation in the virtual summit address the domestic fuel shortages stemming from the Viva Energy refinery fire, or is it strictly focused on the broader geopolitical disruptions in the Middle East?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How did authorities in Beit Shemesh respond to the public's declining trust in older shelters following the fatal direct hit during the March 2026 attack?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8333333333333334,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "Following the acknowledgment that older shelters in Beit Shemesh do not meet modern standards and cannot guarantee safety, have authorities provided any specific alternative protective measures or guidance for residents living in buildings that lack modern shelter facilities?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How did the reactions of residents in Beit Shemesh following the direct hit on a shelter compare to the reactions of residents in the Barbour neighborhood of Beirut after their areas were targeted in April 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Following the Israeli strikes on the Barbour neighborhood in April 2026, which targeted schools being used to shelter displaced families, did this breach of sanctuary lead to any notable shifts in how refugees in Beirut approached or utilized school-based shelters?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "How does Lord Nash's proposed amendment to raise the age limit for social media use to 16 compare to the existing legal regulations currently governing social media companies in the UK?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.96875,
+                "context_precision_critic": 0.9999999999666667,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Regarding the 12-month period allowed for implementing 'highly effective age assurance' under Lord Nash's proposed amendment, what concerns have been raised about the sufficiency of this timeframe for social media companies?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What specifically is the Chief Medical Officer directed to advise parents and carers on under Lord Nash's proposed amendment regarding children's social media use?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Which other individuals or groups, beyond educators and the Youth Sport Trust, have been identified as supporting the push for tighter social media regulation, such as the measures proposed by Lord Nash?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "What specific concerns did Democratic senators raise in their January 7, 2026, letter regarding the impact of redirecting 28,000 federal law-enforcement personnel to ICE's enforcement and removal operations?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "According to the January 7, 2026, letter from Democratic senators, how long has the diversion of federal law-enforcement personnel to ICE operations been in effect?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Which specific federal law-enforcement agencies were identified in the January 7, 2026, letter as having been required to provide personnel for ICE's enforcement and removal operations?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Does the January 7, 2026, letter from the Democratic senators indicate whether the reassignment of personnel from the ATF, FBI, and HSI to ICE operations is intended to be a permanent policy or a temporary measure?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did the outcome of the primary runoff election between Tony Gonzales and Brandon Herrera result in the termination of Gonzales's re-election campaign, and if so, did Herrera become the Republican nominee?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Did Congressman Tony Gonzales suspend his re-election campaign before the primary runoff election against Brandon Herrera took place?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.6666666666666666,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What was the result of the primary runoff election between Congressman Tony Gonzales and Brandon Herrera?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What was the final outcome of the primary runoff election between Congressman Tony Gonzales and Brandon Herrera?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Did any other U.S. government agencies or officials officially support Brendan Carr's threat to revoke broadcaster spectrum permits following the March 14, 2026, social media posts?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.8888888888888888,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What specific arguments or statements did FCC Commissioner Anna M. Gomez make in response to Brendan Carr's threats to revoke broadcast spectrum permits?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.5
+            },
+            {
+                "content": "Have there been any reports or indications that media organizations are altering their news coverage in response to the pressure exerted by Brendan Carr's threats regarding spectrum permits?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Are there any other U.S. government officials or prominent industry figures, besides FCC Commissioner Anna M. Gomez, who have publicly commented on Brendan Carr's threats to revoke broadcast spectrum permits?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Did the public disagreement between Vice-President JD Vance, President Trump, and Pope Leo XIV between April 13th and April 14th, 2026, result in any immediate changes to the Trump administration's stated foreign policy goals regarding the war in Iran?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999666667,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Did Pope Leo XIV directly address the critique made by Vice-President JD Vance on April 14, 2026, or did the Vatican adopt a different approach to communicating its stance on the war in Iran on April 15, 2026?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.7142857142857143,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Following Pope Leo XIV's message of peace and healing on April 15, 2026, which occurred after the public dispute with the administration, did the Trump administration alter its stance on the war in Iran?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.49999999995,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Following President Trump's social media post on April 15, 2026, which featured an AI-generated image of himself held by Jesus Christ and inflammatory captions, did the Vatican issue any official commentary or reaction to this specific content?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.3333333333333333
+            },
+            {
+                "content": "Has Kristi Noem addressed the specific allegations of 'lawlessness' and the fatal shooting of Alex Pretti in her recent public statements, or has she ignored these criticisms in favor of other talking points?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.9090909090909091,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Has there been any indication of a change in the standoff between House Democrats and the Department of Homeland Security regarding funding, given that Kristi Noem has used social media to stand by her record rather than addressing Democratic concerns?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 0.75
+            },
+            {
+                "content": "How would the use of a reconciliation bill by Senate Republicans change the current legislative dynamic surrounding the deadlocked Department of Homeland Security funding and the ongoing partial government shutdown?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.5555555555555556,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Would including immigration enforcement funding within a broader tax package, pursued via a reconciliation bill to bypass the filibuster, effectively neutralize the objections raised by Democrats regarding the Department of Homeland Security's operations?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.6470588235294118,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "How does the water consumption required to produce plant-based milk alternatives like soy, oat, and almond compare to the water usage required for the production of dairy milk?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9090909090909091,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "When considering both the greenhouse gas emissions and water usage associated with milk production, how does the nutritional content of dairy, soy, oat, and almond milk affect their relative environmental efficiency?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.8928571428571429,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.25
+            },
+            {
+                "content": "How significantly do the processing and packaging stages contribute to the total 'farm to fork' environmental footprint of plant-based milks compared to the raw ingredient production phase?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.5,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "To what extent can purchasing locally produced plant-based milk help offset the environmental impact caused by the processing and transportation stages of its production?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Have zookeepers observed evidence that the stuffed orangutan toy is successfully acting as a surrogate to help Punch the monkey learn the subordinate social cues necessary for integration into his group?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.9375,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 0.25
+            },
+            {
+                "content": "Is Punch's behavior of climbing on and interacting with adult Japanese macaques a direct result of the confidence he gained from the stuffed orangutan toy, or is this behavior driven by innate survival instincts he would have developed without the toy?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9333333333333333,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Does Punch the monkey's increased interaction with the other macaques suggest that the initial concerns regarding his ability to learn subordinate social responses have been resolved, or is it currently unclear if he will successfully integrate into the hierarchy?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Does successful integration for Punch the monkey require him to demonstrate specific behavioral markers of subordinate status, or is his ongoing presence and interaction within the group sufficient evidence that he has mastered the necessary social responses?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.6666666666666666
+            },
+            {
+                "content": "How do states with restrictive midwifery oversight requirements, such as mandatory physician oversight for certified nurse-midwives, impact maternal health outcomes and care accessibility in maternal care deserts compared to states with more permissive midwifery scope-of-practice laws?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9782608695652174,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What legislative mechanisms do states with permissive midwifery policies, such as those that allow independent practice for certified professional midwives, use to integrate midwives into the hospital system while avoiding the requirement for costly physician oversight agreements?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What are the primary arguments typically used by advocacy groups and medical associations that lobby to maintain restrictive midwifery laws, such as mandatory physician oversight, in states like Georgia?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.75
+            },
+            {
+                "content": "How does the argument for mandatory physician oversight to ensure patient safety in midwifery practice compare to the evidence presented by advocates who suggest that midwifery-led care improves maternal and infant health outcomes in other regions?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.6
+            },
+            {
+                "content": "Did the UK government propose a specific alternative figure or offer any guidance on what they would consider a 'fair' price for entry into the Safe European defence initiative after rejecting the \u20ac2bn demand?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.5,
+                "context_precision_critic": 0.99999999995,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Has there been any public response or reaction from the European Union regarding the UK's preference for an entry contribution in the hundreds of millions for the Safe European defence initiative instead of the initially requested \u20ac2bn?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.8,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Are there any other countries involved in or expressing interest in the Safe European defence initiative, or is the negotiation regarding the entry fee strictly limited to the UK and the European Union?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.8333333333333334,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "What specific advantages or strategic objectives does the UK government hope to achieve by securing a defence pact with the EU through the Safe initiative, given the ongoing disagreement over the financial contribution?",
+                "correctness_aspect_critic": 0,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Have the exclusionary attitudes toward women in the literary industry observed around 2011 and the resistance to female membership at the Garrick Club seen in 2026 changed significantly since those respective times?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.95,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Is the difference in the pace of gender inclusion between the literary industry and institutions like the Garrick Club primarily a result of their distinct organizational structures or the specific demographics and cultures of the individuals within them?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.5,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Can external public pressure successfully force meaningful change in highly rigid, tradition-based institutions like the Garrick Club, or are internal personnel changes the only effective pathway to breaking down exclusionary structures?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9230769230769231,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Given that the Garrick Club uses 'literary connections' as a pretext for symbolic membership while the broader literary industry has made measurable progress toward inclusion, should we view the concept of 'literary merit' differently when it is evaluated within highly exclusive, tradition-bound institutions versus in the open publishing market?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 1.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How does the scope of Princess Beatrice's engagements in Saudi Arabia and the UAE compare to the focus of Princess Eugenie's visit to Art Basel in Qatar?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.9090909090909091,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Do the differing regional engagement profiles of Princess Eugenie, centered on art-related events like Art Basel in Qatar, and Princess Beatrice, involving investment and energy conferences in Saudi Arabia and the UAE, reflect a divergence in their professional roles or public responsibilities?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "How does the media and public reception of Princess Eugenie\u2019s art-focused engagements compare to the reception of Princess Beatrice\u2019s business and finance-related activities in the Middle East?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "What potential outcomes from the leadership spill in the Nationals' party room would influence David Littleproud's willingness to reschedule his talks with Sussan Ley regarding the Liberal-National Coalition?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.5,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 1.0
+            },
+            {
+                "content": "Why is there an urgency for David Littleproud and Sussan Ley to hold talks regarding the Liberal-National Coalition specifically before the return of parliament on 30 January 2026?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Does the current situation imply that there is no formal Coalition agreement between the Liberal and National parties as they head into the 30 January 2026 parliamentary session?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.0,
+                "context_precision_critic": 0.0,
+                "context_recall_critic": 0.0
+            },
+            {
+                "content": "Is it standard parliamentary procedure for the Coalition agreement between the Liberal and National parties to be in a state of flux or require re-establishment immediately before the start of a parliamentary session?",
+                "correctness_aspect_critic": 1,
+                "faithfulness_aspect_critic": 0.5,
+                "context_precision_critic": 0.9999999999,
+                "context_recall_critic": 0.6666666666666666
+            }
+        ]
+    }
+}
