@@ -21,18 +21,16 @@ This repository contains the **data, code, and configurations** used for all exp
 
 | Folder                         | Description                                                                                                                                                                                                                                                                                                                                                         |
 |--------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **`data/`**                    | Contains all generated conversations and corresponding logs. Each experiment folder includes:<br>• One JSON file per run (conversation data)<br>• Log file (Conversation Validator output)<br>• Metric files:<br> – *Multiturn metrics*: forgetfulness, context retention<br> – *Single-turn metrics*: correctness, faithfulness, context precision, context recall |
-| **`data/industrial_usecase/`** | Includes the industrial use case experiments                                                                                                                                                                                                                                                                                                                        |
-| **`human_validation/`**        | Contains Excel sheets with human validation results of generated conversations.<br>The main dataset used: `data/ADD_CORRECT_PATH_HERE`.<br>To view the conversation, open `viewer.html` in your browser.                                                                                                                                                            |
 | **`context_discoverer/`**      | Implements the Context Discoverer (CD) for multi-hop semantic bridging via filtered KNN search and LLM validation.                                                                                                                                                                                                                                                  |
 | **`conversation_generator/`**  | Code used for **synthetic conversation generation** with multiple model configurations and personas.                                                                                                                                                                                                                                                                |
 | **`conversation_validator/`**  | Code for **automatic validation** of generated conversations.                                                                                                                                                                                                                                                                                                       |
 | **`conversation_evaluator/`**  | Evaluation scripts for **RAG performance metrics**, including RAGAS-based assessments.                                                                                                                                                                                                                                                                              |
 | **`Models/`**                  | Contains model configuration and integration scripts:<br>• `chat_gpt.py` – OpenAI GPT integration<br>• `gemini.py` – Google Gemini integration                                                                                                                                                                                                                      |
 | **`rag_to_be_tested/`**        | Implementation of the target RAG architectures: System A (Naive Baseline) and System B (Agentic Retrieval). Start the RAG FastAPI service (`main.py`)                                                                                                                                                                                                               |
-| **`industrial_use_case/`**     | Code for the industrial use case experiments, including Conversation Generator (CG), Conversation Validator (CV), and evaluation scripts inside for SQuAD evalaution `RAG_Evaluation_Standard/`. Data is stored in `single-hop-RAG-dataset/`.                                                                                                                       |
 | **`data_preprocessing/`**      | Pipeline for news article acquisition and processing. Contains a cronjob for fetching news articles ( `guardian_fetcher`) and a Jupyter notebook to initialise `v_eval`. |
 | **`streamlit_viewer/`**        | Interactive tool (`app.py`) for viewing generated conversations. |
+| **`phase_1_validation/`** | data related to experiments for internal artefact validation (phase 1 of experimental setup) |
+| **`phase_2_validation/`** | data related to expeirments that assess the artefacts practical utility (phase 2 of experimental setup) |
 ---
 
 ## Getting Started
@@ -55,16 +53,9 @@ Target System B requires a MongoDB instance running locally. Deploy it via Docke
 docker pull mongo:latest
 ```
 
-2. **Download Datasets and Vector Databases**:
-
-The pre-embedded ChromaDBs and the raw JSON documents are hosted externally.
-
-- ChromaDBs (`v_eval`, `v_base`, `v_advanced`): Download them from [INSERT LINK HERE].
-- Raw Guardian Articles: Download the raw dataset from [INSERT LINK HERE] and import it into your running MongoDB instance.
+2. **Download Datasets and Vector Databases**: Download Guardian Articles via https://open-platform.theguardian.com/ and create `v_eval`, `v_base` and `v_advanced` ChromaDBs.
 
 3. **Import the raw guardian news articles into MongoDB**:
-
-`TODO`
 
 ### 2. Environment Setup
 
@@ -201,12 +192,6 @@ Implements the target RAG architectures evaluated in the thesis.
 * **`qa_chains/`** – Directory containing the RAG implementations operating on ChromaDB:
   * `qa_chain_baseline.py`: **System A (Naive Baseline)** using restrictive chunking and standard dense-vector retrieval.
   * `qa_chain_advanced.py`: **System B (Agentic Retrieval)** using an iterative LLM reasoning loop and parent-document retrieval strategies.
-
----
-
-### Industrial Use Case ([`industrial_use_case/`](industrial_use_case/))
-
-*[TODO: Add description and instructions for the industrial use case experiments, SQuAD evaluation, and data integration]*
 
 ---
 
