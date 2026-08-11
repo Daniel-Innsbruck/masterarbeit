@@ -20,13 +20,13 @@ llm = init_chat_model("gemini-2.5-flash", model_provider="google_genai")
 embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
 
 vector_store = Chroma(
-    collection_name="target_baseline",
-    persist_directory="../phase_1_validation/chroma_db_baseline",
+    collection_name="target_base_chunks",
+    persist_directory="/home/qe/git_projects/masterarbeit/data_preprocessing/chroma_db_wiki",
     embedding_function=embeddings
 )
 
 prompt = ChatPromptTemplate.from_messages([
-    ("system", "You are a helpful assistant. Answer the question based on the provided context and the previous chat history. If the context does not contain the answer, state that you cannot find the answer.\n\nChat History:\n{chat_history}"),
+    ("system", "You are a helpful assistant. Answer the question based solely on the provided context and the previous chat history. If the context does not contain the answer, state that you cannot find the answer. Never answer questions with your internal knowledge.\n\nChat History:\n{chat_history}"),
     ("human", "Context:\n{context}\n\nQuestion: {question}"),
 ])
 

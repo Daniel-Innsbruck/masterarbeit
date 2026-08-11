@@ -30,7 +30,7 @@ class GeminiEmbeddingFunction(EmbeddingFunction):
         return embeddings
 
 class ChromaConnector:
-    def __init__(self, path=None, collection_name="guardian_chunks"):
+    def __init__(self, path=None, collection_name="wikipedia_eval_chunks"):
         if path is None:
             current_dir = os.path.dirname(os.path.realpath(__file__))
             generator_dir = os.path.dirname(current_dir)
@@ -70,7 +70,7 @@ class ChromaConnector:
         return {
             'id': results['ids'][0],
             'text_snippet': results['documents'][0],
-            'article_id': results['metadatas'][0]['article_id'],
+            'article_id': results['metadatas'][0]['parent_id'],
             'chunk_index': results['metadatas'][0]['chunk_index']
         }
 
@@ -92,7 +92,7 @@ class ChromaConnector:
         return {
             'id': results['ids'][0][idx],
             'text_snippet': results['documents'][0][idx],
-            'article_id': results['metadatas'][0][idx]['article_id'],
+            'article_id': results['metadatas'][0][idx]['parent_id'],
             'chunk_index': results['metadatas'][0][idx]['chunk_index']
         }
 
@@ -115,7 +115,7 @@ class ChromaConnector:
         return {
             'id': results['ids'][idx],
             'text_snippet': results['documents'][idx],
-            'article_id': results['metadatas'][idx]['article_id'],
+            'article_id': results['metadatas'][idx]['parent_id'],
             'chunk_index': results['metadatas'][idx]['chunk_index']
         }
 
@@ -156,7 +156,7 @@ class ChromaConnector:
             return None
 
         results = self.collection.get(
-            where={"$and": [{"article_id": article_id}, {"chunk_index": target_idx}]},
+            where={"$and": [{"parent_id": article_id}, {"chunk_index": target_idx}]},
             include=['metadatas', 'documents']
         )
 
@@ -166,7 +166,7 @@ class ChromaConnector:
         return {
             'id': results['ids'][0],
             'text_snippet': results['documents'][0],
-            'article_id': results['metadatas'][0]['article_id'],
+            'article_id': results['metadatas'][0]['parent_id'],
             'chunk_index': results['metadatas'][0]['chunk_index'],
             'total_chunks': results['metadatas'][0].get('total_chunks', total_chunks)
         }
@@ -174,7 +174,7 @@ class ChromaConnector:
     def get_chunk_by_id(self, article_id, chunk_index):
         """Retrieve a specific chunk by article_id and chunk_index."""
         results = self.collection.get(
-            where={"$and": [{"article_id": article_id}, {"chunk_index": chunk_index}]},
+            where={"$and": [{"parent_id": article_id}, {"chunk_index": chunk_index}]},
             include=['metadatas', 'documents']
         )
 
@@ -184,7 +184,7 @@ class ChromaConnector:
         return {
             'id': results['ids'][0],
             'text_snippet': results['documents'][0],
-            'article_id': results['metadatas'][0]['article_id'],
+            'article_id': results['metadatas'][0]['parent_id'],
             'chunk_index': results['metadatas'][0]['chunk_index'],
             'total_chunks': results['metadatas'][0].get('total_chunks', 1)
         }

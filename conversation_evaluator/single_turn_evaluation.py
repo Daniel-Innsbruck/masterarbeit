@@ -24,11 +24,11 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 
 # Initialize with Google AI Studio
 evaluator_llm = LangchainLLMWrapper(ChatOpenAI(
-    model="gpt-4o-mini",
+    model="gpt-5.4-mini",
 ))
 
 paths = [
-    "../data/2906_conversation_data_gemini-3.1-flash-lite_turns_5_conversations_1.jsonl"
+    "/home/qe/git_projects/masterarbeit/data/naive_rag_n5_alpha2_beta3_dialogues20.jsonl"
 ]
 
 def calculate_safe_average(result_list, key):

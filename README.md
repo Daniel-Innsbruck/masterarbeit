@@ -1,6 +1,6 @@
 # DSIA_2024_Hillebrand_Daniel_MA
 
- **Automated Evaluation of RAG Systems for Multi-Turn, Multi-Hop Scenarios**
+**Automated Evaluation of RAG Systems for Multi-Turn, Multi-Hop Scenarios**
 
 This repository accompanies the results and raw data from the Master's thesis **Automated Evaluation of RAG Systems for
 Multi-Turn, Multi-Hop Scenarios"**. The work extends the original framework **“RAG-DIVE:  A Dynamic Approach for 

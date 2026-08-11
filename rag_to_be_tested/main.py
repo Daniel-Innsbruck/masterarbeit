@@ -16,7 +16,7 @@ class QuestionRequest(BaseModel):
 @app.post("/rag")
 def ask_question(request: QuestionRequest):
     # für tests: advanced rag
-    result = agentic_rag(request.question, request.thread_id)
+    result = baseline_rag(request.question, request.thread_id)
     return {"answer": result["answer"], "context": result["context"]}
 
     if request.mode == "baseline":

@@ -47,13 +47,13 @@ class ContextDiscoverer:
 
             if 'chunk_index' not in meta or 'total_chunks' not in meta:
                 print(
-                    f"[CD] Warning: 'chunk_index' or 'total_chunks' missing from article {meta.get('article_id', 'Unknown')}. Discarding chunk.")
+                    f"[CD] Warning: 'chunk_index' or 'total_chunks' missing from article {meta.get('parent_id', 'Unknown')}. Discarding chunk.")
                 continue
 
             chunk_a = {
                 'id': db_result['ids'][0],
                 'text_snippet': db_result['documents'][0],
-                'article_id': meta['article_id'],
+                'article_id': meta['parent_id'],
                 'chunk_index': meta['chunk_index'],
                 'total_chunks': meta['total_chunks']
             }
@@ -95,7 +95,7 @@ class ContextDiscoverer:
         results = self.db.collection.query(
             query_embeddings=[query_vector],
             n_results=self.k,
-            where={"article_id": {"$ne": exclude_article_id}}
+            where={"parent_id": {"$ne": exclude_article_id}}
         )
 
         if not results['ids'] or not results['ids'][0]:
@@ -106,7 +106,7 @@ class ContextDiscoverer:
             neighbors.append({
                 'id': results['ids'][0][i],
                 'text_snippet': results['documents'][0][i],
-                'article_id': results['metadatas'][0][i]['article_id'],
+                'article_id': results['metadatas'][0][i]['parent_id'],
                 'chunk_index': results['metadatas'][0][i]['chunk_index'],
                 'total_chunks': results['metadatas'][0][i].get('total_chunks', 1)
             })

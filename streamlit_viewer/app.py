@@ -1,15 +1,20 @@
-# streamlit_viewer/app.py
+import sys
+from pathlib import Path
+import os
+# Absoluter Pfad zum Root-Ordner (masterarbeit) dynamisch ermitteln
+root_path = str(Path(__file__).resolve().parent.parent)
+if root_path not in sys.path:
+    sys.path.insert(0, root_path)
 
 import streamlit as st
 import json
 import glob
-import os
-from utils.chroma_connector import ChromaConnector
-
+from conversation_generator.utils.chroma_connector import ChromaConnector
 st.set_page_config(page_title="Dialogue Viewer", layout="wide")
 st.title("🔍 RAG-DIVE Dialogue Viewer")
 
-db_connector = ChromaConnector('./data/v_eval_filtered/')
+db_path = str(Path(root_path) / 'data_preprocessing/chroma_db_wiki')
+db_connector = ChromaConnector(db_path)
 
 def get_chunk_text_from_id(chunk_id):
     return db_connector.get_chunk_by_id(chunk_id)
@@ -97,8 +102,17 @@ st.divider()
 # =========================================================
 # Turns
 # =========================================================
-for turn in conv.get("conversation", []):
-    turn_num = turn.get("turn_index", 0) + 1
+raw_conv = conv.get("conversation", [])
+
+# Normalisiere das Format: Mache aus einem einzelnen Dict eine Liste
+if isinstance(raw_conv, dict):
+    turns = [raw_conv]
+else:
+    turns = raw_conv
+
+for turn in turns:
+    # Falls turn_index fehlt, nutze den Index der Schleife
+    turn_num = turn.get("turn_index", turns.index(turn)) + 1
     q_type = turn.get("type", "?")
     logic = turn.get("logic_type", "none")
     multi_hop = turn.get("multi_hop_flag", 0)

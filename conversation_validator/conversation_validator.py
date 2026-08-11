@@ -10,7 +10,7 @@ from .utils import parser_validation as parser
 import time
 
 #model_name = 'gemini-2.5-flash'  # Change to 'gemini-2.0-flash' if needed
-model_name= 'gpt-5-mini'
+model_name= 'gpt-5'
 # model = gemini.GEMINI(model_name)
 model = chat_gpt.ChatGPT(model_name)
 parser = parser.LLMResponseParser()

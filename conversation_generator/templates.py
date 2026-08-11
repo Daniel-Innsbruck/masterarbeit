@@ -19,11 +19,12 @@ CONVERSATION_PROMPTS = {
             {chunk_b}
 
             ### RULES FOR THE QUESTION
-            1. **Strict Multi-Hop:** The question MUST require synthesising facts from BOTH Context A and B. It must be impossible to answer using only one context.
-            2. **No Compound Questions:** Do NOT ask two separate questions joined by "and" (e.g., "What is X, and what is Y?"). Ask a single, cohesive question.
-            3. **Natural Persona:** Sound like a human naturally starting a chat based on your Persona. Easy English Vocabulary is preferred. Avoid stiff, academic exam-style phrasing. NEVER mention "Context A" or "Context B".
-            4. **Scope:** The answer to your question must be entirely contained within the provided snippets.
-            5. **No Premise Leakage:** Do not explicitly summarise the facts from both Context A and Context B in your question. A true multi-hop question asks for the connection WITHOUT giving it away. 
+            1  **Answerability:** It must be possible to give the right answer to the questions from the provided context without additional assumptions. Be specific.
+            2. **Strict Multi-Hop:** The question MUST require synthesising facts from BOTH Context A and B. It must be impossible to answer using only one context.
+            3. **No Compound Questions:** Do NOT ask two separate questions joined by "and" (e.g., "What is X, and what is Y?"). Ask a single, cohesive question.
+            4. **Natural Persona:** Sound like a human naturally starting a chat based on your Persona. Easy English Vocabulary is preferred. Avoid stiff, academic exam-style phrasing. NEVER mention "Context A" or "Context B".
+            5. **Scope:** The answer to your question must be entirely contained within the provided snippets.
+            6. **No Premise Leakage:** Do not explicitly summarise the facts from both Context A and Context B in your question. A true multi-hop question asks for the connection WITHOUT giving it away. 
                - BAD: "Given that flour prices have tripled [Context B], how did the Iran attack [Context A] cause this?"
                - GOOD: "What direct impact did the recent escalation with Iran have on the pricing of basic baking ingredients like flour?"
                         
@@ -33,9 +34,9 @@ CONVERSATION_PROMPTS = {
             - **Specific Answers:** The ground-truth answer must contain concrete facts (dates, numbers, names) that narrow down the possible reference ground truths to precisely the references sources that are given to you to formulate the question.
             
             ### CONFIGURATION
-            - **Logic Type:** Choose the reasoning required: 'inference' (connecting premises), 'comparison' (comparing entities), or 'temporal' (timelines/sequences).
+            - **Logic Type:** Choose the reasoning required: 'inference' (connecting premises), 'comparison' (comparing entities), or 'temporal' (timelines/sequences). 
             - **First Turn Rule:** Because this is the very first message, `rag_input` and `question` MUST be strictly identical.
-
+            
             ### OUTPUT FORMAT (Strict JSON)
             {{
                 "rag_input": "Your initial, natural question matching your Persona.",
